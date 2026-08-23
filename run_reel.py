@@ -53,8 +53,8 @@ def main():
 
     reserva = (
         f"{reel['titulo']}\n\n"
-        f"O Moviki mostra onde os negocios itinerantes estao agora.\n"
-        f"Conheca em moviki.com.br — link na bio."
+        f"O Moviki mostra onde os negócios itinerantes estão agora.\n"
+        f"Conheça em moviki.com.br — link na bio."
     )
     legenda = ia.escrever(
         f"Escreva a legenda de um Reel do Moviki.\n\n"

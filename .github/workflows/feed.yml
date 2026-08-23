@@ -1,0 +1,73 @@
+name: Feed
+
+# Calendario do feed. Ter/Qui puxam pauta de conversao, Sex puxa parceiro,
+# Seg/Qua puxam educativo/bastidor — a escolha acontece dentro do run_feed.py
+# (funcao montar_institucional), aqui so define QUANDO roda.
+#
+# Horarios em UTC. Sao Paulo = UTC-3.
+on:
+  schedule:
+    - cron: '0 13 * * 1,3'   # 10h BRT — segunda e quarta
+    - cron: '0 22 * * 2,4'   # 19h BRT — terca e quinta
+    - cron: '0 15 * * 5'     # 12h BRT — sexta
+  workflow_dispatch:
+    inputs:
+      tipo:
+        description: 'vitrine | institucional | (vazio = decide sozinho)'
+        required: false
+        default: ''
+      dry_run:
+        description: 'monta e NAO publica'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Nunca dois workflows mexendo em estado/ ao mesmo tempo.
+concurrency:
+  group: moviki-assistente-social-estado
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      # Publicar sempre no mesmo minuto cheio e padrao de robo. A espera
+      # aleatoria deixa o horario organico.
+      - name: Espera aleatoria (0-25 min)
+        if: github.event_name == 'schedule'
+        run: sleep $(( RANDOM % 1500 ))
+
+      - name: Publicar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python run_feed.py ${{ inputs.tipo }}
+
+      - name: Salvar estado
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "moviki-assistente-social"
+          git config user.email "bot@moviki.com.br"
+          git add estado/ || true
+          git diff --staged --quiet && echo "nada a commitar" && exit 0
+          git commit -m "estado: feed $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash || true
+          git push

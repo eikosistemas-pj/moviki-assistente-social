@@ -101,12 +101,14 @@ def montar_vitrine():
         semente=escolhido.get("uid"),
     )
 
+    # Texto reserva: vai AO AR se a IA falhar. Escrever com acentuacao
+    # correta — e conteudo publico, nao log interno.
     reserva = (
-        f"{nome} esta no Moviki. \U0001f4cd\n\n"
+        f"{nome} está no Moviki. \U0001f4cd\n\n"
         f"{rotulo}{(' em ' + cidade) if cidade else ''}. "
-        f"Quer saber se ta aberto agora? E so abrir o link:\n"
+        f"Quer saber se tá aberto agora? É só abrir o link:\n"
         f"moviki.com.br/{escolhido.get('slug','')}\n\n"
-        f"Se voce trabalha na rua e quer o seu, o link ta na bio."
+        f"Se você trabalha na rua e quer o seu, o link tá na bio."
     )
     legenda = ia.escrever(
         f"Escreva a legenda de um post que divulga um negocio REAL cadastrado no "
@@ -156,7 +158,7 @@ def montar_institucional():
 
     reserva = (
         f"{pauta['titulo']}\n\n{pauta.get('subtitulo','')}\n\n"
-        f"Conheca em moviki.com.br — link na bio."
+        f"Conheça em moviki.com.br — link na bio."
     )
     legenda = ia.escrever(
         f"Escreva a legenda de um post do Moviki.\n\n"

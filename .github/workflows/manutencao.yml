@@ -1,0 +1,49 @@
+name: Manutencao
+
+# Duas rotinas de saude, no mesmo workflow pra nao multiplicar arquivo:
+#   - verificacao (segunda): o alarme. Se o token da Meta expirou, o job
+#     fica vermelho e o GitHub manda e-mail. Sem isso, o robo para de
+#     publicar em silencio e ninguem descobre por semanas.
+#   - limpeza (domingo): apaga arte com mais de 60 dias de publicado/.
+on:
+  schedule:
+    - cron: '0 11 * * 1'   # 8h BRT — segunda: verificacao
+    - cron: '0 7 * * 0'    # 4h BRT — domingo: limpeza
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  verificar:
+    if: github.event.schedule != '0 7 * * 0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Verificar saude do robo
+        env:
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+        run: python run_verificar.py
+
+  limpar:
+    if: github.event.schedule == '0 7 * * 0' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Limpar arte antiga
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python run_limpeza.py

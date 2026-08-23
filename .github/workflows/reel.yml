@@ -1,0 +1,55 @@
+name: Reel
+
+# Reel e o formato de maior alcance organico. 2x por semana e o suficiente
+# pra sustentar o perfil sem estourar o banco de videos.
+on:
+  schedule:
+    - cron: '0 20 * * 2'   # 17h BRT — terca
+    - cron: '0 20 * * 6'   # 17h BRT — sabado
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'monta e NAO publica'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: moviki-assistente-social-estado
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Espera aleatoria (0-20 min)
+        if: github.event_name == 'schedule'
+        run: sleep $(( RANDOM % 1200 ))
+
+      - name: Publicar Reel
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python run_reel.py
+
+      - name: Salvar estado
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "moviki-assistente-social"
+          git config user.email "bot@moviki.com.br"
+          git add estado/ || true
+          git diff --staged --quiet && echo "nada a commitar" && exit 0
+          git commit -m "estado: reel $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash || true
+          git push

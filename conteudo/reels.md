@@ -1,21 +1,19 @@
 # Banco de Reels
 
-Os videos NAO ficam versionados no git. Um Reel de 8s sai com 5-10 MB; a
-~8 por mes isso viraria ~800 MB de historico em um ano, e git nao esquece
-binario. Em vez disso cada Reel mora como ASSET DE RELEASE do proprio repo
-(URL publica permanente, fora do historico) e este arquivo guarda so o
+Os vídeos NÃO ficam versionados no git. Um Reel de 8s sai com 5-10 MB; a
+~8 por mês isso viraria ~800 MB de histórico em um ano, e git não esquece
+binário. Em vez disso cada Reel mora como ASSET DE RELEASE do próprio repo
+(URL pública permanente, fora do histórico) e este arquivo guarda só o
 ponteiro.
 
 ## Como acrescentar um Reel
 
-1. Gerar o video (Kairogen, `veo-3-1-fast`, 9:16) e **revisar antes**.
-2. No GitHub: `Releases` -> `Draft a new release` -> tag `reels`
-   (reaproveite a mesma release pra todos) -> arraste o `.mp4` em
-   *Attach binaries*.
-3. Clique com o botao direito no arquivo anexado -> copiar endereco do
-   link. Vai ter a forma:
+1. Gerar o vídeo (Kairogen, `veo-3-1-fast`, 9:16) e **assistir antes**.
+2. No GitHub: `Releases` → editar a release `reels` (ícone de lápis) →
+   arraste o `.mp4` em *Attach binaries* → `Update release`.
+3. Copiar o endereço do link do arquivo anexado. Vai ter a forma
    `https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/reels/<arquivo>.mp4`
-4. Cole num bloco novo aqui embaixo, tirando o comentario `<!--`/`-->`.
+4. Colar num bloco novo aqui embaixo.
 
 Formato:
 
@@ -23,32 +21,31 @@ Formato:
     tipo: educativo | conversao | parceiro | bastidor
     url: <URL do asset de release>
     capa: (opcional) URL de uma imagem 1080x1920 pra capa
-    titulo: <do que o video fala, so pra referencia humana>
-    angulo: <instrucao pra IA escrever a legenda>
+    titulo: <gancho da legenda — VAI AO AR, escreva com acento>
+    angulo: <instrucao pra IA escrever a legenda; nunca vai ao ar>
 
-Enquanto nao houver nenhum bloco ativo, o workflow de Reels termina sem
-publicar e avisa no log — nao quebra.
+⚠️ `titulo` é publicado (vira a primeira linha da legenda se a IA falhar).
+Escreva como gancho de verdade, não como descrição do vídeo.
+
+Enquanto não houver nenhum bloco ativo, o workflow de Reels termina sem
+publicar e avisa no log — não quebra.
 
 ---
-
-<!-- APAGUE ESTA LINHA DE COMENTARIO (e a do fim) QUANDO SUBIR OS VIDEOS
 
 ## endereco-que-muda-reel
 tipo: educativo
 url: https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/reels/endereco-que-muda.mp4
-titulo: O carrinho sai de uma esquina de noite e amanhece em outra praca
-angulo: Mostre a dor de quem trabalha em carrinho: o cliente de ontem nao sabe onde voce esta hoje. Primeira linha precisa segurar quem esta rolando o feed. Feche mandando pro link da bio.
+titulo: Ontem ele tava naquela esquina. E hoje?
+angulo: Mostre a dor de quem trabalha em carrinho: o cliente de ontem não sabe onde você está hoje. Primeira linha precisa segurar quem está rolando o feed. Feche mandando pro link da bio.
 
 ## quem-procura-reel
 tipo: educativo
 url: https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/reels/quem-procura.mp4
-titulo: Pessoa procurando na rua ate achar o carrinho aberto
-angulo: Vire o post pro lado de QUEM PROCURA, nao do lojista. Bateu vontade e a pessoa nao sabe se ele esta na praca hoje. Agora sabe. Feche mandando pro link da bio.
+titulo: Bateu vontade. Só falta saber se ele tá na praça hoje.
+angulo: Vire o post pro lado de QUEM PROCURA, não do lojista. A pessoa quer achar o pastel, o açaí, o barbeiro móvel. Mostre que dá pra ver quem está aberto perto de você. Feche mandando pro link da bio.
 
 ## abrir-o-dia-reel
 tipo: bastidor
 url: https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/reels/abrir-o-dia.mp4
-titulo: Vendedor abrindo o carrinho no comeco do dia
-angulo: Post de posicionamento e respeito. Trabalhar na rua nao e menos negocio, e so um negocio que anda. Sem pieguice, sem vitimizacao, sem numero inventado.
-
-FIM DO COMENTARIO -->
+titulo: Todo dia ele abre. Todo dia num lugar diferente.
+angulo: Post de posicionamento e respeito. Trabalhar na rua não é menos negócio, é só um negócio que anda. Sem pieguice, sem vitimização, sem número inventado.

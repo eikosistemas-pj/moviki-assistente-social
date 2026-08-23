@@ -167,11 +167,24 @@ def test_container_com_erro_estoura_antes_de_publicar():
 
 
 # ------------------------------------------------------------- comentarios
-def test_bloco_comentado_nao_vira_post():
-    """Modelo comentado no markdown NAO pode ir ao ar. Regressao: antes o
-    parser lia bloco dentro de <!-- --> como pauta real."""
+def test_reels_carregados_tem_url_real():
+    """Todo reel ativo precisa de URL utilizavel. Regressao dupla:
+    (a) bloco dentro de <!-- --> nao pode virar post;
+    (b) URL de exemplo com <owner> nao pode passar."""
     from run_reel import carregar_reels
-    assert carregar_reels() == []
+    for r in carregar_reels():
+        assert r["url"].startswith("https://"), r["id"]
+        assert "<owner>" not in r["url"], r["id"]
+        assert "<repo>" not in r["url"], r["id"]
+        assert r["url"].endswith(".mp4"), r["id"]
+
+
+def test_titulos_de_reel_passam_na_trava():
+    """titulo do reel VAI AO AR (vira a 1a linha da legenda reserva)."""
+    from src import compliance
+    from run_reel import carregar_reels
+    for r in carregar_reels():
+        assert compliance.violacoes(r["titulo"]) == [], f"{r['id']}: {r['titulo']}"
 
 
 def test_sem_comentarios_remove_bloco_html():

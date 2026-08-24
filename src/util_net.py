@@ -37,3 +37,12 @@ def get(url, **kw):
 def post(url, **kw):
     kw.setdefault("timeout", 60)
     return _tentar(requests.post, url, **kw)
+
+
+def put(url, **kw):
+    """A API de conteudo do GitHub (criar/atualizar arquivo) so aceita PUT.
+    Chamar o mesmo endereco com POST devolve 404 Not Found — erro que parece
+    'repo inexistente' e manda a gente cacar permissao que nao e' o problema.
+    """
+    kw.setdefault("timeout", 60)
+    return _tentar(requests.put, url, **kw)

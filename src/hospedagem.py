@@ -64,7 +64,9 @@ def publicar_arquivo(caminho_local, prefixo="post"):
     with open(caminho_local, "rb") as f:
         conteudo = base64.b64encode(f.read()).decode()
 
-    r = net.post(
+    # PUT, nao POST: e' o metodo que a API de conteudo do GitHub aceita para
+    # criar arquivo. Com POST o GitHub responde 404 e o robo nao publica.
+    r = net.put(
         f"{API}/repos/{config.GH_REPO}/contents/{destino}",
         headers={
             "Authorization": f"Bearer {token}",

@@ -39,7 +39,9 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          SO_FACEBOOK: ${{ secrets.SO_FACEBOOK }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
         run: python run_reel.py
 

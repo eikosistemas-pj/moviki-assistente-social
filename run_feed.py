@@ -216,8 +216,13 @@ def main():
 
     caminho = arte.salvar(post["imagem"], f"/tmp/feed-{post['tipo']}.jpg")
     print(f"arte montada: {caminho}")
+
+    # Legenda JA adaptada ao canal antes de imprimir. O dry-run existe pra
+    # revisar o que vai ao ar — se ele mostrasse o texto cru e a adaptacao
+    # acontecesse so na hora de publicar, a revisao nao valeria nada.
+    legenda = _texto_facebook(post["legenda"]) if config.SO_FACEBOOK else post["legenda"]
     print("--- legenda ---")
-    print(post["legenda"])
+    print(legenda)
     print("---------------")
 
     if config.DRY_RUN:
@@ -241,7 +246,7 @@ def main():
     # ------------------------------------------------------------------
     if config.SO_FACEBOOK:
         print("SO_FACEBOOK ligado -> publicando direto na Pagina do Facebook.")
-        fb_id = Facebook().foto(url, _texto_facebook(post["legenda"]))
+        fb_id = Facebook().foto(url, legenda)
         print(f"OK -> Facebook | {post['tipo']} | {post['descricao']} | id: {fb_id}")
         estado.marcar_usado(post["tipo"], post["chave"])
         estado.registrar("feed", post["descricao"], fb_id,
@@ -249,7 +254,7 @@ def main():
         return
 
     try:
-        media_id = Instagram().foto(url, post["legenda"], post["hashtags"])
+        media_id = Instagram().foto(url, legenda, post["hashtags"])
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: Instagram falhou ({e}) -> tentando publicar no Facebook.")
         fb_id = Facebook().foto(url, _texto_facebook(post["legenda"]))

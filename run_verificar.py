@@ -9,6 +9,7 @@ ninguem perceber por semanas.
 Falha aqui = workflow vermelho = e-mail do GitHub. E o alarme.
 """
 from src import config, conteudo, firestore
+from src import util_net as net
 from src.social.instagram import Instagram
 
 CHECAGENS = []
@@ -26,6 +27,17 @@ def checar(nome, funcao, critico=True):
 
 def main():
     def token():
+        # No modo SO_FACEBOOK a conta do Instagram nao existe pro robo — o
+        # que precisa estar vivo e o token da Pagina. Validar pelo canal
+        # que realmente publica, senao o alarme vigia a porta errada.
+        if config.SO_FACEBOOK:
+            r = net.get(
+                f"{config.GRAPH}/{config.FACEBOOK_PAGE_ID}",
+                params={"fields": "name,fan_count", "access_token": config.PAGE_ACCESS_TOKEN},
+            ).json()
+            if "error" in r:
+                raise RuntimeError(r["error"].get("message"))
+            return f"Pagina {r.get('name','?')} | {r.get('fan_count','?')} curtidas"
         d = Instagram().validar_token()
         return f"@{d.get('username','?')} | {d.get('followers_count','?')} seguidores"
 
@@ -42,12 +54,17 @@ def main():
         return f"{len(p)} pautas carregadas"
 
     def envs():
-        faltando = [n for n in ("IG_ACCOUNT_ID", "PAGE_ACCESS_TOKEN",
-                                "FIREBASE_PROJECT_ID")
-                    if not getattr(config, n, "")]
+        # O conjunto obrigatorio muda com o canal: sem Instagram, o que nao
+        # pode faltar e o FACEBOOK_PAGE_ID.
+        if config.SO_FACEBOOK:
+            precisa = ("FACEBOOK_PAGE_ID", "PAGE_ACCESS_TOKEN", "FIREBASE_PROJECT_ID")
+        else:
+            precisa = ("IG_ACCOUNT_ID", "PAGE_ACCESS_TOKEN", "FIREBASE_PROJECT_ID")
+        faltando = [n for n in precisa if not getattr(config, n, "")]
         if faltando:
             raise RuntimeError("secrets ausentes: " + ", ".join(faltando))
-        return "todos os secrets obrigatorios presentes"
+        canal = "somente Facebook" if config.SO_FACEBOOK else "Instagram + espelho no Facebook"
+        return f"secrets obrigatorios presentes | canal: {canal}"
 
     checar("secrets", envs)
     checar("token da Meta", token)

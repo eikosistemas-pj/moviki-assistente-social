@@ -25,7 +25,7 @@ from datetime import datetime, timezone
 
 from src import arte, config, conteudo, estado, firestore, ia, segmentos
 from src import util_net as net
-from src.social.facebook import espelhar
+from src.social.facebook import Facebook, espelhar
 from src.social.instagram import Instagram
 from src import hospedagem
 
@@ -208,7 +208,38 @@ def main():
     url = hospedagem.publicar_arquivo(caminho, prefixo=f"feed-{post['tipo']}")
     print(f"arte publica: {url}")
 
-    media_id = Instagram().foto(url, post["legenda"], post["hashtags"])
+    # ------------------------------------------------------------------
+    # Onde publicar.
+    #
+    # Modo normal: Instagram e o principal, Facebook e o espelho.
+    # Modo SO_FACEBOOK: o Instagram esta bloqueado pela Meta, entao a Pagina
+    #   do Facebook vira o canal principal — e ai uma falha dela DERRUBA o
+    #   ciclo de proposito, porque nao ha outro lugar pra publicar.
+    #
+    # Plano B automatico: se o Instagram falhar no modo normal (token
+    # revogado, restricao nova), o robo NAO perde o post — publica no
+    # Facebook e avisa. Melhor um canal no ar que nenhum.
+    # ------------------------------------------------------------------
+    if config.SO_FACEBOOK:
+        print("SO_FACEBOOK ligado -> publicando direto na Pagina do Facebook.")
+        fb_id = Facebook().foto(url, post["legenda"])
+        print(f"OK -> Facebook | {post['tipo']} | {post['descricao']} | id: {fb_id}")
+        estado.marcar_usado(post["tipo"], post["chave"])
+        estado.registrar("feed", post["descricao"], fb_id,
+                         {"subtipo": post["tipo"], "rede": "facebook"})
+        return
+
+    try:
+        media_id = Instagram().foto(url, post["legenda"], post["hashtags"])
+    except Exception as e:  # noqa: BLE001
+        print(f"AVISO: Instagram falhou ({e}) -> tentando publicar no Facebook.")
+        fb_id = Facebook().foto(url, post["legenda"])
+        print(f"OK -> Facebook (plano B) | {post['descricao']} | id: {fb_id}")
+        estado.marcar_usado(post["tipo"], post["chave"])
+        estado.registrar("feed", post["descricao"], fb_id,
+                         {"subtipo": post["tipo"], "rede": "facebook", "planoB": True})
+        return
+
     print(f"OK -> Instagram | {post['tipo']} | {post['descricao']} | id: {media_id}")
 
     estado.marcar_usado(post["tipo"], post["chave"])

@@ -43,6 +43,13 @@ def carregar_reels():
 
 
 def main():
+    # Reel so existe no Instagram. Com o Instagram bloqueado pela Meta, sair
+    # limpo (sem erro) em vez de deixar o workflow vermelho toda terca e
+    # sabado — alarme que toca sempre e alarme que ninguem escuta.
+    if config.SO_FACEBOOK:
+        print("SO_FACEBOOK ligado -> Reel e exclusivo do Instagram. Nada a publicar hoje.")
+        return
+
     reels = carregar_reels()
     if not reels:
         print("banco de Reels vazio (conteudo/reels.md) -> nada a publicar hoje.")

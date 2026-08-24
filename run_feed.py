@@ -20,6 +20,7 @@ Uso:
     python run_feed.py institucional   # forca institucional
     DRY_RUN=1 python run_feed.py       # monta tudo e NAO publica
 """
+import re
 import sys
 from datetime import datetime, timezone
 
@@ -178,6 +179,24 @@ def montar_institucional():
     }
 
 
+# ------------------------------------------------------------------ Facebook
+def _texto_facebook(legenda):
+    """Adapta a legenda quando o post vai pro Facebook em vez do Instagram.
+
+    "Link na bio" e' gramatica de Instagram: na Pagina do Facebook nao existe
+    bio com link, entao a frase manda o leitor pra lugar nenhum.
+
+    Dois casos, tratados em ordem:
+      1) "... moviki.com.br — link na bio."  -> corta o rabicho (o endereco
+         ja esta na frase, e no Facebook ele vira link clicavel sozinho).
+      2) "o link ta na bio."                 -> troca pelo endereco, senao a
+         frase ficaria truncada e sem chamada pra acao.
+    """
+    t = re.sub(r"\s*[—–-]\s*(o\s+)?link\s+(t[aá]\s+)?na\s+bio\.?", ".", legenda, flags=re.IGNORECASE)
+    t = re.sub(r"link\s+(t[aá]\s+)?na\s+bio", "link está em moviki.com.br", t, flags=re.IGNORECASE)
+    return re.sub(r"\.\s*\.", ".", t).strip()
+
+
 # ------------------------------------------------------------------ principal
 def main():
     forcado = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
@@ -222,7 +241,7 @@ def main():
     # ------------------------------------------------------------------
     if config.SO_FACEBOOK:
         print("SO_FACEBOOK ligado -> publicando direto na Pagina do Facebook.")
-        fb_id = Facebook().foto(url, post["legenda"])
+        fb_id = Facebook().foto(url, _texto_facebook(post["legenda"]))
         print(f"OK -> Facebook | {post['tipo']} | {post['descricao']} | id: {fb_id}")
         estado.marcar_usado(post["tipo"], post["chave"])
         estado.registrar("feed", post["descricao"], fb_id,
@@ -233,7 +252,7 @@ def main():
         media_id = Instagram().foto(url, post["legenda"], post["hashtags"])
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: Instagram falhou ({e}) -> tentando publicar no Facebook.")
-        fb_id = Facebook().foto(url, post["legenda"])
+        fb_id = Facebook().foto(url, _texto_facebook(post["legenda"]))
         print(f"OK -> Facebook (plano B) | {post['descricao']} | id: {fb_id}")
         estado.marcar_usado(post["tipo"], post["chave"])
         estado.registrar("feed", post["descricao"], fb_id,

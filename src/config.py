@@ -89,3 +89,18 @@ JANELA_ANTI_REPETICAO = int(os.environ.get("JANELA_ANTI_REPETICAO", "10"))
 
 # Modo seco: monta tudo e NAO publica. Usado nos testes e no dry-run.
 DRY_RUN = os.environ.get("DRY_RUN", "").strip().lower() in ("1", "true", "sim")
+
+# Modo SO FACEBOOK (24/08/2026).
+#
+# POR QUE EXISTE: a conta @moviki.app do Instagram esta sob restricao de
+# integridade da Meta ("conta comercial proibida de anunciar"), e conta
+# restrita nao consegue nem se conectar a uma Pagina. Sem conexao nao existe
+# IG_ACCOUNT_ID, e sem ele o robo nao publica no Instagram.
+#
+# A Pagina do Facebook `Moviki.app` esta LIMPA. Entao o robo passa a publicar
+# nela, sozinho, enquanto o Instagram nao volta. O projeto para de ficar
+# refem de uma decisao da Meta.
+#
+# Ligar: secret/env SO_FACEBOOK=1
+# Desligar (quando o Instagram voltar): apagar o secret. Nada mais muda.
+SO_FACEBOOK = os.environ.get("SO_FACEBOOK", "").strip().lower() in ("1", "true", "sim")

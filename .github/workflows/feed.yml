@@ -5,11 +5,17 @@ name: Feed
 # (funcao montar_institucional), aqui so define QUANDO roda.
 #
 # Horarios em UTC. Sao Paulo = UTC-3.
+#
+# MINUTO QUEBRADO DE PROPOSITO (:37, :23, :47). O agendador do Actions e
+# best-effort e enfileira: o minuto 0 de cada hora e o pico mundial, e foi
+# o que fez os posts sairem com 1h a 10h de atraso (o de quinta 27/08 22h
+# UTC so rodou sexta 06h). Minuto fora do pico entra numa fila muito menor.
+# Publicar 23 min antes do alvo compensa a espera aleatoria do passo abaixo.
 on:
   schedule:
-    - cron: '0 13 * * 1,3'   # 10h BRT — segunda e quarta
-    - cron: '0 22 * * 2,4'   # 19h BRT — terca e quinta
-    - cron: '0 15 * * 5'     # 12h BRT — sexta
+    - cron: '37 12 * * 1,3'   # ~10h BRT — segunda e quarta
+    - cron: '23 21 * * 2,4'   # ~19h BRT — terca e quinta
+    - cron: '47 14 * * 5'     # ~12h BRT — sexta
   workflow_dispatch:
     inputs:
       tipo:
@@ -44,10 +50,12 @@ jobs:
         run: pip install -r requirements.txt
 
       # Publicar sempre no mesmo minuto cheio e padrao de robo. A espera
-      # aleatoria deixa o horario organico.
-      - name: Espera aleatoria (0-25 min)
+      # aleatoria deixa o horario organico. Reduzida de 25 para 12 min: o
+      # atraso da fila do Actions ja da irregularidade de sobra, e 25 min
+      # somados ao atraso jogavam o post pra longe demais do alvo.
+      - name: Espera aleatoria (0-12 min)
         if: github.event_name == 'schedule'
-        run: sleep $(( RANDOM % 1500 ))
+        run: sleep $(( RANDOM % 720 ))
 
       - name: Publicar
         env:

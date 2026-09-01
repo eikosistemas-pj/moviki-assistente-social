@@ -114,25 +114,19 @@ def _fundo_liso(tamanho, cor):
     return base
 
 
-def escolher_fundo(tamanho, segmento=None, cor=None, semente=None):
-    """Pega um fundo do banco de criativos. Prefere o do segmento.
-
-    Nomes esperados em assets/fundos:
-      <segmento>-01.jpg, <segmento>-02.jpg ... e generico-01.jpg ...
-    """
+def _banco_de_fundos():
+    """Todos os arquivos de fundo aprovados, em ordem estavel."""
     dir_fundos = config.FUNDOS_DIR
-    candidatos = []
-    if dir_fundos.is_dir():
-        todos = [p for p in sorted(dir_fundos.iterdir())
-                 if p.suffix.lower() in (".jpg", ".jpeg", ".png")]
-        if segmento:
-            candidatos = [p for p in todos if p.stem.lower().startswith(str(segmento).lower())]
-        if not candidatos:
-            candidatos = [p for p in todos if p.stem.lower().startswith("generico")] or todos
+    if not dir_fundos.is_dir():
+        return []
+    return [p for p in sorted(dir_fundos.iterdir())
+            if p.suffix.lower() in (".jpg", ".jpeg", ".png")]
 
+
+def _abrir_fundo(candidatos, tamanho, cor, semente):
+    """Sorteia entre os candidatos e devolve a imagem ja recortada."""
     if not candidatos:
         return _fundo_liso(tamanho, cor)
-
     rnd = random.Random(semente) if semente is not None else random
     escolhido = rnd.choice(candidatos)
     try:
@@ -140,6 +134,40 @@ def escolher_fundo(tamanho, segmento=None, cor=None, semente=None):
     except Exception as e:  # noqa: BLE001
         print(f"aviso: fundo {escolhido.name} falhou ({e}) -> fundo liso")
         return _fundo_liso(tamanho, cor)
+
+
+def escolher_fundo(tamanho, segmento=None, cor=None, semente=None):
+    """Pega um fundo do banco de criativos. Prefere o do segmento.
+
+    Nomes esperados em assets/fundos:
+      <segmento>-01.jpg, <segmento>-02.jpg ... e generico-01.jpg ...
+    """
+    todos = _banco_de_fundos()
+    candidatos = []
+    if todos:
+        if segmento:
+            candidatos = [p for p in todos if p.stem.lower().startswith(str(segmento).lower())]
+        if not candidatos:
+            candidatos = [p for p in todos if p.stem.lower().startswith("generico")] or todos
+    return _abrir_fundo(candidatos, tamanho, cor, semente)
+
+
+def fundo_institucional(tamanho, cor=None, semente=None):
+    """Fundo do post institucional.
+
+    POR QUE E' SEPARADO DE escolher_fundo: o post institucional fala do
+    Moviki, nao de um segmento. Antes ele pedia o prefixo 'institucional' —
+    e como o banco tem UM unico institucional-01.jpg, os 7 primeiros posts
+    reais sairam todos com a mesma imagem. Enquanto a vitrine estiver
+    travada (< MIN_NEGOCIOS_VITRINE), 100% dos posts sao institucionais, ou
+    seja: o banco inteiro de 11 fundos ficava parado.
+
+    Agora ele pode usar QUALQUER cena do banco — todas sao rua brasileira,
+    todas com area escura pro texto, nenhuma contradiz um post que fala do
+    produto. Com semente = id da pauta, cada pauta fica com a sua cena fixa
+    (identidade) e pautas diferentes trazem cenas diferentes (variedade).
+    """
+    return _abrir_fundo(_banco_de_fundos(), tamanho, cor, semente)
 
 
 def _escurecer_base(img, forca=0.55):
@@ -275,7 +303,7 @@ def card_vitrine(negocio, logo_bytes=None, cidade="", chamada="", tamanho=FEED, 
 def card_institucional(titulo, subtitulo="", etiqueta="", tamanho=FEED, semente=None):
     """Post sobre o proprio Moviki (educativo/conversao)."""
     cor = config.COR_PRIMARIA
-    base = escolher_fundo(tamanho, "institucional", cor, semente)
+    base = fundo_institucional(tamanho, cor, semente)
     base = _escurecer_base(base, 0.66)
     l, a = base.size
     d = ImageDraw.Draw(base)

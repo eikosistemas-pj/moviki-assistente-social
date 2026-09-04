@@ -6,8 +6,9 @@ Le variaveis de ambiente (GitHub Secrets em producao) com padrao de
 desenvolvimento local. NENHUM segredo mora neste arquivo.
 
 Regra de ouro herdada do projeto: este repo NAO escreve em colecao
-financeira. Ele so LE 'negocios' (leitura ja publica nas regras) e escreve
-exclusivamente em 'social_estado/{doc}', que e dele.
+financeira e NAO guarda credencial de banco. Desde 04/09/2026 ele nem fala
+mais com o Firestore: le a vitrine pronta em moviki.com.br/api/vitrine e
+escreve so em estado/ (commitado pelo proprio workflow).
 """
 import os
 from pathlib import Path
@@ -34,17 +35,31 @@ COR_PRIMARIA = "#00f2fe"   # mesma cor padrao gravada em negocios.cor
 COR_FUNDO = "#0b1220"
 COR_TEXTO = "#ffffff"
 
-# ----------------------------------------------------------------- Firebase
-# Leitura de 'negocios' e publica nas regras, entao o robo usa a REST API do
-# Firestore so com a API key do proprio app web. NAO usamos service account
-# aqui de proposito: chave de Admin SDK da acesso de ESCRITA TOTAL ao banco,
-# inclusive as colecoes de dinheiro. Este repo nao precisa disso.
+# ----------------------------------------------------------------- base
+# ATE 04/09/2026 este robo lia /negocios direto na REST API do Firestore com a
+# API key do app web. Isso deixou de ser possivel: para o Firebase, chamada com
+# a chave publica e chamada de CLIENTE, e com o App Check enforcado ela passa a
+# ser RECUSADA. O robo pararia de postar e o erro so apareceria dentro de um
+# workflow que ninguem le todo dia.
+#
+# A saida NAO foi por chave de service account aqui: este repo e PUBLICO, e
+# guardar credencial de banco num GitHub Secret so para ler dado que ja e
+# publico e trocar um problema por outro maior.
+#
+# Agora o robo consome /api/vitrine no proprio site. Quem fala com o Firestore
+# e o servidor da Vercel, com conta de servico SOMENTE LEITURA, e a lista ja
+# vem filtrada pelo opt-in (autorizaDivulgacao) e com um conjunto FECHADO de
+# campos. Menos credencial neste repo, menos leitura no Firestore, e o dado de
+# quem NAO autorizou divulgacao nunca mais sai do banco.
+VITRINE_URL = os.environ.get("VITRINE_URL", f"{SITE}/api/vitrine")
+
+# Opcional: so precisa existir se um dia o endpoint for fechado por segredo
+# (env VITRINE_SECRET no projeto Vercel do site). Vazio = endpoint aberto.
+VITRINE_SECRET = os.environ.get("VITRINE_SECRET", "")
+
+# Mantido: o run_verificar confere este secret como sinal de ambiente montado,
+# e ele identifica o projeto nos logs. Nao e mais usado para ler o banco.
 FIREBASE_PROJECT_ID = os.environ.get("FIREBASE_PROJECT_ID", "")
-FIREBASE_API_KEY = os.environ.get("FIREBASE_API_KEY", "")
-FIRESTORE_BASE = (
-    f"https://firestore.googleapis.com/v1/projects/{FIREBASE_PROJECT_ID}"
-    f"/databases/(default)/documents"
-)
 
 # Hospedagem publica da arte final. O Instagram exige uma URL publica no
 # momento em que o container e criado; depois ele copia a imagem pro CDN

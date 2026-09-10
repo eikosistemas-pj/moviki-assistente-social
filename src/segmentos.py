@@ -2,7 +2,7 @@
 """
 Espelho da arvore de segmentos do quiz (moviki-app/quiz/quiz-segmentos.js).
 
-10 macros / 30 subtipos. Serve pra dois usos:
+10 macros / 31 subtipos. Serve pra dois usos:
   - rotulo legivel no post ("Hamburgueria / Food Truck");
   - escolher o fundo do banco de criativos por macro.
 
@@ -51,6 +51,7 @@ SUBTIPOS = {
     "estetica": ("servicos", "Estetica / Manicure Movel"),
     "lavagemcarro": ("servicos", "Lavagem de Carro Movel"),
     "chaveiroconserto": ("servicos", "Chaveiro / Conserto Rapido"),
+    "otica": ("servicos", "Otica / Oculos"),
     "perfumariacosmeticos": ("belezaperfumaria", "Perfumaria / Cosmeticos"),
     "livrariapapelaria": ("papelarialivraria", "Livraria / Papelaria de Rua"),
     "acessorioscelular": ("tecnologia", "Acessorios de Celular"),

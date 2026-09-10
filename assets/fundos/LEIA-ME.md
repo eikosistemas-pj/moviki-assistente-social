@@ -26,7 +26,11 @@ centro e embaixo — é ali que o nome do negócio e o link são escritos.
 
 ## Segmentos ainda sem fundo próprio
 
-Nenhum — os 9 macros estão cobertos. Para variar mais, gere `-02`, `-03`
+`suplementos-01.jpg` (macro novo de 10/09/2026, Suplementos & Nutrição) —
+enquanto não existir, o post desse segmento cai em `generico-01.jpg`. Cena
+sugerida: banca/quiosque de suplementos em corredor de academia ou feira,
+potes alinhados, luz de fim de tarde, **sem rótulo de marca legível**.
+Os outros 9 macros estão cobertos. Para variar mais, gere `-02`, `-03`
 do mesmo segmento: o robô sorteia entre todos que começam com o prefixo.
 
 ## Prompt que funciona (validado)

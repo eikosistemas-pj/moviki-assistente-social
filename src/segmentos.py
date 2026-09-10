@@ -2,7 +2,7 @@
 """
 Espelho da arvore de segmentos do quiz (moviki-app/quiz/quiz-segmentos.js).
 
-9 macros / 27 subtipos. Serve pra dois usos:
+10 macros / 30 subtipos. Serve pra dois usos:
   - rotulo legivel no post ("Hamburgueria / Food Truck");
   - escolher o fundo do banco de criativos por macro.
 
@@ -14,6 +14,7 @@ MACROS = {
     "alimentacao": "Alimentacao",
     "hortifruti": "Hortifruti / Feira",
     "bebidas": "Bebidas",
+    "suplementos": "Suplementos & Nutricao",
     "moda": "Moda / Brecho",
     "artesanato": "Artesanato",
     "servicos": "Servicos",
@@ -26,6 +27,7 @@ MACROS = {
 SUBTIPOS = {
     "foodtruck": ("alimentacao", "Hamburgueria / Food Truck"),
     "pizzaria": ("alimentacao", "Pizzaria"),
+    "sushi": ("alimentacao", "Sushi / Comida Japonesa"),
     "lanches": ("alimentacao", "Pastelaria / Lanches de Rua"),
     "pratofeito": ("alimentacao", "Prato Feito / Marmitex"),
     "pipoca": ("alimentacao", "Pipoca / Doces e Guloseimas"),
@@ -36,6 +38,8 @@ SUBTIPOS = {
     "cafeteria": ("bebidas", "Cafe / Cafeteria Movel"),
     "aguacoco": ("bebidas", "Agua de Coco / Outras Bebidas"),
     "barmovel": ("bebidas", "Bar Movel / Chopp / Drinks"),
+    "suplementosesportivos": ("suplementos", "Suplementos / Nutricao Esportiva"),
+    "naturaisvitaminas": ("suplementos", "Produtos Naturais / Vitaminas"),
     "roupas": ("moda", "Roupas"),
     "calcados": ("moda", "Calcados"),
     "acessorios": ("moda", "Acessorios / Bijuterias"),
@@ -58,6 +62,10 @@ CHAMADAS = {
     "alimentacao": "TA ABERTO AGORA",
     "hortifruti": "FEIRA DE HOJE",
     "bebidas": "GELADO E PERTO",
+    # Suplementos fica no texto neutro de proposito: chamada tipo "GANHE MASSA" /
+    # "SECA BARRIGA" seria alegacao de saude/resultado, barrada pela ANVISA e pelas
+    # politicas de Meta e Google. Nao trocar.
+    "suplementos": "ACHOU NO MOVIKI",
     "moda": "ACHOU NO MOVIKI",
     "artesanato": "FEITO A MAO",
     "servicos": "ATENDE HOJE",

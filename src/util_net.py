@@ -5,9 +5,19 @@ Rede com repeticao. Toda chamada externa do robo passa por aqui.
 Existe porque o GitHub Actions roda sem ninguem olhando: uma falha de rede
 transitoria nao pode derrubar a publicacao do dia inteiro.
 """
+import re
 import time
 
 import requests
+
+# 23/09/2026 (seguranca): o repositorio e PUBLICO e o log do Actions tambem.
+# Erro de rede do requests traz a URL inteira — com access_token=... junto.
+# Tudo que vira mensagem de erro passa por aqui antes.
+_SEGREDOS = re.compile(r"(access_token=|input_token=|client_secret=)[^&\s'\"]+|((?:Bearer|OAuth)\s+)[A-Za-z0-9._\-|]+", re.I)
+
+
+def sem_segredo(texto):
+    return _SEGREDOS.sub(lambda m: (m.group(1) or m.group(2) or "") + "***", str(texto))
 
 TENTATIVAS = 3
 ESPERA_BASE = 2  # segundos; dobra a cada tentativa
@@ -26,7 +36,7 @@ def _tentar(func, *a, **kw):
             erro = e
             if n < TENTATIVAS - 1:
                 time.sleep(ESPERA_BASE * (2 ** n))
-    raise RuntimeError(f"rede falhou apos {TENTATIVAS} tentativas: {erro}")
+    raise RuntimeError(f"rede falhou apos {TENTATIVAS} tentativas: {sem_segredo(erro)}")
 
 
 def get(url, **kw):

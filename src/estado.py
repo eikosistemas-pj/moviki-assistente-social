@@ -82,5 +82,8 @@ def registrar(formato, descricao, media_id, extra=None):
         linha.update(extra)
     hist = ler_lista("historico.json")
     hist.insert(0, linha)
-    gravar_lista("historico.json", hist[:500])
+    # 2000 (22/09/2026, era 500): com story 2x/dia o historico cobria so ~5
+    # meses, e o painel do dono le este arquivo para contar os posts de cada
+    # criador em ate 12 meses.
+    gravar_lista("historico.json", hist[:2000])
     return linha

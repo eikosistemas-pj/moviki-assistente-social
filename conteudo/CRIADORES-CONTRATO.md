@@ -1,9 +1,17 @@
 # Contrato: peças dos criadores → redes oficiais do Moviki
 
-Criado em 22/09/2026, **antes** de o painel do criador existir. É a "brecha"
-que o robô já deixa aberta: quando o painel e o endpoint abaixo subirem,
-basta criar o secret `CRIADORES_URL` neste repositório e as peças
-autorizadas entram na rotação de **feed, story e reel**, sem mexer no robô.
+Criado em 22/09/2026. É a "brecha" que o robô deixa aberta para as peças dos
+influenciadores entrarem na rotação de **feed, story e reel**.
+
+**Estado em 22/09/2026 (fim do dia):**
+
+| Ponta | Estado |
+|---|---|
+| Robô (este repo) | pronto — lê `CRIADORES_URL` |
+| Endpoint `www.moviki.com.br/api/criadores` (repo `moviki`) | **pronto** (GET para o robô, POST de tráfego para o painel do dono) |
+| Regras `criador_pecas` (v27) e Storage `criadores/{uid}/` | **prontas**, publicar no console |
+| Painel do dono — menu **Criadores** (aprovar, suspender, desempenho) | **pronto** (`eikoadm01.html` 2026-09-22-criadores) |
+| Painel do criador — enviar peça, **Autorizar** / **Revogar** | **a fazer** — tem que seguir a seção 3 à risca |
 
 Enquanto o secret não existir, nada muda: o robô publica só o Material de
 apoio.
@@ -38,9 +46,9 @@ recusa mesmo que o endpoint a devolva.
 
 ---
 
-## 2. O endpoint (a construir no repo `moviki`, igual ao `/api/vitrine`)
+## 2. O endpoint (repo `moviki`, `api/criadores.js` — pronto em 22/09/2026)
 
-- Endereço sugerido: `https://www.moviki.com.br/api/criadores` (usar o
+- Endereço: `https://www.moviki.com.br/api/criadores` (usar o
   **www** — o apex redireciona e quebra chamada de servidor).
 - Lê o Firestore com a conta de serviço **somente leitura** que o site já
   tem (`FIREBASE_SA_LEITURA`). Este repositório é público e **nunca**
@@ -96,21 +104,37 @@ recusa mesmo que o endpoint a devolva.
 
 ---
 
-## 3. Modelo sugerido no Firestore (decidir no chat do painel)
+## 3. Modelo no Firestore — DEFINIDO (regras v27)
 
 Coleção **na raiz**, por causa da regra "o Firestore não tem deny":
 `criador_pecas/{id}`.
 
 | Campo | Quem escreve |
 |---|---|
-| `uid`, `formato`, `midia`, `storagePath`, `url`, `w`, `h`, `duracao`, `titulo`, `legenda`, `categoria`, `criadaEm` | o criador, só na criação, `hasOnly` fechado |
+| `uid`, `formato`, `midia`, `storagePath`, `url`, `capa` (opcional), `w`, `h`, `duracao`, `titulo` (≤ 120), `legenda` (≤ 2.200), `categoria`, `criadaEm` | o criador, só na criação, `hasOnly` fechado |
 | `autorizaRedes` (bool), `autorizaRedesEm`, `termoVersao`, `revogadaEm` | o criador, só nesses campos |
-| `status` (`aguardando` · `aprovada` · `recusada`), `aprovadaEm`, `motivoRecusa` | **só o dono** (Admin SDK ou regra de admin) |
+| `status` (`aguardando` · `aprovada` · `recusada` · `suspensa`), `avaliadaEm`, `avaliadaPor`, `motivoRecusa` | **só o dono**, no menu Criadores do painel |
 
-- Criador nunca grava `status`. Criador lê só as próprias peças.
-- Arquivo no Storage em `criadores/{uid}/…`, leitura pública só depois de
-  aprovada (ou URL com token, gerada na aprovação).
+Regras que o painel do criador precisa respeitar (senão a gravação é recusada calada):
+
+- **Quem é criador:** `parceiros/{uid}.status == 'aprovado'` **e**
+  `parceiros/{uid}.criador == true`. A marca é dada pelo dono (menu
+  Criadores > Quem é criador).
+- **Criar:** `status: 'aguardando'`, `criadaEm: serverTimestamp()`,
+  `uid` = o próprio, `url` começando com
+  `https://firebasestorage.googleapis.com/`, `storagePath` começando com
+  `criadores/{uid}/`. Campos fora da lista da tabela = recusado.
+- **Arquivo:** subir em `criadores/{uid}/<nome-com-carimbo>` (JPG, PNG ou
+  MP4, até 100 MB) e gravar em `url` o `getDownloadURL()`. Arquivo não se
+  sobrescreve.
+- **Autorizar:** `autorizaRedes: true`, `autorizaRedesEm: serverTimestamp()`,
+  `termoVersao: '3.1'`, `revogadaEm: null`.
+- **Revogar:** `autorizaRedes: false`, `revogadaEm: serverTimestamp()`.
+- Conteúdo não se edita depois de criado: para trocar, apagar e enviar outra.
+- Criador lê só as próprias peças e pode apagá-las.
 - `expira_em` = `autorizaRedesEm` + 12 meses, calculado no endpoint.
+- O crédito sai do **cadastro** (`parceiros/{uid}.nome` e `.arroba`), não do
+  que o criador escreve na peça.
 
 ---
 
@@ -145,8 +169,11 @@ Coleção **na raiz**, por causa da regra "o Firestore não tem deny":
 
 ## 6. Para ligar
 
-1. Endpoint no ar respondendo o formato da seção 2.
-2. Secret `CRIADORES_URL` neste repo (Settings → Secrets → Actions).
+1. Endpoint no ar (repo `moviki`, `api/criadores.js`) e regras v27
+   publicadas.
+2. Secret `CRIADORES_URL` = `https://www.moviki.com.br/api/criadores` neste
+   repo (Settings → Secrets → Actions). Pode criar já: sem peça liberada, o
+   endpoint devolve lista vazia e nada muda.
 3. Opcional: `CRIADORES_SECRET` (e a mesma env na Vercel do site).
 4. Rodar Actions → Story → Run workflow com `origem: criador` e `dry_run`
    marcado. O log mostra quantas peças entraram e o motivo de cada recusa.

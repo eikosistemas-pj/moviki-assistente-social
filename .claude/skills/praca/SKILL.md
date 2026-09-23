@@ -9,9 +9,10 @@ Eu cuido do `moviki-assistente-social`. Ele não tem tela e não atende ninguém
 
 ## De que eu cuido
 
-- **Rotinas** — `.github/workflows/feed.yml`, `reel.yml`, `manutencao.yml`.
+- **Rotinas** — `.github/workflows/feed.yml`, `story.yml`, `reel.yml`, `manutencao.yml`.
+- **Fontes de peça** — `src/pecas.py` (escolha e mistura), `src/material.py` (Material de apoio), `src/criadores.py` (peças de influenciador, contrato em `conteudo/CRIADORES-CONTRATO.md`).
 - **Conteúdo** — `src/conteudo.py`, `src/ia.py`, a pasta `conteudo/`.
-- **Arte** — `src/arte.py` (composição sobre fundo já aprovado).
+- **Arte** — `src/material.py` (peças prontas do Material de apoio, lidas ao vivo de `app.moviki.com.br/material/catalogo.json`) e `src/arte.py` (moldura padrão Moviki para vitrine de lojista e card de pauta).
 - **Compliance** — `src/compliance.py`.
 - **Publicação** — `src/social/`, Instagram e Facebook.
 - **Estado** — `src/estado.py`, `publicado/`, para não repetir post.
@@ -29,18 +30,22 @@ Eu cuido do `moviki-assistente-social`. Ele não tem tela e não atende ninguém
 - **Entrar em rede social nova.**
 - **Campanha, promoção ou preço em post.**
 - **Publicar qualquer coisa sobre um lojista específico** — mesmo que ele autorize divulgação.
+- **Ligar a fonte de criadores** (secret `CRIADORES_URL`) e mudar a fatia deles (`CRIADORES_PARTICIPACAO`).
 
 ## Regras que eu não quebro
 
 1. **Todo texto passa por `compliance.garantir()` antes de publicar.** Sem exceção, sem "esse é curtinho".
 2. **Texto reserva é obrigatório e precisa estar limpo.** Falha de IA nunca fura o calendário: sai o texto reserva.
 3. **Instagram é prioridade; Facebook é best-effort** e nunca derruba o ciclo.
-4. **Imagem não é gerada por IA na hora de publicar.** Compõe sobre fundo já aprovado — é o que impede uma peça estranha de ir ao ar sem ninguém ver.
+4. **Imagem não é gerada por IA na hora de publicar.** O feed usa peça já aprovada do Material de apoio, ou a moldura padrão Moviki desenhada em código — é o que impede uma peça estranha de ir ao ar sem ninguém ver. A cor do lojista não entra na arte; o banco `assets/fundos` foi aposentado em 22/09/2026.
 5. **Vídeo não entra no git.** Asset de release e ponteiro em `conteudo/reels.md`.
 6. **Não respondo DM nem comentário.** Isso é conversa, e conversa é do Atendimento.
 7. **Não escrevo no Firestore.** Eu leio `negocios` e publico. Só.
 8. **Nunca recebo chave de service account.** Essa é a fronteira deste repositório e ela não se move.
 9. **Só entra na peça quem tem `autorizaDivulgacao === true`**, e nunca com endereço exato. Município/UF.
+10. **Legenda de peça do material é convertida para a voz da marca.** Sai `#publi`, `{link}` vira link da bio (Instagram) ou `moviki.com.br` (Facebook). Sobrou marca de parceiro depois da troca → a peça é descartada, nunca vai pela metade. Arte com texto de parceiro impresso fica em `MATERIAL_EXCLUIR`.
+11. **Vitrine de lojista tem teto semanal** (`VITRINE_POR_SEMANA`) e nasce **desligada (0)** enquanto a base real for zero — conta de teste na página oficial é prova social falsa. **Nunca** usa conta demo, conta de teste listada em `VITRINE_EXCLUIR` ou slug derivado de e-mail. Ligar é decisão do Paulo.
+12. **Peça de criador só com as duas chaves:** autorização dele (válida, não revogada, não vencida) **e** aprovação do Moviki. O robô nunca aprova. Legenda de criador que viola a trava vira reserva inteira — não reescrevo frase de terceiro. Crédito "Conteúdo de @arroba" sempre.
 
 ## O que eu confiro antes de entregar
 

@@ -70,7 +70,7 @@ tipo: conversao
 etiqueta: 30 dias
 titulo: Testa 30 dias. Se não servir, você sai.
 subtitulo: Sem multa, sem letra miúda.
-angulo: Fale da garantia de 30 dias com honestidade, sem exagero. Não prometa resultado — prometa que dá pra testar sem risco.
+angulo: Fale do teste grátis de 30 dias com honestidade, sem exagero: dá pra testar e, se não servir, sair sem multa. Não prometa resultado.
 
 ## fundador
 tipo: conversao
@@ -83,8 +83,8 @@ angulo: Enquadramento de fundador. Convide o dono de negócio itinerante a entra
 tipo: parceiro
 etiqueta: parceiros
 titulo: Você conhece cinco carrinhos bons agora mesmo.
-subtitulo: Indicar dá comissão recorrente enquanto eles usarem.
-angulo: Fale do Programa de Parceiros sem prometer valor e sem citar número nenhum. Diga que existe comissão por indicação e que ela é recorrente enquanto o indicado for cliente. Convide pra conhecer o regulamento.
+subtitulo: Indicar dá comissão enquanto eles pagarem a mensalidade.
+angulo: Fale do Programa de Parceiros sem prometer valor e sem citar número nenhum. Diga que existe comissão por indicação e que ela se repete a cada mensalidade que o indicado pagar. Convide pra conhecer o regulamento.
 
 ## parceiro-quem-serve
 tipo: parceiro

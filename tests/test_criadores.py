@@ -73,6 +73,12 @@ def test_video_longo_nao_vira_reel():
     assert criadores.valida(_item(duracao=120), AGORA)
 
 
+def test_story_em_video_ate_60_s():
+    it = _item(formato="story", duracao=75)
+    assert criadores.valida(it, AGORA)
+    assert criadores.valida(_item(formato="story", duracao=45), AGORA) == ""
+
+
 def test_feed_de_criador_so_imagem():
     assert criadores.valida(_item(formato="feed"), AGORA)
 

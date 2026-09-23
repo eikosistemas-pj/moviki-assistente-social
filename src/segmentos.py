@@ -4,23 +4,28 @@ Espelho da arvore de segmentos do quiz (moviki-app/quiz/quiz-segmentos.js).
 
 10 macros / 31 subtipos. Serve pra dois usos:
   - rotulo legivel no post ("Hamburgueria / Food Truck");
-  - escolher o fundo do banco de criativos por macro.
+  - etiqueta de topo da arte de vitrine, por macro.
 
 MANTER SINCRONIZADO com o quiz. Se entrar segmento novo la, entra aqui —
-senao o post cai no fundo generico (degrada, nao quebra).
+senao o post sai sem rotulo (degrada, nao quebra).
+
+22/09/2026: rotulos e chamadas passaram a ter ACENTO. Eles sao impressos na
+arte e na legenda publica ("Alimentacao", "Servicos" iam ao ar sem acento).
+E a chamada "TA ABERTO AGORA" saiu: o robo nao sabe se o negocio esta aberto
+na hora do post — afirmar isso e informacao falsa sobre terceiro.
 """
 
 MACROS = {
-    "alimentacao": "Alimentacao",
-    "hortifruti": "Hortifruti / Feira",
+    "alimentacao": "Alimentação",
+    "hortifruti": "Hortifrúti / Feira",
     "bebidas": "Bebidas",
-    "suplementos": "Suplementos & Nutricao",
-    "moda": "Moda / Brecho",
+    "suplementos": "Suplementos e Nutrição",
+    "moda": "Moda / Brechó",
     "artesanato": "Artesanato",
-    "servicos": "Servicos",
-    "belezaperfumaria": "Beleza & Perfumaria",
-    "papelarialivraria": "Papelaria & Livraria",
-    "tecnologia": "Tecnologia / Acessorios",
+    "servicos": "Serviços",
+    "belezaperfumaria": "Beleza e Perfumaria",
+    "papelarialivraria": "Papelaria e Livraria",
+    "tecnologia": "Tecnologia / Acessórios",
 }
 
 # subtipo -> (macro, rotulo)
@@ -33,43 +38,46 @@ SUBTIPOS = {
     "pipoca": ("alimentacao", "Pipoca / Doces e Guloseimas"),
     "feira": ("hortifruti", "Verduras, Legumes e Frutas"),
     "floricultura": ("hortifruti", "Floricultura / Plantas e Mudas"),
-    "sorvete": ("bebidas", "Sorvete / Picole / Acai"),
+    "sorvete": ("bebidas", "Sorvete / Picolé / Açaí"),
     "suco": ("bebidas", "Suco / Vitamina Natural"),
-    "cafeteria": ("bebidas", "Cafe / Cafeteria Movel"),
-    "aguacoco": ("bebidas", "Agua de Coco / Outras Bebidas"),
-    "barmovel": ("bebidas", "Bar Movel / Chopp / Drinks"),
-    "suplementosesportivos": ("suplementos", "Suplementos / Nutricao Esportiva"),
+    "cafeteria": ("bebidas", "Café / Cafeteria Móvel"),
+    "aguacoco": ("bebidas", "Água de Coco / Outras Bebidas"),
+    "barmovel": ("bebidas", "Bar Móvel / Chopp / Drinks"),
+    "suplementosesportivos": ("suplementos", "Suplementos / Nutrição Esportiva"),
     "naturaisvitaminas": ("suplementos", "Produtos Naturais / Vitaminas"),
     "roupas": ("moda", "Roupas"),
-    "calcados": ("moda", "Calcados"),
-    "acessorios": ("moda", "Acessorios / Bijuterias"),
-    "decoracao": ("artesanato", "Decoracao / Utilidades"),
+    "calcados": ("moda", "Calçados"),
+    "acessorios": ("moda", "Acessórios / Bijuterias"),
+    "decoracao": ("artesanato", "Decoração / Utilidades"),
     "bijuteriaartesanal": ("artesanato", "Bijuteria Artesanal"),
     "manufaturados": ("artesanato", "Outros Manufaturados"),
-    "petshop": ("servicos", "Petshop Movel / Banho e Tosa"),
-    "barbeariasalao": ("servicos", "Barbearia / Salao Movel"),
-    "estetica": ("servicos", "Estetica / Manicure Movel"),
-    "lavagemcarro": ("servicos", "Lavagem de Carro Movel"),
-    "chaveiroconserto": ("servicos", "Chaveiro / Conserto Rapido"),
-    "otica": ("servicos", "Otica / Oculos"),
-    "perfumariacosmeticos": ("belezaperfumaria", "Perfumaria / Cosmeticos"),
+    "petshop": ("servicos", "Petshop Móvel / Banho e Tosa"),
+    "barbeariasalao": ("servicos", "Barbearia / Salão Móvel"),
+    "estetica": ("servicos", "Estética / Manicure Móvel"),
+    "lavagemcarro": ("servicos", "Lavagem de Carro Móvel"),
+    "chaveiroconserto": ("servicos", "Chaveiro / Conserto Rápido"),
+    "otica": ("servicos", "Ótica / Óculos"),
+    "perfumariacosmeticos": ("belezaperfumaria", "Perfumaria / Cosméticos"),
     "livrariapapelaria": ("papelarialivraria", "Livraria / Papelaria de Rua"),
-    "acessorioscelular": ("tecnologia", "Acessorios de Celular"),
-    "relogiosgadgets": ("tecnologia", "Relogios e Gadgets"),
+    "acessorioscelular": ("tecnologia", "Acessórios de Celular"),
+    "relogiosgadgets": ("tecnologia", "Relógios e Gadgets"),
 }
 
-# Chamada de topo do card, por macro. Deixa o post menos repetitivo.
+PADRAO = "ESTÁ NO MOVIKI"
+
+# Etiqueta de topo do card, por macro. So frase que o robo consegue
+# sustentar sem saber nada alem do cadastro.
 CHAMADAS = {
-    "alimentacao": "TA ABERTO AGORA",
-    "hortifruti": "FEIRA DE HOJE",
-    "bebidas": "GELADO E PERTO",
+    "alimentacao": "SABOR NO MAPA",
+    "hortifruti": "DA FEIRA PRO MAPA",
+    "bebidas": "PRA REFRESCAR",
     # Suplementos fica no texto neutro de proposito: chamada tipo "GANHE MASSA" /
     # "SECA BARRIGA" seria alegacao de saude/resultado, barrada pela ANVISA e pelas
     # politicas de Meta e Google. Nao trocar.
     "suplementos": "ACHOU NO MOVIKI",
     "moda": "ACHOU NO MOVIKI",
-    "artesanato": "FEITO A MAO",
-    "servicos": "ATENDE HOJE",
+    "artesanato": "FEITO À MÃO",
+    "servicos": "SERVIÇO NO MAPA",
     "belezaperfumaria": "ACHOU NO MOVIKI",
     "papelarialivraria": "ACHOU NO MOVIKI",
     "tecnologia": "ACHOU NO MOVIKI",
@@ -95,4 +103,4 @@ def rotulo(segmento):
 
 
 def chamada(segmento):
-    return CHAMADAS.get(macro_de(segmento), "ESTA NO MOVIKI")
+    return CHAMADAS.get(macro_de(segmento), PADRAO)

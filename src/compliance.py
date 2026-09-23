@@ -41,7 +41,9 @@ GANHO_FACIL = [
     r"\bganho\s+garantido\b|\bretorno\s+garantido\b",
     r"\bdinheiro\s+(f[áa]cil|r[áa]pido|no\s+autom[áa]tico)\b",
     r"\bfique\s+rico\b|\benriqueca\b|\bindepend[êe]ncia\s+financeira\b",
-    r"\bsem\s+(fazer\s+)?(nada|esfor[çc]o)\b",
+    # "(?!\s+al[ée]m)": "sem nada alem do celular" e descricao de ferramenta,
+    # nao promessa de ganho sem esforco (falso positivo achado em 22/09/2026).
+    r"\bsem\s+(fazer\s+)?(nada|esfor[çc]o)\b(?!\s+al[ée]m)",
     r"\bganhe\s+enquanto\s+dorme\b",
     r"\bmultipliqu?e\s+(o\s+)?seu\s+dinheiro\b",
     r"\binvestimento\s+garantido\b|\brentabilidade\b",
@@ -59,7 +61,7 @@ RESULTADO = [
 FORNECEDOR = [
     r"\basaas\b", r"\bfirebase\b", r"\bvercel\b", r"\bgoogle\s+cloud\b",
     r"\banthropic\b", r"\bclaude\b", r"\bopenai\b", r"\bchatgpt\b",
-    r"\bhostgator\b", r"\bresend\b", r"\btitan\b", r"\bcloudflare\b",
+    r"\bhostgator\b", r"\bresend\b", r"\btitan\b(?!\s*\d)", r"\bcloudflare\b",
     r"\bsupabase\b", r"\baws\b", r"\bstripe\b", r"\bmercado\s*pago\b",
 ]
 PROVA_FALSA = [

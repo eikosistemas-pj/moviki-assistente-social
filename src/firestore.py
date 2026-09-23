@@ -27,8 +27,30 @@ que e como se defende opt-in.
 
 Este modulo SO LE. Nao existe funcao de escrita aqui de proposito.
 """
+import re
+
 from . import config
 from . import util_net as net
+
+# Slug gerado a partir de e-mail ("fabiofffggggmailcom"). Aconteceu no ar em
+# 11 e 16/09/2026: o post imprimiu o e-mail do lojista, sem @ e sem ponto,
+# em letra grande. E dado pessoal exposto (LGPD) e cara de conta de teste.
+# Lojista nessa situacao fica fora da vitrine ate trocar o apelido do link.
+_SLUG_EMAIL = re.compile(
+    r"(gmail|hotmail|outlook|yahoo|icloud|live|bol|uol|terra|msn|proton)com(br)?$"
+    r"|(gmail|hotmail|outlook|yahoo|icloud)",
+    re.I,
+)
+
+
+def slug_publicavel(slug):
+    """Slug que pode ir impresso num post publico."""
+    s = (slug or "").strip().lower()
+    if not s or len(s) > 40:
+        return False
+    if _SLUG_EMAIL.search(s.replace("-", "").replace(".", "")):
+        return False
+    return s not in config.VITRINE_EXCLUIR
 
 # Total de negocios na base (todos, nao so os elegiveis) da ultima chamada de
 # `listar_negocios`. Fica aqui porque o endpoint devolve o numero de graca, por
@@ -103,6 +125,8 @@ def elegiveis(negocios):
       3. tem slug (senao o post nao tem link pra onde mandar a pessoa)
       4. tem alguma imagem propria (markerLogo ou fotos) OU segmento
          definido — senao nao da pra montar uma arte que preste.
+      5. slug publicavel (22/09/2026): nao derivado de e-mail, nao e conta
+         demo/teste listada em VITRINE_EXCLUIR.
     """
     saida = []
     for n in negocios or []:
@@ -114,6 +138,8 @@ def elegiveis(negocios):
             continue
         tem_visual = bool(n.get("markerLogo")) or bool(n.get("fotos"))
         if not (tem_visual or n.get("segmento")):
+            continue
+        if not slug_publicavel(n.get("slug")):
             continue
         saida.append(n)
     return saida

@@ -15,9 +15,13 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 
+# Marca de versao do robo. Sai na primeira linha do log de cada execucao do
+# feed: e assim que se confere, no Actions, qual versao rodou de verdade.
+VERSAO = "2026-09-22-formatos"
+
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))
-FUNDOS_DIR = ASSETS_DIR / "fundos"
+FUNDOS_DIR = ASSETS_DIR / "fundos"   # APOSENTADO em 22/09/2026 — arte.py nao le mais
 REELS_DIR = ASSETS_DIR / "reels"
 CONTEUDO_DIR = Path(os.environ.get("CONTEUDO_DIR", RAIZ / "conteudo"))
 
@@ -83,6 +87,58 @@ DIAS_RETENCAO_IMAGEM = int(os.environ.get("DIAS_RETENCAO_IMAGEM", "60"))
 # workflow. Mesmo motivo: nao exige credencial de escrita em lugar nenhum.
 ESTADO_DIR = RAIZ / "estado"
 
+# ----------------------------------------------------------------- material de apoio
+# 22/09/2026: o feed institucional passou a publicar as PECAS PRONTAS do
+# Material de apoio do parceiro (moviki-app/material). Fonte unica: o robo
+# le o catalogo AO VIVO no painel — arte nova que entra na aba do parceiro
+# entra na rotacao do robo sozinha, sem mexer neste repo.
+MATERIAL_BASE = os.environ.get("MATERIAL_BASE", "https://app.moviki.com.br").rstrip("/")
+MATERIAL_CATALOGO = os.environ.get("MATERIAL_CATALOGO", f"{MATERIAL_BASE}/material/catalogo.json")
+
+# Pecas que NAO podem ir para a pagina oficial. Todas estas trazem impresso
+# na arte (ou falado no video) "CADASTRE-SE PELO LINK DESTE PARCEIRO",
+# "ACESSE PELO LINK DESTE PARCEIRO" ou "fale comigo pelo link": na pagina do
+# proprio Moviki a frase manda o leitor para um parceiro que nao existe.
+# Peca nova com texto de parceiro entra AQUI (ou no secret MATERIAL_EXCLUIR,
+# ids separados por virgula, sem mexer em codigo).
+MATERIAL_EXCLUIR_FIXO = {
+    # feed
+    "feed-na-hora-foodtruck", "feed-quem-se-move", "feed-tudo-em-um-lugar",
+    "quadrado-zero-comissao", "feed-na-hora-cidade", "feed-quem-se-move-2",
+    "quadrado-na-hora",
+    # story
+    "story-na-hora", "story-tudo-em-um-lugar", "story-quem-se-move",
+    # video
+    "video-cada-negocio", "video-live-parceiro", "video-live-parceiro-4x5",
+    "video-parceiro-chama-parceiro",
+}
+MATERIAL_EXCLUIR = MATERIAL_EXCLUIR_FIXO | {
+    x.strip() for x in os.environ.get("MATERIAL_EXCLUIR", "").split(",") if x.strip()
+}
+
+# ----------------------------------------------------------------- criadores
+# "Brecha" para as pecas dos INFLUENCIADORES (22/09/2026). O painel do
+# criador (parceiro.html em modo criador) vai ter o botao "Autorizar nas
+# redes do Moviki". O robo le as pecas liberadas num endpoint do site, no
+# mesmo desenho da vitrine: quem fala com o Firestore e o servidor da
+# Vercel, com conta SOMENTE LEITURA; este repo publico nunca recebe
+# credencial de banco. Contrato completo em conteudo/CRIADORES-CONTRATO.md.
+#
+# VAZIO = FONTE DESLIGADA. Nada muda no robo ate o endpoint existir e o
+# secret CRIADORES_URL ser criado no GitHub.
+CRIADORES_URL = os.environ.get("CRIADORES_URL", "").strip()
+CRIADORES_SECRET = os.environ.get("CRIADORES_SECRET", "").strip()
+
+# Fatia dos posts de cada formato que vai para peca de criador, quando houver
+# peca liberada. 0.5 = metade. O resto continua saindo do Material de apoio,
+# pra pagina nao virar mural de um influenciador so.
+CRIADORES_PARTICIPACAO = float(os.environ.get("CRIADORES_PARTICIPACAO") or "0.5")
+
+# Limites de video aceitos pelas duas redes ao mesmo tempo (Reels da Pagina
+# do Facebook: 3 a 90 s). Video mais longo fica fora da rotacao de Reels.
+REEL_DURACAO_MIN = 3
+REEL_DURACAO_MAX = 90
+
 # ----------------------------------------------------------------- Meta
 IG_ACCOUNT_ID = os.environ.get("IG_ACCOUNT_ID", "")
 FACEBOOK_PAGE_ID = os.environ.get("FACEBOOK_PAGE_ID", "")
@@ -101,6 +157,22 @@ MIN_NEGOCIOS_VITRINE = int(os.environ.get("MIN_NEGOCIOS_VITRINE", "3"))
 
 # Nao repetir o mesmo negocio antes de N publicacoes.
 JANELA_ANTI_REPETICAO = int(os.environ.get("JANELA_ANTI_REPETICAO", "10"))
+
+# Teto de posts de VITRINE (lojista) por 7 dias corridos.
+#
+# PADRAO 0 = VITRINE DESLIGADA (22/09/2026). Os negocios com opt-in hoje sao
+# contas de teste do proprio Paulo (base real = zero, confirmado em 16/09), e
+# de 11 a 16/09 foram 4 posts seguidos delas na pagina oficial — prova
+# social de mentira. Quando entrar o primeiro lojista real, criar o secret
+# VITRINE_POR_SEMANA=1 no GitHub. Nada mais muda.
+VITRINE_POR_SEMANA = int(os.environ.get("VITRINE_POR_SEMANA") or "0")  # secret vazio = desligada
+
+# Slugs que nunca entram na vitrine, mesmo com opt-in. Conta demo e conta de
+# teste nao sao "negocio real": publicar como se fossem e prova social falsa.
+# Secret VITRINE_EXCLUIR, slugs separados por virgula, soma a esta lista.
+VITRINE_EXCLUIR = {"hamburguermaster", "karina"} | {
+    x.strip().lower() for x in os.environ.get("VITRINE_EXCLUIR", "").split(",") if x.strip()
+}
 
 # Modo seco: monta tudo e NAO publica. Usado nos testes e no dry-run.
 DRY_RUN = os.environ.get("DRY_RUN", "").strip().lower() in ("1", "true", "sim")

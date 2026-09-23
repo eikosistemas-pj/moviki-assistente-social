@@ -1,31 +1,51 @@
 # -*- coding: utf-8 -*-
 """
-Compositor de arte (Pillow).
+Compositor de arte (Pillow) — PADRAO MOVIKI.
 
-DECISAO DE ARQUITETURA: a arte final NAO e gerada por IA na hora de
-publicar. O robo compoe: pega um fundo aprovado do banco de criativos
-(assets/fundos, gerado no Kairogen e revisado antes de entrar no repo) e
-escreve por cima os dados REAIS do negocio (nome, segmento, cidade, link)
-mais a logo real do lojista.
+MUDANCA DE 22/09/2026 (padronizacao do feed):
+  Ate aqui o robo escrevia por cima de fotos do banco assets/fundos e
+  pintava etiqueta e link na COR DO LOJISTA. Resultado no ar: cada post de
+  um jeito (laranja, verde, ciano), fundo sem relacao com o negocio (loja
+  de suplemento sobre foto de vendedor de carrinho) e texto brigando com o
+  rosto da pessoa na foto.
 
-Por que assim:
-  - imagem de IA gerada sem revisao pode ir ao ar torta as 10h da manha;
-  - o post de vitrine precisa da logo/foto REAL do lojista, senao nao e
-    prova social, e so ilustracao generica;
-  - fundo gerado 1x e reusado centenas de vezes custa quase nada;
-  - identidade visual fica consistente, nao vira roleta.
+  Agora TODA arte composta pelo robo sai na identidade do Material de apoio
+  do parceiro: azul-marinho, mapa neon, pinos ciano, botao verde, logo do
+  Moviki no topo. A cor do lojista nao entra mais — quem aparece e o
+  lojista (logo, nome, ramo, cidade, link), a moldura e sempre do Moviki.
+
+  O banco assets/fundos foi APOSENTADO. O fundo e desenhado em codigo:
+  nunca sai torto, nunca traz marca de terceiro, nunca repete foto de
+  pessoa, e custa zero.
+
+DECISAO QUE CONTINUA: nenhuma imagem e gerada por IA na hora de publicar.
+As pecas prontas vem do Material de apoio (src/material.py), revisadas antes
+de subir; o que o robo compoe aqui usa so dados reais do negocio.
 """
 import io
+import math
 import os
 import random
-import textwrap
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 from . import config
 
-FEED = (1080, 1080)
+FEED = (1080, 1350)      # 4:5 — o mesmo formato da maioria das pecas do material
+QUADRADO = (1080, 1080)
 STORY = (1080, 1920)
+
+# ------------------------------------------------------------------ paleta
+# Amostrada das pecas do Material de apoio (moviki-app/material/feed).
+MARINHO_TOPO = (4, 24, 72)
+MARINHO_BASE = (0, 6, 28)
+RUA = (18, 70, 170)
+CIANO = (2, 225, 255)
+AZUL = (30, 144, 255)
+VERDE = (0, 217, 104)
+TINTA = (3, 16, 48)          # texto escuro sobre ciano/verde
+BRANCO = (255, 255, 255)
+CINZA_AZUL = (170, 195, 235)
 
 
 # ------------------------------------------------------------------ utilidades
@@ -34,22 +54,6 @@ def _fonte(caminho, tamanho):
         return ImageFont.truetype(str(caminho), tamanho)
     except Exception:
         return ImageFont.load_default()
-
-
-def _hex(cor, padrao="#00f2fe"):
-    c = (cor or "").strip()
-    if len(c) == 7 and c.startswith("#"):
-        try:
-            int(c[1:], 16)
-            return c
-        except ValueError:
-            pass
-    return padrao
-
-
-def _rgb(cor):
-    c = _hex(cor).lstrip("#")
-    return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
 
 
 def _largura(draw, texto, fonte):
@@ -74,120 +78,177 @@ def _quebrar(draw, texto, fonte, largura_max):
     return linhas
 
 
-def _ajustar_fonte(draw, texto, caminho, largura_max, tamanho_ini, tamanho_min=28):
-    """Diminui a fonte ate o texto caber em no maximo 2 linhas."""
-    tam = tamanho_ini
-    while tam > tamanho_min:
+def _caber(draw, texto, caminho, largura_max, maior, menor, max_linhas):
+    """Maior fonte em que o texto cabe em `max_linhas` sem palavra estourando."""
+    tam = maior
+    while tam >= menor:
         f = _fonte(caminho, tam)
-        if len(_quebrar(draw, texto, f, largura_max)) <= 2:
-            return f
+        linhas = _quebrar(draw, texto, f, largura_max)
+        if len(linhas) <= max_linhas and all(_largura(draw, l, f) <= largura_max for l in linhas):
+            return f, linhas
         tam -= 4
-    return _fonte(caminho, tamanho_min)
+    f = _fonte(caminho, menor)
+    return f, _quebrar(draw, texto, f, largura_max)[:max_linhas]
 
 
-# ------------------------------------------------------------------ fundos
-def _cobrir(img, alvo):
-    """Redimensiona cobrindo o alvo inteiro e corta o excesso (object-fit: cover)."""
-    lm, am = alvo
-    escala = max(lm / img.width, am / img.height)
-    novo = (max(1, int(img.width * escala)), max(1, int(img.height * escala)))
-    img = img.resize(novo, Image.LANCZOS)
-    esq = (img.width - lm) // 2
-    topo = (img.height - am) // 2
-    return img.crop((esq, topo, esq + lm, topo + am))
+def _centro(draw, y, texto, fonte, cor, largura):
+    w = _largura(draw, texto, fonte)
+    draw.text(((largura - w) // 2, y), texto, font=fonte, fill=cor)
 
 
-def _fundo_liso(tamanho, cor):
-    """Fundo de emergencia: degrade diagonal na cor da marca (ou do lojista)."""
+# ------------------------------------------------------------------ fundo
+def _pino(draw, cx, cy, h, cor):
+    """Pino de mapa (gota invertida) com furo no meio."""
+    r = h * 0.36
+    draw.ellipse((cx - r, cy - h, cx + r, cy - h + 2 * r), fill=cor)
+    draw.polygon([(cx - r * 0.82, cy - h + r * 1.45), (cx + r * 0.82, cy - h + r * 1.45), (cx, cy)], fill=cor)
+    f = r * 0.42
+    draw.ellipse((cx - f, cy - h + r - f, cx + f, cy - h + r + f), fill=MARINHO_BASE)
+
+
+def fundo_padrao(tamanho=FEED, semente=None):
+    """Fundo da identidade Moviki: degrade marinho + ruas neon + pinos.
+
+    Deterministico pela semente: o mesmo negocio/pauta sempre ganha o mesmo
+    mapa (identidade), negocios diferentes ganham mapas diferentes.
+    """
     l, a = tamanho
-    base = Image.new("RGB", (l, a), config.COR_FUNDO)
+    rnd = random.Random(str(semente) if semente is not None else "moviki")
+
+    base = Image.new("RGB", (l, a))
     d = ImageDraw.Draw(base)
-    r, g, b = _rgb(cor)
     for y in range(a):
         t = y / max(1, a - 1)
-        d.line(
-            [(0, y), (l, y)],
-            fill=(int(11 + (r - 11) * t * 0.35),
-                  int(18 + (g - 18) * t * 0.35),
-                  int(32 + (b - 32) * t * 0.35)),
-        )
+        d.line([(0, y), (l, y)], fill=tuple(int(MARINHO_TOPO[i] + (MARINHO_BASE[i] - MARINHO_TOPO[i]) * t) for i in range(3)))
+
+    # ruas: grade torta + avenidas diagonais, desenhadas numa camada que
+    # ganha brilho (blur) e depois volta nitida por cima.
+    ruas = Image.new("RGB", (l, a), (0, 0, 0))
+    r = ImageDraw.Draw(ruas)
+    ang = rnd.uniform(-0.35, 0.35)
+    passo = rnd.randint(130, 170)
+    for k in range(-6, 14):
+        x0 = k * passo + rnd.randint(-20, 20)
+        r.line([(x0, 0), (x0 + math.tan(ang) * a, a)], fill=RUA, width=rnd.choice((2, 2, 3)))
+    for k in range(-2, 12):
+        y0 = k * passo + rnd.randint(-20, 20)
+        r.line([(0, y0), (l, y0 - math.tan(ang) * l * 0.6)], fill=RUA, width=rnd.choice((2, 2, 3)))
+    for _ in range(3):
+        x0, y0 = rnd.randint(-200, l), rnd.choice((-50, a + 50))
+        x1, y1 = rnd.randint(0, l + 200), a + 50 if y0 < 0 else -50
+        r.line([(x0, y0), (x1, y1)], fill=AZUL, width=5)
+
+    brilho = ruas.filter(ImageFilter.GaussianBlur(6))
+    base = _somar(base, brilho, 0.6)
+    base = _somar(base, ruas, 0.3)
+
+    # pinos espalhados, longe do miolo onde vai o conteudo
+    pinos = Image.new("RGB", (l, a), (0, 0, 0))
+    p = ImageDraw.Draw(pinos)
+    for _ in range(7):
+        for _tentativa in range(20):
+            cx, cy = rnd.randint(40, l - 40), rnd.randint(260, a - 380)
+            if cx < l * 0.2 or cx > l * 0.8:
+                break
+        _pino(p, cx, cy, rnd.randint(34, 56), rnd.choice((CIANO, AZUL, CIANO)))
+    base = _somar(base, pinos.filter(ImageFilter.GaussianBlur(10)), 0.8)
+    base = _somar(base, pinos, 0.55)
+
+    # vinheta: escurece bordas e o rodape pra leitura
+    mascara = Image.new("L", (l, a), 0)
+    m = ImageDraw.Draw(mascara)
+    for i in range(0, 60):
+        m.rectangle((i * 4, i * 4, l - i * 4, a - i * 4), outline=int(255 * (1 - i / 60) * 0.8), width=4)
+    base = Image.composite(Image.new("RGB", (l, a), MARINHO_BASE), base, mascara.filter(ImageFilter.GaussianBlur(40)))
+
+    # faixas de leitura: topo (logo + frase) e miolo (nome/titulo) mais
+    # escuros, pra rua neon nunca cruzar letra fina.
+    sombra = Image.new("L", (l, a), 0)
+    s = ImageDraw.Draw(sombra)
+    s.rectangle((0, 0, l, 215), fill=190)
+    s.rounded_rectangle((40, int(a * 0.20), l - 40, int(a * 0.80)), radius=80, fill=120)
+    base = Image.composite(Image.new("RGB", (l, a), MARINHO_BASE), base, sombra.filter(ImageFilter.GaussianBlur(50)))
     return base
 
 
-def _banco_de_fundos():
-    """Todos os arquivos de fundo aprovados, em ordem estavel."""
-    dir_fundos = config.FUNDOS_DIR
-    if not dir_fundos.is_dir():
-        return []
-    return [p for p in sorted(dir_fundos.iterdir())
-            if p.suffix.lower() in (".jpg", ".jpeg", ".png")]
+def _somar(base, camada, forca):
+    """Mistura aditiva (luz somando), limitada a 255."""
+    return ImageChops.add(base, camada.point(lambda v: int(v * forca)))
 
 
-def _abrir_fundo(candidatos, tamanho, cor, semente):
-    """Sorteia entre os candidatos e devolve a imagem ja recortada."""
-    if not candidatos:
-        return _fundo_liso(tamanho, cor)
-    rnd = random.Random(semente) if semente is not None else random
-    escolhido = rnd.choice(candidatos)
-    try:
-        return _cobrir(Image.open(escolhido).convert("RGB"), tamanho)
-    except Exception as e:  # noqa: BLE001
-        print(f"aviso: fundo {escolhido.name} falhou ({e}) -> fundo liso")
-        return _fundo_liso(tamanho, cor)
-
-
-def escolher_fundo(tamanho, segmento=None, cor=None, semente=None):
-    """Pega um fundo do banco de criativos. Prefere o do segmento.
-
-    Nomes esperados em assets/fundos:
-      <segmento>-01.jpg, <segmento>-02.jpg ... e generico-01.jpg ...
-    """
-    todos = _banco_de_fundos()
-    candidatos = []
-    if todos:
-        if segmento:
-            candidatos = [p for p in todos if p.stem.lower().startswith(str(segmento).lower())]
-        if not candidatos:
-            candidatos = [p for p in todos if p.stem.lower().startswith("generico")] or todos
-    return _abrir_fundo(candidatos, tamanho, cor, semente)
-
-
-def fundo_institucional(tamanho, cor=None, semente=None):
-    """Fundo do post institucional.
-
-    POR QUE E' SEPARADO DE escolher_fundo: o post institucional fala do
-    Moviki, nao de um segmento. Antes ele pedia o prefixo 'institucional' —
-    e como o banco tem UM unico institucional-01.jpg, os 7 primeiros posts
-    reais sairam todos com a mesma imagem. Enquanto a vitrine estiver
-    travada (< MIN_NEGOCIOS_VITRINE), 100% dos posts sao institucionais, ou
-    seja: o banco inteiro de 11 fundos ficava parado.
-
-    Agora ele pode usar QUALQUER cena do banco — todas sao rua brasileira,
-    todas com area escura pro texto, nenhuma contradiz um post que fala do
-    produto. Com semente = id da pauta, cada pauta fica com a sua cena fixa
-    (identidade) e pautas diferentes trazem cenas diferentes (variedade).
-    """
-    return _abrir_fundo(_banco_de_fundos(), tamanho, cor, semente)
-
-
-def _escurecer_base(img, forca=0.55):
-    """Degrade escuro de baixo pra cima: garante leitura do texto sobre
-    qualquer fundo, inclusive foto clara."""
-    l, a = img.size
-    camada = Image.new("L", (1, a), 0)
-    px = camada.load()
-    for y in range(a):
-        t = y / max(1, a - 1)
-        px[0, y] = int(255 * forca * (t ** 1.6))
-    mascara = camada.resize((l, a))
-    preto = Image.new("RGB", (l, a), (0, 0, 0))
-    return Image.composite(preto, img, mascara).convert("RGB")
+def _brilho_circular(base, centro, raio, cor, forca=0.55):
+    l, a = base.size
+    camada = Image.new("RGB", (l, a), (0, 0, 0))
+    ImageDraw.Draw(camada).ellipse(
+        (centro[0] - raio, centro[1] - raio, centro[0] + raio, centro[1] + raio), fill=cor)
+    return _somar(base, camada.filter(ImageFilter.GaussianBlur(raio // 2)), forca)
 
 
 # ------------------------------------------------------------------ pecas
+def _cabecalho(base, etiqueta=""):
+    """Logo do Moviki + frase da marca a esquerda; etiqueta ciano a direita."""
+    l, _ = base.size
+    d = ImageDraw.Draw(base)
+    margem = 72
+    try:
+        logo = Image.open(config.LOGO_PATH).convert("RGBA")
+        alt = 78
+        logo = logo.resize((max(1, int(logo.width * alt / logo.height)), alt), Image.LANCZOS)
+        base.paste(logo, (margem, 66), logo)
+    except Exception:  # noqa: BLE001
+        d.text((margem, 66), "moviki", font=_fonte(config.FONTE_FORTE, 64), fill=BRANCO)
+    f = _fonte(config.FONTE_FORTE, 22)
+    d.text((margem + 4, 160), "O mapa inteligente dos negócios em movimento.", font=f, fill=CINZA_AZUL)
+
+    if etiqueta:
+        f_tag = _fonte(config.FONTE_FORTE, 28)
+        tag = etiqueta.upper()
+        tw = _largura(d, tag, f_tag)
+        x1 = l - margem
+        x0 = x1 - tw - 52
+        d.rounded_rectangle((x0, 78, x1, 136), radius=29, fill=CIANO)
+        d.text((x0 + 26, 91), tag, font=f_tag, fill=TINTA)
+
+
+def _botao(base, y, texto, largura_max=860):
+    """Botao verde da identidade (mesmo do 'CADASTRE-SE GRATIS' do material)."""
+    l, _ = base.size
+    d = ImageDraw.Draw(base)
+    f, linhas = _caber(d, texto.upper(), config.FONTE_FORTE, largura_max - 180, 40, 26, 1)
+    w = _largura(d, linhas[0], f)
+    icone = 64
+    total = icone + 22 + w
+    x0 = (l - total) // 2 - 40
+    x1 = x0 + total + 80
+    base_glow = Image.new("RGB", base.size, (0, 0, 0))
+    ImageDraw.Draw(base_glow).rounded_rectangle((x0, y, x1, y + 104), radius=52, fill=VERDE)
+    novo = _somar(base, base_glow.filter(ImageFilter.GaussianBlur(18)), 0.45)
+    base.paste(novo)
+    d = ImageDraw.Draw(base)
+    d.rounded_rectangle((x0, y, x1, y + 104), radius=52, fill=VERDE)
+    cx, cy = x0 + 40 + icone // 2, y + 52
+    d.ellipse((cx - icone // 2, cy - icone // 2, cx + icone // 2, cy + icone // 2), fill=TINTA)
+    _pino(d, cx, cy + 20, 40, VERDE)
+    x_txt = x0 + 40 + icone + 22
+    bbox = d.textbbox((0, 0), linhas[0], font=f)
+    d.text((x_txt, y + 52 - (bbox[1] + bbox[3]) // 2), linhas[0], font=f, fill=TINTA)
+
+
+def _rodape(base, texto="No mapa em tempo real  •  Página própria  •  Contato pelo WhatsApp"):
+    l, a = base.size
+    d = ImageDraw.Draw(base)
+    d.line([(72, a - 118), (l - 72, a - 118)], fill=(28, 60, 130), width=2)
+    f, linhas = _caber(d, texto, config.FONTE_FORTE, l - 144, 26, 18, 1)
+    _centro(d, a - 80, linhas[0], f, CINZA_AZUL, l)
+
+
 def _circulo(img, diametro):
-    """Recorta a imagem num circulo (logo do lojista)."""
-    img = _cobrir(img.convert("RGB"), (diametro, diametro))
+    """Recorta a imagem num circulo (logo do lojista), cobrindo o quadro."""
+    img = img.convert("RGB")
+    escala = max(diametro / img.width, diametro / img.height)
+    img = img.resize((max(1, int(img.width * escala)), max(1, int(img.height * escala))), Image.LANCZOS)
+    esq, topo = (img.width - diametro) // 2, (img.height - diametro) // 2
+    img = img.crop((esq, topo, esq + diametro, topo + diametro))
     mascara = Image.new("L", (diametro, diametro), 0)
     ImageDraw.Draw(mascara).ellipse((0, 0, diametro - 1, diametro - 1), fill=255)
     saida = Image.new("RGBA", (diametro, diametro), (0, 0, 0, 0))
@@ -195,153 +256,133 @@ def _circulo(img, diametro):
     return saida
 
 
-def _colar_logo(base, logo_bytes, centro, diametro, cor_borda):
-    """Cola a logo do lojista com anel na cor dele. Sem logo -> nao desenha."""
-    if not logo_bytes:
-        return False
-    try:
-        logo = Image.open(io.BytesIO(logo_bytes))
-    except Exception:
-        return False
+_LIGACOES = {"e", "de", "da", "do", "das", "dos", "a", "o", "the", "&"}
 
+
+def _iniciais(nome):
+    partes = [p for p in (nome or "").replace("&", " ").split()
+              if p[:1].isalnum() and p.lower() not in _LIGACOES]
+    if not partes:
+        return "M"
+    if len(partes) == 1:
+        return partes[0][:2].upper()
+    return (partes[0][0] + partes[1][0]).upper()
+
+
+def _selo_negocio(base, logo_bytes, nome, centro, diametro):
+    """Logo real do lojista num circulo com anel ciano brilhante.
+    Sem logo: circulo azul com as iniciais — nunca imagem inventada."""
     cx, cy = centro
     raio = diametro // 2
-    anel = 8
+    anel = 12
+    base.paste(_brilho_circular(base, centro, raio + 40, CIANO, 0.5))
     d = ImageDraw.Draw(base)
-    d.ellipse(
-        (cx - raio - anel, cy - raio - anel, cx + raio + anel, cy + raio + anel),
-        fill=_rgb(cor_borda),
-    )
-    base.paste(_circulo(logo, diametro), (cx - raio, cy - raio), _circulo(logo, diametro))
-    return True
+    d.ellipse((cx - raio - anel, cy - raio - anel, cx + raio + anel, cy + raio + anel), fill=CIANO)
 
+    logo = None
+    if logo_bytes:
+        try:
+            logo = Image.open(io.BytesIO(logo_bytes))
+            logo.load()
+        except Exception:  # noqa: BLE001
+            logo = None
+    if logo is not None:
+        circ = _circulo(logo, diametro)
+        base.paste(circ, (cx - raio, cy - raio), circ)
+        return True
 
-def _marca_dagua(base, cor):
-    """Assinatura do Moviki no rodape. Sempre presente."""
-    l, a = base.size
-    d = ImageDraw.Draw(base)
-    f = _fonte(config.FONTE_FORTE, 30)
-    texto = "moviki.com.br"
-    w = _largura(d, texto, f)
-
-    try:
-        if config.LOGO_PATH.exists():
-            logo = Image.open(config.LOGO_PATH).convert("RGBA")
-            alt = 46
-            logo = logo.resize((max(1, int(logo.width * alt / logo.height)), alt), Image.LANCZOS)
-            total = logo.width + 14 + w
-            x = (l - total) // 2
-            base.paste(logo, (x, a - 92), logo)
-            d.text((x + logo.width + 14, a - 82), texto, font=f, fill=_rgb(cor))
-            return
-    except Exception:
-        pass
-
-    d.text(((l - w) // 2, a - 82), texto, font=f, fill=_rgb(cor))
+    d.ellipse((cx - raio, cy - raio, cx + raio, cy + raio), fill=(10, 50, 140))
+    f = _fonte(config.FONTE_TITULO, int(diametro * 0.42))
+    txt = _iniciais(nome)
+    bbox = d.textbbox((0, 0), txt, font=f)
+    d.text((cx - (bbox[0] + bbox[2]) // 2, cy - (bbox[1] + bbox[3]) // 2), txt, font=f, fill=BRANCO)
+    return False
 
 
 # ------------------------------------------------------------------ cards
 def card_vitrine(negocio, logo_bytes=None, cidade="", chamada="", tamanho=FEED, semente=None):
-    """Post que divulga UM negocio real cadastrado no Moviki.
+    """Post que divulga UM negocio real cadastrado no Moviki, no padrao Moviki.
 
-    negocio: dict vindo do Firestore (nome, slug, cor, segmento...).
+    negocio: dict vindo da vitrine (nome, slug, segmento_rotulo...).
+    A cor do lojista NAO e usada de proposito: a moldura e sempre da marca.
     """
-    cor = _hex(negocio.get("cor"), config.COR_PRIMARIA)
-    base = escolher_fundo(tamanho, negocio.get("segmento"), cor, semente)
-    base = _escurecer_base(base, 0.62)
+    base = fundo_padrao(tamanho, semente)
     l, a = base.size
+    _cabecalho(base, chamada or "ESTÁ NO MOVIKI")
     d = ImageDraw.Draw(base)
-    margem = 80
-    larg_util = l - margem * 2
+    larg = l - 150
 
-    # etiqueta de topo
-    f_tag = _fonte(config.FONTE_FORTE, 30)
-    tag = (chamada or "ESTA NO MOVIKI").upper()
-    tw = _largura(d, tag, f_tag)
-    d.rounded_rectangle(
-        (margem, 78, margem + tw + 56, 78 + 62), radius=31, fill=_rgb(cor)
-    )
-    d.text((margem + 28, 78 + 15), tag, font=f_tag, fill=(8, 14, 26))
+    nome = (negocio.get("nome") or "Negócio").strip()
+    # Nome em UMA linha sempre que couber grande; duas linhas so se precisar,
+    # e ai o selo encolhe pra o bloco nunca encostar no botao.
+    f_nome, linhas = _caber(d, nome.upper(), config.FONTE_TITULO, larg, 112, 80, 1)
+    if _largura(d, linhas[0], f_nome) > larg or len(_quebrar(d, nome.upper(), f_nome, larg)) > 1:
+        f_nome, linhas = _caber(d, nome.upper(), config.FONTE_TITULO, larg, 96, 56, 2)
+    diam, cy = (380, 470) if len(linhas) == 1 else (300, 420)
+    _selo_negocio(base, logo_bytes, nome, (l // 2, cy), diam)
+    d = ImageDraw.Draw(base)
 
-    # logo do lojista
-    tem_logo = _colar_logo(base, logo_bytes, (l // 2, int(a * 0.40)), 300, cor)
+    y = cy + diam // 2 + 52
+    for linha in linhas:
+        _centro(d, y, linha, f_nome, BRANCO, l)
+        y += int(f_nome.size * 1.04)
 
-    # nome do negocio
-    y = int(a * 0.40) + (185 if tem_logo else 20)
-    f_nome = _ajustar_fonte(d, negocio.get("nome", "Negocio"), config.FONTE_TITULO,
-                            larg_util, 92, 44)
-    for linha in _quebrar(d, negocio.get("nome", "Negocio"), f_nome, larg_util)[:2]:
-        w = _largura(d, linha, f_nome)
-        d.text(((l - w) // 2, y), linha, font=f_nome, fill=(255, 255, 255))
-        y += f_nome.size + 12
-
-    # cidade / segmento
-    sub = " · ".join(x for x in [negocio.get("segmento_rotulo", ""), cidade] if x)
+    sub = "  •  ".join(x for x in [negocio.get("segmento_rotulo", ""), cidade] if x)
     if sub:
-        f_sub = _fonte(config.FONTE_TEXTO, 36)
-        w = _largura(d, sub, f_sub)
-        d.text(((l - w) // 2, y + 8), sub, font=f_sub, fill=(215, 225, 240))
-        y += 60
+        f_sub, ls = _caber(d, sub.upper(), config.FONTE_FORTE, larg, 32, 22, 1)
+        # folga pro cedilha/acento do Anton, que desce abaixo da linha
+        _centro(d, y + int(f_nome.size * 0.16) + 22, ls[0], f_sub, CIANO, l)
 
-    # link
     slug = (negocio.get("slug") or "").strip()
+    y_btn = a - 330
+    _botao(base, y_btn, "Veja se está aberto agora")
     if slug:
-        f_link = _fonte(config.FONTE_FORTE, 42)
-        link = f"moviki.com.br/{slug}"
-        w = _largura(d, link, f_link)
-        cx0 = (l - w) // 2
-        d.rounded_rectangle(
-            (cx0 - 34, y + 30, cx0 + w + 34, y + 30 + 84), radius=42,
-            outline=_rgb(cor), width=4,
-        )
-        d.text((cx0, y + 30 + 20), link, font=f_link, fill=_rgb(cor))
+        d = ImageDraw.Draw(base)
+        f_link, ls = _caber(d, f"moviki.com.br/{slug}", config.FONTE_FORTE, larg, 42, 26, 1)
+        _centro(d, y_btn + 128, ls[0], f_link, BRANCO, l)
 
-    _marca_dagua(base, cor)
+    _rodape(base)
     return base
 
 
-def card_institucional(titulo, subtitulo="", etiqueta="", tamanho=FEED, semente=None):
-    """Post sobre o proprio Moviki (educativo/conversao)."""
-    cor = config.COR_PRIMARIA
-    base = fundo_institucional(tamanho, cor, semente)
-    base = _escurecer_base(base, 0.66)
+def card_institucional(titulo, subtitulo="", etiqueta="", tamanho=FEED, semente=None,
+                       botao="Conheça em moviki.com.br"):
+    """Post sobre o proprio Moviki (pautas de conteudo/pautas.md), no padrao Moviki.
+
+    Usado na sexta (pauta de parceiro) e como reserva quando o catalogo do
+    Material de apoio nao responde — o calendario nunca fura.
+    """
+    base = fundo_padrao(tamanho, semente)
     l, a = base.size
+    _cabecalho(base, etiqueta)
     d = ImageDraw.Draw(base)
-    margem = 84
-    larg_util = l - margem * 2
+    margem = 80
+    larg = l - margem * 2
 
-    if etiqueta:
-        f_tag = _fonte(config.FONTE_FORTE, 30)
-        tag = etiqueta.upper()
-        tw = _largura(d, tag, f_tag)
-        d.rounded_rectangle((margem, 92, margem + tw + 56, 92 + 62), radius=31, fill=_rgb(cor))
-        d.text((margem + 28, 92 + 15), tag, font=f_tag, fill=(8, 14, 26))
+    f_tit, linhas = _caber(d, titulo.upper(), config.FONTE_TITULO, larg, 118, 60, 5)
+    alt_tit = len(linhas) * int(f_tit.size * 1.06)
+    f_sub = _fonte(config.FONTE_FORTE, 38)
+    l_sub = _quebrar(d, subtitulo, f_sub, larg)[:3] if subtitulo else []
+    alt_sub = (len(l_sub) * (f_sub.size + 12) + 40) if l_sub else 0
 
-    f_tit = _fonte(config.FONTE_TITULO, 86)
-    linhas = _quebrar(d, titulo, f_tit, larg_util)
-    while len(linhas) > 4 and f_tit.size > 48:
-        f_tit = _fonte(config.FONTE_TITULO, f_tit.size - 6)
-        linhas = _quebrar(d, titulo, f_tit, larg_util)
-
-    altura = len(linhas) * (f_tit.size + 14)
-    y = (a - altura) // 2 - 40
-    for linha in linhas:
-        d.text((margem, y), linha, font=f_tit, fill=(255, 255, 255))
-        y += f_tit.size + 14
-
-    if subtitulo:
-        f_sub = _fonte(config.FONTE_TEXTO, 38)
-        y += 22
-        for linha in _quebrar(d, subtitulo, f_sub, larg_util)[:3]:
-            d.text((margem, y), linha, font=f_sub, fill=(205, 218, 235))
+    y = 250 + max(0, (a - 250 - 400 - alt_tit - alt_sub) // 2)
+    for i, linha in enumerate(linhas):
+        cor = CIANO if (i == len(linhas) - 1 and len(linhas) > 1) else BRANCO
+        d.text((margem, y), linha, font=f_tit, fill=cor)
+        y += int(f_tit.size * 1.06)
+    if l_sub:
+        y += 40
+        for linha in l_sub:
+            d.text((margem, y), linha, font=f_sub, fill=(225, 236, 252))
             y += f_sub.size + 12
 
-    _marca_dagua(base, cor)
+    _botao(base, a - 300, botao)
+    _rodape(base)
     return base
 
 
 # ------------------------------------------------------------------ saida
-def salvar(img, caminho, qualidade=88):
+def salvar(img, caminho, qualidade=90):
     """Salva otimizado. O Instagram aceita ate 8MB; a gente fica MUITO abaixo."""
     caminho = str(caminho)
     os.makedirs(os.path.dirname(caminho) or ".", exist_ok=True)

@@ -26,6 +26,7 @@ devolvido NAO expira. Por isso o robo faz essa troca sozinho, uma vez por
 execucao, e o secret continua sendo o token do usuario do sistema — nada
 muda do lado de quem configura.
 """
+import os
 import time
 
 from .. import config
@@ -63,13 +64,18 @@ class Facebook:
             r = self._get(self.page_id, {"fields": "access_token"})
             tok = r.get("access_token")
             if tok:
+                # 23/09/2026 (seguranca): o token da Pagina nao e um secret do
+                # GitHub, entao o Actions nao o esconde sozinho. Mascara aqui,
+                # antes de qualquer print ou erro que possa carrega-lo.
+                if os.environ.get("GITHUB_ACTIONS") == "true":
+                    print(f"::add-mask::{tok}")
                 self._token_pagina = tok
                 return tok
             erro = (r.get("error") or {}).get("message")
             if erro:
                 print(f"aviso: nao consegui o token da Pagina ({erro}) -> tentando com o token atual")
         except Exception as e:  # noqa: BLE001
-            print(f"aviso: nao consegui o token da Pagina ({e}) -> tentando com o token atual")
+            print(f"aviso: nao consegui o token da Pagina ({net.sem_segredo(e)}) -> tentando com o token atual")
         self._token_pagina = self.token
         return self._token_pagina
 

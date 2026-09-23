@@ -33,6 +33,8 @@ jobs:
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           SO_FACEBOOK: ${{ secrets.SO_FACEBOOK }}
+          CRIADORES_URL: ${{ secrets.CRIADORES_URL }}
+          CRIADORES_SECRET: ${{ secrets.CRIADORES_SECRET }}
         run: python run_verificar.py
 
   limpar:

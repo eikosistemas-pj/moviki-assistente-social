@@ -60,7 +60,7 @@ def test_macro_resolve_ele_mesmo():
 def test_segmento_desconhecido_degrada_sem_quebrar():
     assert segmentos.macro_de("inexistente") == ""
     assert segmentos.rotulo("inexistente") == ""
-    assert segmentos.chamada("inexistente") == "ESTA NO MOVIKI"
+    assert segmentos.chamada("inexistente") == "ESTÁ NO MOVIKI"
 
 
 # ------------------------------------------------------------- pautas
@@ -171,8 +171,8 @@ def test_reels_carregados_tem_url_real():
     """Todo reel ativo precisa de URL utilizavel. Regressao dupla:
     (a) bloco dentro de <!-- --> nao pode virar post;
     (b) URL de exemplo com <owner> nao pode passar."""
-    from run_reel import carregar_reels
-    for r in carregar_reels():
+    from src.pecas import banco_reels
+    for r in banco_reels():
         assert r["url"].startswith("https://"), r["id"]
         assert "<owner>" not in r["url"], r["id"]
         assert "<repo>" not in r["url"], r["id"]
@@ -182,8 +182,8 @@ def test_reels_carregados_tem_url_real():
 def test_titulos_de_reel_passam_na_trava():
     """titulo do reel VAI AO AR (vira a 1a linha da legenda reserva)."""
     from src import compliance
-    from run_reel import carregar_reels
-    for r in carregar_reels():
+    from src.pecas import banco_reels
+    for r in banco_reels():
         assert compliance.violacoes(r["titulo"]) == [], f"{r['id']}: {r['titulo']}"
 
 

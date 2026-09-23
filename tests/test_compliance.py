@@ -26,6 +26,9 @@ from src import compliance
     ("O maior aplicativo do Brasil pra food truck", "prova_falsa"),
     ("Melhor que o iFood pro seu negocio", "concorrente"),
     ("Chama no (81) 99999-8888", "dado_pessoal"),
+    ("Nosso e-mail roda no Titan", "fornecedor"),
+    ("Ganhe comissao sem fazer nada", "ganho_facil"),
+    ("Renda sem esforco nenhum", "ganho_facil"),
 ])
 def test_bloqueia(texto, camada):
     achados = dict(compliance.violacoes(texto))
@@ -41,6 +44,9 @@ def test_bloqueia(texto, camada):
     "Burger do Ze esta no Moviki. Veja se esta aberto agora.",
     "Um link so, pra sempre: moviki.com.br/seunegocio",
     "Cardapio digital que voce mesmo edita quando o preco muda.",
+    # falsos positivos achados nas legendas do Material de apoio (22/09/2026)
+    '"Tem pra Titan 160?" — essa pergunta chega todo dia.',
+    "Do seu celular, sem nada além do que você já tem.",
 ])
 def test_libera(texto):
     assert compliance.violacoes(texto) == [], f"nao deveria bloquear: {texto!r}"

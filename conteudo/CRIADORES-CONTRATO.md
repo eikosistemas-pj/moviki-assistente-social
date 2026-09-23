@@ -11,7 +11,7 @@ influenciadores entrarem na rotação de **feed, story e reel**.
 | Endpoint `www.moviki.com.br/api/criadores` (repo `moviki`) | **pronto** (GET para o robô, POST de tráfego para o painel do dono) |
 | Regras `criador_pecas` (v27) e Storage `criadores/{uid}/` | **prontas**, publicar no console |
 | Painel do dono — menu **Criadores** (aprovar, suspender, desempenho) | **pronto** (`eikoadm01.html` 2026-09-22-criadores) |
-| Painel do criador — enviar peça, **Autorizar** / **Revogar** | **a fazer** — tem que seguir a seção 3 à risca |
+| Painel do criador — **Área do criador** no `parceiro.html` (enviar, Autorizar/Revogar, apagar, resultados) | **pronto** (`parceiro.html` 2026-09-22-criador) |
 
 Enquanto o secret não existir, nada muda: o robô publica só o Material de
 apoio.
@@ -97,7 +97,7 @@ recusa mesmo que o endpoint a devolva.
 | `midia` | `imagem` · `video`. Feed = só imagem. Reel = só vídeo. Story = os dois |
 | `url` | `https://`, pública, baixável pela Meta sem login |
 | `w`, `h` | feed de 4:5 a 1,91:1 · story e reel 9:16 |
-| `duracao` | segundos. Vídeo de **3 a 90 s** (limite do Reel da Página do Facebook) |
+| `duracao` | segundos. Reel de **3 a 90 s** (limite do Reel da Página do Facebook); story em vídeo de **3 a 60 s** |
 | `categoria` | mesmos ids do material (`alimentacao`, `moda`, `pet`…), ou `geral` |
 | `autorizado`, `aprovada` | **booleano** `true`. Texto `"true"` é recusado |
 | `titulo` | vai ao ar se a legenda do criador for recusada — tem que ser limpo |
@@ -155,7 +155,7 @@ Regras que o painel do criador precisa respeitar (senão a gravação é recusad
 
 ## 5. Regras para o criador (colocar no painel, junto do botão)
 
-- Vídeo MP4 (H.264 + AAC), 1080×1920, de 3 a 90 s, até 100 MB.
+- Vídeo MP4 (H.264 + AAC), 1080×1920. Reel de 3 a 90 s; story de 3 a 60 s. Até 100 MB.
 - **Sem música de biblioteca de plataforma** (Instagram/TikTok): a Meta
   silencia ou derruba vídeo com áudio protegido publicado por API. Voz,
   som ambiente ou trilha própria.

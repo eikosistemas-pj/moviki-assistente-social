@@ -8,7 +8,7 @@ ninguem perceber por semanas.
 
 Falha aqui = workflow vermelho = e-mail do GitHub. E o alarme.
 """
-from src import config, conteudo, firestore
+from src import config, conteudo, criadores, firestore, material, pecas
 from src import util_net as net
 from src.social.instagram import Instagram
 
@@ -66,10 +66,30 @@ def main():
         canal = "somente Facebook" if config.SO_FACEBOOK else "Instagram + espelho no Facebook"
         return f"secrets obrigatorios presentes | canal: {canal}"
 
+    def material_de_apoio():
+        # 22/09/2026: feed, story e reel saem do Material de apoio. Se o
+        # catalogo sumir, feed cai no card de pauta e story/reel no banco do
+        # repo — nao para, mas perde o padrao. Aviso, sem derrubar.
+        cat = material.carregar_catalogo()
+        n = {f: len(material.pecas(cat, f)) for f in ("feed", "story", "reel")}
+        if not n["feed"]:
+            raise RuntimeError("catalogo lido, mas nenhuma peca de feed publicavel")
+        return (f"catalogo {cat.get('versao','?')} | feed {n['feed']} · story {n['story']} "
+                f"· reel {n['reel']} (+{len(pecas.banco_reels())} do banco do repo)")
+
+    def fonte_criadores():
+        if not criadores.ativa():
+            return "desligada (secret CRIADORES_URL nao existe) — normal ate o painel do criador subir"
+        itens = criadores.carregar()
+        n = {f: len(criadores.pecas(itens, f)) for f in ("feed", "story", "reel")}
+        return f"{len(itens)} itens | publicaveis: feed {n['feed']} · story {n['story']} · reel {n['reel']}"
+
     checar("secrets", envs)
     checar("token da Meta", token)
     checar("pautas", pautas)
     checar("base do Moviki", base, critico=False)
+    checar("material de apoio", material_de_apoio, critico=False)
+    checar("pecas de criadores", fonte_criadores, critico=False)
 
     falhas_criticas = [c for c in CHECAGENS if not c[1] and c[3]]
     if falhas_criticas:

@@ -2,29 +2,37 @@
 """
 Ciclo do FEED.
 
-Decide entre dois tipos de post e publica UM:
+Decide entre tres tipos de post e publica UM:
 
-  VITRINE      - divulga um negocio real cadastrado no Moviki que autorizou
-                 divulgacao. E o post que gera prova social verdadeira,
-                 retencao (o lojista e divulgado de graca) e alcance
-                 organico (ele compartilha o post do proprio negocio).
-  INSTITUCIONAL- explica o produto pra quem nunca ouviu falar.
+  PECA         - (22/09/2026) peca pronta: do Material de apoio do parceiro
+                 (lido ao vivo de app.moviki.com.br/material) ou, quando a
+                 fonte estiver ligada, de um CRIADOR que autorizou e o Moviki
+                 aprovou (src/criadores.py). A mistura mora em src/pecas.py.
+  VITRINE      - divulga um negocio real que autorizou divulgacao, na
+                 moldura padrao do Moviki (a cor do lojista nao entra mais).
+                 No maximo VITRINE_POR_SEMANA por 7 dias.
+  INSTITUCIONAL- card de pauta (conteudo/pautas.md), tambem no padrao
+                 Moviki. Fica com a sexta (pauta de parceiro) e e a reserva
+                 quando o catalogo do material nao responde.
 
-Regra de mistura: enquanto a base de comerciantes autorizados for pequena
-(< MIN_NEGOCIOS_VITRINE), TUDO e institucional — senao o mesmo lojista
-apareceria toda semana e o perfil viraria panfleto de uma pessoa so.
+Ordem de decisao (sem argumento):
+  sexta            -> institucional (pauta de parceiro)
+  vitrine com cota -> vitrine
+  senao            -> peca (material ou criador)  (falhou? -> institucional)
 
 Uso:
     python run_feed.py                 # decide sozinho
+    python run_feed.py material        # forca peca do material de apoio
+    python run_feed.py criador         # forca peca de criador (se houver)
     python run_feed.py vitrine         # forca vitrine
-    python run_feed.py institucional   # forca institucional
+    python run_feed.py institucional   # forca card de pauta
     DRY_RUN=1 python run_feed.py       # monta tudo e NAO publica
 """
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
-from src import arte, config, conteudo, estado, firestore, ia, segmentos
+from src import arte, config, conteudo, estado, firestore, ia, pecas, segmentos
 from src import util_net as net
 from src.social.facebook import Facebook, espelhar
 from src.social.instagram import Instagram
@@ -43,6 +51,38 @@ def _baixar(url):
     except Exception as e:  # noqa: BLE001
         print(f"aviso: nao baixei a imagem do lojista ({e})")
     return None
+
+
+UF_POR_ESTADO = {
+    "acre": "AC", "alagoas": "AL", "amapa": "AP", "amazonas": "AM", "bahia": "BA",
+    "ceara": "CE", "distrito federal": "DF", "espirito santo": "ES", "goias": "GO",
+    "maranhao": "MA", "mato grosso": "MT", "mato grosso do sul": "MS",
+    "minas gerais": "MG", "para": "PA", "paraiba": "PB", "parana": "PR",
+    "pernambuco": "PE", "piaui": "PI", "rio de janeiro": "RJ",
+    "rio grande do norte": "RN", "rio grande do sul": "RS", "rondonia": "RO",
+    "roraima": "RR", "santa catarina": "SC", "sao paulo": "SP", "sergipe": "SE",
+    "tocantins": "TO",
+}
+
+
+def _sem_acento(t):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", t or "")
+                   if unicodedata.category(c) != "Mn").lower().strip()
+
+
+def uf_de(endereco):
+    """UF a partir da resposta do Nominatim.
+
+    22/09/2026: antes pegava as 2 primeiras letras do nome do estado. Parana,
+    Paraiba e Para viravam todos "PA" — foi ao ar "Curitiba - PA" e
+    "Cabedelo - PA". Agora usa o codigo ISO (BR-PR) e, na falta dele, a
+    tabela oficial. Sem certeza, sem UF: melhor omitir do que errar.
+    """
+    iso = (endereco.get("ISO3166-2-lvl4") or "").upper()
+    if iso.startswith("BR-") and len(iso) == 5:
+        return iso[3:]
+    return UF_POR_ESTADO.get(_sem_acento(endereco.get("state")), "")
 
 
 def _cidade(negocio):
@@ -65,13 +105,25 @@ def _cidade(negocio):
         )
         a = (r.json() or {}).get("address", {}) or {}
         cidade = a.get("city") or a.get("town") or a.get("village") or a.get("municipality") or ""
-        uf = a.get("state_code") or ""
-        if not uf:
-            estado_nome = a.get("state") or ""
-            uf = estado_nome[:2].upper() if estado_nome else ""
-        return " - ".join(x for x in [cidade, uf.upper()] if x)
+        return " - ".join(x for x in [cidade, uf_de(a)] if x)
     except Exception:  # noqa: BLE001
         return ""
+
+
+def vitrines_na_semana():
+    """Quantos posts de vitrine sairam nos ultimos 7 dias (pelo historico)."""
+    limite = datetime.now(timezone.utc) - timedelta(days=7)
+    n = 0
+    for linha in estado.ler_lista("historico.json"):
+        if linha.get("subtipo") != "vitrine":
+            continue
+        try:
+            quando = datetime.fromisoformat(linha.get("quando", ""))
+        except ValueError:
+            continue
+        if quando >= limite:
+            n += 1
+    return n
 
 
 # ------------------------------------------------------------------ vitrine
@@ -91,7 +143,7 @@ def montar_vitrine():
     escolhido["segmento_rotulo"] = segmentos.rotulo(seg)
     cidade = _cidade(escolhido)
     nome = escolhido.get("nome", "")
-    rotulo = escolhido["segmento_rotulo"] or "negocio itinerante"
+    rotulo = escolhido["segmento_rotulo"] or "negócio itinerante"
 
     imagem = arte.card_vitrine(
         escolhido,
@@ -155,6 +207,8 @@ def montar_institucional():
     imagem = arte.card_institucional(
         pauta["titulo"], pauta.get("subtitulo", ""), pauta.get("etiqueta", ""),
         semente=pauta["id"],
+        botao=("Seja parceiro em moviki.com.br" if pauta.get("tipo") == "parceiro"
+               else "Conheça em moviki.com.br"),
     )
 
     reserva = (
@@ -198,21 +252,74 @@ def _texto_facebook(legenda):
 
 
 # ------------------------------------------------------------------ principal
-def main():
-    forcado = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
+def _marcar(post, media_id, rede, extra=None):
+    """Rotacao + historico. Peca (material/criador) tem o proprio registro."""
+    extra = dict(extra or {}, subtipo=post["tipo"])
+    if post.get("_peca"):
+        pecas.marcar(post["_peca"], media_id, rede, extra)
+        return
+    estado.marcar_usado(post["tipo"], post["chave"])
+    estado.registrar("feed", post["descricao"], media_id, dict(extra, rede=rede))
 
-    post = None
+
+def montar_peca(forcar_origem=None):
+    """Post de feed a partir de peca pronta (material ou criador)."""
+    peca = pecas.escolher_peca("feed", forcar_origem)
+    if not peca:
+        raise RuntimeError("nenhuma peca de feed publicavel")
+    return {
+        "tipo": "peca",
+        "imagem": pecas.imagem_local(peca),
+        "legenda": peca["legenda_ig"],
+        "legenda_fb": peca["legenda_fb"],
+        "hashtags": conteudo.hashtags("conversao"),
+        "chave": peca["id"],
+        "descricao": f"{peca['origem']}:{peca['id']}",
+        "_peca": peca,
+    }
+
+
+def _material_ou_pauta():
+    try:
+        return montar_peca()
+    except Exception as e:  # noqa: BLE001
+        print(f"AVISO: peca pronta falhou ({e}) -> card de pauta")
+        return montar_institucional()
+
+
+def escolher_post(forcado=""):
     if forcado == "institucional":
-        post = montar_institucional()
-    else:
+        return montar_institucional()
+    if forcado == "material":
+        return montar_peca("casa")
+    if forcado == "criador":
+        return montar_peca("criador")
+    if forcado == "vitrine":
+        post = montar_vitrine()
+        if post is None:
+            raise SystemExit("ERRO: vitrine forcada mas nao ha negocio elegivel.")
+        return post
+
+    if datetime.now(timezone.utc).weekday() == 4:   # sexta = pauta de parceiro
+        return montar_institucional()
+
+    feitas = vitrines_na_semana()
+    if feitas < config.VITRINE_POR_SEMANA:
         try:
             post = montar_vitrine()
+            if post is not None:
+                return post
         except Exception as e:  # noqa: BLE001
-            print(f"aviso: vitrine falhou ({e}) -> institucional")
-        if post is None:
-            if forcado == "vitrine":
-                raise SystemExit("ERRO: vitrine forcada mas nao ha negocio elegivel.")
-            post = montar_institucional()
+            print(f"aviso: vitrine falhou ({e}) -> material de apoio")
+    else:
+        print(f"vitrine: {feitas} na semana (teto {config.VITRINE_POR_SEMANA}) -> material de apoio")
+    return _material_ou_pauta()
+
+
+def main():
+    print(f"moviki-assistente-social {config.VERSAO}")
+    forcado = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
+    post = escolher_post(forcado)
 
     caminho = arte.salvar(post["imagem"], f"/tmp/feed-{post['tipo']}.jpg")
     print(f"arte montada: {caminho}")
@@ -220,7 +327,8 @@ def main():
     # Legenda JA adaptada ao canal antes de imprimir. O dry-run existe pra
     # revisar o que vai ao ar — se ele mostrasse o texto cru e a adaptacao
     # acontecesse so na hora de publicar, a revisao nao valeria nada.
-    legenda = _texto_facebook(post["legenda"]) if config.SO_FACEBOOK else post["legenda"]
+    legenda_fb = post.get("legenda_fb") or _texto_facebook(post["legenda"])
+    legenda = legenda_fb if config.SO_FACEBOOK else post["legenda"]
     print("--- legenda ---")
     print(legenda)
     print("---------------")
@@ -248,28 +356,23 @@ def main():
         print("SO_FACEBOOK ligado -> publicando direto na Pagina do Facebook.")
         fb_id = Facebook().foto(url, legenda)
         print(f"OK -> Facebook | {post['tipo']} | {post['descricao']} | id: {fb_id}")
-        estado.marcar_usado(post["tipo"], post["chave"])
-        estado.registrar("feed", post["descricao"], fb_id,
-                         {"subtipo": post["tipo"], "rede": "facebook"})
+        _marcar(post, fb_id, "facebook")
         return
 
     try:
         media_id = Instagram().foto(url, legenda, post["hashtags"])
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: Instagram falhou ({e}) -> tentando publicar no Facebook.")
-        fb_id = Facebook().foto(url, _texto_facebook(post["legenda"]))
+        fb_id = Facebook().foto(url, legenda_fb)
         print(f"OK -> Facebook (plano B) | {post['descricao']} | id: {fb_id}")
-        estado.marcar_usado(post["tipo"], post["chave"])
-        estado.registrar("feed", post["descricao"], fb_id,
-                         {"subtipo": post["tipo"], "rede": "facebook", "planoB": True})
+        _marcar(post, fb_id, "facebook", {"planoB": True})
         return
 
     print(f"OK -> Instagram | {post['tipo']} | {post['descricao']} | id: {media_id}")
 
-    estado.marcar_usado(post["tipo"], post["chave"])
-    estado.registrar("feed", post["descricao"], media_id, {"subtipo": post["tipo"]})
+    _marcar(post, media_id, "instagram")
 
-    espelhar(url, post["legenda"])
+    espelhar(url, legenda_fb)
 
 
 if __name__ == "__main__":

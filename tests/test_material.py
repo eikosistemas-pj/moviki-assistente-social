@@ -152,3 +152,22 @@ def test_uf_certa_para_parana_e_paraiba():
     assert run_feed.uf_de({"state": "Paraíba"}) == "PB"
     assert run_feed.uf_de({"state": "Pará"}) == "PA"
     assert run_feed.uf_de({"state": "Estado inventado"}) == ""
+
+
+def test_peca_que_vende_live_fica_de_fora_enquanto_beta(monkeypatch):
+    monkeypatch.setattr(config, "LIVE_NA_PAGINA", False)
+    cat = _cat(_story(id="story-bijuteria-lives", titulo="Faça lives e venda mais"),
+               _peca(id="feed-roupas", titulo="Suas roupas vendendo ao vivo"),
+               _story())
+    assert [p["id"] for p in material.pecas(cat, "story", excluir=set())] == ["story-pizzaria"]
+    assert material.pecas(cat, "feed", excluir=set()) == []
+
+
+def test_peca_de_live_volta_quando_a_live_abrir(monkeypatch):
+    monkeypatch.setattr(config, "LIVE_NA_PAGINA", True)
+    cat = _cat(_story(id="story-bijuteria-lives", titulo="Faça lives e venda mais"))
+    assert [p["id"] for p in material.pecas(cat, "story", excluir=set())] == ["story-bijuteria-lives"]
+
+
+def test_ao_vivo_no_mapa_nao_e_live():
+    assert material.fala_de_live(_peca()) is False

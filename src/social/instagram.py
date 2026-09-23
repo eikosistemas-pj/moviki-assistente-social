@@ -101,6 +101,16 @@ class Instagram:
         self._esperar_pronto(cont["id"], tentativas=10, intervalo=4)
         return self._publicar(cont["id"], "")
 
+    def story_video(self, video_url):
+        """Story em video (22/09/2026). Mesmo fluxo do reel, sem legenda."""
+        cont = self._erro(
+            self._post(f"{self.account_id}/media",
+                       {"video_url": video_url, "media_type": "STORIES"}),
+            "container story video",
+        )
+        self._esperar_pronto(cont["id"], tentativas=30, intervalo=8)
+        return self._publicar(cont["id"], "")
+
     # ------------------------------------------------------------- diagnostico
     def validar_token(self):
         """Confere se o token ainda alcanca a conta. Usado pelo workflow

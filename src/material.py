@@ -31,7 +31,11 @@ QUEM FICA DE FORA
     falado no video);
   - categoria 'recrutar' e legenda com {link_parceiro};
   - proporcao fora do formato (feed 4:5 a 1,91:1; story e reel 9:16);
-  - video fora de 3 a 90 s.
+  - video fora de 3 a 90 s;
+  - peca que vende LIVE (lives, transmissao, "vender ao vivo") enquanto
+    config.LIVE_NA_PAGINA estiver desligado — a live esta em beta fechado
+    (23/09/2026). Story nao tem legenda e a arte nao passa pela trava de
+    texto: por isso o filtro olha id, titulo, legenda, arquivo e dica.
 """
 import re
 
@@ -40,6 +44,19 @@ from . import util_net as net
 
 PROPORCAO_FEED = (0.8, 1.91)   # 4:5 ate paisagem maxima do Instagram
 PROPORCAO_VERTICAL = (0.5, 0.6)  # 9:16 com folga (0,5625)
+
+_FALA_DE_LIVE = re.compile(
+    r"\blives?\b|transmiss|vend\w*\s+ao\s+vivo|venda\s+ao\s+vivo|compr\w*\s+ao\s+vivo"
+    r"|ao\s+vivo\s+pel[ao]\s+c[aâ]mera|modo\s+live",
+    re.I,
+)
+
+
+def fala_de_live(item):
+    """A peca vende a live (beta fechado)? Olha todo texto que acompanha a arte."""
+    txt = " ".join(str(item.get(k) or "") for k in ("id", "titulo", "legenda", "texto", "arquivo", "dica"))
+    return bool(_FALA_DE_LIVE.search(txt))
+
 
 _MARCAS_PARCEIRO = re.compile(
     r"\{link_parceiro\}|\{meu_nome\}|\{verificacao\}|\bmeu\s+link\b|#publi\b|\{link\}",
@@ -140,6 +157,8 @@ def pecas(catalogo, formato, excluir=None):
         if not isinstance(it, dict) or not it.get("id") or not it.get("arquivo"):
             continue
         if it["id"] in excluir or it.get("categoria") == "recrutar":
+            continue
+        if not config.LIVE_NA_PAGINA and fala_de_live(it):
             continue
         if _formato_do_item(it) != formato:
             continue

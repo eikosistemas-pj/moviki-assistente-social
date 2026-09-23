@@ -126,6 +126,12 @@ MATERIAL_EXCLUIR = MATERIAL_EXCLUIR_FIXO | {
 #
 # VAZIO = FONTE DESLIGADA. Nada muda no robo ate o endpoint existir e o
 # secret CRIADORES_URL ser criado no GitHub.
+# 23/09/2026: o Modo Live esta em beta fechado. Enquanto este secret nao for
+# "1", nenhuma peca do material que venda live (lives, transmissao, "vender ao
+# vivo") vai para a pagina oficial — seria anunciar um recurso que o cliente
+# ainda nao consegue usar. Ligar quando a live abrir para todos.
+LIVE_NA_PAGINA = os.environ.get("LIVE_NA_PAGINA", "").strip() == "1"
+
 CRIADORES_URL = os.environ.get("CRIADORES_URL", "").strip()
 CRIADORES_SECRET = os.environ.get("CRIADORES_SECRET", "").strip()
 

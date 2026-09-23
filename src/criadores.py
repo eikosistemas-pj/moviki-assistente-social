@@ -112,8 +112,9 @@ def valida(item, agora=None):
             seg = float(item.get("duracao"))
         except (TypeError, ValueError):
             return "video sem duracao"
-        if not (config.REEL_DURACAO_MIN <= seg <= config.REEL_DURACAO_MAX):
-            return "video fora de 3 a 90 s"
+        maximo = config.STORY_DURACAO_MAX if item.get("formato") == "story" else config.REEL_DURACAO_MAX
+        if not (config.REEL_DURACAO_MIN <= seg <= maximo):
+            return f"video fora de 3 a {maximo} s"
     try:
         prop = float(item.get("w")) / float(item.get("h"))
     except (TypeError, ValueError, ZeroDivisionError):

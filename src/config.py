@@ -17,7 +17,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-09-22-formatos"
+VERSAO = "2026-09-22-criador"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))
@@ -138,6 +138,8 @@ CRIADORES_PARTICIPACAO = float(os.environ.get("CRIADORES_PARTICIPACAO") or "0.5"
 # do Facebook: 3 a 90 s). Video mais longo fica fora da rotacao de Reels.
 REEL_DURACAO_MIN = 3
 REEL_DURACAO_MAX = 90
+# Story em video: Instagram e Pagina do Facebook aceitam ate 60 s.
+STORY_DURACAO_MAX = 60
 
 # ----------------------------------------------------------------- Meta
 IG_ACCOUNT_ID = os.environ.get("IG_ACCOUNT_ID", "")

@@ -72,6 +72,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Opcionais (22/09/2026). Vazios = padrao do codigo.
           MATERIAL_EXCLUIR: ${{ secrets.MATERIAL_EXCLUIR }}
+          # 23/09/2026: "1" libera pecas que vendem live (live aberta a todos). Sem ele, ficam de fora.
+          LIVE_NA_PAGINA: ${{ secrets.LIVE_NA_PAGINA }}
           VITRINE_EXCLUIR: ${{ secrets.VITRINE_EXCLUIR }}
           VITRINE_POR_SEMANA: ${{ secrets.VITRINE_POR_SEMANA }}
           CRIADORES_URL: ${{ secrets.CRIADORES_URL }}

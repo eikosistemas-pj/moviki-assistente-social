@@ -52,6 +52,8 @@ jobs:
           PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
           SO_FACEBOOK: ${{ secrets.SO_FACEBOOK }}
           MATERIAL_EXCLUIR: ${{ secrets.MATERIAL_EXCLUIR }}
+          # 23/09/2026: "1" libera pecas que vendem live (live aberta a todos). Sem ele, ficam de fora.
+          LIVE_NA_PAGINA: ${{ secrets.LIVE_NA_PAGINA }}
           CRIADORES_URL: ${{ secrets.CRIADORES_URL }}
           CRIADORES_SECRET: ${{ secrets.CRIADORES_SECRET }}
           CRIADORES_PARTICIPACAO: ${{ secrets.CRIADORES_PARTICIPACAO }}

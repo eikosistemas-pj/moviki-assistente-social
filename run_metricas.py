@@ -19,6 +19,7 @@ nenhum segredo dentro. Curtida e comentario ja sao publicos nas redes.
 Nunca publica nada e nunca quebra: metrica que falha vira "—" no painel.
 """
 import json
+import re
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
@@ -107,6 +108,40 @@ def _indice_catalogo():
     return idx
 
 
+def _indice_publicado(pasta=None):
+    """Arte que o proprio robo hospedou em publicado/ ({prefixo}-{AAAAmmdd-HHMMSS}.jpg,
+    horario UTC). Serve de miniatura para os posts que foram ao ar antes de o
+    historico guardar a miniatura (card de pauta, vitrine, story de criador)."""
+    pasta = pasta or (config.RAIZ / "publicado")
+    idx = []
+    try:
+        nomes = [p.name for p in pasta.iterdir() if p.suffix.lower() in (".jpg", ".jpeg", ".png")]
+    except OSError:
+        return idx
+    for nome in nomes:
+        m = re.match(r"^(feed|story|reel)-.*?(\d{8}-\d{6})\.(jpe?g|png)$", nome, re.I)
+        if not m:
+            continue
+        try:
+            t = datetime.strptime(m.group(2), "%Y%m%d-%H%M%S").replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        idx.append((m.group(1).lower(), t, f"{config.RAW_BASE}/{nome}"))
+    return idx
+
+
+def _mini_publicado(idx, formato, quando):
+    """Arte hospedada ate 20 min ANTES do post (o upload vem antes da publicacao)."""
+    melhor = None
+    for fmt, t, url in idx:
+        if fmt != formato:
+            continue
+        dif = (quando - t).total_seconds()
+        if -120 <= dif <= 1200 and (melhor is None or abs(dif) < melhor[0]):
+            melhor = (abs(dif), url)
+    return melhor[1] if melhor else ""
+
+
 # ---------------------------------------------------------------- agenda
 def esperado(formato, dia):
     """Posts que o calendario manda sair nesse dia (data de Brasilia)."""
@@ -127,7 +162,7 @@ def _quando(linha):
         return None
 
 
-def montar(hist, agora, get_ig=None, get_fb=None, catalogo=None, contas=None):
+def montar(hist, agora, get_ig=None, get_fb=None, catalogo=None, contas=None, publicado=None):
     """Monta o relatorio. get_ig/get_fb = funcoes (caminho, params) -> dict."""
     catalogo = catalogo or {}
     hoje = agora.astimezone(FUSO).date()
@@ -149,7 +184,8 @@ def montar(hist, agora, get_ig=None, get_fb=None, catalogo=None, contas=None):
             "titulo": linha.get("descricao") or cat.get("titulo") or "",
             "peca": linha.get("peca"),
             "ramo": linha.get("ramo") or cat.get("ramo") or "",
-            "miniatura": linha.get("miniatura") or cat.get("mini") or "",
+            "miniatura": linha.get("miniatura") or cat.get("mini")
+                         or _mini_publicado(publicado or [], formato, q) or "",
             "rede": rede,
             "planoB": bool(linha.get("planoB")),
             "erroInstagram": linha.get("erroInstagram"),
@@ -296,7 +332,7 @@ def main():
     contas = ler_contas(get_ig, get_fb) if tok else {}
 
     rel = montar(estado.ler_lista("historico.json"), datetime.now(timezone.utc),
-                 get_ig, get_fb, _indice_catalogo(), contas)
+                 get_ig, get_fb, _indice_catalogo(), contas, _indice_publicado())
     estado.gravar_lista("redes.json", rel)
     print(f"{len(rel['posts'])} posts em {DIAS_POSTS} dias | canal hoje: {rel['canal_hoje']}")
     for a in rel["alertas"]:

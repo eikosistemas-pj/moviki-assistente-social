@@ -364,8 +364,10 @@ def main():
         _marcar(post, fb_id, "facebook", {"miniatura": url})
         return
 
+    ig = Instagram()
     try:
-        media_id = Instagram().foto(url, legenda, post["hashtags"])
+        media_id = ig.foto(url, legenda, post["hashtags"],
+                           colaboradores=pecas.colaboradores(post["_peca"]) if post.get("_peca") else None)
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: Instagram falhou ({e}) -> tentando publicar no Facebook.")
         fb_id = Facebook().foto(url, legenda_fb)
@@ -383,6 +385,9 @@ def main():
     # painel do dono mostra curtidas e comentarios das duas redes.
     fid = espelhar(url, legenda_fb)
     extra = {"miniatura": url}
+    if ig.collab_enviado:
+        extra["collab"] = "@" + ig.collab_enviado[0]
+        print(f"parceria: convite enviado para @{ig.collab_enviado[0]} (ele aceita no app)")
     if fid:
         extra["fb"] = fid
     _marcar(post, media_id, "instagram", extra)

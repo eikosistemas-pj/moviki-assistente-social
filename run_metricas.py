@@ -189,6 +189,7 @@ def montar(hist, agora, get_ig=None, get_fb=None, catalogo=None, contas=None, pu
             "rede": rede,
             "planoB": bool(linha.get("planoB")),
             "erroInstagram": linha.get("erroInstagram"),
+            "collab": linha.get("collab"),
         }
         idade_h = (agora - q).total_seconds() / 3600
         if rede == "instagram":
@@ -291,6 +292,51 @@ def montar(hist, agora, get_ig=None, get_fb=None, catalogo=None, contas=None, pu
     }
 
 
+# ---------------------------------------------------------------- seguidores
+def serie_seguidores(anterior, contas, agora, guardar=400):
+    """Historico diario de seguidores (28/09/2026). Mora dentro do proprio
+    redes.json: cada execucao le a serie anterior e grava o numero do dia
+    (a ultima leitura do dia vale)."""
+    serie = {x["dia"]: x for x in (anterior or []) if isinstance(x, dict) and x.get("dia")}
+    ig = (contas or {}).get("instagram") or {}
+    fb = (contas or {}).get("facebook") or {}
+    if ig.get("seguidores") is not None or fb.get("seguidores") is not None:
+        dia = agora.astimezone(FUSO).date().isoformat()
+        serie[dia] = {"dia": dia, "ig": ig.get("seguidores"), "ig_posts": ig.get("posts"),
+                      "fb": fb.get("seguidores")}
+    return [serie[d] for d in sorted(serie)][-guardar:]
+
+
+def resumo_seguidores(serie, agora):
+    ig = [x for x in serie if isinstance(x.get("ig"), int)]
+    if not ig:
+        return {}
+    atual = ig[-1]["ig"]
+    hoje = agora.astimezone(FUSO).date()
+
+    def ha(dias):
+        corte = (hoje - timedelta(days=dias)).isoformat()
+        antes = [x for x in ig if x["dia"] <= corte]
+        base = antes[-1] if antes else ig[0]
+        return atual - base["ig"], base["dia"]
+
+    d7, desde7 = ha(7)
+    d30, desde30 = ha(30)
+    metas = []
+    for tok in config.META_SEGUIDORES.split(","):
+        alvo, _, ate = tok.strip().partition("@")
+        try:
+            alvo, ate_d = int(alvo), datetime.fromisoformat(ate.strip()).date()
+        except ValueError:
+            continue
+        dias = (ate_d - hoje).days
+        falta = max(0, alvo - atual)
+        metas.append({"alvo": alvo, "ate": ate_d.isoformat(), "falta": falta, "dias": dias,
+                      "por_dia": round(falta / dias, 1) if dias > 0 else None})
+    return {"atual": atual, "ganho_7d": d7, "desde_7d": desde7, "ganho_30d": d30,
+            "desde_30d": desde30, "metas": metas}
+
+
 # ---------------------------------------------------------------- contas
 def ler_contas(get_ig, get_fb):
     contas = {}
@@ -333,6 +379,10 @@ def main():
 
     rel = montar(estado.ler_lista("historico.json"), datetime.now(timezone.utc),
                  get_ig, get_fb, _indice_catalogo(), contas, _indice_publicado())
+    anterior = estado.ler_lista("redes.json")
+    anterior = anterior.get("seguidores_hist", []) if isinstance(anterior, dict) else []
+    rel["seguidores_hist"] = serie_seguidores(anterior, contas, datetime.now(timezone.utc))
+    rel["seguidores"] = resumo_seguidores(rel["seguidores_hist"], datetime.now(timezone.utc))
     estado.gravar_lista("redes.json", rel)
     print(f"{len(rel['posts'])} posts em {DIAS_POSTS} dias | canal hoje: {rel['canal_hoje']}")
     for a in rel["alertas"]:

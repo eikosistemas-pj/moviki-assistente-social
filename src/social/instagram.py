@@ -12,6 +12,7 @@ nao comenta nada.
 
 Injecao de dependencia (post_fn/sleep_fn) pra testar sem rede.
 """
+import json
 import re
 import time
 
@@ -29,6 +30,7 @@ class Instagram:
         self._post_fn = post_fn
         self._get_fn = get_fn
         self._sleep = sleep_fn
+        self.collab_enviado = []
 
     # ------------------------------------------------------------- baixo nivel
     def _post(self, caminho, params):
@@ -90,23 +92,62 @@ class Instagram:
             texto = f"{texto}\n\n{rodape}" if texto else rodape
         return texto
 
-    def foto(self, image_url, legenda, hashtags=""):
-        cont = self._erro(
-            self._post(f"{self.account_id}/media",
-                       {"image_url": image_url, "caption": self.legenda_final(legenda, hashtags)}),
-            "container foto",
-        )
-        self._esperar_pronto(cont["id"], tentativas=10, intervalo=4)
-        return self._publicar(cont["id"])
+    # ------------------------------------------------------------- collab
+    @staticmethod
+    def limpar_colaboradores(colaboradores):
+        """Ate 3 usernames validos, sem @ e sem repetir."""
+        saida = []
+        for c in colaboradores or []:
+            u = str(c or "").strip().lstrip("@").lower()
+            if re.fullmatch(r"[a-z0-9._]{1,30}", u) and u not in saida:
+                saida.append(u)
+        return saida[:3]
 
-    def reel(self, video_url, legenda, hashtags="", capa_url=None):
+    def _container(self, params, contexto, colaboradores=None):
+        """Cria o container. Com colaboradores (post em parceria, 28/09/2026):
+        o convite vai para o criador aceitar no app dele. Se a Meta recusar o
+        convite (conta privada, @ trocado), o post sai SEM parceria — o
+        calendario nunca fura por causa do collab."""
+        self.collab_enviado = []
+        colab = self.limpar_colaboradores(colaboradores)
+        if colab:
+            r = self._post(f"{self.account_id}/media",
+                           dict(params, collaborators=json.dumps(colab)))
+            if isinstance(r, dict) and "error" not in r and r.get("id"):
+                self.collab_enviado = colab
+                return r
+            msg = (r.get("error") or {}).get("message") if isinstance(r, dict) else r
+            print(f"aviso: convite de parceria para @{', @'.join(colab)} recusado ({msg}) -> publicando sem parceria")
+        return self._erro(self._post(f"{self.account_id}/media", params), contexto)
+
+    def _criar_e_publicar(self, params, contexto, colaboradores, tentativas, intervalo):
+        cont = self._container(params, contexto, colaboradores)
+        try:
+            self._esperar_pronto(cont["id"], tentativas=tentativas, intervalo=intervalo)
+            return self._publicar(cont["id"])
+        except Exception as e:  # noqa: BLE001
+            if not self.collab_enviado:
+                raise
+            # A Meta pode aceitar o convite no container e recusar so na
+            # publicacao. Uma nova tentativa SEM parceria — collab nunca pode
+            # derrubar o post nem contar falha para o freio.
+            print(f"aviso: publicacao com parceria falhou ({e}) -> tentando sem parceria")
+            self.collab_enviado = []
+            cont = self._erro(self._post(f"{self.account_id}/media", params), contexto)
+            self._esperar_pronto(cont["id"], tentativas=tentativas, intervalo=intervalo)
+            return self._publicar(cont["id"])
+
+    def foto(self, image_url, legenda, hashtags="", colaboradores=None):
+        return self._criar_e_publicar(
+            {"image_url": image_url, "caption": self.legenda_final(legenda, hashtags)},
+            "container foto", colaboradores, 10, 4)
+
+    def reel(self, video_url, legenda, hashtags="", capa_url=None, colaboradores=None):
         params = {"media_type": "REELS", "video_url": video_url,
                   "caption": self.legenda_final(legenda, hashtags)}
         if capa_url:
             params["cover_url"] = capa_url
-        cont = self._erro(self._post(f"{self.account_id}/media", params), "container reel")
-        self._esperar_pronto(cont["id"], tentativas=30, intervalo=8)
-        return self._publicar(cont["id"])
+        return self._criar_e_publicar(params, "container reel", colaboradores, 30, 8)
 
     def story(self, image_url):
         cont = self._erro(

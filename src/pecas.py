@@ -221,6 +221,15 @@ def imagem_local(peca):
     return _baixar_imagem(peca["url"])
 
 
+# ------------------------------------------------------------------ parceria
+def colaboradores(peca):
+    """@ do criador para o convite de post em parceria (feed e reel)."""
+    if not config.COLLAB_CRIADORES or peca.get("origem") != "criador":
+        return []
+    a = ((peca.get("criador") or {}).get("arroba") or "").strip()
+    return [a] if a else []
+
+
 # ------------------------------------------------------------------ alarme
 def alarme_instagram(formato, erro):
     """Instagram falhou e o post saiu so na Pagina. Deixa um bilhete que o
@@ -290,7 +299,8 @@ def publicar(peca, hashtags=""):
     try:
         ig = Instagram()
         if formato == "reel":
-            mid = ig.reel(url, leg_ig, hashtags, capa_url=peca.get("capa"))
+            mid = ig.reel(url, leg_ig, hashtags, capa_url=peca.get("capa"),
+                          colaboradores=colaboradores(peca))
         else:
             mid = ig.story_video(url) if midia == "video" else ig.story(url)
     except Exception as e:  # noqa: BLE001
@@ -302,6 +312,9 @@ def publicar(peca, hashtags=""):
         return mid
 
     freio.sucesso()
+    if getattr(ig, "collab_enviado", None):
+        mini = dict(mini, collab="@" + ig.collab_enviado[0])
+        print(f"parceria: convite enviado para @{ig.collab_enviado[0]} (ele aceita no app)")
     print(f"OK -> Instagram | {formato} | {peca['id']} | id: {mid}")
     # Espelho ANTES de registrar: o id do post na Pagina vai junto no historico
     # e o painel do dono mostra curtidas e comentarios das duas redes.

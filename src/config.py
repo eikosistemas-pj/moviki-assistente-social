@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-09-28-painel"
+VERSAO = "2026-09-28-collab"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))
@@ -268,6 +268,17 @@ def instagram_ligado(formato, hoje=None):
     inicio = rampa[formato]
     return inicio is None or (hoje or hoje_br()) >= inicio
 
+
+# Post em PARCERIA com o criador (28/09/2026). Peca de criador no feed ou no
+# reel do Instagram sai com convite de collab para o @ dele: se ele aceitar
+# no app, o post aparece no perfil dos dois e o publico dele ve o Moviki.
+# Story nao aceita parceria. Desligar: secret COLLAB_CRIADORES = nao.
+COLLAB_CRIADORES = os.environ.get("COLLAB_CRIADORES", "").strip().lower() not in ("nao", "não", "0", "false")
+
+# Metas de seguidores do Instagram mostradas no painel do dono (28/09/2026).
+# "alvo@AAAA-MM-DD", separadas por virgula. Padrao: 5.000 em 30 dias e
+# 10.000 em 90 dias, contados de 28/09/2026 (2.297 seguidores).
+META_SEGUIDORES = os.environ.get("META_SEGUIDORES") or "5000@2026-10-28,10000@2026-12-27"
 
 # Freio automatico do Instagram (28/09/2026).
 FREIO_FALHAS = int(os.environ.get("FREIO_FALHAS") or "2")

@@ -155,3 +155,90 @@ def test_miniatura_antiga_vem_da_arte_hospedada_pelo_robo(monkeypatch):
     assert run_metricas._mini_publicado(idx, "story", q2).endswith("story-criador-20260928-000744.jpg")
     # arte de outro dia nunca vira miniatura por engano
     assert run_metricas._mini_publicado(idx, "feed", datetime(2026, 9, 26, tzinfo=timezone.utc)) == ""
+
+
+# ------------------------------------------------------------ post em parceria
+class _GraphCollab:
+    def __init__(self, recusa_collab=False, falha_publicar_com_collab=False):
+        self.chamadas = []
+        self.recusa = recusa_collab
+        self.falha_pub = falha_publicar_com_collab
+        self._ultimo_collab = False
+
+    def post(self, caminho, params):
+        self.chamadas.append((caminho, dict(params)))
+        if caminho.endswith("/media"):
+            self._ultimo_collab = "collaborators" in params
+            if self.recusa and self._ultimo_collab:
+                return {"error": {"message": "Invalid collaborator"}}
+            return {"id": "c1"}
+        if caminho.endswith("/media_publish"):
+            if self.falha_pub and self._ultimo_collab:
+                return {"error": {"message": "collab nao permitido"}}
+            return {"id": "m1"}
+        return {}
+
+    def get(self, caminho, params):
+        return {"status_code": "FINISHED"}
+
+
+def _igc(g):
+    from src.social.instagram import Instagram
+    return Instagram(account_id="1", token="t", post_fn=g.post, get_fn=g.get, sleep_fn=lambda s: None)
+
+
+def test_peca_de_criador_vai_com_convite_de_parceria():
+    g = _GraphCollab()
+    ig = _igc(g)
+    assert ig.foto("https://img", "leg", "", colaboradores=["@Fulano.Criador"]) == "m1"
+    assert g.chamadas[0][1]["collaborators"] == '["fulano.criador"]'
+    assert ig.collab_enviado == ["fulano.criador"]
+
+
+def test_convite_recusado_publica_sem_parceria():
+    g = _GraphCollab(recusa_collab=True)
+    ig = _igc(g)
+    assert ig.foto("https://img", "leg", "", colaboradores=["fulano"]) == "m1"
+    assert ig.collab_enviado == []
+    assert "collaborators" not in g.chamadas[-2][1]
+
+
+def test_publicacao_recusada_com_parceria_tenta_de_novo_sem():
+    g = _GraphCollab(falha_publicar_com_collab=True)
+    ig = _igc(g)
+    assert ig.reel("https://v.mp4", "leg", "", colaboradores=["fulano"]) == "m1"
+    assert ig.collab_enviado == []
+
+
+def test_arroba_invalido_nao_vira_convite():
+    from src.social.instagram import Instagram
+    assert Instagram.limpar_colaboradores(["@a b", "", None, "@ok_1"]) == ["ok_1"]
+
+
+def test_so_peca_de_criador_leva_parceria(monkeypatch):
+    from src import pecas
+    monkeypatch.setattr(config, "COLLAB_CRIADORES", True)
+    assert pecas.colaboradores({"origem": "criador", "criador": {"arroba": "@fulano"}}) == ["@fulano"]
+    assert pecas.colaboradores({"origem": "material"}) == []
+    monkeypatch.setattr(config, "COLLAB_CRIADORES", False)
+    assert pecas.colaboradores({"origem": "criador", "criador": {"arroba": "@fulano"}}) == []
+
+
+# ------------------------------------------------------------ historico de seguidores
+def test_serie_de_seguidores_acumula_um_ponto_por_dia():
+    a = datetime(2026, 9, 28, 20, tzinfo=timezone.utc)
+    s1 = run_metricas.serie_seguidores([], {"instagram": {"seguidores": 2297, "posts": 24}}, a)
+    s2 = run_metricas.serie_seguidores(s1, {"instagram": {"seguidores": 2301}}, a + timedelta(hours=2))
+    assert len(s2) == 1 and s2[0]["ig"] == 2301          # mesmo dia: vale a ultima leitura
+    s3 = run_metricas.serie_seguidores(s2, {"instagram": {"seguidores": 2350}}, a + timedelta(days=7))
+    assert [x["ig"] for x in s3] == [2301, 2350]
+    r = run_metricas.resumo_seguidores(s3, a + timedelta(days=7))
+    assert r["atual"] == 2350 and r["ganho_7d"] == 49
+    assert r["metas"][0]["alvo"] == 5000 and r["metas"][0]["por_dia"] > 0
+
+
+def test_conta_com_erro_nao_apaga_a_serie():
+    a = datetime(2026, 9, 28, 20, tzinfo=timezone.utc)
+    s1 = run_metricas.serie_seguidores([], {"instagram": {"seguidores": 2297}}, a)
+    s2 = run_metricas.serie_seguidores(s1, {"instagram": {"erro": "token"}}, a + timedelta(days=1))
+    assert s2 == s1

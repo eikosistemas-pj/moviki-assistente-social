@@ -478,5 +478,155 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-09-28T20:14:39+00:00"
+ },
+ "story-loja-feminina-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-loja-feminina-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:13+00:00"
+ },
+ "story-pizzaria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-pizzaria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:15+00:00"
+ },
+ "story-petshop-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-petshop-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:16+00:00"
+ },
+ "story-petshop-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-petshop-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:17+00:00"
+ },
+ "story-artesanato-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-artesanato-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:19+00:00"
+ },
+ "story-hamburguer-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-hamburguer-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:20+00:00"
+ },
+ "story-servico-mais-perto": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-servico-mais-perto.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:21+00:00"
+ },
+ "story-conecte-seu-servico": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-conecte-seu-servico.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:22+00:00"
+ },
+ "story-servico-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-servico-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:24+00:00"
+ },
+ "story-fotografia-talento": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-fotografia-talento.jpg",
+  "parceiro": true,
+  "trecho": "Rafael Mendes Fotografia",
+  "em": "2026-09-28T20:16:25+00:00"
+ },
+ "story-fotografia-talento-2": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-fotografia-talento-2.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:26+00:00"
+ },
+ "video-comercio-naturais": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-naturais.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:27+00:00"
+ },
+ "video-comercio-bijuteria": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-bijuteria.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:29+00:00"
+ },
+ "video-comercio-acessorios-celular": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-acessorios-celular.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:30+00:00"
+ },
+ "video-comercio-brinquedos": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-brinquedos.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:31+00:00"
+ },
+ "video-comercio-acai": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-acai.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:32+00:00"
+ },
+ "video-comercio-boutique": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-boutique.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:33+00:00"
+ },
+ "video-comercio-cosmeticos": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-cosmeticos.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:34+00:00"
+ },
+ "video-comercio-farmacia": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-farmacia.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:35+00:00"
+ },
+ "video-shopping-suplementos": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-shopping-suplementos.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:36+00:00"
+ },
+ "video-shopping-bebe": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-shopping-bebe.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:37+00:00"
+ },
+ "video-shopping-pet": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-shopping-pet.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:38+00:00"
+ },
+ "video-shopping-moda": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-shopping-moda.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:39+00:00"
+ },
+ "video-shopping-esportes": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-shopping-esportes.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:40+00:00"
+ },
+ "video-influencer-lojista": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-influencer-parceiro.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:16:41+00:00"
  }
 }

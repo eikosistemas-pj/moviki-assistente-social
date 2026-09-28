@@ -1,0 +1,18 @@
+{
+  "_leia": "Hashtag de data comemorativa (28/09/2026). No periodo, entra no lugar da ultima hashtag do ramo (o teto continua 5). inicio/fim em MM-DD valem todo ano; AAAA-MM-DD vale so naquele ano (datas moveis, como a Black Friday). ramos = categorias do Material de apoio; * = todos. A primeira que casar vence.",
+  "datas": [
+    {"nome": "Black Friday 2026", "inicio": "2026-11-13", "fim": "2026-11-30", "tag": "#blackfriday", "ramos": ["*"]},
+    {"nome": "Dia dos Animais", "inicio": "09-28", "fim": "10-04", "tag": "#diadosanimais", "ramos": ["pet"]},
+    {"nome": "Dia das Criancas", "inicio": "10-01", "fim": "10-12", "tag": "#diadascriancas", "ramos": ["infantil", "papelaria", "moda", "shopping", "eletronicos", "artesanato", "alimentacao", "geral"]},
+    {"nome": "Dia dos Professores", "inicio": "10-10", "fim": "10-15", "tag": "#diadosprofessores", "ramos": ["papelaria", "artesanato"]},
+    {"nome": "Halloween", "inicio": "10-20", "fim": "10-31", "tag": "#halloween", "ramos": ["eventos", "alimentacao", "infantil", "artesanato"]},
+    {"nome": "Natal", "inicio": "12-01", "fim": "12-24", "tag": "#natal", "ramos": ["*"]},
+    {"nome": "Volta as aulas", "inicio": "01-15", "fim": "02-10", "tag": "#voltaasaulas", "ramos": ["papelaria", "infantil"]},
+    {"nome": "Carnaval 2027", "inicio": "2027-01-25", "fim": "2027-02-09", "tag": "#carnaval", "ramos": ["moda", "beleza", "alimentacao", "eventos", "artesanato"]},
+    {"nome": "Pascoa 2027", "inicio": "2027-03-15", "fim": "2027-03-28", "tag": "#pascoa", "ramos": ["alimentacao", "infantil", "artesanato", "geral"]},
+    {"nome": "Dia das Maes 2027", "inicio": "2027-04-26", "fim": "2027-05-09", "tag": "#diadasmaes", "ramos": ["*"]},
+    {"nome": "Dia dos Namorados", "inicio": "06-01", "fim": "06-12", "tag": "#diadosnamorados", "ramos": ["*"]},
+    {"nome": "Dia dos Pais 2027", "inicio": "2027-07-26", "fim": "2027-08-08", "tag": "#diadospais", "ramos": ["*"]},
+    {"nome": "Dia do Cliente", "inicio": "09-08", "fim": "09-15", "tag": "#diadocliente", "ramos": ["*"]}
+  ]
+}

@@ -107,7 +107,7 @@ tudo vem de GitHub Secrets.
 | `FIREBASE_API_KEY` | vitrine | API key web do app |
 | `ANTHROPIC_API_KEY` | não | Sem ela, as legendas saem do texto reserva |
 | `SO_FACEBOOK` | não | `sim` = nada vai ao Instagram. Apagar para ligar o Instagram |
-| `IG_FORMATOS` | não | Instagram formato a formato: `feed`, `feed,reel`… Vazio = todos |
+| `IG_FORMATOS` | não | Instagram formato a formato: `feed`, `feed,reel`… `formato@AAAA-MM-DD` liga sozinho naquele dia (ex.: `feed,reel@2026-10-05,story@2026-10-12`). Vazio = todos |
 
 `GITHUB_TOKEN` é injetado pelo próprio Actions — não precisa criar.
 
@@ -209,3 +209,9 @@ implementações do mesmo recurso em linguagens diferentes seria dívida
 técnica de graça.
 
 Este repo **não escreve** em nenhuma coleção do Firestore. Só lê `negocios`.
+
+## Painel do dono e freio (28/09/2026)
+
+- `metricas.yml` roda ~08h e ~22h e grava `estado/redes.json` (curtidas, comentários, miniaturas, agenda de 7 dias, alertas). O painel do dono lê esse arquivo na seção **Redes sociais**. Nada de token sai do Actions.
+- **Freio automático:** 2 falhas seguidas do Instagram tiram ele do ar por 72 h (`estado/instagram_freio.json`). Soltar na mão: apagar esse arquivo.
+- **Datas comemorativas:** `conteudo/datas-comemorativas.json` põe a hashtag da data em 2º lugar, sem passar de 5.

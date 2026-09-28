@@ -11,13 +11,14 @@ mais com o Firestore: le a vitrine pronta em moviki.com.br/api/vitrine e
 escreve so em estado/ (commitado pelo proprio workflow).
 """
 import os
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-09-27-instagram"
+VERSAO = "2026-09-28-painel"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))
@@ -209,26 +210,68 @@ SO_FACEBOOK = os.environ.get("SO_FACEBOOK", "").strip().lower() in ("1", "true",
 #
 # Secret IG_FORMATOS, formatos separados por virgula:
 #   feed           -> so o feed vai ao Instagram; story e reel seguem so na Pagina
-#   feed,reel      -> segunda semana
+#   feed,reel      -> feed e reel
 #   (vazio)        -> todos os formatos (padrao quando SO_FACEBOOK nao existe)
 #   nenhum         -> nada no Instagram (mesmo efeito do SO_FACEBOOK)
+#
+# RAMPA POR DATA (28/09/2026): formato@AAAA-MM-DD liga o formato sozinho a
+# partir daquele dia (horario de Brasilia). Exemplo da rampa decidida:
+#   feed,reel@2026-10-05,story@2026-10-12
+# Ninguem precisa mexer em secret no dia 05 nem no dia 12.
+#
 # O Facebook recebe TUDO sempre: o que vai ao Instagram e espelhado na Pagina,
 # o que nao vai sai direto nela. A Pagina nao perde nenhum post.
 #
 # SO_FACEBOOK continua mandando: existindo com "sim", nada vai ao Instagram.
+# O FREIO automatico (src/freio.py) tambem manda: 2 falhas seguidas do
+# Instagram tiram ele do ar por FREIO_HORAS, sozinho.
 _IG_FORMATOS_BRUTO = os.environ.get("IG_FORMATOS", "").strip().lower()
 IG_FORMATOS = {x.strip() for x in _IG_FORMATOS_BRUTO.split(",") if x.strip()}
+FUSO_BR = timezone(timedelta(hours=-3))
 
 
-def instagram_ligado(formato):
-    """True se este formato (feed | story | reel) deve sair no Instagram."""
+def hoje_br():
+    return datetime.now(FUSO_BR).date()
+
+
+def rampa_ig():
+    """{formato: data_de_inicio_ou_None} lida do IG_FORMATOS. Vazio = todos hoje."""
+    saida = {}
+    for tok in IG_FORMATOS:
+        fmt, _, quando = tok.partition("@")
+        fmt = fmt.strip()
+        if not fmt:
+            continue
+        data = None
+        if quando.strip():
+            try:
+                data = date.fromisoformat(quando.strip())
+            except ValueError:
+                # data mal escrita nunca LIGA nada por engano
+                continue
+        saida[fmt] = data
+    return saida
+
+
+def instagram_ligado(formato, hoje=None):
+    """True se este formato (feed | story | reel) deve sair no Instagram hoje.
+    Nao considera o freio — quem publica usa freio.no_instagram()."""
     if SO_FACEBOOK or not IG_ACCOUNT_ID:
         return False
     if not IG_FORMATOS:
         return True
-    if "nenhum" in IG_FORMATOS:
+    rampa = rampa_ig()
+    if "nenhum" in rampa:
         return False
-    return formato in IG_FORMATOS
+    if formato not in rampa:
+        return False
+    inicio = rampa[formato]
+    return inicio is None or (hoje or hoje_br()) >= inicio
+
+
+# Freio automatico do Instagram (28/09/2026).
+FREIO_FALHAS = int(os.environ.get("FREIO_FALHAS") or "2")
+FREIO_HORAS = int(os.environ.get("FREIO_HORAS") or "72")
 
 
 # Hashtags no Instagram (27/09/2026).

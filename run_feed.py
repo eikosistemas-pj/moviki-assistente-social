@@ -32,7 +32,7 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 
-from src import arte, config, conteudo, estado, firestore, ia, pecas, segmentos
+from src import arte, config, conteudo, estado, firestore, freio, ia, pecas, segmentos
 from src import util_net as net
 from src.social.facebook import Facebook, espelhar
 from src.social.instagram import Instagram
@@ -328,7 +328,7 @@ def main():
     # revisar o que vai ao ar — se ele mostrasse o texto cru e a adaptacao
     # acontecesse so na hora de publicar, a revisao nao valeria nada.
     legenda_fb = post.get("legenda_fb") or _texto_facebook(post["legenda"])
-    no_ig = config.instagram_ligado("feed")
+    no_ig = freio.no_instagram("feed")
     legenda = post["legenda"] if no_ig else legenda_fb
     print("--- legenda ---")
     print(legenda)
@@ -361,7 +361,7 @@ def main():
         print("Instagram desligado para o feed (SO_FACEBOOK/IG_FORMATOS) -> publicando direto na Pagina do Facebook.")
         fb_id = Facebook().foto(url, legenda)
         print(f"OK -> Facebook | {post['tipo']} | {post['descricao']} | id: {fb_id}")
-        _marcar(post, fb_id, "facebook")
+        _marcar(post, fb_id, "facebook", {"miniatura": url})
         return
 
     try:
@@ -370,15 +370,22 @@ def main():
         print(f"AVISO: Instagram falhou ({e}) -> tentando publicar no Facebook.")
         fb_id = Facebook().foto(url, legenda_fb)
         print(f"OK -> Facebook (plano B) | {post['descricao']} | id: {fb_id}")
-        _marcar(post, fb_id, "facebook", {"planoB": True})
+        _marcar(post, fb_id, "facebook", {"miniatura": url, "planoB": True,
+                                          "erroInstagram": str(e)[:200]})
+        freio.falhou("feed", e)
         pecas.alarme_instagram("feed", e)
         return
 
+    freio.sucesso()
     print(f"OK -> Instagram | {post['tipo']} | {post['descricao']} | id: {media_id}")
 
-    _marcar(post, media_id, "instagram")
-
-    espelhar(url, legenda_fb)
+    # Espelho ANTES de registrar: o id do post na Pagina entra no historico e o
+    # painel do dono mostra curtidas e comentarios das duas redes.
+    fid = espelhar(url, legenda_fb)
+    extra = {"miniatura": url}
+    if fid:
+        extra["fb"] = fid
+    _marcar(post, media_id, "instagram", extra)
 
 
 if __name__ == "__main__":

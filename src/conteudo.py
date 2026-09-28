@@ -76,6 +76,8 @@ HASHTAGS_RAMO = {
     "feira": "#foodtruck #feiralivre #vendasderua #delivery",
     "eventos": "#fotografo #eventos #festa #empreendedor",
     "infantil": "#lojainfantil #brinquedos #modainfantil #comerciolocal",
+    "joalheria": "#joalheria #joias #semijoias #acessorios",
+    "otica": "#otica #oculos #oculosdegrau #oculosdesol",
     "shopping": "#lojista #varejo #liveshop #vendasonline",
     "moda": "#lojaderoupa #modafeminina #lojista #vendasonline",
     "naturais": "#produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
@@ -94,13 +96,47 @@ HASHTAGS_TIPO = {
 }
 
 
-def hashtags(tipo="educativo", categoria=None):
+def data_comemorativa(categoria=None, hoje=None):
+    """Hashtag da data comemorativa em vigor para o ramo, ou ''.
+    Le conteudo/datas-comemorativas.json; arquivo com defeito = sem data."""
+    import json
+    hoje = hoje or config.hoje_br()
+    try:
+        dados = json.loads((config.CONTEUDO_DIR / "datas-comemorativas.json").read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return ""
+    md = hoje.strftime("%m-%d")
+    iso = hoje.isoformat()
+    for d in dados.get("datas", []):
+        ini, fim, tag = str(d.get("inicio", "")), str(d.get("fim", "")), str(d.get("tag", ""))
+        if not tag.startswith("#") or not ini or not fim:
+            continue
+        ramos = d.get("ramos") or ["*"]
+        if "*" not in ramos and (categoria or "") not in ramos:
+            continue
+        if len(ini) == 10:                       # AAAA-MM-DD: so naquele ano
+            dentro = ini <= iso <= fim
+        elif ini <= fim:                         # MM-DD dentro do ano
+            dentro = ini <= md <= fim
+        else:                                    # MM-DD que vira o ano (dez -> jan)
+            dentro = md >= ini or md <= fim
+        if dentro:
+            return tag.lower()
+    return ""
+
+
+def hashtags(tipo="educativo", categoria=None, hoje=None):
     """No maximo 5 hashtags (limite do Instagram). Vao no FIM DA LEGENDA do
     Instagram — nunca em comentario automatico. Ramo da peca manda; sem ramo
-    conhecido, vale o tipo de pauta."""
+    conhecido, vale o tipo de pauta. Em data comemorativa (conteudo/
+    datas-comemorativas.json) a tag da data entra em 2o lugar e a ultima do
+    ramo sai."""
     extras = HASHTAGS_RAMO.get(categoria or "") or HASHTAGS_TIPO.get(tipo) or HASHTAGS_TIPO["educativo"]
     tags = []
     for t in ("#moviki " + extras).split():
         if t not in tags:
             tags.append(t)
+    data = data_comemorativa(categoria, hoje)
+    if data and data not in tags:
+        tags.insert(1, data)
     return " ".join(tags[: config.HASHTAGS_MAX])

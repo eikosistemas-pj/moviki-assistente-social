@@ -8,7 +8,7 @@ ninguem perceber por semanas.
 
 Falha aqui = workflow vermelho = e-mail do GitHub. E o alarme.
 """
-from src import config, conteudo, criadores, firestore, material, pecas
+from src import config, conteudo, criadores, firestore, freio, material, pecas
 from src import util_net as net
 from src.social.instagram import Instagram
 
@@ -99,6 +99,16 @@ def main():
     checar("secrets", envs)
     checar("Pagina do Facebook", pagina)
     checar("Instagram", instagram)
+    def rampa_e_freio():
+        r = config.rampa_ig()
+        txt = ", ".join(f"{f} desde {d.strftime('%d/%m')}" if d else f"{f} ja" for f, d in sorted(r.items())) \
+            or "todos os formatos"
+        fim = freio.ativo()
+        if fim:
+            raise RuntimeError(f"FREIO ligado ate {fim.isoformat(timespec='minutes')} (UTC) — tudo so no Facebook")
+        return f"rampa: {txt} | freio solto"
+
+    checar("rampa e freio do Instagram", rampa_e_freio, critico=False)
     checar("pautas", pautas)
     checar("base do Moviki", base, critico=False)
     checar("material de apoio", material_de_apoio, critico=False)

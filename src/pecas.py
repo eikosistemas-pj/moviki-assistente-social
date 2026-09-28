@@ -139,6 +139,8 @@ def marcar(peca, media_id, rede, extra=None):
              "peca": peca["id"], "rede": rede}
     if peca.get("criador"):
         dados["criador"] = peca["criador"].get("uid")
+    if peca.get("categoria"):
+        dados["ramo"] = peca["categoria"]
     if extra:
         dados.update(extra)
     estado.registrar(peca["formato"], peca.get("titulo") or peca["id"], media_id, dados)
@@ -243,11 +245,12 @@ def publicar(peca, hashtags=""):
                           Instagram falhou -> Facebook como plano B + alarme
                           (job vermelho, e-mail do GitHub).
     """
+    from . import freio
     from .social.facebook import Facebook, espelhar_formato
     from .social.instagram import Instagram
 
     formato, midia = peca["formato"], peca["midia"]
-    no_ig = config.instagram_ligado(formato)
+    no_ig = freio.no_instagram(formato)
     leg_ig = leg_fb = ""
     if formato == "reel":
         leg_ig, leg_fb = legendas(peca)
@@ -272,10 +275,15 @@ def publicar(peca, hashtags=""):
             return fb.reel(url, leg_fb)
         return fb.story_video(url) if midia == "video" else fb.story_foto(url)
 
+    # Miniatura para o painel do dono (28/09/2026): a propria peca — imagem
+    # publica ou capa do video. Nunca a URL do CDN da Meta (expira e a CSP
+    # do painel bloqueia).
+    mini = {"miniatura": url if midia != "video" else (peca.get("capa") or "")}
+
     print(f"canal: {'Instagram + espelho no Facebook' if no_ig else 'somente Facebook'}")
     if not no_ig:
         mid = no_facebook()
-        marcar(peca, mid, "facebook")
+        marcar(peca, mid, "facebook", mini)
         print(f"OK -> Facebook | {formato} | {peca['id']} | id: {mid}")
         return mid
 
@@ -288,11 +296,15 @@ def publicar(peca, hashtags=""):
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: Instagram falhou ({e}) -> publicando no Facebook.")
         mid = no_facebook()
-        marcar(peca, mid, "facebook", {"planoB": True})
+        marcar(peca, mid, "facebook", dict(mini, planoB=True, erroInstagram=str(e)[:200]))
+        freio.falhou(formato, e)
         alarme_instagram(formato, e)
         return mid
 
-    marcar(peca, mid, "instagram")
+    freio.sucesso()
     print(f"OK -> Instagram | {formato} | {peca['id']} | id: {mid}")
-    espelhar_formato(formato, midia, url, leg_fb)
+    # Espelho ANTES de registrar: o id do post na Pagina vai junto no historico
+    # e o painel do dono mostra curtidas e comentarios das duas redes.
+    fid = espelhar_formato(formato, midia, url, leg_fb)
+    marcar(peca, mid, "instagram", dict(mini, fb=fid) if fid else mini)
     return mid

@@ -87,6 +87,9 @@ def test_plano_b_publica_na_pagina_e_deixa_alarme(monkeypatch):
         os.remove(alerta)
     monkeypatch.setattr(config, "ALERTA_INSTAGRAM", alerta)
     monkeypatch.setattr(config, "DRY_RUN", False)
+    import tempfile
+    from pathlib import Path
+    monkeypatch.setattr(config, "ESTADO_DIR", Path(tempfile.mkdtemp()))
     marcados = []
     monkeypatch.setattr(pecas, "marcar", lambda p, mid, rede, extra=None: marcados.append((rede, extra)))
 
@@ -105,7 +108,9 @@ def test_plano_b_publica_na_pagina_e_deixa_alarme(monkeypatch):
     monkeypatch.setattr(fb_mod, "Facebook", FbOk)
 
     assert pecas.publicar(_peca()) == "fb-1"
-    assert marcados == [("facebook", {"planoB": True})]
+    assert len(marcados) == 1 and marcados[0][0] == "facebook"
+    assert marcados[0][1]["planoB"] is True
+    assert "conta restrita" in marcados[0][1]["erroInstagram"]
     assert "conta restrita" in open(alerta, encoding="utf-8").read()
     os.remove(alerta)
 
@@ -115,6 +120,9 @@ def test_formato_fora_da_rampa_vai_direto_na_pagina_sem_alarme(monkeypatch):
     alerta = "/tmp/teste-alerta-instagram-2.txt"
     monkeypatch.setattr(config, "ALERTA_INSTAGRAM", alerta)
     monkeypatch.setattr(config, "DRY_RUN", False)
+    import tempfile
+    from pathlib import Path
+    monkeypatch.setattr(config, "ESTADO_DIR", Path(tempfile.mkdtemp()))
     monkeypatch.setattr(pecas, "marcar", lambda *a, **k: None)
 
     import src.social.instagram as ig_mod

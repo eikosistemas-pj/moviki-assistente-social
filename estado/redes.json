@@ -1,5 +1,5 @@
 {
- "gerado": "2026-09-28T20:27:35+00:00",
+ "gerado": "2026-09-28T20:54:28+00:00",
  "versao": "2026-09-28-tiktok2",
  "contas": {
   "instagram": {
@@ -21,9 +21,9 @@
   "reel": "facebook"
  },
  "rampa": {
-  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "feed": null
  },
  "so_facebook": false,
  "freio": {

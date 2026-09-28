@@ -1,6 +1,6 @@
 {
- "gerado": "2026-09-28T20:16:00+00:00",
- "versao": "2026-09-28-tiktok",
+ "gerado": "2026-09-28T20:27:35+00:00",
+ "versao": "2026-09-28-tiktok2",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
@@ -21,8 +21,8 @@
   "reel": "facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
   "feed": null,
+  "reel": "2026-10-05",
   "story": "2026-10-12"
  },
  "so_facebook": false,
@@ -354,9 +354,7 @@
    "collab": null,
    "fb": {
     "id": "1723675602048359",
-    "link": "https://www.facebook.com/reel/1723675602048359/",
-    "curtidas": 0,
-    "comentarios": 0
+    "erro": "Unsupported get request. Object with ID '1723675602048359' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Plea"
    }
   },
   {
@@ -408,10 +406,7 @@
    "collab": null,
    "fb": {
     "id": "1312620718595159_122117841609430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122117841609430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
+    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
    }
   },
   {
@@ -716,10 +711,7 @@
    "collab": null,
    "fb": {
     "id": "1312620718595159_122115813651430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122115813651430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
+    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
    }
   },
   {
@@ -1019,7 +1011,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 25,
+  "olhadas_agora": 0,
   "falhas_agora": 2
  },
  "tiktok": {

@@ -3,6 +3,9 @@ name: Metricas
 # Relatorio das redes para o painel do dono (28/09/2026).
 # Le curtidas, comentarios e a saude das contas na Graph API e grava
 # estado/redes.json. NUNCA publica nada.
+# 28/09/2026: tambem faz a triagem "so parceiro" das pecas novas do Material
+# de apoio (estado/triagem_material.json) e monta o Kit TikTok do dia
+# (estado/tiktok.json).
 #
 # Horarios em UTC (Sao Paulo = UTC-3), minuto fora do pico do Actions:
 #   ~08h BRT -> o agente diario le as 08h30 e avisa o Paulo se algo falhou
@@ -42,13 +45,16 @@ jobs:
           SO_FACEBOOK: ${{ secrets.SO_FACEBOOK }}
           IG_FORMATOS: ${{ secrets.IG_FORMATOS }}
           LIVE_NA_PAGINA: ${{ secrets.LIVE_NA_PAGINA }}
+          # 28/09/2026: triagem "so parceiro" por imagem e Kit TikTok do dia.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MATERIAL_EXCLUIR: ${{ secrets.MATERIAL_EXCLUIR }}
         run: python run_metricas.py
 
       - name: Salvar relatorio
         run: |
           git config user.name "moviki-assistente-social"
           git config user.email "bot@moviki.com.br"
-          git add estado/redes.json || true
+          git add estado/ || true
           git diff --staged --quiet && echo "nada a commitar" && exit 0
           git commit -m "relatorio: redes $(date -u +%Y-%m-%d)"
           git pull --rebase --autostash || true

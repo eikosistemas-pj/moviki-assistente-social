@@ -3,11 +3,16 @@
 Publicador do Instagram (Graph API oficial da Meta).
 
 Fluxo oficial em 2 passos: cria o container de midia, espera o Instagram
-baixar a imagem/video, publica. Hashtags vao no PRIMEIRO COMENTARIO — a
-legenda fica limpa e o alcance e o mesmo.
+baixar a imagem/video, publica.
+
+Hashtags (27/09/2026): no FIM DA LEGENDA, no maximo 5 (limite do Instagram
+desde dez/2025). Antes iam 10 no primeiro comentario — acima do limite e
+comentario automatico, proibido pela regra permanente da conta nova. O robo
+nao comenta nada.
 
 Injecao de dependencia (post_fn/sleep_fn) pra testar sem rede.
 """
+import re
 import time
 
 from .. import config
@@ -61,36 +66,47 @@ class Instagram:
         raise RuntimeError("container nao ficou pronto a tempo")
 
     # ------------------------------------------------------------- publicacao
-    def _publicar(self, container_id, hashtags):
+    def _publicar(self, container_id):
         pub = self._erro(
             self._post(f"{self.account_id}/media_publish", {"creation_id": container_id}),
             "publicar",
         )
-        media_id = pub["id"]
-        if hashtags:
-            # comentario e best-effort: se falhar, o post ja esta no ar
-            try:
-                self._post(f"{media_id}/comments", {"message": hashtags})
-            except Exception as e:  # noqa: BLE001
-                print(f"aviso: hashtags no comentario falharam: {e}")
-        return media_id
+        return pub["id"]
+
+    @staticmethod
+    def legenda_final(legenda, hashtags=""):
+        """Legenda + hashtags no fim, respeitando os limites do Instagram:
+        no maximo 5 hashtags no total (contando as que ja estiverem no texto)
+        e 2.200 caracteres."""
+        texto = (legenda or "").strip()
+        ja = re.findall(r"#\w+", texto)
+        vaga = max(0, config.HASHTAGS_MAX - len(ja))
+        novas = [t for t in (hashtags or "").split() if t.startswith("#") and t not in ja][:vaga]
+        rodape = " ".join(novas)
+        teto = 2200 - (len(rodape) + 2 if rodape else 0)
+        if len(texto) > teto:
+            texto = texto[: teto - 1].rstrip() + "…"
+        if rodape:
+            texto = f"{texto}\n\n{rodape}" if texto else rodape
+        return texto
 
     def foto(self, image_url, legenda, hashtags=""):
         cont = self._erro(
             self._post(f"{self.account_id}/media",
-                       {"image_url": image_url, "caption": legenda}),
+                       {"image_url": image_url, "caption": self.legenda_final(legenda, hashtags)}),
             "container foto",
         )
         self._esperar_pronto(cont["id"], tentativas=10, intervalo=4)
-        return self._publicar(cont["id"], hashtags)
+        return self._publicar(cont["id"])
 
     def reel(self, video_url, legenda, hashtags="", capa_url=None):
-        params = {"media_type": "REELS", "video_url": video_url, "caption": legenda}
+        params = {"media_type": "REELS", "video_url": video_url,
+                  "caption": self.legenda_final(legenda, hashtags)}
         if capa_url:
             params["cover_url"] = capa_url
         cont = self._erro(self._post(f"{self.account_id}/media", params), "container reel")
         self._esperar_pronto(cont["id"], tentativas=30, intervalo=8)
-        return self._publicar(cont["id"], hashtags)
+        return self._publicar(cont["id"])
 
     def story(self, image_url):
         cont = self._erro(
@@ -99,7 +115,7 @@ class Instagram:
             "container story",
         )
         self._esperar_pronto(cont["id"], tentativas=10, intervalo=4)
-        return self._publicar(cont["id"], "")
+        return self._publicar(cont["id"])
 
     def story_video(self, video_url):
         """Story em video (22/09/2026). Mesmo fluxo do reel, sem legenda."""
@@ -109,9 +125,21 @@ class Instagram:
             "container story video",
         )
         self._esperar_pronto(cont["id"], tentativas=30, intervalo=8)
-        return self._publicar(cont["id"], "")
+        return self._publicar(cont["id"])
 
     # ------------------------------------------------------------- diagnostico
+    def cota_publicacao(self):
+        """Quantos posts a conta ja publicou nas ultimas 24 h pela API e o teto.
+        So responde se o token tiver instagram_content_publish — e por isso
+        serve de prova de que o robo CONSEGUE publicar, nao so ler."""
+        r = self._erro(
+            self._get(f"{self.account_id}/content_publishing_limit",
+                      {"fields": "config,quota_usage"}),
+            "cota de publicacao",
+        )
+        d = (r.get("data") or [{}])[0]
+        return int(d.get("quota_usage") or 0), int((d.get("config") or {}).get("quota_total") or 0)
+
     def validar_token(self):
         """Confere se o token ainda alcanca a conta. Usado pelo workflow
         semanal de verificacao — token de pagina expira e derruba tudo em

@@ -1,0 +1,829 @@
+{
+ "gerado": "2026-09-28T17:34:26+00:00",
+ "versao": "2026-09-28-painel",
+ "contas": {
+  "instagram": {
+   "usuario": "moviki.oficial",
+   "seguidores": 2297,
+   "posts": 24,
+   "cota_usada": 1,
+   "cota_total": 100
+  },
+  "facebook": {
+   "nome": "Moviki.app",
+   "curtidas_pagina": 0,
+   "seguidores": 0
+  }
+ },
+ "canal_hoje": {
+  "feed": "instagram+facebook",
+  "story": "facebook",
+  "reel": "facebook"
+ },
+ "rampa": {
+  "reel": "2026-10-05",
+  "feed": null,
+  "story": "2026-10-12"
+ },
+ "so_facebook": false,
+ "freio": {
+  "ativo_ate": null,
+  "falhas_seguidas": 0,
+  "ultima_falha": null,
+  "ultimo_acionamento": null
+ },
+ "agenda": [
+  {
+   "dia": "2026-09-21",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 0
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-09-22",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 2
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 1
+   },
+   "reel": {
+    "esperado": 1,
+    "feito": 1
+   }
+  },
+  {
+   "dia": "2026-09-23",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-09-24",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-09-25",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-09-26",
+   "hoje": false,
+   "feed": {
+    "esperado": 0,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 1,
+    "feito": 1
+   }
+  },
+  {
+   "dia": "2026-09-27",
+   "hoje": false,
+   "feed": {
+    "esperado": 0,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-09-28",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 0
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  }
+ ],
+ "totais": {
+  "7d": {
+   "ig": {
+    "feed": {
+     "posts": 1,
+     "curtidas": 0,
+     "comentarios": 0
+    }
+   },
+   "fb": {
+    "story": {
+     "posts": 11,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 2,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "feed": {
+     "posts": 6,
+     "curtidas": 0,
+     "comentarios": 0
+    }
+   }
+  },
+  "30d": {
+   "ig": {
+    "feed": {
+     "posts": 1,
+     "curtidas": 0,
+     "comentarios": 0
+    }
+   },
+   "fb": {
+    "story": {
+     "posts": 11,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 2,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "feed": {
+     "posts": 22,
+     "curtidas": 0,
+     "comentarios": 0
+    }
+   }
+  }
+ },
+ "alertas": [],
+ "posts": [
+  {
+   "quando": "2026-09-28T16:47:10+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Atenda ao vivo com o Moviki",
+   "peca": "feed-farmacia-atenda-ao-vivo",
+   "ramo": "farmacia",
+   "miniatura": "https://app.moviki.com.br/material/feed/feed-farmacia-atenda-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "ig": {
+    "id": "18116816707860359",
+    "link": "https://www.instagram.com/p/Dd1pcUNl0pR/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-09-28T00:07:50+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "931228239642520"
+   }
+  },
+  {
+   "quando": "2026-09-27T17:10:20+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Mostre seus tênis ao vivo",
+   "peca": "story-tenis-mostre-ao-vivo",
+   "ramo": "moda",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-tenis-mostre-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1979811082714644"
+   }
+  },
+  {
+   "quando": "2026-09-27T00:02:17+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1430323672528849"
+   }
+  },
+  {
+   "quando": "2026-09-26T22:47:09+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Ontem ele tava naquela esquina. E hoje?",
+   "peca": "banco:endereco-que-muda-reel",
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1723675602048359",
+    "link": "https://www.facebook.com/reel/1723675602048359/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-09-26T16:31:03+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Seu pet shop no mapa",
+   "peca": "story-petshop-no-mapa",
+   "ramo": "pet",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-petshop-no-mapa.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "2283401882446445"
+   }
+  },
+  {
+   "quando": "2026-09-26T00:14:40+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua bijuteria mais perto dos seus clientes",
+   "peca": "story-bijuteria-mais-perto",
+   "ramo": "moda",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-bijuteria-mais-perto.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1631613235004242"
+   }
+  },
+  {
+   "quando": "2026-09-25T18:54:59+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "indique-conhece",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122117841609430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-25T17:19:52+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "4580275218869254"
+   }
+  },
+  {
+   "quando": "2026-09-25T00:02:32+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Serviços e reparos ao vivo no mapa",
+   "peca": "story-servicos-reparos",
+   "ramo": "servicos",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-servicos-reparos.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1517359917088616"
+   }
+  },
+  {
+   "quando": "2026-09-24T23:56:56+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Bons serviços sempre encontram clientes",
+   "peca": "feed-servicos-reparos",
+   "ramo": "servicos",
+   "miniatura": "https://app.moviki.com.br/material/feed/feed-servicos-reparos.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122117688831430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-24T17:26:53+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "3968774980084779"
+   }
+  },
+  {
+   "quando": "2026-09-24T00:01:20+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua papelaria ao vivo, do balcão",
+   "peca": "story-material-escolar-2",
+   "ramo": "papelaria",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-material-escolar-2.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1076722101770381"
+   }
+  },
+  {
+   "quando": "2026-09-23T17:32:07+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Sua loja de eletrônicos no mapa, na hora",
+   "peca": "feed-eletronicos-no-mapa",
+   "ramo": "eletronicos",
+   "miniatura": "https://app.moviki.com.br/material/feed/feed-eletronicos-no-mapa.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122117425107430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-23T17:21:46+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Divulgue seus serviços ao vivo",
+   "peca": "story-servicos-ao-vivo",
+   "ramo": "servicos",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-servicos-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1919189149065304"
+   }
+  },
+  {
+   "quando": "2026-09-23T02:26:10+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1073800858578044"
+   }
+  },
+  {
+   "quando": "2026-09-23T02:16:10+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Seus serviços no mapa e ao vivo",
+   "peca": "feed-servicos-ao-vivo",
+   "ramo": "servicos",
+   "miniatura": "https://app.moviki.com.br/material/feed/feed-servicos-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122117292087430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-23T00:58:59+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Seu cliente saiu pra te procurar. Ele te achou?",
+   "peca": "video-influencer-lojista",
+   "ramo": "geral",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-influencer-parceiro.webp",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1435287178666529",
+    "link": "https://www.facebook.com/reel/1435287178666529/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-09-22T23:45:17+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "trinta-dias",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122117273325430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-21T18:28:55+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "endereco-que-muda",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122116946031430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-18T17:55:57+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "parceiro-quem-serve",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122116304805430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-17T23:37:15+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "quiz-rapido",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122116152687430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-16T17:15:22+00:00",
+   "formato": "feed",
+   "origem": "vitrine",
+   "subtipo": "vitrine",
+   "titulo": "Fábio Suplementos (Suplementos / Nutricao Esportiva)",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122115940119430818",
+    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
+   }
+  },
+  {
+   "quando": "2026-09-15T23:35:10+00:00",
+   "formato": "feed",
+   "origem": "vitrine",
+   "subtipo": "vitrine",
+   "titulo": "Hamburguer Master (Hamburgueria / Food Truck)",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122115813651430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-14T18:20:54+00:00",
+   "formato": "feed",
+   "origem": "vitrine",
+   "subtipo": "vitrine",
+   "titulo": "CALDEIRÃO NORDESTINO (negocio itinerante)",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122115620715430818",
+    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
+   }
+  },
+  {
+   "quando": "2026-09-11T18:02:21+00:00",
+   "formato": "feed",
+   "origem": "vitrine",
+   "subtipo": "vitrine",
+   "titulo": "Fábio Suplementos (Suplementos / Nutricao Esportiva)",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122115107985430818",
+    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
+   }
+  },
+  {
+   "quando": "2026-09-10T23:25:03+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "fundador",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122114974503430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-09T16:57:19+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "itinerante-e-negocio",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122114730393430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-08T23:31:55+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "trinta-dias",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122114592237430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-07T17:54:18+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "quem-procura",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122114353593430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-04T17:58:20+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "indique-conhece",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122113771179430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-03T23:21:14+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "quiz-rapido",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122113638939430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-02T16:58:11+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "cardapio-na-mao",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122113284483430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-01T23:33:24+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "fundador",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122113128351430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-09-01T03:00:53+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "trinta-dias",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122112893685430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  },
+  {
+   "quando": "2026-08-31T19:45:27+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "abrir-fechar",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "fb": {
+    "id": "1312620718595159_122112837111430818",
+    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   }
+  }
+ ]
+}

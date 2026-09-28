@@ -378,7 +378,10 @@ def material_e_tiktok(agora, catalogo=None, perguntar=None):
         return {"triagem": None, "tiktok": {"erro": f"catalogo do material: {str(e)[:120]}", "dias": []},
                 "_alertas_extra": [{"nivel": "atencao", "tipo": "material",
                                     "texto": "Catálogo do Material de apoio fora do ar: kit TikTok e triagem sem atualizar."}]}
-    todas = [p for f in ("feed", "story", "reel") for p in material.pecas(cat, f)]
+    # Video primeiro: o Kit TikTok so tem video, e com arte nova em lote o
+    # limite da rodada acabava no feed e no story (28/09: kit vazio com 27
+    # pecas esperando, todas as 16 de video entre elas).
+    todas = [p for f in ("reel", "story", "feed") for p in material.pecas(cat, f)]
     olhadas, falhas = triagem.olhar(todas, triagem.POR_RELATORIO, perguntar)
     res = triagem.resumo(todas)
     res.update({"olhadas_agora": olhadas, "falhas_agora": falhas})

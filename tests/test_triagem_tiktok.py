@@ -200,3 +200,12 @@ def test_video_no_firebase_storage_continua_valendo(monkeypatch):
             "material%2Fcapas%2Fvideo-9.webp?alt=media&token=def")
     p = material.pecas(_cat(_video(9, arquivo=url, capa=capa)), "reel")
     assert len(p) == 1 and p[0]["url"] == url and p[0]["capa_triagem"] == capa
+
+
+def test_relatorio_olha_video_antes_de_feed_e_story(monkeypatch):
+    _tmp(monkeypatch)
+    monkeypatch.setattr(triagem, "POR_RELATORIO", 3)
+    cat = _cat(*[_feed(i) for i in range(5)], _video(1), _video(2, cat="pet"))
+    out = run_metricas.material_e_tiktok(datetime(2026, 10, 1, 12, tzinfo=timezone.utc), cat,
+                                         lambda u: {"parceiro": False})
+    assert out["tiktok"]["videos_disponiveis"] == 2

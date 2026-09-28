@@ -124,32 +124,22 @@ def test_foto_cria_container_espera_e_publica():
     falso = GraphFalso()
     assert _ig(falso).foto("https://img", "legenda", "#tag") == "media-99"
     caminhos = [c for c, _ in falso.chamadas]
-    assert caminhos == ["123/media", "123/media_publish", "media-99/comments"]
+    # 27/09/2026: sem comentario automatico — so container e publicacao.
+    assert caminhos == ["123/media", "123/media_publish"]
 
 
-def test_hashtags_vao_no_comentario_nao_na_legenda():
+def test_hashtags_vao_no_fim_da_legenda_nunca_em_comentario():
     falso = GraphFalso()
-    _ig(falso).foto("https://img", "legenda limpa", "#moviki")
+    _ig(falso).foto("https://img", "legenda limpa", "#moviki #pet")
     _, params_container = falso.chamadas[0]
-    assert "#moviki" not in params_container["caption"]
-    _, params_comentario = falso.chamadas[2]
-    assert params_comentario["message"] == "#moviki"
+    assert params_container["caption"] == "legenda limpa\n\n#moviki #pet"
+    assert not any(c.endswith("/comments") for c, _ in falso.chamadas)
 
 
 def test_falha_ao_publicar_estoura():
     falso = GraphFalso(falhar_em="media_publish")
     with pytest.raises(RuntimeError, match="publicar"):
         _ig(falso).foto("https://img", "legenda")
-
-
-def test_comentario_que_falha_nao_derruba_post_ja_publicado():
-    class ComentarioRuim(GraphFalso):
-        def post(self, caminho, params):
-            if caminho.endswith("/comments"):
-                raise RuntimeError("rede caiu")
-            return super().post(caminho, params)
-
-    assert _ig(ComentarioRuim()).foto("https://img", "legenda", "#tag") == "media-99"
 
 
 def test_reel_usa_media_type_reels():

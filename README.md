@@ -106,6 +106,8 @@ tudo vem de GitHub Secrets.
 | `FIREBASE_PROJECT_ID` | vitrine | ID do projeto Firebase do Moviki |
 | `FIREBASE_API_KEY` | vitrine | API key web do app |
 | `ANTHROPIC_API_KEY` | não | Sem ela, as legendas saem do texto reserva |
+| `SO_FACEBOOK` | não | `sim` = nada vai ao Instagram. Apagar para ligar o Instagram |
+| `IG_FORMATOS` | não | Instagram formato a formato: `feed`, `feed,reel`… Vazio = todos |
 
 `GITHUB_TOKEN` é injetado pelo próprio Actions — não precisa criar.
 

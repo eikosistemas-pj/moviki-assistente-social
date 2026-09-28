@@ -31,7 +31,7 @@ def main():
     if not peca:
         print("nenhum reel publicavel hoje -> nada a publicar.")
         return
-    pecas.publicar(peca, conteudo.hashtags(peca.get("tipo_pauta") or "conversao"))
+    pecas.publicar(peca, conteudo.hashtags(peca.get("tipo_pauta") or "conversao", peca.get("categoria")))
 
 
 if __name__ == "__main__":

@@ -272,7 +272,7 @@ def montar_peca(forcar_origem=None):
         "imagem": pecas.imagem_local(peca),
         "legenda": peca["legenda_ig"],
         "legenda_fb": peca["legenda_fb"],
-        "hashtags": conteudo.hashtags("conversao"),
+        "hashtags": conteudo.hashtags("conversao", peca.get("categoria")),
         "chave": peca["id"],
         "descricao": f"{peca['origem']}:{peca['id']}",
         "_peca": peca,
@@ -328,10 +328,14 @@ def main():
     # revisar o que vai ao ar — se ele mostrasse o texto cru e a adaptacao
     # acontecesse so na hora de publicar, a revisao nao valeria nada.
     legenda_fb = post.get("legenda_fb") or _texto_facebook(post["legenda"])
-    legenda = legenda_fb if config.SO_FACEBOOK else post["legenda"]
+    no_ig = config.instagram_ligado("feed")
+    legenda = post["legenda"] if no_ig else legenda_fb
     print("--- legenda ---")
     print(legenda)
+    if no_ig and post.get("hashtags"):
+        print(f"hashtags no fim da legenda: {post['hashtags']}")
     print("---------------")
+    print(f"canal: {'Instagram + espelho no Facebook' if no_ig else 'somente Facebook'}")
 
     if config.DRY_RUN:
         print("DRY_RUN ligado -> nada foi publicado.")
@@ -344,16 +348,17 @@ def main():
     # Onde publicar.
     #
     # Modo normal: Instagram e o principal, Facebook e o espelho.
-    # Modo SO_FACEBOOK: o Instagram esta bloqueado pela Meta, entao a Pagina
-    #   do Facebook vira o canal principal — e ai uma falha dela DERRUBA o
+    # Instagram desligado p/ o feed (SO_FACEBOOK ou IG_FORMATOS sem "feed"):
+    #   a Pagina do Facebook vira o canal principal — e ai uma falha dela DERRUBA o
     #   ciclo de proposito, porque nao ha outro lugar pra publicar.
     #
     # Plano B automatico: se o Instagram falhar no modo normal (token
     # revogado, restricao nova), o robo NAO perde o post — publica no
-    # Facebook e avisa. Melhor um canal no ar que nenhum.
+    # Facebook e deixa o job VERMELHO no fim (alarme_instagram). Melhor um
+    # canal no ar que nenhum — mas sem esconder que o Instagram caiu.
     # ------------------------------------------------------------------
-    if config.SO_FACEBOOK:
-        print("SO_FACEBOOK ligado -> publicando direto na Pagina do Facebook.")
+    if not no_ig:
+        print("Instagram desligado para o feed (SO_FACEBOOK/IG_FORMATOS) -> publicando direto na Pagina do Facebook.")
         fb_id = Facebook().foto(url, legenda)
         print(f"OK -> Facebook | {post['tipo']} | {post['descricao']} | id: {fb_id}")
         _marcar(post, fb_id, "facebook")
@@ -366,6 +371,7 @@ def main():
         fb_id = Facebook().foto(url, legenda_fb)
         print(f"OK -> Facebook (plano B) | {post['descricao']} | id: {fb_id}")
         _marcar(post, fb_id, "facebook", {"planoB": True})
+        pecas.alarme_instagram("feed", e)
         return
 
     print(f"OK -> Instagram | {post['tipo']} | {post['descricao']} | id: {media_id}")

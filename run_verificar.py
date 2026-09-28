@@ -26,20 +26,32 @@ def checar(nome, funcao, critico=True):
 
 
 def main():
-    def token():
-        # No modo SO_FACEBOOK a conta do Instagram nao existe pro robo — o
-        # que precisa estar vivo e o token da Pagina. Validar pelo canal
-        # que realmente publica, senao o alarme vigia a porta errada.
-        if config.SO_FACEBOOK:
-            r = net.get(
-                f"{config.GRAPH}/{config.FACEBOOK_PAGE_ID}",
-                params={"fields": "name,fan_count", "access_token": config.PAGE_ACCESS_TOKEN},
-            ).json()
-            if "error" in r:
-                raise RuntimeError(r["error"].get("message"))
-            return f"Pagina {r.get('name','?')} | {r.get('fan_count','?')} curtidas"
-        d = Instagram().validar_token()
-        return f"@{d.get('username','?')} | {d.get('followers_count','?')} seguidores"
+    ig_formatos = [f for f in ("feed", "story", "reel") if config.instagram_ligado(f)]
+
+    def pagina():
+        # A Pagina publica sempre: sozinha (Instagram desligado) ou como
+        # espelho. Vigia as duas portas, nao so a do canal principal.
+        r = net.get(
+            f"{config.GRAPH}/{config.FACEBOOK_PAGE_ID}",
+            params={"fields": "name,fan_count", "access_token": config.PAGE_ACCESS_TOKEN},
+        ).json()
+        if "error" in r:
+            raise RuntimeError(r["error"].get("message"))
+        return f"Pagina {r.get('name','?')} | {r.get('fan_count','?')} curtidas"
+
+    def instagram():
+        if not ig_formatos:
+            motivo = "SO_FACEBOOK ligado" if config.SO_FACEBOOK else (
+                "IG_ACCOUNT_ID nao existe" if not config.IG_ACCOUNT_ID else "IG_FORMATOS=nenhum")
+            return f"desligado ({motivo}) — tudo sai so na Pagina"
+        ig = Instagram()
+        d = ig.validar_token()
+        # A cota so responde com instagram_content_publish no token: e a prova
+        # de que o robo PUBLICA, nao so le. Token sem essa permissao passava no
+        # teste antigo e falhava na hora do post.
+        usado, teto = ig.cota_publicacao()
+        return (f"@{d.get('username','?')} | {d.get('followers_count','?')} seguidores | "
+                f"formatos: {', '.join(ig_formatos)} | cota 24h: {usado}/{teto or '?'}")
 
     def base():
         todos = firestore.listar_negocios()
@@ -54,16 +66,16 @@ def main():
         return f"{len(p)} pautas carregadas"
 
     def envs():
-        # O conjunto obrigatorio muda com o canal: sem Instagram, o que nao
-        # pode faltar e o FACEBOOK_PAGE_ID.
-        if config.SO_FACEBOOK:
-            precisa = ("FACEBOOK_PAGE_ID", "PAGE_ACCESS_TOKEN", "FIREBASE_PROJECT_ID")
-        else:
-            precisa = ("IG_ACCOUNT_ID", "PAGE_ACCESS_TOKEN", "FIREBASE_PROJECT_ID")
+        precisa = ["FACEBOOK_PAGE_ID", "PAGE_ACCESS_TOKEN", "FIREBASE_PROJECT_ID"]
+        # SO_FACEBOOK nao existe = a intencao e publicar no Instagram. Sem o
+        # IG_ACCOUNT_ID o robo cairia calado so na Pagina: aqui fica vermelho.
+        if not config.SO_FACEBOOK and "nenhum" not in config.IG_FORMATOS:
+            precisa.append("IG_ACCOUNT_ID")
         faltando = [n for n in precisa if not getattr(config, n, "")]
         if faltando:
             raise RuntimeError("secrets ausentes: " + ", ".join(faltando))
-        canal = "somente Facebook" if config.SO_FACEBOOK else "Instagram + espelho no Facebook"
+        canal = (f"Instagram ({', '.join(ig_formatos)}) + Facebook" if ig_formatos
+                 else "somente Facebook")
         return f"secrets obrigatorios presentes | canal: {canal}"
 
     def material_de_apoio():
@@ -85,7 +97,8 @@ def main():
         return f"{len(itens)} itens | publicaveis: feed {n['feed']} · story {n['story']} · reel {n['reel']}"
 
     checar("secrets", envs)
-    checar("token da Meta", token)
+    checar("Pagina do Facebook", pagina)
+    checar("Instagram", instagram)
     checar("pautas", pautas)
     checar("base do Moviki", base, critico=False)
     checar("material de apoio", material_de_apoio, critico=False)

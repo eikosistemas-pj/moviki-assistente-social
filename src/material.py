@@ -27,6 +27,8 @@ O QUE MUDA NA PECA PARA IR A PAGINA OFICIAL
   Story nao tem legenda: vai so a arte.
 
 QUEM FICA DE FORA
+  - campo `so_parceiro: true` no catalogo (28/09/2026);
+  - arte que a triagem por imagem barrou (src/triagem.py, 28/09/2026);
   - ids em config.MATERIAL_EXCLUIR (texto de parceiro impresso na arte ou
     falado no video);
   - categoria 'recrutar' e legenda com {link_parceiro};
@@ -38,6 +40,7 @@ QUEM FICA DE FORA
     texto: por isso o filtro olha id, titulo, legenda, arquivo e dica.
 """
 import re
+from urllib.parse import unquote, urlparse
 
 from . import compliance, config
 from . import util_net as net
@@ -62,6 +65,13 @@ _MARCAS_PARCEIRO = re.compile(
     r"\{link_parceiro\}|\{meu_nome\}|\{verificacao\}|\bmeu\s+link\b|#publi\b|\{link\}",
     re.I,
 )
+
+
+def so_parceiro(item):
+    """Campo `so_parceiro` do catalogo (28/09/2026): a peca tem texto de
+    parceiro na arte ou falado no video e nunca vai para a pagina oficial."""
+    v = item.get("so_parceiro")
+    return v is True or str(v).strip().lower() in ("1", "true", "sim")
 
 
 # ------------------------------------------------------------------ catalogo
@@ -97,6 +107,16 @@ def _segundos(duracao):
     for p in partes:
         total = total * 60 + p
     return total
+
+
+def extensao_de(arquivo):
+    """Caminho em minusculas SEM a query string. Arquivo no Firebase Storage
+    (P46, 28/09/2026) chega como '.../o/material%2Fvideo.mp4?alt=media&token=...':
+    olhar so o fim da URL inteira diria que nao e .mp4."""
+    a = str(arquivo or "")
+    if a.startswith("https://"):
+        a = unquote(urlparse(a).path)
+    return a.lower()
 
 
 def url_absoluta(arquivo):
@@ -158,11 +178,13 @@ def pecas(catalogo, formato, excluir=None):
             continue
         if it["id"] in excluir or it.get("categoria") == "recrutar":
             continue
+        if so_parceiro(it):
+            continue
         if not config.LIVE_NA_PAGINA and fala_de_live(it):
             continue
         if _formato_do_item(it) != formato:
             continue
-        arq = str(it["arquivo"]).lower()
+        arq = extensao_de(it["arquivo"])
         midia = "video" if formato == "reel" else "imagem"
         if midia == "imagem" and not arq.endswith((".jpg", ".jpeg", ".png")):
             continue
@@ -188,7 +210,11 @@ def pecas(catalogo, formato, excluir=None):
             "midia": midia,
             "url": url_absoluta(it["arquivo"]),
             "capa": url_absoluta(it["capa"]) if (formato == "reel" and it.get("capa")
-                                                 and str(it["capa"]).lower().endswith((".jpg", ".jpeg"))) else None,
+                                                 and extensao_de(it["capa"]).endswith((".jpg", ".jpeg"))) else None,
+            # Capa em qualquer formato de imagem: e o que a triagem olha no video.
+            "capa_triagem": url_absoluta(it["capa"]) if (formato == "reel" and it.get("capa")
+                                                         and extensao_de(it["capa"]).endswith(
+                                                             (".jpg", ".jpeg", ".png", ".webp"))) else None,
             "titulo": it.get("titulo", ""),
             "categoria": it.get("categoria", "geral"),
             "legenda_ig": leg_ig,

@@ -8,7 +8,9 @@ Roda 2x por dia (metricas.yml) e grava estado/redes.json:
   - os posts dos ultimos 30 dias com miniatura, link, curtidas e comentarios
     no Instagram e na Pagina;
   - agenda dos ultimos 7 dias: quantos posts eram esperados x quantos sairam;
-  - alertas (plano B, freio, dia com post faltando, token sem permissao).
+  - alertas (plano B, freio, dia com post faltando, token sem permissao);
+  - triagem "so parceiro" das pecas novas do Material de apoio (28/09/2026);
+  - Kit TikTok do dia: video + legenda de hoje e dos proximos 6 dias.
 
 Quem le: o painel do dono (secao Redes sociais) e o agente diario.
 
@@ -23,7 +25,7 @@ import re
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
-from src import config, estado, freio, material
+from src import config, estado, freio, material, tiktok, triagem
 from src import util_net as net
 
 DIAS_POSTS = 30
@@ -101,8 +103,8 @@ def _indice_catalogo():
             continue
         arq = str(it.get("arquivo") or "")
         capa = str(it.get("capa") or "")
-        img = capa if arq.lower().endswith(".mp4") else arq
-        if img and img.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+        img = capa if material.extensao_de(arq).endswith(".mp4") else arq
+        if img and material.extensao_de(img).endswith((".jpg", ".jpeg", ".png", ".webp")):
             idx[it["id"]] = {"mini": material.url_absoluta(img), "titulo": it.get("titulo", ""),
                              "ramo": it.get("categoria", "")}
     return idx
@@ -365,6 +367,36 @@ def ler_contas(get_ig, get_fb):
     return contas
 
 
+# ---------------------------------------------------------------- tiktok
+def material_e_tiktok(agora, catalogo=None, perguntar=None):
+    """Triagem das pecas novas + Kit TikTok. Nunca derruba o relatorio."""
+    hoje = agora.astimezone(FUSO).date()
+    extra = []
+    try:
+        cat = catalogo if catalogo is not None else material.carregar_catalogo()
+    except Exception as e:  # noqa: BLE001
+        return {"triagem": None, "tiktok": {"erro": f"catalogo do material: {str(e)[:120]}", "dias": []},
+                "_alertas_extra": [{"nivel": "atencao", "tipo": "material",
+                                    "texto": "Catálogo do Material de apoio fora do ar: kit TikTok e triagem sem atualizar."}]}
+    todas = [p for f in ("feed", "story", "reel") for p in material.pecas(cat, f)]
+    olhadas, falhas = triagem.olhar(todas, triagem.POR_RELATORIO, perguntar)
+    res = triagem.resumo(todas)
+    res.update({"olhadas_agora": olhadas, "falhas_agora": falhas})
+    if not res["ligada"] and perguntar is None:
+        extra.append({"nivel": "atencao", "tipo": "triagem",
+                      "texto": "Triagem por imagem desligada (falta o secret ANTHROPIC_API_KEY no Metricas): "
+                               "peça nova com texto de parceiro na arte pode ir à página."})
+    elif falhas:
+        extra.append({"nivel": "atencao", "tipo": "triagem",
+                      "texto": f"{falhas} peça(s) nova(s) do Material de apoio sem triagem: ficam fora das redes até a próxima rodada."})
+    videos = triagem.filtrar(material.pecas(cat, "reel"), limite=0, perguntar=perguntar)
+    tk = tiktok.atualizar(videos, hoje)
+    if not tk["dias"]:
+        extra.append({"nivel": "atencao", "tipo": "tiktok",
+                      "texto": "Kit TikTok vazio: nenhum vídeo 9:16 do Material de apoio liberado para a página oficial."})
+    return {"triagem": res, "tiktok": tk, "_alertas_extra": extra}
+
+
 def main():
     print(f"moviki-assistente-social {config.VERSAO} — relatorio das redes")
     from src.social.facebook import Facebook
@@ -383,6 +415,8 @@ def main():
     anterior = anterior.get("seguidores_hist", []) if isinstance(anterior, dict) else []
     rel["seguidores_hist"] = serie_seguidores(anterior, contas, datetime.now(timezone.utc))
     rel["seguidores"] = resumo_seguidores(rel["seguidores_hist"], datetime.now(timezone.utc))
+    rel.update(material_e_tiktok(datetime.now(timezone.utc)))
+    rel["alertas"] += rel.pop("_alertas_extra", [])
     estado.gravar_lista("redes.json", rel)
     print(f"{len(rel['posts'])} posts em {DIAS_POSTS} dias | canal hoje: {rel['canal_hoje']}")
     for a in rel["alertas"]:

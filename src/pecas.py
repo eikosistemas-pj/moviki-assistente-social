@@ -22,7 +22,7 @@ import re
 
 from PIL import Image, ImageDraw
 
-from . import arte, config, conteudo, criadores, estado, hospedagem, ia, material
+from . import arte, config, conteudo, criadores, estado, hospedagem, ia, material, triagem
 from . import util_net as net
 
 JANELA = 500
@@ -64,7 +64,7 @@ def candidatas(formato):
     derruba as outras."""
     casa, cria = [], []
     try:
-        casa = material.pecas(material.carregar_catalogo(), formato)
+        casa = triagem.filtrar(material.pecas(material.carregar_catalogo(), formato))
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: material de apoio indisponivel ({e})")
     if formato == "reel":

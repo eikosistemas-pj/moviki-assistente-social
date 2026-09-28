@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-09-28-collab"
+VERSAO = "2026-09-28-tiktok"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))
@@ -102,6 +102,9 @@ MATERIAL_CATALOGO = os.environ.get("MATERIAL_CATALOGO", f"{MATERIAL_BASE}/materi
 # proprio Moviki a frase manda o leitor para um parceiro que nao existe.
 # Peca nova com texto de parceiro entra AQUI (ou no secret MATERIAL_EXCLUIR,
 # ids separados por virgula, sem mexer em codigo).
+# 28/09/2026: lista LEGADA. Peca nova e barrada pelo campo `so_parceiro` do
+# catalogo e pela triagem por imagem (src/triagem.py) — ninguem precisa
+# lembrar de escrever aqui.
 MATERIAL_EXCLUIR_FIXO = {
     # feed
     "feed-na-hora-foodtruck", "feed-quem-se-move", "feed-tudo-em-um-lugar",
@@ -156,7 +159,12 @@ GRAPH = "https://graph.facebook.com/v25.0"
 
 # ----------------------------------------------------------------- IA
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-3-5-haiku-latest")
+# 28/09/2026: o padrao era "claude-3-5-haiku-latest", geracao 3.5 que sai de
+# linha (platform.claude.com/docs/en/about-claude/model-deprecations). Modelo
+# aposentado = IA falha e a legenda cai no texto reserva sem aviso.
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-haiku-4-5"
+# Modelo que LE IMAGEM na triagem "so parceiro" (src/triagem.py).
+ANTHROPIC_MODEL_VISAO = os.environ.get("ANTHROPIC_MODEL_VISAO") or "claude-haiku-4-5"
 
 # ----------------------------------------------------------------- regras
 # Quantos negocios no minimo precisam ter autorizado divulgacao para o

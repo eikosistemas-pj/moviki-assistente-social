@@ -215,3 +215,8 @@ Este repo **não escreve** em nenhuma coleção do Firestore. Só lê `negocios`
 - `metricas.yml` roda ~08h e ~22h e grava `estado/redes.json` (curtidas, comentários, miniaturas, agenda de 7 dias, alertas). O painel do dono lê esse arquivo na seção **Redes sociais**. Nada de token sai do Actions.
 - **Freio automático:** 2 falhas seguidas do Instagram tiram ele do ar por 72 h (`estado/instagram_freio.json`). Soltar na mão: apagar esse arquivo.
 - **Datas comemorativas:** `conteudo/datas-comemorativas.json` põe a hashtag da data em 2º lugar, sem passar de 5.
+
+## Triagem "só parceiro" e Kit TikTok (28/09/2026)
+
+- **Peça com texto de parceiro nunca vai à página oficial.** Três travas: campo `so_parceiro: true` no catálogo do Material de apoio, a lista `MATERIAL_EXCLUIR`, e a triagem por imagem (`src/triagem.py`) — a IA lê o texto impresso na arte (ou na capa do vídeo) uma vez e guarda o veredito em `estado/triagem_material.json`. Peça ainda não olhada fica de fora. Sem `ANTHROPIC_API_KEY` a triagem desliga e o painel avisa.
+- **Kit TikTok do dia:** o `metricas.yml` escolhe um vídeo 9:16 do material por dia (agenda de 7 dias em `estado/tiktok.json`) com legenda da marca e 5 hashtags. O painel do dono mostra o kit com Baixar vídeo e Copiar legenda. A postagem é manual pelo app do TikTok — a API pública exige auditoria que não aprova ferramenta de conta própria.

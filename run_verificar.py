@@ -8,7 +8,7 @@ ninguem perceber por semanas.
 
 Falha aqui = workflow vermelho = e-mail do GitHub. E o alarme.
 """
-from src import config, conteudo, criadores, firestore, freio, material, pecas
+from src import config, conteudo, criadores, estado, firestore, freio, material, pecas
 from src import util_net as net
 from src.social.instagram import Instagram
 
@@ -113,6 +113,18 @@ def main():
     checar("base do Moviki", base, critico=False)
     checar("material de apoio", material_de_apoio, critico=False)
     checar("pecas de criadores", fonte_criadores, critico=False)
+
+    def triagem_so_parceiro():
+        # 28/09/2026. A triagem roda no Metricas (~08h e ~22h); aqui so se le o
+        # que ela ja guardou.
+        cache = estado.ler_lista("triagem_material.json")
+        cache = cache if isinstance(cache, dict) else {}
+        if not cache:
+            raise RuntimeError("nenhuma peca olhada ainda — rodar Actions > Metricas")
+        barradas = sum(1 for v in cache.values() if v.get("parceiro"))
+        return f"{len(cache)} pecas olhadas, {barradas} barradas como so parceiro"
+
+    checar("triagem so parceiro", triagem_so_parceiro, critico=False)
 
     falhas_criticas = [c for c in CHECAGENS if not c[1] and c[3]]
     if falhas_criticas:

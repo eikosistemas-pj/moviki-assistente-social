@@ -140,3 +140,18 @@ def test_agenda_aponta_post_que_faltou(monkeypatch):
     assert any("28/09: feed saiu 0 de 1" in a["texto"] for a in r["alertas"])
     hoje = r["agenda"][-1]
     assert hoje["hoje"] and hoje["reel"]["esperado"] == 1
+
+
+def test_miniatura_antiga_vem_da_arte_hospedada_pelo_robo(monkeypatch):
+    _cfg(monkeypatch)
+    pasta = Path(tempfile.mkdtemp())
+    for n in ("feed-institucional-20260925-185451.jpg", "story-criador-20260928-000744.jpg",
+              "feed-vitrine-20260911-180215.jpg"):
+        (pasta / n).write_bytes(b"x")
+    idx = run_metricas._indice_publicado(pasta)
+    q = datetime(2026, 9, 25, 18, 54, 58, tzinfo=timezone.utc)
+    assert run_metricas._mini_publicado(idx, "feed", q).endswith("feed-institucional-20260925-185451.jpg")
+    q2 = datetime(2026, 9, 28, 0, 7, 50, tzinfo=timezone.utc)
+    assert run_metricas._mini_publicado(idx, "story", q2).endswith("story-criador-20260928-000744.jpg")
+    # arte de outro dia nunca vira miniatura por engano
+    assert run_metricas._mini_publicado(idx, "feed", datetime(2026, 9, 26, tzinfo=timezone.utc)) == ""

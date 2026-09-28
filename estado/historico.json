@@ -1,5 +1,16 @@
 [
  {
+  "quando": "2026-09-28T19:47:06+00:00",
+  "formato": "story",
+  "descricao": "Mostre sua farmácia ao vivo",
+  "media_id": "1252553337031938",
+  "origem": "casa",
+  "peca": "story-farmacia-mostre-ao-vivo",
+  "rede": "facebook",
+  "ramo": "farmacia",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-farmacia-mostre-ao-vivo.jpg"
+ },
+ {
   "quando": "2026-09-28T16:47:10+00:00",
   "formato": "feed",
   "descricao": "Atenda ao vivo com o Moviki",

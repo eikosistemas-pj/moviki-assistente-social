@@ -1,5 +1,5 @@
 {
- "gerado": "2026-09-28T20:00:32+00:00",
+ "gerado": "2026-09-28T20:13:02+00:00",
  "versao": "2026-09-28-tiktok",
  "contas": {
   "instagram": {
@@ -21,9 +21,9 @@
   "reel": "facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
   "feed": null,
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -167,7 +167,7 @@
    "ig": {
     "feed": {
      "posts": 2,
-     "curtidas": 0,
+     "curtidas": 2,
      "comentarios": 0
     }
    },
@@ -193,7 +193,7 @@
    "ig": {
     "feed": {
      "posts": 2,
-     "curtidas": 0,
+     "curtidas": 2,
      "comentarios": 0
     }
    },
@@ -219,8 +219,8 @@
  "alertas": [
   {
    "nivel": "atencao",
-   "tipo": "triagem",
-   "texto": "Triagem por imagem desligada (falta o secret ANTHROPIC_API_KEY no Metricas): peça nova com texto de parceiro na arte pode ir à página."
+   "tipo": "tiktok",
+   "texto": "Kit TikTok vazio: nenhum vídeo 9:16 do Material de apoio liberado para a página oficial."
   }
  ],
  "posts": [
@@ -240,7 +240,7 @@
    "ig": {
     "id": "18353725261222473",
     "link": "https://www.instagram.com/p/Dd1_HiMFmKE/",
-    "curtidas": 0,
+    "curtidas": 2,
     "comentarios": 0
    },
    "fb": {
@@ -1001,30 +1001,26 @@
   ]
  },
  "triagem": {
-  "ligada": false,
-  "liberadas": 0,
-  "barradas": 0,
-  "pendentes": 35,
-  "lista_barradas": [],
-  "olhadas_agora": 0,
+  "ligada": true,
+  "liberadas": 78,
+  "barradas": 2,
+  "pendentes": 27,
+  "lista_barradas": [
+   {
+    "id": "story-servicos-ao-vivo",
+    "trecho": "Fale comigo direto pelo seu perfil, Interaja com seus clientes em tempo real, Receba pedidos pelo whatsapp, Gente que realmente faz o mundo girar"
+   },
+   {
+    "id": "story-bijuteria-lives",
+    "trecho": "ana.souza Estou lindo! carol.martins Tem na cor dourada? lukasferreira Vou querer! biaoliveira Como faço pra comprar?"
+   }
+  ],
+  "olhadas_agora": 80,
   "falhas_agora": 0
  },
  "tiktok": {
-  "videos_disponiveis": 1,
-  "live_na_pagina": false,
-  "dias": [
-   {
-    "dia": "2026-09-28",
-    "hoje": true,
-    "id": "video-influencer-lojista",
-    "titulo": "Seu cliente saiu pra te procurar. Ele te achou?",
-    "ramo": "geral",
-    "video": "https://app.moviki.com.br/material/video-influencer-parceiro.mp4",
-    "capa": "https://app.moviki.com.br/material/capas/video-influencer-parceiro.webp",
-    "duracao": 67.0,
-    "legenda": "Ninguém compra de quem não acha.\n\nNo Moviki o comerciante marca onde está hoje, monta a página com cardápio, fotos e promoções, e quem está por perto encontra. Vale para quem se move e para quem tem ponto fixo.\n\nTeste grátis por 30 dias, sem cartão. Comece pelo link da bio.\n\n#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
-    "hashtags": "#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline"
-   }
-  ]
+  "videos_disponiveis": 0,
+  "live_na_pagina": true,
+  "dias": []
  }
 }

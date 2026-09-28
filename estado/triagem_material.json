@@ -1,0 +1,482 @@
+{
+ "feed-joias-venda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-joias-venda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:12+00:00"
+ },
+ "feed-joalheria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-joalheria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:13+00:00"
+ },
+ "feed-otica-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-otica-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:15+00:00"
+ },
+ "feed-otica-no-moviki": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-otica-no-moviki.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:16+00:00"
+ },
+ "feed-oculos-venda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-oculos-venda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:17+00:00"
+ },
+ "feed-armacoes-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-armacoes-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:18+00:00"
+ },
+ "feed-farmacia-atenda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-farmacia-atenda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:19+00:00"
+ },
+ "feed-farmacia-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-farmacia-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:20+00:00"
+ },
+ "feed-brinquedos-mostre-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-brinquedos-mostre-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:21+00:00"
+ },
+ "feed-brinquedos-loja-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-brinquedos-loja-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:23+00:00"
+ },
+ "feed-artesanato-mostre-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-artesanato-mostre-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:24+00:00"
+ },
+ "feed-artesanato-venda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-artesanato-venda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:25+00:00"
+ },
+ "feed-tenis-loja-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-tenis-loja-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:26+00:00"
+ },
+ "feed-tenis-mostre-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-tenis-mostre-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:27+00:00"
+ },
+ "feed-servicos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-servicos-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:28+00:00"
+ },
+ "feed-servicos-reparos": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-servicos-reparos.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:30+00:00"
+ },
+ "feed-material-escolar-2": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-material-escolar-2.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:30+00:00"
+ },
+ "feed-material-escolar": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-material-escolar.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:31+00:00"
+ },
+ "feed-naturais-granola": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-naturais-granola.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:33+00:00"
+ },
+ "feed-naturais-loja": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-naturais-loja.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:34+00:00"
+ },
+ "feed-naturais-atendente": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-naturais-atendente.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:34+00:00"
+ },
+ "feed-autopecas-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-autopecas-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:35+00:00"
+ },
+ "feed-pecas-automotivas": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-pecas-automotivas.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:37+00:00"
+ },
+ "feed-moto-pecas-acessorios": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-moto-pecas-acessorios.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:38+00:00"
+ },
+ "feed-moto-pecas": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-moto-pecas.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:39+00:00"
+ },
+ "feed-suplementos-academia": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-suplementos-academia.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:40+00:00"
+ },
+ "feed-bijuteria-live": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-bijuteria-live.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:41+00:00"
+ },
+ "feed-bolos-live": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-bolos-live.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:42+00:00"
+ },
+ "feed-bolo-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-bolo-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:44+00:00"
+ },
+ "feed-eletronicos-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-eletronicos-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:45+00:00"
+ },
+ "feed-eletronicos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-eletronicos-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:45+00:00"
+ },
+ "feed-loja-feminina-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-loja-feminina-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:47+00:00"
+ },
+ "feed-loja-feminina-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-loja-feminina-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:47+00:00"
+ },
+ "feed-pizzaria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-pizzaria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:48+00:00"
+ },
+ "feed-petshop-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-petshop-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:50+00:00"
+ },
+ "feed-petshop-mais-perto": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-petshop-mais-perto.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:51+00:00"
+ },
+ "feed-atelie-mais-pessoas": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-atelie-mais-pessoas.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:52+00:00"
+ },
+ "feed-artesanato-encanta": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-artesanato-encanta.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:53+00:00"
+ },
+ "feed-cardapio-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-cardapio-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:55+00:00"
+ },
+ "feed-todo-tipo-de-negocio": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-todo-tipo-de-negocio.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:56+00:00"
+ },
+ "feed-seja-encontrado": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-seja-encontrado.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:57+00:00"
+ },
+ "feed-atenda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-atenda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:58+00:00"
+ },
+ "feed-servico-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-servico-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:13:59+00:00"
+ },
+ "feed-fotografia-talento": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-fotografia-talento.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:00+00:00"
+ },
+ "story-joias-venda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-joias-venda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:02+00:00"
+ },
+ "story-joalheria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-joalheria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:02+00:00"
+ },
+ "story-otica-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-otica-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:04+00:00"
+ },
+ "story-otica-vitrine-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-otica-vitrine-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:05+00:00"
+ },
+ "story-oculos-venda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-oculos-venda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:06+00:00"
+ },
+ "story-oculos-mostre-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-oculos-mostre-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:07+00:00"
+ },
+ "story-farmacia-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-farmacia-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:08+00:00"
+ },
+ "story-farmacia-mostre-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-farmacia-mostre-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:09+00:00"
+ },
+ "story-brinquedos-loja-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-brinquedos-loja-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:10+00:00"
+ },
+ "story-brinquedos-no-mapa": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-brinquedos-no-mapa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:11+00:00"
+ },
+ "story-artesanato-venda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-artesanato-venda-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:12+00:00"
+ },
+ "story-artesanato-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-artesanato-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:13+00:00"
+ },
+ "story-tenis-esportivos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-tenis-esportivos-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:14+00:00"
+ },
+ "story-tenis-mostre-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-tenis-mostre-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:15+00:00"
+ },
+ "story-servicos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-servicos-ao-vivo.jpg",
+  "parceiro": true,
+  "trecho": "Fale comigo direto pelo seu perfil, Interaja com seus clientes em tempo real, Receba pedidos pelo whatsapp, Gente que realmente faz o mundo girar",
+  "em": "2026-09-28T20:14:16+00:00"
+ },
+ "story-servicos-reparos": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-servicos-reparos.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:17+00:00"
+ },
+ "story-material-escolar-2": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-material-escolar-2.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:18+00:00"
+ },
+ "story-material-escolar": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-material-escolar.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:19+00:00"
+ },
+ "story-naturais-granola": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-naturais-granola.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:20+00:00"
+ },
+ "story-naturais-atendente": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-naturais-atendente.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:21+00:00"
+ },
+ "story-autopecas-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-autopecas-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:22+00:00"
+ },
+ "story-pecas-automotivas": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-pecas-automotivas.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:23+00:00"
+ },
+ "story-moto-produtos": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-moto-produtos.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:24+00:00"
+ },
+ "story-moto-pecas": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-moto-pecas.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:26+00:00"
+ },
+ "story-suplementos-academia": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-suplementos-academia.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:27+00:00"
+ },
+ "story-suplementos-whey": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-suplementos-whey.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:28+00:00"
+ },
+ "story-suplementos-avental": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-suplementos-avental.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:29+00:00"
+ },
+ "story-suplementos-na-feira": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-suplementos-na-feira.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:30+00:00"
+ },
+ "story-bijuteria-lives": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-bijuteria-lives.jpg",
+  "parceiro": true,
+  "trecho": "ana.souza Estou lindo! carol.martins Tem na cor dourada? lukasferreira Vou querer! biaoliveira Como faço pra comprar?",
+  "em": "2026-09-28T20:14:32+00:00"
+ },
+ "story-bijuteria-mais-perto": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-bijuteria-mais-perto.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:33+00:00"
+ },
+ "story-suco-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-suco-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:34+00:00"
+ },
+ "story-eletronicos-por-live": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-eletronicos-por-live.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:35+00:00"
+ },
+ "story-eletronicos-por-live-2": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-eletronicos-por-live-2.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:36+00:00"
+ },
+ "story-moda-masculina-blazer": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-moda-masculina-blazer.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:37+00:00"
+ },
+ "story-moda-masculina-camisa": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-moda-masculina-camisa.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:38+00:00"
+ },
+ "story-roupas-por-live": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-roupas-por-live.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-28T20:14:39+00:00"
+ }
+}

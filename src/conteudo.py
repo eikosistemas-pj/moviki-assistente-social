@@ -62,14 +62,45 @@ def por_tipo(pautas, tipo):
     return [p for p in pautas if p.get("tipo") == tipo]
 
 
-def hashtags(tipo="educativo"):
-    """Blocos fixos de hashtag. Vao no primeiro comentario, nunca na legenda."""
-    base = "#moviki #negocioitinerante #foodtruck #carrinhodelanche #feiralivre"
-    extras = {
-        "educativo": "#empreendedorismo #negociodrua #vendasderua #trabalhoautonomo",
-        "conversao": "#empreendedor #donodenegocio #comerciolocal #microempreendedor",
-        "parceiro": "#programadeparceiros #indicacao #rendaporindicacao #marketingdeindicacao",
-        "bastidor": "#comerciolocal #ruas #trabalhador #brasil",
-        "vitrine": "#comerciolocal #apoieonegociolocal #ondecomer #pertodemim",
-    }
-    return f"{base} {extras.get(tipo, extras['educativo'])}"
+# Hashtags por ramo (27/09/2026). O material hoje cobre farmacia, shopping,
+# pet, moda... e todo post saia com #foodtruck #carrinhodelanche — hashtag
+# errada entrega o post pra quem nao e publico. Cada ramo tem 4 proprias;
+# a 5a e sempre #moviki (limite do Instagram: 5 por post).
+HASHTAGS_RAMO = {
+    "alimentacao": "#delivery #lanchonete #restaurante #comerciolocal",
+    "artesanato": "#artesanato #feitoamao #empreendedora #comerciolocal",
+    "beleza": "#salaodebeleza #esteticista #manicure #empreendedora",
+    "automotivo": "#oficinamecanica #lavajato #motopecas #comerciolocal",
+    "eletronicos": "#assistenciatecnica #celular #acessorios #comerciolocal",
+    "farmacia": "#farmacia #drogaria #saude #comerciolocal",
+    "feira": "#foodtruck #feiralivre #vendasderua #delivery",
+    "eventos": "#fotografo #eventos #festa #empreendedor",
+    "infantil": "#lojainfantil #brinquedos #modainfantil #comerciolocal",
+    "shopping": "#lojista #varejo #liveshop #vendasonline",
+    "moda": "#lojaderoupa #modafeminina #lojista #vendasonline",
+    "naturais": "#produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
+    "papelaria": "#papelaria #voltasaulas #lojista #comerciolocal",
+    "pet": "#petshop #banhoetosa #pet #comerciolocal",
+    "servicos": "#prestadordeservicos #autonomo #reparos #empreendedor",
+    "geral": "#pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "panfletos": "#pequenonegocio #empreendedor #comerciolocal #marketinglocal",
+}
+HASHTAGS_TIPO = {
+    "educativo": "#empreendedorismo #pequenonegocio #comerciolocal #dicasdenegocio",
+    "conversao": "#pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "parceiro": "#programadeparceiros #indicacao #empreendedor #pequenonegocio",
+    "bastidor": "#empreendedor #comerciolocal #pequenonegocio #brasil",
+    "vitrine": "#comerciolocal #apoieonegociolocal #pertodemim #pequenonegocio",
+}
+
+
+def hashtags(tipo="educativo", categoria=None):
+    """No maximo 5 hashtags (limite do Instagram). Vao no FIM DA LEGENDA do
+    Instagram — nunca em comentario automatico. Ramo da peca manda; sem ramo
+    conhecido, vale o tipo de pauta."""
+    extras = HASHTAGS_RAMO.get(categoria or "") or HASHTAGS_TIPO.get(tipo) or HASHTAGS_TIPO["educativo"]
+    tags = []
+    for t in ("#moviki " + extras).split():
+        if t not in tags:
+            tags.append(t)
+    return " ".join(tags[: config.HASHTAGS_MAX])

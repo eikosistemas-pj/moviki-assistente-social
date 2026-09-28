@@ -219,18 +219,35 @@ def imagem_local(peca):
     return _baixar_imagem(peca["url"])
 
 
+# ------------------------------------------------------------------ alarme
+def alarme_instagram(formato, erro):
+    """Instagram falhou e o post saiu so na Pagina. Deixa um bilhete que o
+    ultimo passo do workflow transforma em job VERMELHO (e-mail do GitHub).
+    O post nao se perde e o estado e salvo antes — o alarme so avisa."""
+    msg = f"Instagram falhou no {formato}: {erro}. O post saiu so no Facebook (plano B)."
+    try:
+        with open(config.ALERTA_INSTAGRAM, "a", encoding="utf-8") as f:
+            f.write(msg + "\n")
+    except OSError as e:  # noqa: BLE001
+        print(f"aviso: nao gravou o alarme ({e})")
+    print(f"ALARME: {msg}")
+
+
 # ------------------------------------------------------------------ publicacao
 def publicar(peca, hashtags=""):
     """Publica story ou reel no canal certo e registra. Devolve o id.
 
-    SO_FACEBOOK ligado -> Pagina do Facebook e o canal (falha derruba).
-    Desligado          -> Instagram principal; Facebook espelho best-effort;
-                          Instagram falhou -> Facebook como plano B.
+    Instagram desligado p/ o formato (SO_FACEBOOK, IG_FORMATOS) -> Pagina do
+                          Facebook e o canal (falha derruba).
+    Ligado             -> Instagram principal; Facebook espelho best-effort;
+                          Instagram falhou -> Facebook como plano B + alarme
+                          (job vermelho, e-mail do GitHub).
     """
     from .social.facebook import Facebook, espelhar_formato
     from .social.instagram import Instagram
 
     formato, midia = peca["formato"], peca["midia"]
+    no_ig = config.instagram_ligado(formato)
     leg_ig = leg_fb = ""
     if formato == "reel":
         leg_ig, leg_fb = legendas(peca)
@@ -239,8 +256,10 @@ def publicar(peca, hashtags=""):
     print(f"--- {formato} | {peca['origem']} | {peca['id']} ---")
     print(f"midia: {url}")
     if formato == "reel":
-        print("--- legenda (Facebook) ---" if config.SO_FACEBOOK else "--- legenda ---")
-        print(leg_fb if config.SO_FACEBOOK else leg_ig)
+        print("--- legenda (Instagram) ---" if no_ig else "--- legenda (Facebook) ---")
+        print(leg_ig if no_ig else leg_fb)
+        if no_ig and hashtags:
+            print(f"hashtags no fim da legenda: {hashtags}")
         print("--------------------------")
 
     if config.DRY_RUN:
@@ -253,7 +272,8 @@ def publicar(peca, hashtags=""):
             return fb.reel(url, leg_fb)
         return fb.story_video(url) if midia == "video" else fb.story_foto(url)
 
-    if config.SO_FACEBOOK:
+    print(f"canal: {'Instagram + espelho no Facebook' if no_ig else 'somente Facebook'}")
+    if not no_ig:
         mid = no_facebook()
         marcar(peca, mid, "facebook")
         print(f"OK -> Facebook | {formato} | {peca['id']} | id: {mid}")
@@ -269,6 +289,7 @@ def publicar(peca, hashtags=""):
         print(f"AVISO: Instagram falhou ({e}) -> publicando no Facebook.")
         mid = no_facebook()
         marcar(peca, mid, "facebook", {"planoB": True})
+        alarme_instagram(formato, e)
         return mid
 
     marcar(peca, mid, "instagram")

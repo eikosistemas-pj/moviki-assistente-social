@@ -17,7 +17,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-09-22-criador"
+VERSAO = "2026-09-27-instagram"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))
@@ -199,3 +199,49 @@ DRY_RUN = os.environ.get("DRY_RUN", "").strip().lower() in ("1", "true", "sim")
 # Ligar: secret/env SO_FACEBOOK=1
 # Desligar (quando o Instagram voltar): apagar o secret. Nada mais muda.
 SO_FACEBOOK = os.environ.get("SO_FACEBOOK", "").strip().lower() in ("1", "true", "sim")
+
+# Instagram por formato (27/09/2026).
+#
+# O SO_FACEBOOK era tudo-ou-nada: desligou, feed + 2 stories/dia + 2 reels/semana
+# caem de uma vez numa conta nova (@moviki.oficial). Conta nova com volume
+# automatico repentino e o padrao que a Meta trata como spam — e a conta
+# antiga ja foi restrita uma vez. Aqui se liga o Instagram FORMATO A FORMATO.
+#
+# Secret IG_FORMATOS, formatos separados por virgula:
+#   feed           -> so o feed vai ao Instagram; story e reel seguem so na Pagina
+#   feed,reel      -> segunda semana
+#   (vazio)        -> todos os formatos (padrao quando SO_FACEBOOK nao existe)
+#   nenhum         -> nada no Instagram (mesmo efeito do SO_FACEBOOK)
+# O Facebook recebe TUDO sempre: o que vai ao Instagram e espelhado na Pagina,
+# o que nao vai sai direto nela. A Pagina nao perde nenhum post.
+#
+# SO_FACEBOOK continua mandando: existindo com "sim", nada vai ao Instagram.
+_IG_FORMATOS_BRUTO = os.environ.get("IG_FORMATOS", "").strip().lower()
+IG_FORMATOS = {x.strip() for x in _IG_FORMATOS_BRUTO.split(",") if x.strip()}
+
+
+def instagram_ligado(formato):
+    """True se este formato (feed | story | reel) deve sair no Instagram."""
+    if SO_FACEBOOK or not IG_ACCOUNT_ID:
+        return False
+    if not IG_FORMATOS:
+        return True
+    if "nenhum" in IG_FORMATOS:
+        return False
+    return formato in IG_FORMATOS
+
+
+# Hashtags no Instagram (27/09/2026).
+#
+# Desde dez/2025 o Instagram aceita no maximo 5 hashtags por post. O robo
+# mandava 10 no PRIMEIRO COMENTARIO — acima do limite e, pior, comentario
+# automatico, o que a regra permanente da conta nova proibe ("nunca automacao
+# de comentarios ou DM"). Agora vao no fim da LEGENDA, no maximo 5, escolhidas
+# pelo ramo da peca. Nenhum comentario automatico.
+HASHTAGS_MAX = 5
+
+# Alarme do plano B. Se o Instagram falha, o post sai na Pagina (nao se perde)
+# e este arquivo e criado; o ultimo passo do workflow le o arquivo e deixa o
+# job VERMELHO — o GitHub manda e-mail. Sem isso o Instagram podia morrer por
+# semanas com o log verde (foi o que aconteceu com o reel de 24/08 a 22/09).
+ALERTA_INSTAGRAM = os.environ.get("ALERTA_INSTAGRAM", "/tmp/alerta-instagram.txt")

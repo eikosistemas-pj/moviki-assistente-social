@@ -1,12 +1,12 @@
 {
- "gerado": "2026-09-28T18:41:46+00:00",
- "versao": "2026-09-28-collab",
+ "gerado": "2026-09-28T19:59:09+00:00",
+ "versao": "2026-09-28-tiktok",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
    "seguidores": 2297,
-   "posts": 24,
-   "cota_usada": 1,
+   "posts": 25,
+   "cota_usada": 2,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "facebook"
  },
  "rampa": {
+  "story": "2026-10-12",
   "feed": null,
-  "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -150,11 +150,11 @@
    "hoje": true,
    "feed": {
     "esperado": 1,
-    "feito": 1
+    "feito": 2
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 0,
@@ -166,24 +166,24 @@
   "7d": {
    "ig": {
     "feed": {
-     "posts": 1,
+     "posts": 2,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "fb": {
+    "feed": {
+     "posts": 6,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "story": {
-     "posts": 11,
+     "posts": 12,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
      "posts": 2,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "feed": {
-     "posts": 5,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -192,14 +192,19 @@
   "30d": {
    "ig": {
     "feed": {
-     "posts": 1,
+     "posts": 2,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "fb": {
+    "feed": {
+     "posts": 23,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "story": {
-     "posts": 11,
+     "posts": 12,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -207,17 +212,62 @@
      "posts": 2,
      "curtidas": 0,
      "comentarios": 0
-    },
-    "feed": {
-     "posts": 22,
-     "curtidas": 0,
-     "comentarios": 0
     }
    }
   }
  },
- "alertas": [],
+ "alertas": [
+  {
+   "nivel": "atencao",
+   "tipo": "triagem",
+   "texto": "Triagem por imagem desligada (falta o secret ANTHROPIC_API_KEY no Metricas): peça nova com texto de parceiro na arte pode ir à página."
+  }
+ ],
  "posts": [
+  {
+   "quando": "2026-09-28T19:56:43+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Mostre seus brinquedos ao vivo",
+   "peca": "feed-brinquedos-mostre-ao-vivo",
+   "ramo": "infantil",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20260928-195619.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18353725261222473",
+    "link": "https://www.instagram.com/p/Dd1_HiMFmKE/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122118452673430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122118452673430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-09-28T19:47:06+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Mostre sua farmácia ao vivo",
+   "peca": "story-farmacia-mostre-ao-vivo",
+   "ramo": "farmacia",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-farmacia-mostre-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1252553337031938"
+   }
+  },
   {
    "quando": "2026-09-28T16:47:10+00:00",
    "formato": "feed",
@@ -923,7 +973,7 @@
   {
    "dia": "2026-09-28",
    "ig": 2297,
-   "ig_posts": 24,
+   "ig_posts": 25,
    "fb": 0
   }
  ],
@@ -947,6 +997,33 @@
     "falta": 7703,
     "dias": 90,
     "por_dia": 85.6
+   }
+  ]
+ },
+ "triagem": {
+  "ligada": false,
+  "liberadas": 0,
+  "barradas": 0,
+  "pendentes": 35,
+  "lista_barradas": [],
+  "olhadas_agora": 0,
+  "falhas_agora": 0
+ },
+ "tiktok": {
+  "videos_disponiveis": 1,
+  "live_na_pagina": false,
+  "dias": [
+   {
+    "dia": "2026-09-28",
+    "hoje": true,
+    "id": "video-influencer-lojista",
+    "titulo": "Seu cliente saiu pra te procurar. Ele te achou?",
+    "ramo": "geral",
+    "video": "https://app.moviki.com.br/material/video-influencer-parceiro.mp4",
+    "capa": "https://app.moviki.com.br/material/capas/video-influencer-parceiro.webp",
+    "duracao": 67.0,
+    "legenda": "Ninguém compra de quem não acha.\n\nNo Moviki o comerciante marca onde está hoje, monta a página com cardápio, fotos e promoções, e quem está por perto encontra. Vale para quem se move e para quem tem ponto fixo.\n\nTeste grátis por 30 dias, sem cartão. Comece pelo link da bio.\n\n#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "hashtags": "#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline"
    }
   ]
  }

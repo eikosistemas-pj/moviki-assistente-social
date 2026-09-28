@@ -51,6 +51,8 @@ jobs:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
           SO_FACEBOOK: ${{ secrets.SO_FACEBOOK }}
+          # 27/09/2026: Instagram formato a formato (feed | feed,reel | vazio = todos).
+          IG_FORMATOS: ${{ secrets.IG_FORMATOS }}
           MATERIAL_EXCLUIR: ${{ secrets.MATERIAL_EXCLUIR }}
           # 23/09/2026: "1" libera pecas que vendem live (live aberta a todos). Sem ele, ficam de fora.
           LIVE_NA_PAGINA: ${{ secrets.LIVE_NA_PAGINA }}
@@ -71,3 +73,16 @@ jobs:
           git commit -m "estado: story $(date -u +%Y-%m-%d)"
           git pull --rebase --autostash || true
           git push
+
+      # 27/09/2026. Se o Instagram falhou, o post saiu so na Pagina (plano B)
+      # e o estado ja foi salvo acima. Este passo deixa o job VERMELHO para o
+      # GitHub mandar e-mail — antes o plano B passava verde e o Instagram
+      # podia ficar semanas fora do ar sem ninguem ver.
+      - name: Alarme - Instagram falhou
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          if [ -f /tmp/alerta-instagram.txt ]; then
+            while read -r linha; do echo "::error::$linha"; done < /tmp/alerta-instagram.txt
+            exit 1
+          fi
+          echo "Instagram sem falha neste ciclo."

@@ -68,6 +68,8 @@ jobs:
           PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
           SO_FACEBOOK: ${{ secrets.SO_FACEBOOK }}
+          # 27/09/2026: Instagram formato a formato (feed | feed,reel | vazio = todos).
+          IG_FORMATOS: ${{ secrets.IG_FORMATOS }}
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Opcionais (22/09/2026). Vazios = padrao do codigo.
@@ -102,3 +104,16 @@ jobs:
           git commit -m "estado: feed $(date -u +%Y-%m-%d)"
           git pull --rebase --autostash || true
           git push
+
+      # 27/09/2026. Se o Instagram falhou, o post saiu so na Pagina (plano B)
+      # e o estado ja foi salvo acima. Este passo deixa o job VERMELHO para o
+      # GitHub mandar e-mail — antes o plano B passava verde e o Instagram
+      # podia ficar semanas fora do ar sem ninguem ver.
+      - name: Alarme - Instagram falhou
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          if [ -f /tmp/alerta-instagram.txt ]; then
+            while read -r linha; do echo "::error::$linha"; done < /tmp/alerta-instagram.txt
+            exit 1
+          fi
+          echo "Instagram sem falha neste ciclo."

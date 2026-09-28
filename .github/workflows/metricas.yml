@@ -1,0 +1,55 @@
+name: Metricas
+
+# Relatorio das redes para o painel do dono (28/09/2026).
+# Le curtidas, comentarios e a saude das contas na Graph API e grava
+# estado/redes.json. NUNCA publica nada.
+#
+# Horarios em UTC (Sao Paulo = UTC-3), minuto fora do pico do Actions:
+#   ~08h BRT -> o agente diario le as 08h30 e avisa o Paulo se algo falhou
+#   ~22h BRT -> fecha o dia com o story das 18h40 ja contado
+on:
+  schedule:
+    - cron: '7 11 * * *'
+    - cron: '7 1 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: moviki-assistente-social-estado
+  cancel-in-progress: false
+
+jobs:
+  relatorio:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Montar relatorio
+        env:
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          SO_FACEBOOK: ${{ secrets.SO_FACEBOOK }}
+          IG_FORMATOS: ${{ secrets.IG_FORMATOS }}
+          LIVE_NA_PAGINA: ${{ secrets.LIVE_NA_PAGINA }}
+        run: python run_metricas.py
+
+      - name: Salvar relatorio
+        run: |
+          git config user.name "moviki-assistente-social"
+          git config user.email "bot@moviki.com.br"
+          git add estado/redes.json || true
+          git diff --staged --quiet && echo "nada a commitar" && exit 0
+          git commit -m "relatorio: redes $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash || true
+          git push

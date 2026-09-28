@@ -1,6 +1,6 @@
 {
- "gerado": "2026-09-28T17:34:26+00:00",
- "versao": "2026-09-28-painel",
+ "gerado": "2026-09-28T18:41:46+00:00",
+ "versao": "2026-09-28-collab",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
@@ -21,8 +21,8 @@
   "reel": "facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
   "feed": null,
+  "reel": "2026-10-05",
   "story": "2026-10-12"
  },
  "so_facebook": false,
@@ -183,7 +183,7 @@
      "comentarios": 0
     },
     "feed": {
-     "posts": 6,
+     "posts": 5,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -230,6 +230,7 @@
    "rede": "instagram",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "ig": {
     "id": "18116816707860359",
     "link": "https://www.instagram.com/p/Dd1pcUNl0pR/",
@@ -245,10 +246,11 @@
    "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
    "peca": "c:JemLv0hH5lk0KtYwP6Fi",
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20260928-000744.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "931228239642520"
    }
@@ -265,6 +267,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1979811082714644"
    }
@@ -277,10 +280,11 @@
    "titulo": "Moviki é sensacional !!!!",
    "peca": "c:mp7RoQriVJGxLl3HKpd6",
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20260927-000211.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1430323672528849"
    }
@@ -297,6 +301,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1723675602048359",
     "link": "https://www.facebook.com/reel/1723675602048359/",
@@ -316,6 +321,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "2283401882446445"
    }
@@ -332,6 +338,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1631613235004242"
    }
@@ -344,13 +351,17 @@
    "titulo": "indique-conhece",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260925-185451.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122117841609430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122117841609430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -361,10 +372,11 @@
    "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
    "peca": "c:JemLv0hH5lk0KtYwP6Fi",
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20260925-171942.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "4580275218869254"
    }
@@ -381,6 +393,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1517359917088616"
    }
@@ -397,9 +410,13 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122117688831430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122117688831430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -410,10 +427,11 @@
    "titulo": "Moviki é sensacional !!!!",
    "peca": "c:mp7RoQriVJGxLl3HKpd6",
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20260924-172645.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "3968774980084779"
    }
@@ -430,6 +448,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1076722101770381"
    }
@@ -446,9 +465,13 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122117425107430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122117425107430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -463,6 +486,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1919189149065304"
    }
@@ -475,10 +499,11 @@
    "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
    "peca": "c:JemLv0hH5lk0KtYwP6Fi",
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20260923-022601.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1073800858578044"
    }
@@ -495,9 +520,13 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122117292087430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122117292087430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -512,6 +541,7 @@
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1435287178666529",
     "link": "https://www.facebook.com/reel/1435287178666529/",
@@ -527,13 +557,17 @@
    "titulo": "trinta-dias",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260922-234507.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122117273325430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122117273325430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -544,13 +578,17 @@
    "titulo": "endereco-que-muda",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260921-182846.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122116946031430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122116946031430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -561,13 +599,17 @@
    "titulo": "parceiro-quem-serve",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260918-175548.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122116304805430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122116304805430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -578,13 +620,17 @@
    "titulo": "quiz-rapido",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260917-233707.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122116152687430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122116152687430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -595,10 +641,11 @@
    "titulo": "Fábio Suplementos (Suplementos / Nutricao Esportiva)",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-vitrine-20260916-171517.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122115940119430818",
     "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
@@ -612,13 +659,17 @@
    "titulo": "Hamburguer Master (Hamburgueria / Food Truck)",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-vitrine-20260915-233502.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122115813651430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122115813651430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -629,10 +680,11 @@
    "titulo": "CALDEIRÃO NORDESTINO (negocio itinerante)",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-vitrine-20260914-182047.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122115620715430818",
     "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
@@ -646,10 +698,11 @@
    "titulo": "Fábio Suplementos (Suplementos / Nutricao Esportiva)",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-vitrine-20260911-180215.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122115107985430818",
     "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
@@ -663,13 +716,17 @@
    "titulo": "fundador",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260910-232455.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122114974503430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122114974503430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -680,13 +737,17 @@
    "titulo": "itinerante-e-negocio",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260909-165708.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122114730393430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122114730393430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -697,13 +758,17 @@
    "titulo": "trinta-dias",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260908-233147.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122114592237430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122114592237430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -714,13 +779,17 @@
    "titulo": "quem-procura",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260907-175412.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122114353593430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122114353593430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -731,13 +800,17 @@
    "titulo": "indique-conhece",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260904-175813.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122113771179430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122113771179430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -748,13 +821,17 @@
    "titulo": "quiz-rapido",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260903-232109.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122113638939430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122113638939430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -765,13 +842,17 @@
    "titulo": "cardapio-na-mao",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260902-165804.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122113284483430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122113284483430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -782,13 +863,17 @@
    "titulo": "fundador",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260901-233315.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122113128351430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122113128351430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -799,13 +884,17 @@
    "titulo": "trinta-dias",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260901-030045.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122112893685430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122112893685430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   },
   {
@@ -816,14 +905,49 @@
    "titulo": "abrir-fechar",
    "peca": null,
    "ramo": "",
-   "miniatura": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260831-194518.jpg",
    "rede": "facebook",
    "planoB": false,
    "erroInstagram": null,
+   "collab": null,
    "fb": {
     "id": "1312620718595159_122112837111430818",
-    "erro": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+    "link": "https://www.facebook.com/122118442485430818/posts/122112837111430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
    }
   }
- ]
+ ],
+ "seguidores_hist": [
+  {
+   "dia": "2026-09-28",
+   "ig": 2297,
+   "ig_posts": 24,
+   "fb": 0
+  }
+ ],
+ "seguidores": {
+  "atual": 2297,
+  "ganho_7d": 0,
+  "desde_7d": "2026-09-28",
+  "ganho_30d": 0,
+  "desde_30d": "2026-09-28",
+  "metas": [
+   {
+    "alvo": 5000,
+    "ate": "2026-10-28",
+    "falta": 2703,
+    "dias": 30,
+    "por_dia": 90.1
+   },
+   {
+    "alvo": 10000,
+    "ate": "2026-12-27",
+    "falta": 7703,
+    "dias": 90,
+    "por_dia": 85.6
+   }
+  ]
+ }
 }

@@ -766,5 +766,11 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-09-29T06:50:19+00:00"
+ },
+ "video-comercio-moda-masculina": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-moda-masculina.webp",
+  "parceiro": true,
+  "trecho": "Venda pelo celular",
+  "em": "2026-09-29T16:52:19+00:00"
  }
 }

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-09-29T06:49:53+00:00",
+ "gerado": "2026-09-29T16:52:08+00:00",
  "versao": "2026-09-28-tiktok2",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 2297,
+   "seguidores": 2296,
    "posts": 24,
-   "cota_usada": 2,
+   "cota_usada": 1,
    "cota_total": 100
   },
   "facebook": {
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "feed": null,
-  "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -981,29 +981,29 @@
   },
   {
    "dia": "2026-09-29",
-   "ig": 2297,
+   "ig": 2296,
    "ig_posts": 24,
    "fb": 0
   }
  ],
  "seguidores": {
-  "atual": 2297,
-  "ganho_7d": 0,
+  "atual": 2296,
+  "ganho_7d": -1,
   "desde_7d": "2026-09-28",
-  "ganho_30d": 0,
+  "ganho_30d": -1,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 2703,
+    "falta": 2704,
     "dias": 29,
     "por_dia": 93.2
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 7703,
+    "falta": 7704,
     "dias": 89,
     "por_dia": 86.6
    }
@@ -1012,9 +1012,13 @@
  "triagem": {
   "ligada": true,
   "liberadas": 125,
-  "barradas": 3,
+  "barradas": 4,
   "pendentes": 0,
   "lista_barradas": [
+   {
+    "id": "video-comercio-moda-masculina",
+    "trecho": "Venda pelo celular"
+   },
    {
     "id": "story-servicos-ao-vivo",
     "trecho": "Fale comigo direto pelo seu perfil, Interaja com seus clientes em tempo real, Receba pedidos pelo whatsapp, Gente que realmente faz o mundo girar"
@@ -1028,7 +1032,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 19,
+  "olhadas_agora": 1,
   "falhas_agora": 0
  },
  "tiktok": {

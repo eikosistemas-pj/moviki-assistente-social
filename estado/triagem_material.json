@@ -628,5 +628,29 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-09-28T20:16:41+00:00"
+ },
+ "story-utilidades-lar-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-utilidades-lar-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T01:16:44+00:00"
+ },
+ "story-loja-utensilios-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-loja-utensilios-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T01:16:45+00:00"
+ },
+ "story-cama-mesa-banho-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-cama-mesa-banho-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T01:16:46+00:00"
+ },
+ "story-loja-utilidades-cama-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-loja-utilidades-cama-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T01:16:48+00:00"
  }
 }

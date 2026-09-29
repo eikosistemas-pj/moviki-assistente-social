@@ -652,5 +652,119 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-09-29T01:16:48+00:00"
+ },
+ "video-comercio-cama-mesa-banho": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-cama-mesa-banho.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:00+00:00"
+ },
+ "video-comercio-utilidades": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-utilidades.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:01+00:00"
+ },
+ "video-comercio-perfumaria": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-perfumaria.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:02+00:00"
+ },
+ "video-comercio-calcados": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-calcados.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:03+00:00"
+ },
+ "video-comercio-brecho": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-brecho.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:03+00:00"
+ },
+ "video-comercio-autopecas": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-autopecas.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:04+00:00"
+ },
+ "video-comercio-confeitaria": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-confeitaria.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:05+00:00"
+ },
+ "story-perfumaria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-perfumaria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:06+00:00"
+ },
+ "story-sua-perfumaria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-sua-perfumaria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:07+00:00"
+ },
+ "story-loja-cosmeticos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-loja-cosmeticos-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:08+00:00"
+ },
+ "story-cosmeticos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-cosmeticos-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:10+00:00"
+ },
+ "feed-sua-perfumaria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-sua-perfumaria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:11+00:00"
+ },
+ "feed-perfumaria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-perfumaria-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:12+00:00"
+ },
+ "feed-cosmeticos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-cosmeticos-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:13+00:00"
+ },
+ "feed-loja-cosmeticos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-loja-cosmeticos-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:14+00:00"
+ },
+ "feed-utilidades-lar-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-utilidades-lar-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:15+00:00"
+ },
+ "feed-loja-utensilios-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-loja-utensilios-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:16+00:00"
+ },
+ "feed-cama-mesa-banho-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-cama-mesa-banho-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:18+00:00"
+ },
+ "feed-loja-utilidades-cama-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-loja-utilidades-cama-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-09-29T06:50:19+00:00"
  }
 }

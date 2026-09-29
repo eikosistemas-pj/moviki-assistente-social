@@ -1,5 +1,5 @@
 {
- "gerado": "2026-09-28T20:54:28+00:00",
+ "gerado": "2026-09-29T06:49:53+00:00",
  "versao": "2026-09-28-tiktok2",
  "contas": {
   "instagram": {
@@ -21,9 +21,9 @@
   "reel": "facebook"
  },
  "rampa": {
+  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12",
-  "feed": null
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-09-21",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 0
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-09-22",
    "hoje": false,
@@ -147,64 +131,73 @@
   },
   {
    "dia": "2026-09-28",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 1,
     "feito": 2
    },
    "story": {
     "esperado": 2,
-    "feito": 1
+    "feito": 2
    },
    "reel": {
     "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-09-29",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 0
+   },
+   "reel": {
+    "esperado": 1,
     "feito": 0
    }
   }
  ],
  "totais": {
   "7d": {
-   "ig": {
-    "feed": {
-     "posts": 2,
-     "curtidas": 2,
-     "comentarios": 0
-    }
-   },
    "fb": {
+    "story": {
+     "posts": 13,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "feed": {
      "posts": 6,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 12,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "reel": {
      "posts": 2,
      "curtidas": 0,
+     "comentarios": 0
+    }
+   },
+   "ig": {
+    "feed": {
+     "posts": 2,
+     "curtidas": 3,
      "comentarios": 0
     }
    }
   },
   "30d": {
-   "ig": {
-    "feed": {
-     "posts": 2,
-     "curtidas": 2,
-     "comentarios": 0
-    }
-   },
    "fb": {
-    "feed": {
-     "posts": 23,
+    "story": {
+     "posts": 13,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 12,
+    "feed": {
+     "posts": 23,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -213,17 +206,35 @@
      "curtidas": 0,
      "comentarios": 0
     }
+   },
+   "ig": {
+    "feed": {
+     "posts": 2,
+     "curtidas": 3,
+     "comentarios": 0
+    }
    }
   }
  },
- "alertas": [
-  {
-   "nivel": "atencao",
-   "tipo": "triagem",
-   "texto": "2 peça(s) nova(s) do Material de apoio sem triagem: ficam fora das redes até a próxima rodada."
-  }
- ],
+ "alertas": [],
  "posts": [
+  {
+   "quando": "2026-09-29T01:16:55+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Utilidades para o lar ao vivo no Moviki",
+   "peca": "story-utilidades-lar-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-utilidades-lar-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1826900218327757"
+   }
+  },
   {
    "quando": "2026-09-28T19:56:43+00:00",
    "formato": "feed",
@@ -284,7 +295,7 @@
    "ig": {
     "id": "18116816707860359",
     "link": "https://www.instagram.com/p/Dd1pcUNl0pR/",
-    "curtidas": 0,
+    "curtidas": 1,
     "comentarios": 0
    }
   },
@@ -967,6 +978,12 @@
    "ig": 2297,
    "ig_posts": 24,
    "fb": 0
+  },
+  {
+   "dia": "2026-09-29",
+   "ig": 2297,
+   "ig_posts": 24,
+   "fb": 0
   }
  ],
  "seguidores": {
@@ -980,23 +997,23 @@
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 2703,
-    "dias": 30,
-    "por_dia": 90.1
+    "dias": 29,
+    "por_dia": 93.2
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 7703,
-    "dias": 90,
-    "por_dia": 85.6
+    "dias": 89,
+    "por_dia": 86.6
    }
   ]
  },
  "triagem": {
   "ligada": true,
-  "liberadas": 102,
+  "liberadas": 125,
   "barradas": 3,
-  "pendentes": 2,
+  "pendentes": 0,
   "lista_barradas": [
    {
     "id": "story-servicos-ao-vivo",
@@ -1011,28 +1028,16 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 0,
-  "falhas_agora": 2
+  "olhadas_agora": 19,
+  "falhas_agora": 0
  },
  "tiktok": {
-  "videos_disponiveis": 14,
+  "videos_disponiveis": 21,
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-09-28",
-    "hoje": true,
-    "id": "video-comercio-acai",
-    "titulo": "Açaí e lanchonete: venda ao vivo pelo celular",
-    "ramo": "alimentacao",
-    "video": "https://app.moviki.com.br/material/video-comercio-acai.mp4",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-acai.webp",
-    "duracao": 40.0,
-    "legenda": "Cada pedido do aplicativo leva uma fatia do lucro da loja. E o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o copo sendo montado, responde \"tem paçoca?\" e \"entrega no meu bairro?\" no chat e lança a oferta. Quem prefere buscar toca em \"Como chegar\" e retira no balcão.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #delivery #lanchonete #restaurante #comerciolocal",
-    "hashtags": "#moviki #delivery #lanchonete #restaurante #comerciolocal"
-   },
-   {
     "dia": "2026-09-29",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-acessorios-celular",
     "titulo": "Acessórios de celular: venda ao vivo pelo celular",
     "ramo": "eletronicos",
@@ -1101,6 +1106,18 @@
     "duracao": 40.0,
     "legenda": "A rede grande abriu na esquina e o seu cliente de sempre agora compara preço no aplicativo, do sofá de casa.\n\nCom o Moviki, a sua farmácia abre uma live direto do celular. Mostra o protetor solar de perto, responde \"serve pra pele oleosa?\" e \"tem FPS maior?\" no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #farmacia #drogaria #saude #comerciolocal",
     "hashtags": "#moviki #farmacia #drogaria #saude #comerciolocal"
+   },
+   {
+    "dia": "2026-10-05",
+    "hoje": false,
+    "id": "video-comercio-autopecas",
+    "titulo": "Autopeças: venda ao vivo pelo celular",
+    "ramo": "automotivo",
+    "video": "https://app.moviki.com.br/material/video-comercio-autopecas.mp4",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-autopecas.webp",
+    "duracao": 40.0,
+    "legenda": "Três ligações pra saber se tem a peça, e o cliente desiste. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a peça na mão, confirma no chat se serve no carro do cliente, separa pra retirada e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #oficinamecanica #lavajato #motopecas #comerciolocal",
+    "hashtags": "#moviki #oficinamecanica #lavajato #motopecas #comerciolocal"
    }
   ]
  }

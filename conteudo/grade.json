@@ -1,5 +1,5 @@
 {
- "versao": "2026-09-30-1",
+ "versao": "2026-09-30-2",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -41,6 +41,26 @@
    "repetir_apos_dias": 45,
    "marca": "dcda",
    "obs": "Série Sem seguidores (P49), vídeo 2, versão sem marca de terceiro. Se o Moviki passar a cobrar comissão, tirar da grade no mesmo dia."
+  },
+  {
+   "id": "video-live-oferta-relampago",
+   "formato": "reel",
+   "pilar": "serie-live",
+   "ramo": "geral",
+   "titulo": "Oferta relâmpago sem vender o que você não tem",
+   "video": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/video-live-oferta-relampago.mp4",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
+   "legenda": "Oferta relâmpago na live, com a quantidade certa na tela.\n\nNo Moviki, quem gera o Pix da oferta segura a peça por alguns minutos. Sem peça livre, o próximo cliente não recebe o código. Não pagou no prazo, a peça volta sozinha para a oferta. O Pix confirmado entra em vendidos, e a venda no balcão avisa antes quando a peça está reservada.\n\nOferta relâmpago no plano Enterprise. Conheça os planos pelo link da bio.",
+   "tipo_pauta": "conversao",
+   "canais": ["instagram", "facebook"],
+   "vende_live": true,
+   "dias": ["2026-10-24"],
+   "a_partir_de": "2026-10-24",
+   "valido_ate": "2027-01-04",
+   "reconferir_em": null,
+   "repetir_apos_dias": 45,
+   "marca": "fab9",
+   "obs": "Esquenta da Black Friday (P48, semana 4). Telas reais do estúdio e da live pública, dados fictícios (São Paulo). Se a reserva da oferta mudar de regra, tirar da grade no mesmo dia."
   }
  ]
 }

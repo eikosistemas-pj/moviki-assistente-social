@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-09-30T18:10:01+00:00",
+  "formato": "feed",
+  "descricao": "Utilidades para o lar ao vivo no Moviki",
+  "media_id": "18134277973737590",
+  "origem": "casa",
+  "peca": "feed-utilidades-lar-ao-vivo",
+  "rede": "instagram",
+  "ramo": "casa",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20260930-180942.jpg",
+  "fb": "1312620718595159_122118833007430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-09-30T18:02:26+00:00",
   "formato": "story",
   "descricao": "Venha para o Moviki e venda ao vivo em sua própria live!!!",

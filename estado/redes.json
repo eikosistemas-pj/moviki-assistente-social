@@ -1,11 +1,11 @@
 {
- "gerado": "2026-09-29T16:52:08+00:00",
- "versao": "2026-09-28-tiktok2",
+ "gerado": "2026-09-30T01:07:52+00:00",
+ "versao": "2026-09-30-grade",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
    "seguidores": 2296,
-   "posts": 24,
+   "posts": 25,
    "cota_usada": 1,
    "cota_total": 100
   },
@@ -21,8 +21,8 @@
   "reel": "facebook"
  },
  "rampa": {
-  "feed": null,
   "story": "2026-10-12",
+  "feed": null,
   "reel": "2026-10-05"
  },
  "so_facebook": false,
@@ -150,15 +150,15 @@
    "hoje": true,
    "feed": {
     "esperado": 1,
-    "feito": 0
+    "feito": 1
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 2
    },
    "reel": {
     "esperado": 1,
-    "feito": 0
+    "feito": 1
    }
   }
  ],
@@ -166,7 +166,7 @@
   "7d": {
    "fb": {
     "story": {
-     "posts": 13,
+     "posts": 15,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -183,8 +183,8 @@
    },
    "ig": {
     "feed": {
-     "posts": 2,
-     "curtidas": 3,
+     "posts": 3,
+     "curtidas": 4,
      "comentarios": 0
     }
    }
@@ -192,25 +192,25 @@
   "30d": {
    "fb": {
     "story": {
-     "posts": 13,
+     "posts": 15,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 23,
+     "posts": 24,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
-     "posts": 2,
+     "posts": 3,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "ig": {
     "feed": {
-     "posts": 2,
-     "curtidas": 3,
+     "posts": 3,
+     "curtidas": 4,
      "comentarios": 0
     }
    }
@@ -218,6 +218,87 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-09-30T00:46:56+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Perfumaria ao vivo no Moviki",
+   "peca": "story-perfumaria-ao-vivo",
+   "ramo": "beleza",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-perfumaria-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1566852248021627"
+   }
+  },
+  {
+   "quando": "2026-09-30T00:39:19+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Sua perfumaria ao vivo no Moviki",
+   "peca": "feed-sua-perfumaria-ao-vivo",
+   "ramo": "beleza",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20260930-003853.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18141667255612976",
+    "link": "https://www.instagram.com/p/Dd5EQE1oHcN/",
+    "curtidas": 1,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122118683841430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122118683841430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-09-29T23:41:30+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Cama, mesa e banho: venda ao vivo pelo celular",
+   "peca": "video-comercio-cama-mesa-banho",
+   "ramo": "casa",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-cama-mesa-banho.webp",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1741573633570534",
+    "link": "https://www.facebook.com/reel/1741573633570534/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-09-29T18:12:39+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20260929-181216.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "2418795788528010"
+   }
+  },
   {
    "quando": "2026-09-29T01:16:55+00:00",
    "formato": "story",
@@ -982,7 +1063,7 @@
   {
    "dia": "2026-09-29",
    "ig": 2296,
-   "ig_posts": 24,
+   "ig_posts": 25,
    "fb": 0
   }
  ],
@@ -1032,7 +1113,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 1,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {
@@ -1124,5 +1205,36 @@
     "hashtags": "#moviki #oficinamecanica #lavajato #motopecas #comerciolocal"
    }
   ]
+ },
+ "grade": {
+  "versao": "2026-09-30-1",
+  "acervo": 2,
+  "no_ar": 0,
+  "com_erro": 0,
+  "proximos": [
+   {
+    "dia": "2026-10-06",
+    "hoje": false,
+    "id": "video-live-sem-seguidores",
+    "titulo": "Live da sua loja, sem precisar de seguidores",
+    "formato": "reel",
+    "pilar": "serie-live",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-seguidores.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
+    "dia": "2026-10-10",
+    "hoje": false,
+    "id": "video-live-sem-comissao",
+    "titulo": "Venda ao vivo sem comissão sobre a venda",
+    "formato": "reel",
+    "pilar": "serie-live",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-comissao.jpg",
+    "sai": true,
+    "motivo": ""
+   }
+  ],
+  "vencendo": []
  }
 }

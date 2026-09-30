@@ -1,5 +1,5 @@
 {
- "gerado": "2026-09-30T01:07:52+00:00",
+ "gerado": "2026-09-30T06:38:01+00:00",
  "versao": "2026-09-30-grade",
  "contas": {
   "instagram": {
@@ -11,8 +11,8 @@
   },
   "facebook": {
    "nome": "Moviki.app",
-   "curtidas_pagina": 0,
-   "seguidores": 0
+   "curtidas_pagina": 1,
+   "seguidores": 1
   }
  },
  "canal_hoje": {
@@ -21,9 +21,9 @@
   "reel": "facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
+  "reel": "2026-10-05",
   "feed": null,
-  "reel": "2026-10-05"
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-09-22",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 2
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 1
-   },
-   "reel": {
-    "esperado": 1,
-    "feito": 1
-   }
-  },
   {
    "dia": "2026-09-23",
    "hoje": false,
@@ -147,7 +131,7 @@
   },
   {
    "dia": "2026-09-29",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 1,
     "feito": 1
@@ -160,18 +144,34 @@
     "esperado": 1,
     "feito": 1
    }
+  },
+  {
+   "dia": "2026-09-30",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 0
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
   }
  ],
  "totais": {
   "7d": {
    "fb": {
     "story": {
-     "posts": 15,
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 6,
+     "posts": 5,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -1065,6 +1065,12 @@
    "ig": 2296,
    "ig_posts": 25,
    "fb": 0
+  },
+  {
+   "dia": "2026-09-30",
+   "ig": 2296,
+   "ig_posts": 25,
+   "fb": 1
   }
  ],
  "seguidores": {
@@ -1078,15 +1084,15 @@
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 2704,
-    "dias": 29,
-    "por_dia": 93.2
+    "dias": 28,
+    "por_dia": 96.6
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 7704,
-    "dias": 89,
-    "por_dia": 86.6
+    "dias": 88,
+    "por_dia": 87.5
    }
   ]
  },
@@ -1121,24 +1127,12 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-09-29",
-    "hoje": true,
-    "id": "video-comercio-acessorios-celular",
-    "titulo": "Acessórios de celular: venda ao vivo pelo celular",
-    "ramo": "eletronicos",
-    "video": "https://app.moviki.com.br/material/video-comercio-acessorios-celular.mp4",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-acessorios-celular.webp",
-    "duracao": 40.0,
-    "legenda": "O cliente vê a capinha no balcão e compra pela internet. E o cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a capinha de pertinho, testa o fone ao vivo, responde \"tem pro meu modelo?\" no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
-    "hashtags": "#moviki #assistenciatecnica #celular #acessorios #comerciolocal"
-   },
-   {
     "dia": "2026-09-30",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-bijuteria",
     "titulo": "Bijuteria: venda ao vivo pelo celular",
     "ramo": "moda",
-    "video": "https://app.moviki.com.br/material/video-comercio-bijuteria.mp4",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-bijuteria.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-bijuteria.webp",
     "duracao": 40.0,
     "legenda": "Brinco novo na vitrine e ninguém entra pra ver o brilho de perto. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o brilho da peça de pertinho, monta o conjunto com a cliente no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
@@ -1150,7 +1144,7 @@
     "id": "video-comercio-brinquedos",
     "titulo": "Loja de brinquedos: venda ao vivo pelo celular",
     "ramo": "infantil",
-    "video": "https://app.moviki.com.br/material/video-comercio-brinquedos.mp4",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-brinquedos.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-brinquedos.webp",
     "duracao": 40.0,
     "legenda": "Outubro chegando e o brinquedo parado na prateleira. Enquanto isso, quem vai dar o presente está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o brinquedo funcionando, responde \"serve pra qual idade?\" e \"faz embrulho?\" no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojainfantil #brinquedos #modainfantil",
@@ -1162,7 +1156,7 @@
     "id": "video-comercio-boutique",
     "titulo": "Boutique de bairro: venda ao vivo pelo celular",
     "ramo": "moda",
-    "video": "https://app.moviki.com.br/material/video-comercio-boutique.mp4",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-boutique.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-boutique.webp",
     "duracao": 40.0,
     "legenda": "Arara cheia de peça nova e a rua vazia. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua boutique direto do celular. Mostra a peça de perto, responde \"tem no M?\" e \"qual o comprimento?\" no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
@@ -1174,7 +1168,7 @@
     "id": "video-comercio-cosmeticos",
     "titulo": "Cosméticos: venda ao vivo pelo celular",
     "ramo": "beleza",
-    "video": "https://app.moviki.com.br/material/video-comercio-cosmeticos.mp4",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-cosmeticos.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-cosmeticos.webp",
     "duracao": 40.0,
     "legenda": "Sua cliente assiste live de maquiagem todo dia — só que na live dos outros, e compra pelo aplicativo sem passar na sua loja.\n\nCom o Moviki, a sua loja abre uma live direto do celular. Mostra a cor na pele, responde \"tem tom mais escuro?\" no chat e lança a oferta. E quem quer testar antes toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
@@ -1186,7 +1180,7 @@
     "id": "video-comercio-farmacia",
     "titulo": "Farmácia: venda ao vivo no bairro",
     "ramo": "farmacia",
-    "video": "https://app.moviki.com.br/material/video-comercio-farmacia.mp4",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-farmacia.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-farmacia.webp",
     "duracao": 40.0,
     "legenda": "A rede grande abriu na esquina e o seu cliente de sempre agora compara preço no aplicativo, do sofá de casa.\n\nCom o Moviki, a sua farmácia abre uma live direto do celular. Mostra o protetor solar de perto, responde \"serve pra pele oleosa?\" e \"tem FPS maior?\" no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #farmacia #drogaria #saude #comerciolocal",
@@ -1198,11 +1192,23 @@
     "id": "video-comercio-autopecas",
     "titulo": "Autopeças: venda ao vivo pelo celular",
     "ramo": "automotivo",
-    "video": "https://app.moviki.com.br/material/video-comercio-autopecas.mp4",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-autopecas.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-autopecas.webp",
     "duracao": 40.0,
     "legenda": "Três ligações pra saber se tem a peça, e o cliente desiste. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a peça na mão, confirma no chat se serve no carro do cliente, separa pra retirada e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #oficinamecanica #lavajato #motopecas #comerciolocal",
     "hashtags": "#moviki #oficinamecanica #lavajato #motopecas #comerciolocal"
+   },
+   {
+    "dia": "2026-10-06",
+    "hoje": false,
+    "id": "video-comercio-brecho",
+    "titulo": "Brechó: venda ao vivo pelo celular",
+    "ramo": "moda",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-brecho.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-brecho.webp",
+    "duracao": 40.0,
+    "legenda": "Peça única na arara, e só quem entrou hoje viu. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu brechó direto do celular. Mostra a peça no corpo, conta a história dela, tira a dúvida de tamanho no chat e avisa: quem pagar primeiro leva. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
+    "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
    }
   ]
  },

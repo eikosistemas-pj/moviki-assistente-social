@@ -2,9 +2,12 @@
 """
 Escolha da peca de cada publicacao — feed, story e reel — entre as fontes.
 
-FONTES (22/09/2026)
+FONTES (22/09/2026; grade em 30/09/2026)
+  grade    = conteudo/grade.json (src/grade.py). Video AGENDADO para hoje sai
+             antes de tudo; fora do dia, entra no rodizio da casa.
   casa     = Material de apoio do parceiro (src/material.py)
              + banco de Reels do repo (conteudo/reels.md), so para reel
+             + videos da grade liberados para rodizio (so reel)
   criador  = pecas de influenciador AUTORIZADAS por ele e APROVADAS pelo
              Moviki (src/criadores.py). Desligada ate existir CRIADORES_URL.
 
@@ -22,7 +25,7 @@ import re
 
 from PIL import Image, ImageDraw
 
-from . import arte, config, conteudo, criadores, estado, hospedagem, ia, material, triagem
+from . import arte, config, conteudo, criadores, estado, grade, hospedagem, ia, material, triagem
 from . import util_net as net
 
 JANELA = 500
@@ -69,6 +72,10 @@ def candidatas(formato):
         print(f"AVISO: material de apoio indisponivel ({e})")
     if formato == "reel":
         casa += banco_reels()
+        try:
+            casa += grade.rodizio(formato)
+        except Exception as e:  # noqa: BLE001
+            print(f"AVISO: grade indisponivel ({e}) -> segue sem ela")
     if criadores.ativa():
         try:
             cria = criadores.pecas(criadores.carregar(), formato)
@@ -121,6 +128,17 @@ def escolher(lista, recentes):
 
 
 def escolher_peca(formato, forcar_origem=None):
+    # Grade (30/09/2026): o video marcado para hoje vence o sorteio e a fatia
+    # dos criadores. Forcar "criador" no workflow pula a grade de proposito.
+    if forcar_origem != "criador":
+        try:
+            ag = grade.agendada_hoje(formato)
+        except Exception as e:  # noqa: BLE001
+            ag = None
+            print(f"AVISO: grade indisponivel ({e}) -> sorteio normal")
+        if ag:
+            print(f"{formato}: peca {ag['id']} (grade, agendada para hoje)")
+            return ag
     grupos = candidatas(formato)
     origem = forcar_origem or escolher_origem(formato, grupos)
     lista = grupos.get(origem) or []
@@ -141,6 +159,10 @@ def marcar(peca, media_id, rede, extra=None):
         dados["criador"] = peca["criador"].get("uid")
     if peca.get("categoria"):
         dados["ramo"] = peca["categoria"]
+    if peca.get("origem") == "grade":
+        dados["grade"] = True
+        if peca.get("pilar"):
+            dados["pilar"] = peca["pilar"]
     if extra:
         dados.update(extra)
     estado.registrar(peca["formato"], peca.get("titulo") or peca["id"], media_id, dados)

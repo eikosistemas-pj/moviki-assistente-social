@@ -25,7 +25,7 @@ import re
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 
-from src import config, estado, freio, material, tiktok, triagem
+from src import config, estado, freio, grade, material, tiktok, triagem
 from src import util_net as net
 
 DIAS_POSTS = 30
@@ -420,6 +420,14 @@ def main():
     rel["seguidores"] = resumo_seguidores(rel["seguidores_hist"], datetime.now(timezone.utc))
     rel.update(material_e_tiktok(datetime.now(timezone.utc)))
     rel["alertas"] += rel.pop("_alertas_extra", [])
+    # Grade editorial (30/09/2026): proximos 14 dias + video vencendo ou com
+    # data marcada em dia sem reel. Nunca derruba o relatorio.
+    try:
+        rel["grade"], al_grade = grade.relatorio(datetime.now(timezone.utc).astimezone(FUSO).date(), dia_de=esperado)
+    except Exception as e:  # noqa: BLE001
+        rel["grade"], al_grade = {"erro": str(e)[:160], "proximos": [], "acervo": 0}, [
+            {"nivel": "atencao", "tipo": "grade", "texto": "Grade de vídeos sem leitura neste relatório."}]
+    rel["alertas"] += al_grade
     estado.gravar_lista("redes.json", rel)
     print(f"{len(rel['posts'])} posts em {DIAS_POSTS} dias | canal hoje: {rel['canal_hoje']}")
     for a in rel["alertas"]:

@@ -1,0 +1,46 @@
+{
+ "versao": "2026-09-30-1",
+ "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
+ "itens": [
+  {
+   "id": "video-live-sem-seguidores",
+   "formato": "reel",
+   "pilar": "serie-live",
+   "ramo": "geral",
+   "titulo": "Live da sua loja, sem precisar de seguidores",
+   "video": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/video-live-sem-seguidores.mp4",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-seguidores.jpg",
+   "legenda": "Tem plataforma que pede mil seguidores pra liberar a live. A loja que está começando fica de fora.\n\nNo Moviki, a sua loja abre a live pelo celular com zero seguidor e sem aplicativo. Você chama os seus clientes pelo WhatsApp, pelo Status e pelo Instagram, e a tela é só da sua loja. O Pix cai direto na sua conta e o Moviki não cobra comissão sobre a venda.\n\nLive nos planos Premium e Enterprise. Teste grátis de 30 dias, com 2 lives, sem cartão. Conheça pelo link da bio.",
+   "tipo_pauta": "conversao",
+   "canais": ["instagram", "facebook"],
+   "vende_live": true,
+   "dias": ["2026-10-06"],
+   "a_partir_de": "2026-10-06",
+   "valido_ate": "2027-01-04",
+   "reconferir_em": null,
+   "repetir_apos_dias": 45,
+   "marca": "694d",
+   "obs": "Série Sem seguidores (P49), vídeo 1, versão sem marca de terceiro. Se o Moviki passar a cobrar comissão, tirar da grade no mesmo dia."
+  },
+  {
+   "id": "video-live-sem-comissao",
+   "formato": "reel",
+   "pilar": "serie-live",
+   "ramo": "geral",
+   "titulo": "Venda ao vivo sem comissão sobre a venda",
+   "video": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/video-live-sem-comissao.mp4",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-comissao.jpg",
+   "legenda": "Em muito marketplace, cada venda paga comissão e ainda uma taxa por item.\n\nNo Moviki, o Pix da venda cai direto na sua chave e a gente não cobra comissão sobre a venda. Você paga uma mensalidade fixa, e a live vem no plano Premium, pros clientes que você já tem.\n\nTeste grátis de 30 dias, sem cartão. Conheça pelo link da bio.",
+   "tipo_pauta": "conversao",
+   "canais": ["instagram", "facebook"],
+   "vende_live": true,
+   "dias": ["2026-10-10"],
+   "a_partir_de": "2026-10-10",
+   "valido_ate": "2027-01-04",
+   "reconferir_em": null,
+   "repetir_apos_dias": 45,
+   "marca": "dcda",
+   "obs": "Série Sem seguidores (P49), vídeo 2, versão sem marca de terceiro. Se o Moviki passar a cobrar comissão, tirar da grade no mesmo dia."
+  }
+ ]
+}

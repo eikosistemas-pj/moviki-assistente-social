@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-09-30T00:39:19+00:00",
+  "formato": "feed",
+  "descricao": "Sua perfumaria ao vivo no Moviki",
+  "media_id": "18141667255612976",
+  "origem": "casa",
+  "peca": "feed-sua-perfumaria-ao-vivo",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20260930-003853.jpg",
+  "fb": "1312620718595159_122118683841430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-09-29T23:41:30+00:00",
   "formato": "reel",
   "descricao": "Cama, mesa e banho: venda ao vivo pelo celular",

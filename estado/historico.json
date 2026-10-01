@@ -1,5 +1,16 @@
 [
  {
+  "quando": "2026-10-01T18:30:58+00:00",
+  "formato": "story",
+  "descricao": "Lote Fundador no story",
+  "media_id": "1111452518419926",
+  "origem": "casa",
+  "peca": "fundador-story",
+  "rede": "facebook",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/stories/fundador-story.jpg"
+ },
+ {
   "quando": "2026-10-01T00:50:39+00:00",
   "formato": "story",
   "descricao": "Sua perfumaria ao vivo no Moviki",

@@ -778,5 +778,23 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-10-01T07:08:57+00:00"
+ },
+ "fundador-story": {
+  "imagem": "https://app.moviki.com.br/material/stories/fundador-story.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-01T17:20:55+00:00"
+ },
+ "fundador-feed": {
+  "imagem": "https://app.moviki.com.br/material/feed/fundador-feed.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-01T17:20:56+00:00"
+ },
+ "fundador-quadrado": {
+  "imagem": "https://app.moviki.com.br/material/feed/fundador-quadrado.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-01T17:20:58+00:00"
  }
 }

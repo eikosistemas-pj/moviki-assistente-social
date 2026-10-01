@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-01T07:08:50+00:00",
+ "gerado": "2026-10-01T17:20:43+00:00",
  "versao": "2026-09-30-grade",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 2295,
+   "seguidores": 2192,
    "posts": 26,
    "cota_usada": 1,
    "cota_total": 100
@@ -21,9 +21,9 @@
   "reel": "facebook"
  },
  "rampa": {
+  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12",
-  "feed": null
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -1093,37 +1093,37 @@
   },
   {
    "dia": "2026-10-01",
-   "ig": 2295,
+   "ig": 2192,
    "ig_posts": 26,
    "fb": 1
   }
  ],
  "seguidores": {
-  "atual": 2295,
-  "ganho_7d": -2,
+  "atual": 2192,
+  "ganho_7d": -105,
   "desde_7d": "2026-09-28",
-  "ganho_30d": -2,
+  "ganho_30d": -105,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 2705,
+    "falta": 2808,
     "dias": 27,
-    "por_dia": 100.2
+    "por_dia": 104.0
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 7705,
+    "falta": 7808,
     "dias": 87,
-    "por_dia": 88.6
+    "por_dia": 89.7
    }
   ]
  },
  "triagem": {
   "ligada": true,
-  "liberadas": 126,
+  "liberadas": 129,
   "barradas": 4,
   "pendentes": 0,
   "lista_barradas": [
@@ -1144,7 +1144,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 1,
+  "olhadas_agora": 3,
   "falhas_agora": 0
  },
  "tiktok": {

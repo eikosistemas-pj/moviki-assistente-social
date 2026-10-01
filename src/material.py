@@ -36,6 +36,9 @@ QUEM FICA DE FORA
   - video fora de 3 a 90 s;
   - peca com `valido_ate` (AAAA-MM-DD) ja vencido (01/10/2026, Lote Fundador:
     oferta com data para acabar sai sozinha da rotacao no dia seguinte);
+  - peca com `a_partir_de` (AAAA-MM-DD) ainda no futuro (01/10/2026, videos de
+    Natal da Onda 3: cena com arvore e pisca-pisca so vai ao ar a partir do
+    dia marcado);
   - peca que vende LIVE (lives, transmissao, "vender ao vivo") enquanto
     config.LIVE_NA_PAGINA estiver desligado — a live esta em beta fechado
     (23/09/2026). Story nao tem legenda e a arte nao passa pela trava de
@@ -81,6 +84,19 @@ def vencida(item, hoje=None):
     except ValueError:
         return True
     return (hoje or config.hoje_br()) > fim
+
+
+def antes_da_hora(item, hoje=None):
+    """`a_partir_de` (AAAA-MM-DD) ainda nao chegou? Data ilegivel conta como
+    "ainda nao": peca sazonal nunca vai ao ar fora da epoca por erro de digitacao."""
+    v = item.get("a_partir_de")
+    if not v:
+        return False
+    try:
+        ini = date.fromisoformat(str(v).strip()[:10])
+    except ValueError:
+        return True
+    return (hoje or config.hoje_br()) < ini
 
 
 def so_parceiro(item):
@@ -199,7 +215,7 @@ def pecas(catalogo, formato, excluir=None):
             continue
         if it["id"] in excluir or it.get("categoria") == "recrutar":
             continue
-        if so_parceiro(it) or vencida(it):
+        if so_parceiro(it) or vencida(it) or antes_da_hora(it):
             continue
         if not config.LIVE_NA_PAGINA and fala_de_live(it):
             continue

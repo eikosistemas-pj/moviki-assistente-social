@@ -217,3 +217,19 @@ def test_peca_vencida_sai_do_feed_e_do_story():
     velho = "2000-01-01"
     assert material.pecas(_cat(_peca(valido_ate=velho)), "feed", excluir=set()) == []
     assert material.pecas(_cat(_story(valido_ate=velho)), "story", excluir=set()) == []
+
+
+def test_a_partir_de_segura_a_peca_ate_o_dia():
+    from datetime import date
+    it = {"a_partir_de": "2026-11-20"}
+    assert material.antes_da_hora(it, date(2026, 11, 19)) is True
+    assert material.antes_da_hora(it, date(2026, 11, 20)) is False
+    assert material.antes_da_hora({}, date(2000, 1, 1)) is False
+    assert material.antes_da_hora({"a_partir_de": "20/11"}, date(2030, 1, 1)) is True
+
+
+def test_peca_de_natal_fica_fora_ate_a_epoca():
+    futuro = "2999-01-01"
+    assert material.pecas(_cat(_peca(a_partir_de=futuro)), "feed", excluir=set()) == []
+    assert material.pecas(_cat(_story(a_partir_de=futuro)), "story", excluir=set()) == []
+    assert len(material.pecas(_cat(_peca(a_partir_de="2000-01-01")), "feed", excluir=set())) == 1

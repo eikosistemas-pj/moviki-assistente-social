@@ -34,12 +34,15 @@ QUEM FICA DE FORA
   - categoria 'recrutar' e legenda com {link_parceiro};
   - proporcao fora do formato (feed 4:5 a 1,91:1; story e reel 9:16);
   - video fora de 3 a 90 s;
+  - peca com `valido_ate` (AAAA-MM-DD) ja vencido (01/10/2026, Lote Fundador:
+    oferta com data para acabar sai sozinha da rotacao no dia seguinte);
   - peca que vende LIVE (lives, transmissao, "vender ao vivo") enquanto
     config.LIVE_NA_PAGINA estiver desligado — a live esta em beta fechado
     (23/09/2026). Story nao tem legenda e a arte nao passa pela trava de
     texto: por isso o filtro olha id, titulo, legenda, arquivo e dica.
 """
 import re
+from datetime import date
 from urllib.parse import unquote, urlparse
 
 from . import compliance, config
@@ -62,9 +65,22 @@ def fala_de_live(item):
 
 
 _MARCAS_PARCEIRO = re.compile(
-    r"\{link_parceiro\}|\{meu_nome\}|\{verificacao\}|\bmeu\s+link\b|#publi\b|\{link\}",
+    r"\{link_parceiro\}|\{meu_nome\}|\{verificacao\}|\bmeu\s+link\b|#publi\b|\{link\}|\{link_fundador\}|\{[a-z_]+\}",
     re.I,
 )
+
+
+def vencida(item, hoje=None):
+    """`valido_ate` (AAAA-MM-DD) ja passou? Data ilegivel conta como vencida:
+    oferta com prazo nunca vai ao ar sem saber quando acaba."""
+    v = item.get("valido_ate")
+    if not v:
+        return False
+    try:
+        fim = date.fromisoformat(str(v).strip()[:10])
+    except ValueError:
+        return True
+    return (hoje or config.hoje_br()) > fim
 
 
 def so_parceiro(item):
@@ -133,6 +149,11 @@ def legenda_oficial(texto, canal="instagram"):
     t = (texto or "").strip()
     t = re.sub(r"^#publi\b[\s:.\-–—]*", "", t, flags=re.I)
 
+    # Lote Fundador (01/10/2026): o link do parceiro cai na /fundador; na
+    # pagina oficial vai o endereco da oferta, escrito por extenso.
+    t = re.sub(r"pelo\s+meu\s+link\s*:?\s*\{link_fundador\}\.?", "em moviki.com.br/fundador.", t, flags=re.I)
+    t = t.replace("{link_fundador}", "moviki.com.br/fundador")
+
     destino = "em moviki.com.br" if canal == "facebook" else "pelo link da bio."
     t = re.sub(r"pelo\s+meu\s+link\s*:?\s*\{link\}\.?", destino, t, flags=re.I)
     t = t.replace("{link}", "moviki.com.br")
@@ -178,7 +199,7 @@ def pecas(catalogo, formato, excluir=None):
             continue
         if it["id"] in excluir or it.get("categoria") == "recrutar":
             continue
-        if so_parceiro(it):
+        if so_parceiro(it) or vencida(it):
             continue
         if not config.LIVE_NA_PAGINA and fala_de_live(it):
             continue

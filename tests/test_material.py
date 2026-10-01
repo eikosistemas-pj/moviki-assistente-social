@@ -171,3 +171,49 @@ def test_peca_de_live_volta_quando_a_live_abrir(monkeypatch):
 
 def test_ao_vivo_no_mapa_nao_e_live():
     assert material.fala_de_live(_peca()) is False
+
+
+# ---------------------------------------------------------------- Lote Fundador (01/10/2026)
+_LEG_FUNDADOR = ("#publi Lote Fundador do Moviki: o plano Enterprise por 12 meses, R$ 990 à vista "
+                 "ou 12x de R$ 89,90 no cartão.\nGarantia de 30 dias. São 50 vagas, até 27/11.\n"
+                 "Garanta a sua pelo meu link: {link_fundador}")
+
+
+def test_link_fundador_vira_o_endereco_da_oferta_nos_dois_canais():
+    for canal in ("instagram", "facebook"):
+        t = material.legenda_oficial(_LEG_FUNDADOR, canal)
+        assert t is not None
+        assert t.endswith("Garanta a sua em moviki.com.br/fundador.")
+        assert "#publi" not in t and "meu link" not in t and "{" not in t
+        assert compliance.garantir(t, "reserva") == t
+
+
+def test_link_fundador_solto_tambem_converte():
+    t = material.legenda_oficial("#publi Veja a oferta: {link_fundador}")
+    assert t == "Veja a oferta: moviki.com.br/fundador"
+
+
+def test_marcador_desconhecido_descarta_a_peca():
+    assert material.legenda_oficial("Oferta nova: {link_oferta}") is None
+
+
+def test_peca_fundador_entra_no_feed():
+    it = _peca(id="fundador-feed", legenda=_LEG_FUNDADOR, valido_ate="2999-12-31")
+    pp = material.pecas(_cat(it), "feed", excluir=set())
+    assert [p["id"] for p in pp] == ["fundador-feed"]
+    assert "moviki.com.br/fundador" in pp[0]["legenda_ig"]
+
+
+def test_valido_ate_tira_a_peca_no_dia_seguinte():
+    from datetime import date
+    it = {"valido_ate": "2026-11-27"}
+    assert material.vencida(it, date(2026, 11, 27)) is False
+    assert material.vencida(it, date(2026, 11, 28)) is True
+    assert material.vencida({}, date(2030, 1, 1)) is False
+    assert material.vencida({"valido_ate": "27/11"}, date(2026, 1, 1)) is True
+
+
+def test_peca_vencida_sai_do_feed_e_do_story():
+    velho = "2000-01-01"
+    assert material.pecas(_cat(_peca(valido_ate=velho)), "feed", excluir=set()) == []
+    assert material.pecas(_cat(_story(valido_ate=velho)), "story", excluir=set()) == []

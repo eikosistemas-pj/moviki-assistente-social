@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-02T06:57:37+00:00",
+ "gerado": "2026-10-02T16:36:09+00:00",
  "versao": "2026-09-30-grade",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 2192,
+   "seguidores": 2185,
    "posts": 27,
    "cota_usada": 1,
    "cota_total": 100
@@ -21,8 +21,8 @@
   "reel": "facebook"
  },
  "rampa": {
-  "feed": null,
   "story": "2026-10-12",
+  "feed": null,
   "reel": "2026-10-05"
  },
  "so_facebook": false,
@@ -184,7 +184,7 @@
    "ig": {
     "feed": {
      "posts": 5,
-     "curtidas": 6,
+     "curtidas": 7,
      "comentarios": 0
     }
    }
@@ -210,7 +210,7 @@
    "ig": {
     "feed": {
      "posts": 5,
-     "curtidas": 6,
+     "curtidas": 7,
      "comentarios": 0
     }
    }
@@ -257,7 +257,7 @@
    "ig": {
     "id": "18114057947011062",
     "link": "https://www.instagram.com/p/Dd-QICLmLa8/",
-    "curtidas": 0,
+    "curtidas": 1,
     "comentarios": 0
    },
    "fb": {
@@ -1145,31 +1145,31 @@
   },
   {
    "dia": "2026-10-02",
-   "ig": 2192,
+   "ig": 2185,
    "ig_posts": 27,
    "fb": 1
   }
  ],
  "seguidores": {
-  "atual": 2192,
-  "ganho_7d": -105,
+  "atual": 2185,
+  "ganho_7d": -112,
   "desde_7d": "2026-09-28",
-  "ganho_30d": -105,
+  "ganho_30d": -112,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 2808,
+    "falta": 2815,
     "dias": 26,
-    "por_dia": 108.0
+    "por_dia": 108.3
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 7808,
+    "falta": 7815,
     "dias": 86,
-    "por_dia": 90.8
+    "por_dia": 90.9
    }
   ]
  },

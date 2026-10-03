@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-02T16:36:09+00:00",
+ "gerado": "2026-10-03T06:23:53+00:00",
  "versao": "2026-09-30-grade",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
    "seguidores": 2185,
-   "posts": 27,
+   "posts": 28,
    "cota_usada": 1,
    "cota_total": 100
   },
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-09-25",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-09-26",
    "hoje": false,
@@ -147,9 +131,25 @@
   },
   {
    "dia": "2026-10-02",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-10-03",
+   "hoje": true,
+   "feed": {
+    "esperado": 0,
     "feito": 0
    },
    "story": {
@@ -157,7 +157,7 @@
     "feito": 0
    },
    "reel": {
-    "esperado": 0,
+    "esperado": 1,
     "feito": 0
    }
   }
@@ -183,8 +183,8 @@
    },
    "ig": {
     "feed": {
-     "posts": 5,
-     "curtidas": 7,
+     "posts": 6,
+     "curtidas": 8,
      "comentarios": 0
     }
    }
@@ -192,7 +192,7 @@
   "30d": {
    "fb": {
     "story": {
-     "posts": 19,
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -209,8 +209,8 @@
    },
    "ig": {
     "feed": {
-     "posts": 5,
-     "curtidas": 7,
+     "posts": 6,
+     "curtidas": 8,
      "comentarios": 0
     }
    }
@@ -224,6 +224,67 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-10-03T00:45:23+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261003-004516.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "979574804393201"
+   }
+  },
+  {
+   "quando": "2026-10-02T19:33:30+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "institucional",
+   "titulo": "indique-conhece",
+   "peca": null,
+   "ramo": "",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20261002-193312.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18096351458392292",
+    "link": "https://www.instagram.com/p/DeAPpdcFJ1s/",
+    "curtidas": 1,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122119219659430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122119219659430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-10-02T18:00:58+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua loja de cosméticos ao vivo no Moviki",
+   "peca": "story-loja-cosmeticos-ao-vivo",
+   "ramo": "beleza",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-loja-cosmeticos-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1403685325301754"
+   }
+  },
   {
    "quando": "2026-10-02T01:06:48+00:00",
    "formato": "story",
@@ -1095,27 +1156,6 @@
     "comentarios": 0,
     "compartilhamentos": 0
    }
-  },
-  {
-   "quando": "2026-09-02T16:58:11+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "institucional",
-   "titulo": "cardapio-na-mao",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260902-165804.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122113284483430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122113284483430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
   }
  ],
  "seguidores_hist": [
@@ -1148,6 +1188,12 @@
    "ig": 2185,
    "ig_posts": 27,
    "fb": 1
+  },
+  {
+   "dia": "2026-10-03",
+   "ig": 2185,
+   "ig_posts": 28,
+   "fb": 1
   }
  ],
  "seguidores": {
@@ -1161,15 +1207,15 @@
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 2815,
-    "dias": 26,
-    "por_dia": 108.3
+    "dias": 25,
+    "por_dia": 112.6
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 7815,
-    "dias": 86,
-    "por_dia": 90.9
+    "dias": 85,
+    "por_dia": 91.9
    }
   ]
  },
@@ -1204,20 +1250,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-02",
-    "hoje": true,
-    "id": "video-comercio-boutique",
-    "titulo": "Boutique de bairro: venda ao vivo pelo celular",
-    "ramo": "moda",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-boutique.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-boutique.webp",
-    "duracao": 40.0,
-    "legenda": "Arara cheia de peça nova e a rua vazia. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua boutique direto do celular. Mostra a peça de perto, responde \"tem no M?\" e \"qual o comprimento?\" no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
-    "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
-   },
-   {
     "dia": "2026-10-03",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-cosmeticos",
     "titulo": "Cosméticos: venda ao vivo pelo celular",
     "ramo": "beleza",
@@ -1286,6 +1320,18 @@
     "duracao": 40.0,
     "legenda": "Chegou a numeração que faltava, e o cliente nem sabe. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja de calçados direto do celular. Mostra a sola, calça no pé, confirma a numeração e a forma no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
     "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
+   },
+   {
+    "dia": "2026-10-09",
+    "hoje": false,
+    "id": "video-comercio-confeitaria",
+    "titulo": "Confeitaria: venda ao vivo pelo celular",
+    "ramo": "alimentacao",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-confeitaria.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-confeitaria.webp",
+    "duracao": 40.0,
+    "legenda": "O bolo mais bonito do bairro, e só quem passa na vitrine fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua confeitaria direto do celular. Corta a fatia ao vivo, mostra o recheio, combina a encomenda com a data no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #delivery #lanchonete #restaurante",
+    "hashtags": "#moviki #diadascriancas #delivery #lanchonete #restaurante"
    }
   ]
  },

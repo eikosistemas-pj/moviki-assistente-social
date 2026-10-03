@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-09-30-grade"
+VERSAO = "2026-10-02-semcard"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))

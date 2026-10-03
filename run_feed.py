@@ -2,7 +2,7 @@
 """
 Ciclo do FEED.
 
-Decide entre tres tipos de post e publica UM:
+Decide entre dois tipos de post e publica UM:
 
   PECA         - (22/09/2026) peca pronta: do Material de apoio do parceiro
                  (lido ao vivo de app.moviki.com.br/material) ou, quando a
@@ -11,21 +11,24 @@ Decide entre tres tipos de post e publica UM:
   VITRINE      - divulga um negocio real que autorizou divulgacao, na
                  moldura padrao do Moviki (a cor do lojista nao entra mais).
                  No maximo VITRINE_POR_SEMANA por 7 dias.
-  INSTITUCIONAL- card de pauta (conteudo/pautas.md), tambem no padrao
-                 Moviki. Fica com a sexta (pauta de parceiro) e e a reserva
-                 quando o catalogo do material nao responde.
+
+CARD DE PAUTA APOSENTADO (02/10/2026). O card so de texto (conteudo/pautas.md)
+saia toda sexta e como reserva quando o catalogo falhava. O Paulo ja tinha
+vetado esse formato e ele voltou: em 02/10 sairam DOIS seguidos no Instagram
+(a rodada de quinta atrasou, rodou depois da meia-noite UTC e o robo achou
+que era sexta). Agora ele nao sai por caminho nenhum, nem forcado.
+Sem peca publicavel, o feed do dia NAO sai e a execucao fica VERMELHA no
+Actions: dia sem post e melhor que post ruim na grade, e o vermelho avisa.
 
 Ordem de decisao (sem argumento):
-  sexta            -> institucional (pauta de parceiro)
   vitrine com cota -> vitrine
-  senao            -> peca (material ou criador)  (falhou? -> institucional)
+  senao            -> peca (material ou criador)  (falhou? -> nao publica)
 
 Uso:
     python run_feed.py                 # decide sozinho
     python run_feed.py material        # forca peca do material de apoio
     python run_feed.py criador         # forca peca de criador (se houver)
     python run_feed.py vitrine         # forca vitrine
-    python run_feed.py institucional   # forca card de pauta
     DRY_RUN=1 python run_feed.py       # monta tudo e NAO publica
 """
 import re
@@ -131,7 +134,7 @@ def montar_vitrine():
     negocios = firestore.elegiveis(firestore.listar_negocios())
     print(f"negocios que autorizaram divulgacao: {len(negocios)}")
     if len(negocios) < config.MIN_NEGOCIOS_VITRINE:
-        print(f"abaixo do minimo ({config.MIN_NEGOCIOS_VITRINE}) -> institucional")
+        print(f"abaixo do minimo ({config.MIN_NEGOCIOS_VITRINE}) -> material de apoio")
         return None
 
     escolhido = estado.escolher("vitrine", negocios, chave=lambda n: n.get("uid", ""))
@@ -184,55 +187,6 @@ def montar_vitrine():
     }
 
 
-# ------------------------------------------------------------------ institucional
-def montar_institucional():
-    pautas = conteudo.carregar()
-    if not pautas:
-        raise SystemExit("ERRO: conteudo/pautas.md vazio ou ausente.")
-
-    # Ter/Qui puxam conversao; sexta puxa parceiro; resto e educativo/bastidor.
-    dia = datetime.now(timezone.utc).weekday()
-    if dia in (1, 3):
-        preferidas = conteudo.por_tipo(pautas, "conversao")
-    elif dia == 4:
-        preferidas = conteudo.por_tipo(pautas, "parceiro")
-    else:
-        preferidas = (conteudo.por_tipo(pautas, "educativo")
-                      + conteudo.por_tipo(pautas, "bastidor"))
-    candidatas = preferidas or pautas
-
-    pauta = estado.escolher("institucional", candidatas, chave=lambda p: p["id"])
-    print(f"pauta: {pauta['id']} ({pauta['tipo']})")
-
-    imagem = arte.card_institucional(
-        pauta["titulo"], pauta.get("subtitulo", ""), pauta.get("etiqueta", ""),
-        semente=pauta["id"],
-        botao=("Seja parceiro em moviki.com.br" if pauta.get("tipo") == "parceiro"
-               else "Conheça em moviki.com.br"),
-    )
-
-    reserva = (
-        f"{pauta['titulo']}\n\n{pauta.get('subtitulo','')}\n\n"
-        f"Conheça em moviki.com.br — link na bio."
-    )
-    legenda = ia.escrever(
-        f"Escreva a legenda de um post do Moviki.\n\n"
-        f"Titulo do post: {pauta['titulo']}\n"
-        f"Complemento: {pauta.get('subtitulo','')}\n"
-        f"Angulo: {pauta.get('angulo','')}\n\n"
-        f"Feche com chamada pra acao mandando pro link da bio.",
-        reserva,
-    )
-    return {
-        "tipo": "institucional",
-        "imagem": imagem,
-        "legenda": legenda,
-        "hashtags": conteudo.hashtags(pauta["tipo"]),
-        "chave": pauta["id"],
-        "descricao": pauta["id"],
-    }
-
-
 # ------------------------------------------------------------------ Facebook
 def _texto_facebook(legenda):
     """Adapta a legenda quando o post vai pro Facebook em vez do Instagram.
@@ -279,17 +233,20 @@ def montar_peca(forcar_origem=None):
     }
 
 
-def _material_ou_pauta():
+def _material():
+    """Peca pronta ou nada. Nunca cai em card de pauta (aposentado 02/10/2026)."""
     try:
         return montar_peca()
     except Exception as e:  # noqa: BLE001
-        print(f"AVISO: peca pronta falhou ({e}) -> card de pauta")
-        return montar_institucional()
+        raise SystemExit(
+            f"ERRO: nenhuma peca publicavel ({e}). O feed de hoje NAO sai. "
+            "Card de pauta foi aposentado em 02/10/2026 e nao entra como reserva."
+        )
 
 
 def escolher_post(forcado=""):
     if forcado == "institucional":
-        return montar_institucional()
+        raise SystemExit("ERRO: card de pauta aposentado em 02/10/2026. Use material, criador ou vitrine.")
     if forcado == "material":
         return montar_peca("casa")
     if forcado == "criador":
@@ -299,9 +256,6 @@ def escolher_post(forcado=""):
         if post is None:
             raise SystemExit("ERRO: vitrine forcada mas nao ha negocio elegivel.")
         return post
-
-    if datetime.now(timezone.utc).weekday() == 4:   # sexta = pauta de parceiro
-        return montar_institucional()
 
     feitas = vitrines_na_semana()
     if feitas < config.VITRINE_POR_SEMANA:
@@ -313,7 +267,7 @@ def escolher_post(forcado=""):
             print(f"aviso: vitrine falhou ({e}) -> material de apoio")
     else:
         print(f"vitrine: {feitas} na semana (teto {config.VITRINE_POR_SEMANA}) -> material de apoio")
-    return _material_ou_pauta()
+    return _material()
 
 
 def main():

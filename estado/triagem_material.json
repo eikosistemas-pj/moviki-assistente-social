@@ -796,5 +796,41 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-10-01T17:20:58+00:00"
+ },
+ "video-comercio-eletroportateis": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-eletroportateis.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-03T15:07:52+00:00"
+ },
+ "video-comercio-cabelo": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-cabelo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-03T15:07:53+00:00"
+ },
+ "video-comercio-moda-fitness": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-moda-fitness.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-03T15:07:54+00:00"
+ },
+ "video-comercio-acougue": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-acougue.webp",
+  "parceiro": true,
+  "trecho": "Venda pelo celular",
+  "em": "2026-10-03T15:07:55+00:00"
+ },
+ "video-comercio-games": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-games.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-03T15:07:56+00:00"
+ },
+ "video-comercio-moda-praia": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-moda-praia.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-03T15:07:57+00:00"
  }
 }

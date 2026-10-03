@@ -165,6 +165,12 @@ ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-haiku-4-5"
 # Modelo que LE IMAGEM na triagem "so parceiro" (src/triagem.py).
 ANTHROPIC_MODEL_VISAO = os.environ.get("ANTHROPIC_MODEL_VISAO") or "claude-haiku-4-5"
+# 03/10/2026: validade da chave da Anthropic, so para o alarme de segunda
+# (run_verificar.py). O Console mostra a data na lista de chaves; a API nao
+# informa. Formato AAAA-MM-DD ou DD/MM/AAAA. Vazio = chave sem validade.
+ANTHROPIC_CHAVE_VALIDADE = os.environ.get("ANTHROPIC_CHAVE_VALIDADE", "").strip()
+# Quantos dias antes do vencimento o alarme acende.
+ANTHROPIC_AVISO_DIAS = int(os.environ.get("ANTHROPIC_AVISO_DIAS") or "21")
 
 # ----------------------------------------------------------------- regras
 # Quantos negocios no minimo precisam ter autorizado divulgacao para o

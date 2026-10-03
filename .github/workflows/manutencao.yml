@@ -1,7 +1,8 @@
 name: Manutencao
 
 # Duas rotinas de saude, no mesmo workflow pra nao multiplicar arquivo:
-#   - verificacao (segunda): o alarme. Se o token da Meta expirou, o job
+#   - verificacao (segunda): o alarme. Se o token da Meta expirou (ou a chave
+#     da Anthropic venceu ou vai vencer em 21 dias), o job
 #     fica vermelho e o GitHub manda e-mail. Sem isso, o robo para de
 #     publicar em silencio e ninguem descobre por semanas.
 #   - limpeza (domingo): apaga arte com mais de 60 dias de publicado/.
@@ -37,6 +38,9 @@ jobs:
           IG_FORMATOS: ${{ secrets.IG_FORMATOS }}
           CRIADORES_URL: ${{ secrets.CRIADORES_URL }}
           CRIADORES_SECRET: ${{ secrets.CRIADORES_SECRET }}
+          # 03/10/2026: alarme da chave da Anthropic (vencida, apagada ou perto de vencer).
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_CHAVE_VALIDADE: ${{ secrets.ANTHROPIC_CHAVE_VALIDADE }}
         run: python run_verificar.py
 
   limpar:

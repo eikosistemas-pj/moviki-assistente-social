@@ -8,13 +8,17 @@ ninguem perceber por semanas.
 
 Falha aqui = workflow vermelho = e-mail do GitHub. E o alarme.
 """
-from src import config, conteudo, criadores, estado, firestore, freio, material, pecas
+from src import config, conteudo, criadores, estado, firestore, freio, ia, material, pecas
 from src import util_net as net
 from src.social.instagram import Instagram
 
 CHECAGENS = []
 
 
+# critico=True    -> falha impede publicar: vermelho.
+# critico="alarme"-> o robo publica, mas algo vai quebrar calado: vermelho
+#                    tambem (o e-mail do GitHub e o unico aviso), com outra frase.
+# critico=False   -> so aparece no log.
 def checar(nome, funcao, critico=True):
     try:
         detalhe = funcao()
@@ -126,11 +130,20 @@ def main():
 
     checar("triagem so parceiro", triagem_so_parceiro, critico=False)
 
-    falhas_criticas = [c for c in CHECAGENS if not c[1] and c[3]]
+    # 03/10/2026: chave da Anthropic. Vencida ou apagada, a IA falha calada.
+    checar("chave da Anthropic", ia.conferir_chave, critico="alarme")
+
+    falhas_criticas = [c for c in CHECAGENS if not c[1] and c[3] is True]
     if falhas_criticas:
         raise SystemExit(
             f"\n{len(falhas_criticas)} checagem(ns) critica(s) falharam — "
             f"o robo NAO vai conseguir publicar. Corrigir antes do proximo ciclo."
+        )
+    alarmes = [c for c in CHECAGENS if not c[1] and c[3] == "alarme"]
+    if alarmes:
+        raise SystemExit(
+            "\nO robo continua publicando, mas: "
+            + " | ".join(f"{c[0]}: {c[2]}" for c in alarmes)
         )
     print("\nOK -> robo saudavel")
 

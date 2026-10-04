@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-04T06:46:55+00:00",
+ "gerado": "2026-10-04T11:49:19+00:00",
  "versao": "2026-10-02-semcard",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 2185,
+   "seguidores": 2184,
    "posts": 26,
    "cota_usada": 0,
    "cota_total": 100
@@ -216,18 +216,7 @@
    }
   }
  },
- "alertas": [
-  {
-   "nivel": "grave",
-   "tipo": "grade",
-   "texto": "Grade: Live da sua loja, sem precisar de seguidores está marcado para 06/10, mas o vídeo não está na release acervo do GitHub. Suba o arquivo video-live-sem-seguidores.mp4."
-  },
-  {
-   "nivel": "grave",
-   "tipo": "grade",
-   "texto": "Grade: Venda ao vivo sem comissão sobre a venda está marcado para 10/10, mas o vídeo não está na release acervo do GitHub. Suba o arquivo video-live-sem-comissao.mp4."
-  }
- ],
+ "alertas": [],
  "posts": [
   {
    "quando": "2026-10-04T00:06:50+00:00",
@@ -1225,29 +1214,29 @@
   },
   {
    "dia": "2026-10-04",
-   "ig": 2185,
+   "ig": 2184,
    "ig_posts": 26,
    "fb": 1
   }
  ],
  "seguidores": {
-  "atual": 2185,
-  "ganho_7d": -112,
+  "atual": 2184,
+  "ganho_7d": -113,
   "desde_7d": "2026-09-28",
-  "ganho_30d": -112,
+  "ganho_30d": -113,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 2815,
+    "falta": 2816,
     "dias": 24,
     "por_dia": 117.3
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 7815,
+    "falta": 7816,
     "dias": 84,
     "por_dia": 93.0
    }
@@ -1387,8 +1376,8 @@
     "formato": "reel",
     "pilar": "serie-live",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-seguidores.jpg",
-    "sai": false,
-    "motivo": "vídeo não está na release acervo"
+    "sai": true,
+    "motivo": ""
    },
    {
     "dia": "2026-10-10",
@@ -1398,8 +1387,8 @@
     "formato": "reel",
     "pilar": "serie-live",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-comissao.jpg",
-    "sai": false,
-    "motivo": "vídeo não está na release acervo"
+    "sai": true,
+    "motivo": ""
    }
   ],
   "vencendo": []

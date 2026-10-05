@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-04T15:46:02+00:00",
+ "gerado": "2026-10-05T06:55:30+00:00",
  "versao": "2026-10-02-semcard",
  "contas": {
   "instagram": {
@@ -11,18 +11,18 @@
   },
   "facebook": {
    "nome": "Moviki.app",
-   "curtidas_pagina": 1,
-   "seguidores": 1
+   "curtidas_pagina": 2,
+   "seguidores": 2
   }
  },
  "canal_hoje": {
   "feed": "instagram+facebook",
   "story": "facebook",
-  "reel": "facebook"
+  "reel": "instagram+facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
   "feed": null,
+  "reel": "2026-10-05",
   "story": "2026-10-12"
  },
  "so_facebook": false,
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-09-27",
-   "hoje": false,
-   "feed": {
-    "esperado": 0,
-    "feito": 0
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-09-28",
    "hoje": false,
@@ -147,9 +131,25 @@
   },
   {
    "dia": "2026-10-04",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 0,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-10-05",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
     "feito": 0
    },
    "story": {
@@ -192,7 +192,7 @@
   "30d": {
    "fb": {
     "story": {
-     "posts": 23,
+     "posts": 25,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -202,7 +202,7 @@
      "comentarios": 0
     },
     "feed": {
-     "posts": 22,
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -218,6 +218,40 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-05T00:11:14+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Cama, mesa e banho ao vivo no Moviki",
+   "peca": "story-cama-mesa-banho-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-cama-mesa-banho-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1402350234864324"
+   }
+  },
+  {
+   "quando": "2026-10-04T17:02:44+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261004-170238.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1447993610520367"
+   }
+  },
   {
    "quando": "2026-10-04T00:06:50+00:00",
    "formato": "story",
@@ -1152,27 +1186,6 @@
     "comentarios": 0,
     "compartilhamentos": 0
    }
-  },
-  {
-   "quando": "2026-09-04T17:58:20+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "institucional",
-   "titulo": "indique-conhece",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260904-175813.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122113771179430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122113771179430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
   }
  ],
  "seguidores_hist": [
@@ -1217,6 +1230,12 @@
    "ig": 2180,
    "ig_posts": 26,
    "fb": 1
+  },
+  {
+   "dia": "2026-10-05",
+   "ig": 2180,
+   "ig_posts": 26,
+   "fb": 2
   }
  ],
  "seguidores": {
@@ -1230,15 +1249,15 @@
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 2820,
-    "dias": 24,
-    "por_dia": 117.5
+    "dias": 23,
+    "por_dia": 122.6
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 7820,
-    "dias": 84,
-    "por_dia": 93.1
+    "dias": 83,
+    "por_dia": 94.2
    }
   ]
  },
@@ -1277,20 +1296,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-04",
-    "hoje": true,
-    "id": "video-comercio-farmacia",
-    "titulo": "Farmácia: venda ao vivo no bairro",
-    "ramo": "farmacia",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-farmacia.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-farmacia.webp",
-    "duracao": 40.0,
-    "legenda": "A rede grande abriu na esquina e o seu cliente de sempre agora compara preço no aplicativo, do sofá de casa.\n\nCom o Moviki, a sua farmácia abre uma live direto do celular. Mostra o protetor solar de perto, responde \"serve pra pele oleosa?\" e \"tem FPS maior?\" no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #farmacia #drogaria #saude #comerciolocal",
-    "hashtags": "#moviki #farmacia #drogaria #saude #comerciolocal"
-   },
-   {
     "dia": "2026-10-05",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-autopecas",
     "titulo": "Autopeças: venda ao vivo pelo celular",
     "ramo": "automotivo",
@@ -1359,6 +1366,18 @@
     "duracao": 40.0,
     "legenda": "Cor de cabelo que a foto muda, e a cliente não compra sem ver. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tom na luz do dia, a textura de pertinho, tira a dúvida do comprimento no chat e lança a oferta. E quem quer testar o tom toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
     "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora"
+   },
+   {
+    "dia": "2026-10-11",
+    "hoje": false,
+    "id": "video-comercio-eletroportateis",
+    "titulo": "Eletroportáteis: venda ao vivo pelo celular",
+    "ramo": "eletronicos",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F36-video-comercio-eletroportateis-A.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-eletroportateis.webp",
+    "duracao": 40.0,
+    "legenda": "Air fryer na vitrine, e o cliente comparando preço no aplicativo. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Liga o aparelho ao vivo, mostra a voltagem e o tamanho de perto, tira a dúvida no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #assistenciatecnica #celular #acessorios",
+    "hashtags": "#moviki #diadascriancas #assistenciatecnica #celular #acessorios"
    }
   ]
  },

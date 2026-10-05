@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-05T20:56:01+00:00",
+  "formato": "feed",
+  "descricao": "Lote Fundador: 12 meses de Enterprise",
+  "media_id": "18150551026543632",
+  "origem": "casa",
+  "peca": "fundador-feed",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261005-205542.jpg",
+  "fb": "1312620718595159_122119864239430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-05T00:11:14+00:00",
   "formato": "story",
   "descricao": "Cama, mesa e banho ao vivo no Moviki",

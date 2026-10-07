@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-07T00:54:50+00:00",
+  "formato": "feed",
+  "descricao": "Lote Fundador: R$ 990 ou 12x de R$ 89,90",
+  "media_id": "17962194483245000",
+  "origem": "casa",
+  "peca": "fundador-quadrado",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261007-005433.jpg",
+  "fb": "1312620718595159_122120105049430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-06T23:52:19+00:00",
   "formato": "reel",
   "descricao": "Live da sua loja, sem precisar de seguidores",

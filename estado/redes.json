@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-06T17:09:04+00:00",
+ "gerado": "2026-10-07T07:10:05+00:00",
  "versao": "2026-10-02-semcard",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
    "seguidores": 1933,
-   "posts": 27,
-   "cota_usada": 1,
+   "posts": 29,
+   "cota_usada": 2,
    "cota_total": 100
   },
   "facebook": {
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-09-29",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 1,
-    "feito": 1
-   }
-  },
   {
    "dia": "2026-09-30",
    "hoje": false,
@@ -147,6 +131,22 @@
   },
   {
    "dia": "2026-10-06",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 1,
+    "feito": 1
+   }
+  },
+  {
+   "dia": "2026-10-07",
    "hoje": true,
    "feed": {
     "esperado": 1,
@@ -157,7 +157,7 @@
     "feito": 0
    },
    "reel": {
-    "esperado": 1,
+    "esperado": 0,
     "feito": 0
    }
   }
@@ -184,7 +184,12 @@
    "ig": {
     "feed": {
      "posts": 5,
-     "curtidas": 3,
+     "curtidas": 2,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 1,
+     "curtidas": 0,
      "comentarios": 0
     }
    }
@@ -192,25 +197,30 @@
   "30d": {
    "fb": {
     "story": {
-     "posts": 26,
+     "posts": 28,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 22,
+     "posts": 23,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
-     "posts": 4,
+     "posts": 5,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "ig": {
     "feed": {
-     "posts": 7,
-     "curtidas": 6,
+     "posts": 8,
+     "curtidas": 7,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 1,
+     "curtidas": 0,
      "comentarios": 0
     }
    }
@@ -224,6 +234,93 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-10-07T01:04:39+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Venda joias ao vivo no Moviki",
+   "peca": "story-joias-venda-ao-vivo",
+   "ramo": "joalheria",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-joias-venda-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1077455451713520"
+   }
+  },
+  {
+   "quando": "2026-10-07T00:54:50+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Lote Fundador: R$ 990 ou 12x de R$ 89,90",
+   "peca": "fundador-quadrado",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261007-005433.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17962194483245000",
+    "link": "https://www.instagram.com/p/DeLHmpbGORF/",
+    "curtidas": 1,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122120105049430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122120105049430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-10-06T23:52:19+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Live da sua loja, sem precisar de seguidores",
+   "peca": "grade:video-live-sem-seguidores",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-seguidores.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17986176687085061",
+    "link": "https://www.instagram.com/reel/DeLAYzdEaa1/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1133233879126712",
+    "link": "https://www.facebook.com/reel/1133233879126712/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-10-06T18:34:59+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua loja de utilidades ao vivo no Moviki",
+   "peca": "story-loja-utilidades-cama-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-loja-utilidades-cama-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "904496102597335"
+   }
+  },
   {
    "quando": "2026-10-06T02:04:15+00:00",
    "formato": "story",
@@ -1292,12 +1389,18 @@
    "ig": 1933,
    "ig_posts": 27,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-07",
+   "ig": 1933,
+   "ig_posts": 29,
+   "fb": 2
   }
  ],
  "seguidores": {
   "atual": 1933,
-  "ganho_7d": -363,
-  "desde_7d": "2026-09-29",
+  "ganho_7d": -361,
+  "desde_7d": "2026-09-30",
   "ganho_30d": -364,
   "desde_30d": "2026-09-28",
   "metas": [
@@ -1305,15 +1408,15 @@
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 3067,
-    "dias": 22,
-    "por_dia": 139.4
+    "dias": 21,
+    "por_dia": 146.0
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 8067,
-    "dias": 82,
-    "por_dia": 98.4
+    "dias": 81,
+    "por_dia": 99.6
    }
   ]
  },
@@ -1352,20 +1455,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-06",
-    "hoje": true,
-    "id": "video-comercio-brecho",
-    "titulo": "Brechó: venda ao vivo pelo celular",
-    "ramo": "moda",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-brecho.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-brecho.webp",
-    "duracao": 40.0,
-    "legenda": "Peça única na arara, e só quem entrou hoje viu. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu brechó direto do celular. Mostra a peça no corpo, conta a história dela, tira a dúvida de tamanho no chat e avisa: quem pagar primeiro leva. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
-    "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
-   },
-   {
     "dia": "2026-10-07",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-cama-mesa-banho",
     "titulo": "Cama, mesa e banho: venda ao vivo pelo celular",
     "ramo": "casa",
@@ -1434,6 +1525,18 @@
     "duracao": 40.0,
     "legenda": "Tecido que só convence de perto, e a foto não mostra. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tecido de perto, a costura e as cores, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
     "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
+   },
+   {
+    "dia": "2026-10-13",
+    "hoje": false,
+    "id": "video-comercio-games",
+    "titulo": "Games e informática: venda ao vivo pelo celular",
+    "ramo": "eletronicos",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F44-video-comercio-games-A.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-games.webp",
+    "duracao": 40.0,
+    "legenda": "Teclado que o cliente só testa no vídeo dos outros. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Testa o teclado ao vivo, mostra a luz do mouse de perto, tira a dúvida de compatibilidade no chat e lança a oferta. E quem prefere ver de perto toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
+    "hashtags": "#moviki #assistenciatecnica #celular #acessorios #comerciolocal"
    }
   ]
  },
@@ -1443,17 +1546,6 @@
   "no_ar": 1,
   "com_erro": 0,
   "proximos": [
-   {
-    "dia": "2026-10-06",
-    "hoje": true,
-    "id": "video-live-sem-seguidores",
-    "titulo": "Live da sua loja, sem precisar de seguidores",
-    "formato": "reel",
-    "pilar": "serie-live",
-    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-seguidores.jpg",
-    "sai": true,
-    "motivo": ""
-   },
    {
     "dia": "2026-10-10",
     "hoje": false,

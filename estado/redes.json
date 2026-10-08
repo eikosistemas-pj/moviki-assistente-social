@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-08T07:16:32+00:00",
+ "gerado": "2026-10-08T17:50:12+00:00",
  "versao": "2026-10-02-semcard",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1936,
+   "seguidores": 1933,
    "posts": 30,
    "cota_usada": 1,
    "cota_total": 100
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "feed": null,
-  "reel": "2026-10-05"
+  "reel": "2026-10-05",
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -1411,29 +1411,29 @@
   },
   {
    "dia": "2026-10-08",
-   "ig": 1936,
+   "ig": 1933,
    "ig_posts": 30,
    "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1936,
-  "ganho_7d": -256,
+  "atual": 1933,
+  "ganho_7d": -259,
   "desde_7d": "2026-10-01",
-  "ganho_30d": -361,
+  "ganho_30d": -364,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3064,
+    "falta": 3067,
     "dias": 20,
-    "por_dia": 153.2
+    "por_dia": 153.3
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8064,
+    "falta": 8067,
     "dias": 80,
     "por_dia": 100.8
    }

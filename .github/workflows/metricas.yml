@@ -51,11 +51,6 @@ jobs:
         run: python run_metricas.py
 
       - name: Salvar relatorio
+        # 08/10/2026: merge a tres pontas em JSON, sem rebase (incidente Feed #44).
         run: |
-          git config user.name "moviki-assistente-social"
-          git config user.email "bot@moviki.com.br"
-          git add estado/ || true
-          git diff --staged --quiet && echo "nada a commitar" && exit 0
-          git commit -m "relatorio: redes $(date -u +%Y-%m-%d)"
-          git pull --rebase --autostash || true
-          git push
+          python salvar_estado.py "relatorio: redes"

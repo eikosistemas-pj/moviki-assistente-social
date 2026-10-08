@@ -62,14 +62,9 @@ jobs:
 
       - name: Salvar estado
         if: ${{ !inputs.dry_run }}
+        # 08/10/2026: merge a tres pontas em JSON, sem rebase (incidente Feed #44).
         run: |
-          git config user.name "moviki-assistente-social"
-          git config user.email "bot@moviki.com.br"
-          git add estado/ || true
-          git diff --staged --quiet && echo "nada a commitar" && exit 0
-          git commit -m "estado: reel $(date -u +%Y-%m-%d)"
-          git pull --rebase --autostash || true
-          git push
+          python salvar_estado.py "estado: reel"
 
       # 27/09/2026. Se o Instagram falhou, o post saiu so na Pagina (plano B)
       # e o estado ja foi salvo acima. Este passo deixa o job VERMELHO para o

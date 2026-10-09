@@ -297,6 +297,10 @@ def publicar(peca, hashtags=""):
         print("--------------------------")
 
     if config.DRY_RUN:
+        if formato == "reel" and no_ig:
+            from . import cartela
+            local, _ = cartela.reel_com_cartela(url)   # ensaio: monta e nao sobe
+            print(f"DRY_RUN: reel com cartela em {local}" if local else "DRY_RUN: sem cartela")
         print("DRY_RUN ligado -> nada foi publicado.")
         return None
 
@@ -321,8 +325,7 @@ def publicar(peca, hashtags=""):
     try:
         ig = Instagram()
         if formato == "reel":
-            mid = ig.reel(url, leg_ig, hashtags, capa_url=peca.get("capa"),
-                          colaboradores=colaboradores(peca))
+            mid = _reel_instagram(ig, peca, url, leg_ig, hashtags)
         else:
             mid = ig.story_video(url) if midia == "video" else ig.story(url)
     except Exception as e:  # noqa: BLE001
@@ -342,4 +345,40 @@ def publicar(peca, hashtags=""):
     # e o painel do dono mostra curtidas e comentarios das duas redes.
     fid = espelhar_formato(formato, midia, url, leg_fb)
     marcar(peca, mid, "instagram", dict(mini, fb=fid) if fid else mini)
+    if formato == "story":
+        _story_cartela(ig)
     return mid
+
+
+# ------------------------------------------------------------------ cartela (08/10/2026)
+def _reel_instagram(ig, peca, url, leg_ig, hashtags):
+    """Reel no Instagram com a cartela "Comente LIVE" no fim (src/cartela.py).
+    Cartela falhou em qualquer ponto -> o reel original, como antes."""
+    from . import cartela
+    url_c, asset = cartela.reel_com_cartela(url)
+    if url_c:
+        try:
+            mid = ig.reel(url_c, leg_ig, hashtags, capa_url=peca.get("capa"),
+                          colaboradores=colaboradores(peca))
+            print("cartela: reel publicado com a cartela 'Comente LIVE'")
+            return mid
+        except Exception as e:  # noqa: BLE001
+            print(f"cartela: o Instagram recusou o reel com cartela ({e}) -> original.")
+        finally:
+            cartela.apagar(asset)
+    return ig.reel(url, leg_ig, hashtags, capa_url=peca.get("capa"),
+                   colaboradores=colaboradores(peca))
+
+
+def _story_cartela(ig):
+    """Segundo story, logo depois da arte: "Responda LIVE". So no Instagram
+    (o Facebook nao esta ligado ao ManyChat). Falha nao mexe no story do dia."""
+    from . import cartela
+    url_c = cartela.story_cartela()
+    if not url_c:
+        return
+    try:
+        sid = ig.story(url_c)
+        print(f"cartela: story 'Responda LIVE' publicado | id: {sid}")
+    except Exception as e:  # noqa: BLE001
+        print(f"cartela: story 'Responda LIVE' falhou ({e})")

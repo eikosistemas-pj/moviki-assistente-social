@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-09T01:19:00+00:00",
+  "formato": "feed",
+  "descricao": "Perfumaria ao vivo no Moviki",
+  "media_id": "17943715575358473",
+  "origem": "casa",
+  "peca": "feed-perfumaria-ao-vivo",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261009-011837.jpg",
+  "fb": "1312620718595159_122120551953430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-08T18:57:41+00:00",
   "formato": "story",
   "descricao": "Venha para o Moviki e venda ao vivo em sua própria live!!!",

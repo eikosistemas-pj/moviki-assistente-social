@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-09T07:19:47+00:00",
- "versao": "2026-10-09-cartela",
+ "gerado": "2026-10-09T11:39:12+00:00",
+ "versao": "2026-10-09-tiktok",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "reel": "2026-10-05",
+  "story": "2026-10-12",
   "feed": null
  },
  "so_facebook": false,
@@ -1528,8 +1528,9 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-confeitaria.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-confeitaria.webp",
     "duracao": 40.0,
-    "legenda": "O bolo mais bonito do bairro, e só quem passa na vitrine fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua confeitaria direto do celular. Corta a fatia ao vivo, mostra o recheio, combina a encomenda com a data no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #delivery #lanchonete #restaurante",
-    "hashtags": "#moviki #diadascriancas #delivery #lanchonete #restaurante"
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nO bolo mais bonito do bairro, e só quem passa na vitrine fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua confeitaria direto do celular. Corta a fatia ao vivo, mostra o recheio, combina a encomenda com a data no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #delivery #lanchonete #restaurante",
+    "hashtags": "#moviki #diadascriancas #delivery #lanchonete #restaurante",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-09-video-comercio-confeitaria.mp4"
    },
    {
     "dia": "2026-10-10",
@@ -1540,8 +1541,9 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F38-video-comercio-cabelo-A.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-cabelo.webp",
     "duracao": 40.0,
-    "legenda": "Cor de cabelo que a foto muda, e a cliente não compra sem ver. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tom na luz do dia, a textura de pertinho, tira a dúvida do comprimento no chat e lança a oferta. E quem quer testar o tom toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
-    "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora"
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nCor de cabelo que a foto muda, e a cliente não compra sem ver. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tom na luz do dia, a textura de pertinho, tira a dúvida do comprimento no chat e lança a oferta. E quem quer testar o tom toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
+    "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-10-video-comercio-cabelo.mp4"
    },
    {
     "dia": "2026-10-11",
@@ -1552,8 +1554,9 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F36-video-comercio-eletroportateis-A.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-eletroportateis.webp",
     "duracao": 40.0,
-    "legenda": "Air fryer na vitrine, e o cliente comparando preço no aplicativo. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Liga o aparelho ao vivo, mostra a voltagem e o tamanho de perto, tira a dúvida no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #assistenciatecnica #celular #acessorios",
-    "hashtags": "#moviki #diadascriancas #assistenciatecnica #celular #acessorios"
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nAir fryer na vitrine, e o cliente comparando preço no aplicativo. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Liga o aparelho ao vivo, mostra a voltagem e o tamanho de perto, tira a dúvida no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #assistenciatecnica #celular #acessorios",
+    "hashtags": "#moviki #diadascriancas #assistenciatecnica #celular #acessorios",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-11-video-comercio-eletroportateis.mp4"
    },
    {
     "dia": "2026-10-12",
@@ -1564,7 +1567,7 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F40-video-comercio-moda-fitness-A.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-moda-fitness.webp",
     "duracao": 40.0,
-    "legenda": "Tecido que só convence de perto, e a foto não mostra. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tecido de perto, a costura e as cores, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nTecido que só convence de perto, e a foto não mostra. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tecido de perto, a costura e as cores, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
     "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
    },
    {
@@ -1576,7 +1579,7 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F44-video-comercio-games-A.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-games.webp",
     "duracao": 40.0,
-    "legenda": "Teclado que o cliente só testa no vídeo dos outros. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Testa o teclado ao vivo, mostra a luz do mouse de perto, tira a dúvida de compatibilidade no chat e lança a oferta. E quem prefere ver de perto toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nTeclado que o cliente só testa no vídeo dos outros. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Testa o teclado ao vivo, mostra a luz do mouse de perto, tira a dúvida de compatibilidade no chat e lança a oferta. E quem prefere ver de perto toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
     "hashtags": "#moviki #assistenciatecnica #celular #acessorios #comerciolocal"
    },
    {
@@ -1588,7 +1591,7 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F58-video-comercio-moda-praia-A.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-moda-praia.webp",
     "duracao": 40.0,
-    "legenda": "Calor chegando, e a moda praia parada na arara. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a estampa de perto, o tecido no cabide, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nCalor chegando, e a moda praia parada na arara. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a estampa de perto, o tecido no cabide, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
     "hashtags": "#moviki #lojaderoupa #modafeminina #lojista #vendasonline"
    },
    {
@@ -1600,7 +1603,7 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-naturais.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-naturais.webp",
     "duracao": 40.0,
-    "legenda": "Chegou novidade no granel, e ninguém do bairro fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu empório direto do celular. Pesa na hora, mostra o chá e a castanha de perto, responde no chat quanto a cliente quer levar e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nChegou novidade no granel, e ninguém do bairro fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu empório direto do celular. Pesa na hora, mostra o chá e a castanha de perto, responde no chat quanto a cliente quer levar e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
     "hashtags": "#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal"
    }
   ]

@@ -38,6 +38,10 @@ def legenda(peca, dia):
     base = (peca.get("legenda_ig") or "").strip()
     reserva = f"{(peca.get('titulo') or 'Seu negócio no mapa').strip().rstrip('.')}.\n\nConheça pelo link da bio."
     texto = compliance.garantir(base or reserva, reserva)
+    # 09/10/2026: no TikTok so o direct dispara o funil do ManyChat (comentario
+    # nao tem gatilho no Brasil). A chamada abre a legenda, antes da dobra.
+    if config.CHAMADA_TIKTOK:
+        texto = compliance.garantir(f"{config.CHAMADA_TIKTOK}\n\n{texto}", texto)
     tags = conteudo.hashtags("conversao", peca.get("categoria"), dia)
     return f"{texto}\n\n{tags}".strip(), tags
 
@@ -99,6 +103,8 @@ def kit(videos, hoje, agenda):
             "titulo": v.get("titulo", ""),
             "ramo": v.get("categoria", ""),
             "video": v["url"],
+            # "video_cartela" (09/10/2026): o mesmo video com a cartela
+            # "Mande LIVE no direct" no fim; posto por cartela.kit_tiktok.
             "capa": v.get("capa_triagem") or v.get("capa") or "",
             "duracao": v.get("duracao"),
             "legenda": texto,
@@ -114,6 +120,11 @@ def atualizar(videos, hoje):
     agenda = planejar(videos, hoje, salvo.get("agenda"))
     estado.gravar_lista(ARQUIVO, {"agenda": agenda})
     dias = kit(videos, hoje, agenda)
+    try:
+        from . import cartela
+        dias = cartela.kit_tiktok(dias, hoje.isoformat())
+    except Exception as e:  # noqa: BLE001
+        print(f"kit tiktok: cartela fora ({str(e)[:120]}) -> video original.")
     return {
         "videos_disponiveis": len(videos),
         "live_na_pagina": config.LIVE_NA_PAGINA,

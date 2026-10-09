@@ -48,6 +48,9 @@ jobs:
           # 28/09/2026: triagem "so parceiro" por imagem e Kit TikTok do dia.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MATERIAL_EXCLUIR: ${{ secrets.MATERIAL_EXCLUIR }}
+          # 09/10/2026: o video do Kit TikTok com a cartela "Mande LIVE no
+          # direct" sobe como asset do Release tiktok-kit (precisa do token).
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python run_metricas.py
 
       - name: Salvar relatorio

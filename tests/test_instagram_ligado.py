@@ -140,3 +140,25 @@ def test_formato_fora_da_rampa_vai_direto_na_pagina_sem_alarme(monkeypatch):
     monkeypatch.setattr(fb_mod, "Facebook", FbOk)
     assert pecas.publicar(_peca()) == "fb-2"
     assert not os.path.exists(alerta)
+
+
+# ------------------------------------------------- chamada "Comente LIVE" (08/10/2026)
+def test_chamada_comente_live_na_primeira_linha():
+    leg = Instagram.legenda_final("Sua loja ao vivo.", "#moviki")
+    assert leg.splitlines()[0] == config.CHAMADA_COMENTE
+    assert "Sua loja ao vivo." in leg
+
+
+def test_chamada_nao_repete():
+    leg = Instagram.legenda_final("Comente LIVE aqui embaixo.", "")
+    assert leg.lower().count("comente live") == 1
+
+
+def test_chamada_passa_na_trava():
+    from src import compliance
+    assert compliance.violacoes(config.CHAMADA_COMENTE) == []
+
+
+def test_chamada_desligada(monkeypatch):
+    monkeypatch.setattr(config, "CHAMADA_COMENTE", "")
+    assert Instagram.legenda_final("Texto.", "") == "Texto."

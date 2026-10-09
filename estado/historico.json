@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-09T19:48:50+00:00",
+  "formato": "feed",
+  "descricao": "Sua loja de utensílios ao vivo no Moviki",
+  "media_id": "18124710991930707",
+  "origem": "casa",
+  "peca": "feed-loja-utensilios-ao-vivo",
+  "rede": "instagram",
+  "ramo": "casa",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261009-194833.jpg",
+  "fb": "1312620718595159_122120745609430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-09T18:29:03+00:00",
   "formato": "story",
   "descricao": "Farmácia ao vivo com o Moviki",

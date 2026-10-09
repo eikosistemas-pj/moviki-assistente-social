@@ -5,6 +5,9 @@ Publicador do Instagram (Graph API oficial da Meta).
 Fluxo oficial em 2 passos: cria o container de midia, espera o Instagram
 baixar a imagem/video, publica.
 
+Chamada "Comente LIVE" (08/10/2026): primeira linha de toda legenda de feed e
+reel, ver config.CHAMADA_COMENTE e Instagram.com_chamada.
+
 Hashtags (27/09/2026): no FIM DA LEGENDA, no maximo 5 (limite do Instagram
 desde dez/2025). Antes iam 10 no primeiro comentario — acima do limite e
 comentario automatico, proibido pela regra permanente da conta nova. O robo
@@ -76,11 +79,22 @@ class Instagram:
         return pub["id"]
 
     @staticmethod
+    def com_chamada(texto):
+        """Poe a chamada "Comente LIVE" na primeira linha (08/10/2026). A
+        primeira linha e o que aparece antes do "mais" no feed e por cima do
+        reel. Nao repete se a legenda ja pede o comentario."""
+        chamada = config.CHAMADA_COMENTE
+        if not chamada or re.search(r"\bcomente\s+live\b", texto or "", flags=re.I):
+            return texto
+        return f"{chamada}\n\n{texto}" if texto else chamada
+
+    @staticmethod
     def legenda_final(legenda, hashtags=""):
         """Legenda + hashtags no fim, respeitando os limites do Instagram:
         no maximo 5 hashtags no total (contando as que ja estiverem no texto)
         e 2.200 caracteres."""
         texto = (legenda or "").strip()
+        texto = Instagram.com_chamada(texto)
         ja = re.findall(r"#\w+", texto)
         vaga = max(0, config.HASHTAGS_MAX - len(ja))
         novas = [t for t in (hashtags or "").split() if t.startswith("#") and t not in ja][:vaga]

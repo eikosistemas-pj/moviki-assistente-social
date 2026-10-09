@@ -18,7 +18,17 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-02-semcard"
+VERSAO = "2026-10-08-comente"
+
+# Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
+# e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o
+# link da live de exemplo do ramo dele e o cadastro. So no Instagram (o
+# Facebook nao esta ligado ao ManyChat). Desliga com a variavel
+# CHAMADA_COMENTE=0. A peca do material de apoio NAO muda: o parceiro posta a
+# mesma peca no perfil dele, onde comentar LIVE nao dispara nada.
+_chamada = os.environ.get("CHAMADA_COMENTE", "").strip()
+CHAMADA_COMENTE = "" if _chamada == "0" else (
+    _chamada or "\U0001f4ac Comente LIVE que eu te mando no direct o link de uma live de exemplo do seu ramo.")
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))

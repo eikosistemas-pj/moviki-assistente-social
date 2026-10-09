@@ -6,6 +6,7 @@ com Graph API falsa.
 import pytest
 
 from src import conteudo, firestore, segmentos
+from src import config
 from src.social.instagram import Instagram
 
 
@@ -132,7 +133,8 @@ def test_hashtags_vao_no_fim_da_legenda_nunca_em_comentario():
     falso = GraphFalso()
     _ig(falso).foto("https://img", "legenda limpa", "#moviki #pet")
     _, params_container = falso.chamadas[0]
-    assert params_container["caption"] == "legenda limpa\n\n#moviki #pet"
+    # 08/10/2026: a chamada "Comente LIVE" abre toda legenda do Instagram.
+    assert params_container["caption"] == f"{config.CHAMADA_COMENTE}\n\nlegenda limpa\n\n#moviki #pet"
     assert not any(c.endswith("/comments") for c, _ in falso.chamadas)
 
 

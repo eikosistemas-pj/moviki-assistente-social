@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-08T17:50:12+00:00",
- "versao": "2026-10-02-semcard",
+ "gerado": "2026-10-09T07:19:47+00:00",
+ "versao": "2026-10-09-cartela",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1933,
-   "posts": 30,
+   "seguidores": 1935,
+   "posts": 31,
    "cota_usada": 1,
    "cota_total": 100
   },
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
+  "story": "2026-10-12",
   "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-01",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-10-02",
    "hoje": false,
@@ -147,6 +131,22 @@
   },
   {
    "dia": "2026-10-08",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-10-09",
    "hoje": true,
    "feed": {
     "esperado": 1,
@@ -184,20 +184,20 @@
    "ig": {
     "feed": {
      "posts": 4,
-     "curtidas": 1,
+     "curtidas": 2,
      "comentarios": 0
     },
     "reel": {
      "posts": 1,
      "curtidas": 0,
-     "comentarios": 0
+     "comentarios": 2
     }
    }
   },
   "30d": {
    "fb": {
     "story": {
-     "posts": 30,
+     "posts": 32,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -214,14 +214,14 @@
    },
    "ig": {
     "feed": {
-     "posts": 8,
-     "curtidas": 7,
+     "posts": 9,
+     "curtidas": 8,
      "comentarios": 0
     },
     "reel": {
      "posts": 1,
      "curtidas": 0,
-     "comentarios": 0
+     "comentarios": 2
     }
    }
   }
@@ -234,6 +234,67 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-10-09T01:33:25+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua ótica ao vivo no Moviki",
+   "peca": "story-otica-ao-vivo",
+   "ramo": "otica",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-otica-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1803207294140592"
+   }
+  },
+  {
+   "quando": "2026-10-09T01:19:00+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Perfumaria ao vivo no Moviki",
+   "peca": "feed-perfumaria-ao-vivo",
+   "ramo": "beleza",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261009-011837.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17943715575358473",
+    "link": "https://www.instagram.com/p/DeQT8ywHWZ8/",
+    "curtidas": 1,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122120551953430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122120551953430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-10-08T18:57:41+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261008-185733.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "2115319916018360"
+   }
+  },
   {
    "quando": "2026-10-08T01:25:08+00:00",
    "formato": "story",
@@ -329,7 +390,7 @@
     "id": "17986176687085061",
     "link": "https://www.instagram.com/reel/DeLAYzdEaa1/",
     "curtidas": 0,
-    "comentarios": 0
+    "comentarios": 2
    },
    "fb": {
     "id": "1133233879126712",
@@ -1325,27 +1386,6 @@
     "comentarios": 0,
     "compartilhamentos": 0
    }
-  },
-  {
-   "quando": "2026-09-08T23:31:55+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "institucional",
-   "titulo": "trinta-dias",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260908-233147.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122114592237430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122114592237430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
   }
  ],
  "seguidores_hist": [
@@ -1414,28 +1454,34 @@
    "ig": 1933,
    "ig_posts": 30,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-09",
+   "ig": 1935,
+   "ig_posts": 31,
+   "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1933,
-  "ganho_7d": -259,
-  "desde_7d": "2026-10-01",
-  "ganho_30d": -364,
+  "atual": 1935,
+  "ganho_7d": -250,
+  "desde_7d": "2026-10-02",
+  "ganho_30d": -362,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3067,
-    "dias": 20,
-    "por_dia": 153.3
+    "falta": 3065,
+    "dias": 19,
+    "por_dia": 161.3
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8067,
-    "dias": 80,
-    "por_dia": 100.8
+    "falta": 8065,
+    "dias": 79,
+    "por_dia": 102.1
    }
   ]
  },
@@ -1474,20 +1520,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-08",
-    "hoje": true,
-    "id": "video-comercio-calcados",
-    "titulo": "Calçados: venda ao vivo pelo celular",
-    "ramo": "moda",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-calcados.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-calcados.webp",
-    "duracao": 40.0,
-    "legenda": "Chegou a numeração que faltava, e o cliente nem sabe. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja de calçados direto do celular. Mostra a sola, calça no pé, confirma a numeração e a forma no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
-    "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
-   },
-   {
     "dia": "2026-10-09",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-confeitaria",
     "titulo": "Confeitaria: venda ao vivo pelo celular",
     "ramo": "alimentacao",
@@ -1556,6 +1590,18 @@
     "duracao": 40.0,
     "legenda": "Calor chegando, e a moda praia parada na arara. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a estampa de perto, o tecido no cabide, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
     "hashtags": "#moviki #lojaderoupa #modafeminina #lojista #vendasonline"
+   },
+   {
+    "dia": "2026-10-15",
+    "hoje": false,
+    "id": "video-comercio-naturais",
+    "titulo": "Produtos naturais: venda ao vivo pelo celular",
+    "ramo": "naturais",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-naturais.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-naturais.webp",
+    "duracao": 40.0,
+    "legenda": "Chegou novidade no granel, e ninguém do bairro fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu empório direto do celular. Pesa na hora, mostra o chá e a castanha de perto, responde no chat quanto a cliente quer levar e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
+    "hashtags": "#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal"
    }
   ]
  },

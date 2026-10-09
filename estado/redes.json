@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-09T11:39:12+00:00",
+ "gerado": "2026-10-09T17:25:02+00:00",
  "versao": "2026-10-09-tiktok",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1935,
+   "seguidores": 1936,
    "posts": 31,
    "cota_usada": 1,
    "cota_total": 100
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
   "story": "2026-10-12",
+  "reel": "2026-10-05",
   "feed": null
  },
  "so_facebook": false,
@@ -202,7 +202,7 @@
      "comentarios": 0
     },
     "feed": {
-     "posts": 22,
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -1365,27 +1365,6 @@
     "comentarios": 0,
     "compartilhamentos": 0
    }
-  },
-  {
-   "quando": "2026-09-09T16:57:19+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "institucional",
-   "titulo": "itinerante-e-negocio",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260909-165708.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122114730393430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122114730393430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
   }
  ],
  "seguidores_hist": [
@@ -1457,29 +1436,29 @@
   },
   {
    "dia": "2026-10-09",
-   "ig": 1935,
+   "ig": 1936,
    "ig_posts": 31,
    "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1935,
-  "ganho_7d": -250,
+  "atual": 1936,
+  "ganho_7d": -249,
   "desde_7d": "2026-10-02",
-  "ganho_30d": -362,
+  "ganho_30d": -361,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3065,
+    "falta": 3064,
     "dias": 19,
     "por_dia": 161.3
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8065,
+    "falta": 8064,
     "dias": 79,
     "por_dia": 102.1
    }
@@ -1568,7 +1547,8 @@
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-moda-fitness.webp",
     "duracao": 40.0,
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nTecido que só convence de perto, e a foto não mostra. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tecido de perto, a costura e as cores, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
-    "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista"
+    "hashtags": "#moviki #diadascriancas #lojaderoupa #modafeminina #lojista",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-12-video-comercio-moda-fitness.mp4"
    },
    {
     "dia": "2026-10-13",
@@ -1580,7 +1560,8 @@
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-games.webp",
     "duracao": 40.0,
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nTeclado que o cliente só testa no vídeo dos outros. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Testa o teclado ao vivo, mostra a luz do mouse de perto, tira a dúvida de compatibilidade no chat e lança a oferta. E quem prefere ver de perto toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
-    "hashtags": "#moviki #assistenciatecnica #celular #acessorios #comerciolocal"
+    "hashtags": "#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-13-video-comercio-games.mp4"
    },
    {
     "dia": "2026-10-14",
@@ -1592,7 +1573,8 @@
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-moda-praia.webp",
     "duracao": 40.0,
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nCalor chegando, e a moda praia parada na arara. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a estampa de perto, o tecido no cabide, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
-    "hashtags": "#moviki #lojaderoupa #modafeminina #lojista #vendasonline"
+    "hashtags": "#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-14-video-comercio-moda-praia.mp4"
    },
    {
     "dia": "2026-10-15",

@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-09-cartela"
+VERSAO = "2026-10-09-tiktok"
 
 # Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
 # e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o
@@ -37,6 +37,15 @@ CHAMADA_COMENTE = "" if _chamada == "0" else (
 # padrao aqui).
 CARTELA_REEL = os.environ.get("CARTELA_REEL", "").strip() != "0"
 CARTELA_STORY = os.environ.get("CARTELA_STORY", "").strip() != "0"
+
+# Kit TikTok (09/10/2026). O TikTok nao libera gatilho de comentario no
+# ManyChat no Brasil: so o direct dispara o funil. A legenda do kit abre com
+# a chamada do direct (CHAMADA_TIKTOK=0 desliga) e o video do kit ganha a
+# cartela "Mande LIVE no direct" no fim (CARTELA_TIKTOK=0 desliga).
+_chamada_tt = os.environ.get("CHAMADA_TIKTOK", "").strip()
+CHAMADA_TIKTOK = "" if _chamada_tt == "0" else (
+    _chamada_tt or "\U0001f4e9 Manda LIVE no direct que eu te mando o link de uma live de exemplo.")
+CARTELA_TIKTOK = os.environ.get("CARTELA_TIKTOK", "").strip() != "0"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))

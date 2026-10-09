@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-08-comente"
+VERSAO = "2026-10-09-cartela"
 
 # Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
 # e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o
@@ -29,6 +29,14 @@ VERSAO = "2026-10-08-comente"
 _chamada = os.environ.get("CHAMADA_COMENTE", "").strip()
 CHAMADA_COMENTE = "" if _chamada == "0" else (
     _chamada or "\U0001f4ac Comente LIVE que eu te mando no direct o link de uma live de exemplo do seu ramo.")
+
+# Cartela "Comente LIVE" (08/10/2026), ver src/cartela.py. Reel no Instagram
+# ganha ~7 s de cartela com a voz da marca no fim; story no Instagram ganha
+# um segundo story "Responda LIVE". So na copia do perfil oficial. Desliga
+# com a variavel CARTELA_REEL=0 / CARTELA_STORY=0 no workflow (ou trocando o
+# padrao aqui).
+CARTELA_REEL = os.environ.get("CARTELA_REEL", "").strip() != "0"
+CARTELA_STORY = os.environ.get("CARTELA_STORY", "").strip() != "0"
 
 # ----------------------------------------------------------------- caminhos
 ASSETS_DIR = Path(os.environ.get("ASSETS_DIR", RAIZ / "assets"))

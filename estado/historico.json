@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-10-10T23:39:57+00:00",
+  "formato": "reel",
+  "descricao": "Venda ao vivo sem comissão sobre a venda",
+  "media_id": "18201499093380392",
+  "origem": "casa",
+  "peca": "grade:video-live-sem-comissao",
+  "rede": "instagram",
+  "ramo": "geral",
+  "grade": true,
+  "pilar": "serie-live",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-comissao.jpg",
+  "fb": "1131554919806920"
+ },
+ {
   "quando": "2026-10-10T17:26:38+00:00",
   "formato": "story",
   "descricao": "Sua vitrine agora é ao vivo",

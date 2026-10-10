@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-09T17:25:02+00:00",
+ "gerado": "2026-10-10T06:59:22+00:00",
  "versao": "2026-10-09-tiktok",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1936,
-   "posts": 31,
+   "seguidores": 1948,
+   "posts": 32,
    "cota_usada": 1,
    "cota_total": 100
   },
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
+  "feed": null,
   "reel": "2026-10-05",
-  "feed": null
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-02",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-10-03",
    "hoje": false,
@@ -147,9 +131,25 @@
   },
   {
    "dia": "2026-10-09",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-10-10",
+   "hoje": true,
+   "feed": {
+    "esperado": 0,
     "feito": 0
    },
    "story": {
@@ -157,7 +157,7 @@
     "feito": 0
    },
    "reel": {
-    "esperado": 0,
+    "esperado": 1,
     "feito": 0
    }
   }
@@ -184,7 +184,7 @@
    "ig": {
     "feed": {
      "posts": 4,
-     "curtidas": 2,
+     "curtidas": 4,
      "comentarios": 0
     },
     "reel": {
@@ -197,12 +197,12 @@
   "30d": {
    "fb": {
     "story": {
-     "posts": 32,
+     "posts": 34,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 21,
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -214,8 +214,8 @@
    },
    "ig": {
     "feed": {
-     "posts": 9,
-     "curtidas": 8,
+     "posts": 10,
+     "curtidas": 10,
      "comentarios": 0
     },
     "reel": {
@@ -226,14 +226,69 @@
    }
   }
  },
- "alertas": [
-  {
-   "nivel": "atencao",
-   "tipo": "faltou_post",
-   "texto": "07/10: feed saiu 0 de 1."
-  }
- ],
+ "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-10T01:19:22+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261010-011914.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1794367625120809"
+   }
+  },
+  {
+   "quando": "2026-10-09T19:48:50+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Sua loja de utensílios ao vivo no Moviki",
+   "peca": "feed-loja-utensilios-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261009-194833.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18124710991930707",
+    "link": "https://www.instagram.com/p/DeSS-CWDISW/",
+    "curtidas": 2,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122120745609430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122120745609430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-10-09T18:29:03+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Farmácia ao vivo com o Moviki",
+   "peca": "story-farmacia-ao-vivo",
+   "ramo": "farmacia",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-farmacia-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1812669379743697"
+   }
+  },
   {
    "quando": "2026-10-09T01:33:25+00:00",
    "formato": "story",
@@ -1439,28 +1494,34 @@
    "ig": 1936,
    "ig_posts": 31,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-10",
+   "ig": 1948,
+   "ig_posts": 32,
+   "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1936,
-  "ganho_7d": -249,
-  "desde_7d": "2026-10-02",
-  "ganho_30d": -361,
+  "atual": 1948,
+  "ganho_7d": -235,
+  "desde_7d": "2026-10-03",
+  "ganho_30d": -349,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3064,
-    "dias": 19,
-    "por_dia": 161.3
+    "falta": 3052,
+    "dias": 18,
+    "por_dia": 169.6
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8064,
-    "dias": 79,
-    "por_dia": 102.1
+    "falta": 8052,
+    "dias": 78,
+    "por_dia": 103.2
    }
   ]
  },
@@ -1499,21 +1560,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-09",
-    "hoje": true,
-    "id": "video-comercio-confeitaria",
-    "titulo": "Confeitaria: venda ao vivo pelo celular",
-    "ramo": "alimentacao",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-confeitaria.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-confeitaria.webp",
-    "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nO bolo mais bonito do bairro, e só quem passa na vitrine fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua confeitaria direto do celular. Corta a fatia ao vivo, mostra o recheio, combina a encomenda com a data no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #delivery #lanchonete #restaurante",
-    "hashtags": "#moviki #diadascriancas #delivery #lanchonete #restaurante",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-09-video-comercio-confeitaria.mp4"
-   },
-   {
     "dia": "2026-10-10",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-cabelo",
     "titulo": "Cabelo e apliques: venda ao vivo pelo celular",
     "ramo": "beleza",
@@ -1586,19 +1634,33 @@
     "capa": "https://app.moviki.com.br/material/capas/video-comercio-naturais.webp",
     "duracao": 40.0,
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nChegou novidade no granel, e ninguém do bairro fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu empório direto do celular. Pesa na hora, mostra o chá e a castanha de perto, responde no chat quanto a cliente quer levar e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
-    "hashtags": "#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal"
+    "hashtags": "#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-15-video-comercio-naturais.mp4"
+   },
+   {
+    "dia": "2026-10-16",
+    "hoje": false,
+    "id": "video-comercio-perfumaria",
+    "titulo": "Perfumaria: venda ao vivo pelo celular",
+    "ramo": "beleza",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-perfumaria.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-perfumaria.webp",
+    "duracao": 40.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nPerfume não tem cheiro na foto, e a cliente passa reto. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua perfumaria direto do celular. Descreve as notas de cada fragrância, mostra o frasco de perto, monta o kit presente com a cliente no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
+    "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-16-video-comercio-perfumaria.mp4"
    }
   ]
  },
  "grade": {
   "versao": "2026-09-30-2",
   "acervo": 3,
-  "no_ar": 1,
+  "no_ar": 2,
   "com_erro": 0,
   "proximos": [
    {
     "dia": "2026-10-10",
-    "hoje": false,
+    "hoje": true,
     "id": "video-live-sem-comissao",
     "titulo": "Venda ao vivo sem comissão sobre a venda",
     "formato": "reel",

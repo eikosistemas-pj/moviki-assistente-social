@@ -1,5 +1,5 @@
 {
- "versao": "2026-09-30-2",
+ "versao": "2026-10-11-ugc",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -61,6 +61,26 @@
    "repetir_apos_dias": 45,
    "marca": "fab9",
    "obs": "Esquenta da Black Friday (P48, semana 4). Telas reais do estúdio e da live pública, dados fictícios (São Paulo). Se a reserva da oferta mudar de regra, tirar da grade no mesmo dia."
+  },
+  {
+   "id": "ugc-bastidores-moda",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "moda",
+   "titulo": "Já imaginou fazer uma live direto da sua loja?",
+   "video": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/ugc-bastidores-moda.mp4",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-moda.jpg",
+   "legenda": "Por trás de uma live dentro da loja: o celular no tripé, a cliente perguntando no chat e o pedido chegando pago do outro lado.\n\nNo Moviki, a sua loja abre a live pelo celular, mostra a peça e responde na hora. A cliente compra ali mesmo e o Pix cai direto na sua conta.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão. Conheça pelo link da bio.",
+   "tipo_pauta": "conversao",
+   "canais": ["instagram", "facebook"],
+   "vende_live": true,
+   "dias": ["2026-10-13"],
+   "a_partir_de": "2026-10-13",
+   "valido_ate": "2027-01-11",
+   "reconferir_em": null,
+   "repetir_apos_dias": 45,
+   "marca": "a237",
+   "obs": "UGC bastidores da live (R - UGC bastidores da live), ramo moda, loja fictícia Ateliê Tapiá. Versão limpa (sem 'Comente LIVE'): o robô cola a cartela. Mescla: UGC às terças, sábado fica com o rodízio e as séries."
   }
  ]
 }

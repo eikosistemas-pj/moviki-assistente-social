@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-10T16:12:32+00:00",
+ "gerado": "2026-10-11T07:04:47+00:00",
  "versao": "2026-10-09-tiktok",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1948,
-   "posts": 32,
+   "seguidores": 1950,
+   "posts": 33,
    "cota_usada": 1,
    "cota_total": 100
   },
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
+  "story": "2026-10-12",
   "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-03",
-   "hoje": false,
-   "feed": {
-    "esperado": 0,
-    "feito": 0
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 1,
-    "feito": 1
-   }
-  },
   {
    "dia": "2026-10-04",
    "hoje": false,
@@ -147,6 +131,22 @@
   },
   {
    "dia": "2026-10-10",
+   "hoje": false,
+   "feed": {
+    "esperado": 0,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 1,
+    "feito": 1
+   }
+  },
+  {
+   "dia": "2026-10-11",
    "hoje": true,
    "feed": {
     "esperado": 0,
@@ -157,7 +157,7 @@
     "feito": 0
    },
    "reel": {
-    "esperado": 1,
+    "esperado": 0,
     "feito": 0
    }
   }
@@ -170,64 +170,124 @@
      "curtidas": 0,
      "comentarios": 0
     },
-    "feed": {
-     "posts": 4,
+    "reel": {
+     "posts": 2,
      "curtidas": 0,
      "comentarios": 0
     },
-    "reel": {
-     "posts": 2,
+    "feed": {
+     "posts": 4,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "ig": {
+    "reel": {
+     "posts": 2,
+     "curtidas": 0,
+     "comentarios": 2
+    },
     "feed": {
      "posts": 4,
      "curtidas": 4,
      "comentarios": 0
-    },
-    "reel": {
-     "posts": 1,
-     "curtidas": 0,
-     "comentarios": 2
     }
    }
   },
   "30d": {
    "fb": {
     "story": {
-     "posts": 34,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "feed": {
-     "posts": 22,
+     "posts": 36,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
-     "posts": 5,
+     "posts": 6,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "feed": {
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "ig": {
+    "reel": {
+     "posts": 2,
+     "curtidas": 0,
+     "comentarios": 2
+    },
     "feed": {
      "posts": 10,
      "curtidas": 10,
      "comentarios": 0
-    },
-    "reel": {
-     "posts": 1,
-     "curtidas": 0,
-     "comentarios": 2
     }
    }
   }
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-11T00:31:42+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261011-003134.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1101570962629445"
+   }
+  },
+  {
+   "quando": "2026-10-10T23:39:57+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Venda ao vivo sem comissão sobre a venda",
+   "peca": "grade:video-live-sem-comissao",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-comissao.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18201499093380392",
+    "link": "https://www.instagram.com/reel/DeVSKQED17_/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1131554919806920",
+    "link": "https://www.facebook.com/reel/1131554919806920/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-10-10T17:26:38+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua vitrine agora é ao vivo",
+   "peca": "story-otica-vitrine-ao-vivo",
+   "ramo": "otica",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-otica-vitrine-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1096195546609320"
+   }
+  },
   {
    "quando": "2026-10-10T01:19:22+00:00",
    "formato": "story",
@@ -1399,27 +1459,6 @@
     "id": "1312620718595159_122115107985430818",
     "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
    }
-  },
-  {
-   "quando": "2026-09-10T23:25:03+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "institucional",
-   "titulo": "fundador",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20260910-232455.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122114974503430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122114974503430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
   }
  ],
  "seguidores_hist": [
@@ -1500,28 +1539,34 @@
    "ig": 1948,
    "ig_posts": 32,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-11",
+   "ig": 1950,
+   "ig_posts": 33,
+   "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1948,
-  "ganho_7d": -235,
-  "desde_7d": "2026-10-03",
-  "ganho_30d": -349,
+  "atual": 1950,
+  "ganho_7d": -230,
+  "desde_7d": "2026-10-04",
+  "ganho_30d": -347,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3052,
-    "dias": 18,
-    "por_dia": 169.6
+    "falta": 3050,
+    "dias": 17,
+    "por_dia": 179.4
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8052,
-    "dias": 78,
-    "por_dia": 103.2
+    "falta": 8050,
+    "dias": 77,
+    "por_dia": 104.5
    }
   ]
  },
@@ -1560,21 +1605,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-10",
-    "hoje": true,
-    "id": "video-comercio-cabelo",
-    "titulo": "Cabelo e apliques: venda ao vivo pelo celular",
-    "ramo": "beleza",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F38-video-comercio-cabelo-A.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-cabelo.webp",
-    "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nCor de cabelo que a foto muda, e a cliente não compra sem ver. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tom na luz do dia, a textura de pertinho, tira a dúvida do comprimento no chat e lança a oferta. E quem quer testar o tom toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
-    "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-10-video-comercio-cabelo.mp4"
-   },
-   {
     "dia": "2026-10-11",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-eletroportateis",
     "titulo": "Eletroportáteis: venda ao vivo pelo celular",
     "ramo": "eletronicos",
@@ -1649,6 +1681,19 @@
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nPerfume não tem cheiro na foto, e a cliente passa reto. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua perfumaria direto do celular. Descreve as notas de cada fragrância, mostra o frasco de perto, monta o kit presente com a cliente no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
     "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-16-video-comercio-perfumaria.mp4"
+   },
+   {
+    "dia": "2026-10-17",
+    "hoje": false,
+    "id": "video-comercio-utilidades",
+    "titulo": "Utilidades e cozinha: venda ao vivo pelo celular",
+    "ramo": "casa",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-utilidades.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-utilidades.webp",
+    "duracao": 40.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nPanela boa na prateleira do fundo, e a cliente nem chega até ela. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja de utilidades direto do celular. Mostra a tampa, o pote e a garrafa térmica em uso, tira a dúvida no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "hashtags": "#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-17-video-comercio-utilidades.mp4"
    }
   ]
  },
@@ -1659,13 +1704,13 @@
   "com_erro": 0,
   "proximos": [
    {
-    "dia": "2026-10-10",
-    "hoje": true,
-    "id": "video-live-sem-comissao",
-    "titulo": "Venda ao vivo sem comissão sobre a venda",
+    "dia": "2026-10-24",
+    "hoje": false,
+    "id": "video-live-oferta-relampago",
+    "titulo": "Oferta relâmpago sem vender o que você não tem",
     "formato": "reel",
     "pilar": "serie-live",
-    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-sem-comissao.jpg",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
     "sai": true,
     "motivo": ""
    }

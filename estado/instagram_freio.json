@@ -1,0 +1,8 @@
+{
+ "falhas": 1,
+ "ultima_falha": {
+  "quando": "2026-10-12T21:39:41+00:00",
+  "formato": "feed",
+  "erro": "publicar: Media ID is not available"
+ }
+}

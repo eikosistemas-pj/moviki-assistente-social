@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-10-12T21:39:41+00:00",
+  "formato": "feed",
+  "descricao": "Cosméticos ao vivo no Moviki",
+  "media_id": "1312620718595159_122121319257430818",
+  "origem": "casa",
+  "peca": "feed-cosmeticos-ao-vivo",
+  "rede": "facebook",
+  "ramo": "beleza",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261012-213927.jpg",
+  "planoB": true,
+  "erroInstagram": "publicar: Media ID is not available",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-12T21:29:06+00:00",
   "formato": "story",
   "descricao": "Moviki é sensacional !!!!",

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-11T16:37:26+00:00",
+ "gerado": "2026-10-12T07:17:18+00:00",
  "versao": "2026-10-09-tiktok",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1947,
+   "seguidores": 1948,
    "posts": 33,
-   "cota_usada": 1,
+   "cota_usada": 0,
    "cota_total": 100
   },
   "facebook": {
@@ -17,12 +17,12 @@
  },
  "canal_hoje": {
   "feed": "instagram+facebook",
-  "story": "facebook",
+  "story": "instagram+facebook",
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
   "story": "2026-10-12",
+  "feed": null,
   "reel": "2026-10-05"
  },
  "so_facebook": false,
@@ -33,22 +33,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-04",
-   "hoje": false,
-   "feed": {
-    "esperado": 0,
-    "feito": 0
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-10-05",
    "hoje": false,
@@ -147,9 +131,25 @@
   },
   {
    "dia": "2026-10-11",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 0,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-10-12",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
     "feito": 0
    },
    "story": {
@@ -197,7 +197,7 @@
   "30d": {
    "fb": {
     "story": {
-     "posts": 36,
+     "posts": 38,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -207,7 +207,7 @@
      "comentarios": 0
     },
     "feed": {
-     "posts": 21,
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -228,6 +228,40 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-12T00:49:34+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua loja de brinquedos ao vivo",
+   "peca": "story-brinquedos-loja-ao-vivo",
+   "ramo": "infantil",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-brinquedos-loja-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "28805965482353808"
+   }
+  },
+  {
+   "quando": "2026-10-11T17:46:22+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Venda óculos ao vivo no Moviki",
+   "peca": "story-oculos-venda-ao-vivo",
+   "ramo": "otica",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-oculos-venda-ao-vivo.jpg",
+   "rede": "facebook",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "fb": {
+    "id": "1456993046353518"
+   }
+  },
   {
    "quando": "2026-10-11T00:31:42+00:00",
    "formato": "story",
@@ -1441,24 +1475,6 @@
     "id": "1312620718595159_122115620715430818",
     "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
    }
-  },
-  {
-   "quando": "2026-09-11T18:02:21+00:00",
-   "formato": "feed",
-   "origem": "vitrine",
-   "subtipo": "vitrine",
-   "titulo": "Fábio Suplementos (Suplementos / Nutricao Esportiva)",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-vitrine-20260911-180215.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122115107985430818",
-    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
-   }
   }
  ],
  "seguidores_hist": [
@@ -1545,28 +1561,34 @@
    "ig": 1947,
    "ig_posts": 33,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-12",
+   "ig": 1948,
+   "ig_posts": 33,
+   "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1947,
-  "ganho_7d": -233,
-  "desde_7d": "2026-10-04",
-  "ganho_30d": -350,
+  "atual": 1948,
+  "ganho_7d": -232,
+  "desde_7d": "2026-10-05",
+  "ganho_30d": -349,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3053,
-    "dias": 17,
-    "por_dia": 179.6
+    "falta": 3052,
+    "dias": 16,
+    "por_dia": 190.8
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8053,
-    "dias": 77,
-    "por_dia": 104.6
+    "falta": 8052,
+    "dias": 76,
+    "por_dia": 105.9
    }
   ]
  },
@@ -1605,21 +1627,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-11",
-    "hoje": true,
-    "id": "video-comercio-eletroportateis",
-    "titulo": "Eletroportáteis: venda ao vivo pelo celular",
-    "ramo": "eletronicos",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F36-video-comercio-eletroportateis-A.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-eletroportateis.webp",
-    "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nAir fryer na vitrine, e o cliente comparando preço no aplicativo. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Liga o aparelho ao vivo, mostra a voltagem e o tamanho de perto, tira a dúvida no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #diadascriancas #assistenciatecnica #celular #acessorios",
-    "hashtags": "#moviki #diadascriancas #assistenciatecnica #celular #acessorios",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-11-video-comercio-eletroportateis.mp4"
-   },
-   {
     "dia": "2026-10-12",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-moda-fitness",
     "titulo": "Moda fitness: venda ao vivo pelo celular",
     "ramo": "moda",
@@ -1694,15 +1703,39 @@
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nPanela boa na prateleira do fundo, e a cliente nem chega até ela. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja de utilidades direto do celular. Mostra a tampa, o pote e a garrafa térmica em uso, tira a dúvida no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
     "hashtags": "#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-17-video-comercio-utilidades.mp4"
+   },
+   {
+    "dia": "2026-10-18",
+    "hoje": false,
+    "id": "video-influencer-lojista",
+    "titulo": "Seu cliente saiu pra te procurar. Ele te achou?",
+    "ramo": "geral",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-influencer-parceiro.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-influencer-parceiro.webp",
+    "duracao": 67.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nNinguém compra de quem não acha.\n\nNo Moviki o comerciante marca onde está hoje, monta a página com cardápio, fotos e promoções, e quem está por perto encontra. Vale para quem se move e para quem tem ponto fixo.\n\nTeste grátis por 30 dias, sem cartão. Comece pelo link da bio.\n\n#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "hashtags": "#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-18-video-influencer-lojista.mp4"
    }
   ]
  },
  "grade": {
-  "versao": "2026-09-30-2",
-  "acervo": 3,
+  "versao": "2026-10-11-ugc",
+  "acervo": 4,
   "no_ar": 2,
   "com_erro": 0,
   "proximos": [
+   {
+    "dia": "2026-10-13",
+    "hoje": false,
+    "id": "ugc-bastidores-moda",
+    "titulo": "Já imaginou fazer uma live direto da sua loja?",
+    "formato": "reel",
+    "pilar": "ramo",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-moda.jpg",
+    "sai": true,
+    "motivo": ""
+   },
    {
     "dia": "2026-10-24",
     "hoje": false,

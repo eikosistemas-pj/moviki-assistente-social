@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-10-13T23:56:03+00:00",
+  "formato": "reel",
+  "descricao": "Já imaginou fazer uma live direto da sua loja?",
+  "media_id": "17922529683222034",
+  "origem": "casa",
+  "peca": "grade:ugc-bastidores-moda",
+  "rede": "instagram",
+  "ramo": "moda",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-moda.jpg",
+  "fb": "2646959505776157"
+ },
+ {
   "quando": "2026-10-13T19:21:08+00:00",
   "formato": "story",
   "descricao": "Venha para o Moviki e venda ao vivo em sua própria live!!!",

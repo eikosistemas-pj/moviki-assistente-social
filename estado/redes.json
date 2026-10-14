@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-13T18:09:00+00:00",
+ "gerado": "2026-10-14T06:04:30+00:00",
  "versao": "2026-10-09-tiktok",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
    "seguidores": 1945,
-   "posts": 33,
-   "cota_usada": 4,
+   "posts": 35,
+   "cota_usada": 6,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
+  "story": "2026-10-12",
   "reel": "2026-10-05",
-  "feed": null,
-  "story": "2026-10-12"
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -37,22 +37,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-06",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 1,
-    "feito": 1
-   }
-  },
   {
    "dia": "2026-10-07",
    "hoje": false,
@@ -151,6 +135,22 @@
   },
   {
    "dia": "2026-10-13",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 1,
+    "feito": 1
+   }
+  },
+  {
+   "dia": "2026-10-14",
    "hoje": true,
    "feed": {
     "esperado": 1,
@@ -161,7 +161,7 @@
     "feito": 0
    },
    "reel": {
-    "esperado": 1,
+    "esperado": 0,
     "feito": 0
    }
   }
@@ -170,18 +170,18 @@
   "7d": {
    "ig": {
     "story": {
-     "posts": 2,
+     "posts": 4,
      "curtidas": 0,
+     "comentarios": 0
+    },
+    "feed": {
+     "posts": 3,
+     "curtidas": 3,
      "comentarios": 0
     },
     "reel": {
      "posts": 2,
-     "curtidas": 0,
-     "comentarios": 2
-    },
-    "feed": {
-     "posts": 3,
-     "curtidas": 4,
+     "curtidas": 1,
      "comentarios": 0
     }
    },
@@ -206,34 +206,34 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 2,
+     "posts": 4,
      "curtidas": 0,
+     "comentarios": 0
+    },
+    "feed": {
+     "posts": 11,
+     "curtidas": 10,
      "comentarios": 0
     },
     "reel": {
-     "posts": 2,
-     "curtidas": 0,
+     "posts": 3,
+     "curtidas": 1,
      "comentarios": 2
-    },
-    "feed": {
-     "posts": 10,
-     "curtidas": 10,
-     "comentarios": 0
     }
    },
    "fb": {
     "story": {
-     "posts": 40,
+     "posts": 42,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 21,
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
-     "posts": 6,
+     "posts": 7,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -249,6 +249,105 @@
  ],
  "posts": [
   {
+   "quando": "2026-10-14T00:46:54+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Brinquedos ao vivo no mapa",
+   "peca": "story-brinquedos-no-mapa",
+   "ramo": "infantil",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-brinquedos-no-mapa.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18077670935420763",
+    "link": "https://www.instagram.com/stories/moviki.oficial/4007395554653141239",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1795177928171458"
+   }
+  },
+  {
+   "quando": "2026-10-14T00:35:14+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Cama, mesa e banho ao vivo no Moviki",
+   "peca": "feed-cama-mesa-banho-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261014-003447.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18113375990016836",
+    "link": "https://www.instagram.com/p/DedG57SlEG8/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122121489705430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122121489705430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-10-13T23:56:03+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Já imaginou fazer uma live direto da sua loja?",
+   "peca": "grade:ugc-bastidores-moda",
+   "ramo": "moda",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-moda.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17922529683222034",
+    "link": "https://www.instagram.com/reel/DedCYg8j3RW/",
+    "curtidas": 1,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2646959505776157",
+    "link": "https://www.facebook.com/reel/2646959505776157/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-10-13T19:21:08+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261013-192046.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17881876347627290",
+    "link": "https://www.instagram.com/stories/moviki.oficial/4007231579101881843",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1511340474219941"
+   }
+  },
+  {
    "quando": "2026-10-13T02:54:34+00:00",
    "formato": "story",
    "origem": "casa",
@@ -262,10 +361,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18127543837884790",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4006735039267096201",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18127543837884790"
    },
    "fb": {
     "id": "1772582350617891"
@@ -306,10 +402,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18074794160563703",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4006571272758415586",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18074794160563703"
    },
    "fb": {
     "id": "2034260597288042"
@@ -1660,12 +1753,18 @@
    "ig": 1945,
    "ig_posts": 33,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-14",
+   "ig": 1945,
+   "ig_posts": 35,
+   "fb": 2
   }
  ],
  "seguidores": {
   "atual": 1945,
-  "ganho_7d": 12,
-  "desde_7d": "2026-10-06",
+  "ganho_7d": 9,
+  "desde_7d": "2026-10-07",
   "ganho_30d": -352,
   "desde_30d": "2026-09-28",
   "metas": [
@@ -1673,15 +1772,15 @@
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 3055,
-    "dias": 15,
-    "por_dia": 203.7
+    "dias": 14,
+    "por_dia": 218.2
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 8055,
-    "dias": 75,
-    "por_dia": 107.4
+    "dias": 74,
+    "por_dia": 108.9
    }
   ]
  },
@@ -1720,21 +1819,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-13",
-    "hoje": true,
-    "id": "video-comercio-games",
-    "titulo": "Games e informática: venda ao vivo pelo celular",
-    "ramo": "eletronicos",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F44-video-comercio-games-A.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-games.webp",
-    "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nTeclado que o cliente só testa no vídeo dos outros. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Testa o teclado ao vivo, mostra a luz do mouse de perto, tira a dúvida de compatibilidade no chat e lança a oferta. E quem prefere ver de perto toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
-    "hashtags": "#moviki #assistenciatecnica #celular #acessorios #comerciolocal",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-13-video-comercio-games.mp4"
-   },
-   {
     "dia": "2026-10-14",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-moda-praia",
     "titulo": "Moda praia: venda ao vivo pelo celular",
     "ramo": "moda",
@@ -1809,6 +1895,19 @@
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nO supermercado agora vende queijo coalho embalado, e o cliente faz a compra toda num lugar só. Enquanto isso, os seus clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua casa de produtos do sertão direto do celular. Mostra o queijo coalho de perto, responde no chat se é bom pra assar e se chegou carne de sol, e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #delivery #lanchonete #restaurante #comerciolocal",
     "hashtags": "#moviki #delivery #lanchonete #restaurante #comerciolocal",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-19-video-comercio-sertanejos.mp4"
+   },
+   {
+    "dia": "2026-10-20",
+    "hoje": false,
+    "id": "video-live-demonstracao",
+    "titulo": "Uma live do começo ao fim, com telas reais",
+    "ramo": "geral",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-live-demonstracao.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-live-demonstracao.webp",
+    "duracao": 52.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nUma live do Moviki do começo ao fim, com as telas de verdade e uma loja de demonstração.\n\nO lojista entra ao vivo pelo celular e avisa os clientes com o link. Quem assiste vê o produto na tela, conversa pelo chat e paga por Pix ali mesmo. O lojista confere no extrato, confirma, e o pedido vai para a Central de Pedidos para separar e entregar.\n\nSem comissão sobre a venda: o Pix cai direto na conta do lojista.\nPix dentro da live: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "hashtags": "#moviki #pequenonegocio #empreendedor #comerciolocal #vendasonline",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-20-video-live-demonstracao.mp4"
    }
   ]
  },
@@ -1818,17 +1917,6 @@
   "no_ar": 3,
   "com_erro": 0,
   "proximos": [
-   {
-    "dia": "2026-10-13",
-    "hoje": true,
-    "id": "ugc-bastidores-moda",
-    "titulo": "Já imaginou fazer uma live direto da sua loja?",
-    "formato": "reel",
-    "pilar": "ramo",
-    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-moda.jpg",
-    "sai": true,
-    "motivo": ""
-   },
    {
     "dia": "2026-10-24",
     "hoje": false,

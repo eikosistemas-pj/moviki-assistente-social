@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-14T00:35:14+00:00",
+  "formato": "feed",
+  "descricao": "Cama, mesa e banho ao vivo no Moviki",
+  "media_id": "18113375990016836",
+  "origem": "casa",
+  "peca": "feed-cama-mesa-banho-ao-vivo",
+  "rede": "instagram",
+  "ramo": "casa",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261014-003447.jpg",
+  "fb": "1312620718595159_122121489705430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-13T23:56:03+00:00",
   "formato": "reel",
   "descricao": "Já imaginou fazer uma live direto da sua loja?",

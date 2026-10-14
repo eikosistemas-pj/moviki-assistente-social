@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-14T17:44:05+00:00",
+  "formato": "feed",
+  "descricao": "Sua loja de cosméticos ao vivo no Moviki",
+  "media_id": "17907786765333164",
+  "origem": "casa",
+  "peca": "feed-loja-cosmeticos-ao-vivo",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261014-174340.jpg",
+  "fb": "1312620718595159_122121586329430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-14T17:23:42+00:00",
   "formato": "story",
   "descricao": "Venda seu artesanato ao vivo",

@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-15T23:43:57+00:00",
+  "formato": "feed",
+  "descricao": "Sua loja de utilidades ao vivo no Moviki",
+  "media_id": "18176777092442801",
+  "origem": "casa",
+  "peca": "feed-loja-utilidades-cama-ao-vivo",
+  "rede": "instagram",
+  "ramo": "casa",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261015-234343.jpg",
+  "fb": "1312620718595159_122121776319430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-15T17:10:57+00:00",
   "formato": "story",
   "descricao": "Seu artesanato ao vivo",

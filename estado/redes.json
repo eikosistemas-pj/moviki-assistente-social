@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-15T15:33:55+00:00",
- "versao": "2026-10-09-tiktok",
+ "gerado": "2026-10-16T00:48:31+00:00",
+ "versao": "2026-10-15-republicar",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1951,
-   "posts": 34,
+   "seguidores": 1953,
+   "posts": 35,
    "cota_usada": 5,
    "cota_total": 100
   },
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "reel": "2026-10-05",
+  "story": "2026-10-12",
   "feed": null
  },
  "so_facebook": false,
@@ -154,11 +154,11 @@
    "hoje": true,
    "feed": {
     "esperado": 1,
-    "feito": 0
+    "feito": 1
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 2
    },
    "reel": {
     "esperado": 0,
@@ -170,12 +170,12 @@
   "7d": {
    "ig": {
     "story": {
-     "posts": 6,
+     "posts": 8,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 4,
+     "posts": 5,
      "curtidas": 5,
      "comentarios": 0
     },
@@ -187,12 +187,12 @@
    },
    "fb": {
     "story": {
-     "posts": 14,
+     "posts": 15,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 5,
+     "posts": 6,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -206,12 +206,12 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 6,
+     "posts": 8,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 12,
+     "posts": 13,
      "curtidas": 11,
      "comentarios": 0
     },
@@ -223,7 +223,7 @@
    },
    "fb": {
     "story": {
-     "posts": 44,
+     "posts": 46,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,12 +242,95 @@
  },
  "alertas": [
   {
-   "nivel": "grave",
+   "nivel": "atencao",
    "tipo": "plano_b",
-   "texto": "12/10 18:39: Instagram falhou no feed — saiu só no Facebook. publicar: Media ID is not available"
+   "texto": "12/10 18:39: Instagram falhou no feed — saiu só no Facebook. publicar: Media ID is not available. O Instagram voltou a publicar em 12/10 23:54."
+  },
+  {
+   "nivel": "grave",
+   "tipo": "grade",
+   "texto": "Grade: Oferta relâmpago sem vender o que você não tem está marcado para 24/10, mas o vídeo não está na release acervo do GitHub. Suba o arquivo video-live-oferta-relampago.mp4."
+  },
+  {
+   "nivel": "grave",
+   "tipo": "grade",
+   "texto": "Grade: A cliente sumiu do direct. Na live, ela compra na hora. está marcado para 20/10, mas o vídeo não está na release acervo do GitHub. Suba o arquivo ugc-bastidores-maquiagem.mp4."
   }
  ],
  "posts": [
+  {
+   "quando": "2026-10-15T23:50:59+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261015-235040.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18127033405878407",
+    "link": "https://www.instagram.com/stories/moviki.oficial/4008816958484583728",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1419355220318202"
+   }
+  },
+  {
+   "quando": "2026-10-15T23:43:57+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Sua loja de utilidades ao vivo no Moviki",
+   "peca": "feed-loja-utilidades-cama-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261015-234343.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18176777092442801",
+    "link": "https://www.instagram.com/p/DeiKpmuGMIP/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122121776319430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122121776319430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-10-15T17:10:57+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Seu artesanato ao vivo",
+   "peca": "story-artesanato-ao-vivo",
+   "ramo": "artesanato",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-artesanato-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18354407515221608",
+    "link": "https://www.instagram.com/stories/moviki.oficial/4008615603028950116",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1430232809250165"
+   }
+  },
   {
    "quando": "2026-10-15T00:10:45+00:00",
    "formato": "story",
@@ -262,10 +345,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18337744843262354",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4008102106787344801",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18337744843262354"
    },
    "fb": {
     "id": "2008668953130080"
@@ -312,10 +392,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17918776182451494",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4007897304325345900",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17918776182451494"
    },
    "fb": {
     "id": "1579450490049448"
@@ -1682,24 +1759,6 @@
     "id": "1312620718595159_122115940119430818",
     "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
    }
-  },
-  {
-   "quando": "2026-09-15T23:35:10+00:00",
-   "formato": "feed",
-   "origem": "vitrine",
-   "subtipo": "vitrine",
-   "titulo": "Hamburguer Master (Hamburgueria / Food Truck)",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-vitrine-20260915-233502.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122115813651430818",
-    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
-   }
   }
  ],
  "seguidores_hist": [
@@ -1807,37 +1866,37 @@
   },
   {
    "dia": "2026-10-15",
-   "ig": 1951,
-   "ig_posts": 34,
+   "ig": 1953,
+   "ig_posts": 35,
    "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1951,
-  "ganho_7d": 18,
+  "atual": 1953,
+  "ganho_7d": 20,
   "desde_7d": "2026-10-08",
-  "ganho_30d": -346,
+  "ganho_30d": -344,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3049,
+    "falta": 3047,
     "dias": 13,
-    "por_dia": 234.5
+    "por_dia": 234.4
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8049,
+    "falta": 8047,
     "dias": 73,
-    "por_dia": 110.3
+    "por_dia": 110.2
    }
   ]
  },
  "triagem": {
   "ligada": true,
-  "liberadas": 135,
+  "liberadas": 136,
   "barradas": 5,
   "pendentes": 0,
   "lista_barradas": [
@@ -1862,11 +1921,11 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 0,
+  "olhadas_agora": 1,
   "falhas_agora": 0
  },
  "tiktok": {
-  "videos_disponiveis": 28,
+  "videos_disponiveis": 29,
   "live_na_pagina": true,
   "dias": [
    {
@@ -1963,11 +2022,22 @@
   ]
  },
  "grade": {
-  "versao": "2026-10-11-ugc",
-  "acervo": 4,
+  "versao": "2026-10-15-ugc",
+  "acervo": 5,
   "no_ar": 3,
   "com_erro": 0,
   "proximos": [
+   {
+    "dia": "2026-10-20",
+    "hoje": false,
+    "id": "ugc-bastidores-maquiagem",
+    "titulo": "A cliente sumiu do direct. Na live, ela compra na hora.",
+    "formato": "reel",
+    "pilar": "ramo",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-maquiagem.jpg",
+    "sai": false,
+    "motivo": "vídeo não está na release acervo"
+   },
    {
     "dia": "2026-10-24",
     "hoje": false,
@@ -1976,8 +2046,8 @@
     "formato": "reel",
     "pilar": "serie-live",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
-    "sai": true,
-    "motivo": ""
+    "sai": false,
+    "motivo": "vídeo não está na release acervo"
    }
   ],
   "vencendo": []

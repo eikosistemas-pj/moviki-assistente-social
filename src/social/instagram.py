@@ -5,6 +5,11 @@ Publicador do Instagram (Graph API oficial da Meta).
 Fluxo oficial em 2 passos: cria o container de midia, espera o Instagram
 baixar a imagem/video, publica.
 
+Corrida da Meta (15/10/2026, marca 2026-10-15-republicar): se o media_publish
+responder "Media ID is not available" com o container pronto, o robo espera,
+confere o container e tenta UMA vez mais antes de cair no plano B. Ver
+Instagram._publicar.
+
 Chamada "Comente LIVE" (08/10/2026): primeira linha de toda legenda de feed e
 reel, ver config.CHAMADA_COMENTE e Instagram.com_chamada.
 
@@ -18,9 +23,15 @@ Injecao de dependencia (post_fn/sleep_fn) pra testar sem rede.
 import json
 import re
 import time
+from datetime import datetime, timedelta, timezone
 
 from .. import config
 from .. import util_net as net
+
+# Erro de corrida da Meta no media_publish (12/10/2026): container FINISHED e
+# mesmo assim "Media ID is not available". Uma segunda tentativa resolve.
+_CORRIDA = re.compile(r"media id is not available|not ready to be published|media is not ready", re.I)
+ESPERA_REPUBLICAR = 20  # segundos antes de conferir o container de novo
 
 
 class Instagram:
@@ -71,11 +82,56 @@ class Instagram:
         raise RuntimeError("container nao ficou pronto a tempo")
 
     # ------------------------------------------------------------- publicacao
-    def _publicar(self, container_id):
-        pub = self._erro(
-            self._post(f"{self.account_id}/media_publish", {"creation_id": container_id}),
-            "publicar",
-        )
+    @staticmethod
+    def _corrida_da_meta(resposta):
+        """True so para o erro de corrida da Meta: o container ja disse
+        FINISHED, mas o media_publish responde "Media ID is not available"
+        (codigo 9007 / subcodigo 2207027). Nao e recusa de conteudo nem de
+        conta — e a Meta atrasada do lado dela (incidente de 12/10/2026)."""
+        if not isinstance(resposta, dict) or "error" not in resposta:
+            return False
+        err = resposta.get("error") or {}
+        return (err.get("code") == 9007 or err.get("error_subcode") == 2207027
+                or bool(_CORRIDA.search(str(err.get("message") or ""))))
+
+    def _achar_publicado(self, lista, desde):
+        """O container ja esta PUBLISHED: devolve o id do post que acabou de
+        entrar na conta (feed/reel em /media, story em /stories)."""
+        r = self._get(f"{self.account_id}/{lista}", {"fields": "id,timestamp", "limit": 5})
+        for item in (r.get("data") or []) if isinstance(r, dict) else []:
+            try:
+                quando = datetime.strptime(item.get("timestamp") or "", "%Y-%m-%dT%H:%M:%S%z")
+            except ValueError:
+                continue
+            if item.get("id") and quando >= desde - timedelta(minutes=2):
+                return item["id"]
+        return None
+
+    def _publicar(self, container_id, lista="media"):
+        """media_publish. Desde 15/10/2026 (marca 2026-10-15-republicar):
+        no erro de corrida da Meta, espera, confere o container e tenta
+        publicar UMA vez mais — nunca em laco (regra do freio: conta nova nao
+        insiste depois de recusa). Container ja PUBLISHED = o post entrou;
+        pega o id em vez de publicar de novo (sem post duplicado). Qualquer
+        outro erro estoura como antes e cai no plano B."""
+        desde = datetime.now(timezone.utc)
+        caminho = f"{self.account_id}/media_publish"
+        r = self._post(caminho, {"creation_id": container_id})
+        if self._corrida_da_meta(r):
+            print(f"aviso: Meta respondeu antes da hora ({(r['error'] or {}).get('message')}) "
+                  f"-> esperando {ESPERA_REPUBLICAR}s e conferindo o container")
+            self._sleep(ESPERA_REPUBLICAR)
+            estado = (self._get(container_id, {"fields": "status_code"}) or {}).get("status_code")
+            if estado == "PUBLISHED":
+                mid = self._achar_publicado(lista, desde)
+                if mid:
+                    print("aviso: o post ja tinha entrado no Instagram -> sem publicar de novo")
+                    return mid
+                raise RuntimeError("publicar: a Meta diz que publicou, mas o post nao apareceu na conta")
+            if estado == "FINISHED":
+                print("aviso: container pronto -> segunda e ultima tentativa de publicar")
+                r = self._post(caminho, {"creation_id": container_id})
+        pub = self._erro(r, "publicar")
         return pub["id"]
 
     @staticmethod
@@ -170,7 +226,7 @@ class Instagram:
             "container story",
         )
         self._esperar_pronto(cont["id"], tentativas=10, intervalo=4)
-        return self._publicar(cont["id"])
+        return self._publicar(cont["id"], lista="stories")
 
     def story_video(self, video_url):
         """Story em video (22/09/2026). Mesmo fluxo do reel, sem legenda."""
@@ -180,7 +236,7 @@ class Instagram:
             "container story video",
         )
         self._esperar_pronto(cont["id"], tentativas=30, intervalo=8)
-        return self._publicar(cont["id"])
+        return self._publicar(cont["id"], lista="stories")
 
     # ------------------------------------------------------------- diagnostico
     def cota_publicacao(self):

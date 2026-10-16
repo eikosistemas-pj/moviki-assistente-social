@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-16T00:48:31+00:00",
+ "gerado": "2026-10-16T00:58:20+00:00",
  "versao": "2026-10-15-republicar",
  "contas": {
   "instagram": {
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
   "story": "2026-10-12",
+  "reel": "2026-10-05",
   "feed": null
  },
  "so_facebook": false,
@@ -245,16 +245,6 @@
    "nivel": "atencao",
    "tipo": "plano_b",
    "texto": "12/10 18:39: Instagram falhou no feed — saiu só no Facebook. publicar: Media ID is not available. O Instagram voltou a publicar em 12/10 23:54."
-  },
-  {
-   "nivel": "grave",
-   "tipo": "grade",
-   "texto": "Grade: Oferta relâmpago sem vender o que você não tem está marcado para 24/10, mas o vídeo não está na release acervo do GitHub. Suba o arquivo video-live-oferta-relampago.mp4."
-  },
-  {
-   "nivel": "grave",
-   "tipo": "grade",
-   "texto": "Grade: A cliente sumiu do direct. Na live, ela compra na hora. está marcado para 20/10, mas o vídeo não está na release acervo do GitHub. Suba o arquivo ugc-bastidores-maquiagem.mp4."
   }
  ],
  "posts": [
@@ -1921,7 +1911,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 1,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {
@@ -2035,8 +2025,8 @@
     "formato": "reel",
     "pilar": "ramo",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-maquiagem.jpg",
-    "sai": false,
-    "motivo": "vídeo não está na release acervo"
+    "sai": true,
+    "motivo": ""
    },
    {
     "dia": "2026-10-24",
@@ -2046,8 +2036,8 @@
     "formato": "reel",
     "pilar": "serie-live",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
-    "sai": false,
-    "motivo": "vídeo não está na release acervo"
+    "sai": true,
+    "motivo": ""
    }
   ],
   "vencendo": []

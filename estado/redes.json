@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-16T05:46:46+00:00",
+ "gerado": "2026-10-16T15:20:44+00:00",
  "versao": "2026-10-15-republicar",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1955,
+   "seguidores": 1954,
    "posts": 36,
    "cota_usada": 5,
    "cota_total": 100
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "reel": "2026-10-05",
+  "story": "2026-10-12",
   "feed": null
  },
  "so_facebook": false,
@@ -1862,37 +1862,37 @@
   },
   {
    "dia": "2026-10-16",
-   "ig": 1955,
+   "ig": 1954,
    "ig_posts": 36,
    "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1955,
-  "ganho_7d": 19,
+  "atual": 1954,
+  "ganho_7d": 18,
   "desde_7d": "2026-10-09",
-  "ganho_30d": -342,
+  "ganho_30d": -343,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3045,
+    "falta": 3046,
     "dias": 12,
     "por_dia": 253.8
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8045,
+    "falta": 8046,
     "dias": 72,
-    "por_dia": 111.7
+    "por_dia": 111.8
    }
   ]
  },
  "triagem": {
   "ligada": true,
-  "liberadas": 136,
+  "liberadas": 138,
   "barradas": 5,
   "pendentes": 0,
   "lista_barradas": [
@@ -1917,11 +1917,11 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 0,
+  "olhadas_agora": 2,
   "falhas_agora": 0
  },
  "tiktok": {
-  "videos_disponiveis": 29,
+  "videos_disponiveis": 31,
   "live_na_pagina": true,
   "dias": [
    {
@@ -2018,8 +2018,8 @@
   ]
  },
  "grade": {
-  "versao": "2026-10-15-ugc",
-  "acervo": 5,
+  "versao": "2026-10-16-ugc",
+  "acervo": 7,
   "no_ar": 3,
   "com_erro": 0,
   "proximos": [
@@ -2042,6 +2042,17 @@
     "formato": "reel",
     "pilar": "serie-live",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
+    "dia": "2026-10-27",
+    "hoje": false,
+    "id": "ugc-bastidores-perfumaria",
+    "titulo": "Foto não tem cheiro. Na live, o cliente pergunta e compra na hora.",
+    "formato": "reel",
+    "pilar": "ramo",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-perfumaria.jpg",
     "sai": true,
     "motivo": ""
    }

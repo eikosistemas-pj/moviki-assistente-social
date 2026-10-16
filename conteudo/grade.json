@@ -1,5 +1,5 @@
 {
- "versao": "2026-10-15-ugc",
+ "versao": "2026-10-16-ugc",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -101,6 +101,46 @@
    "repetir_apos_dias": 45,
    "marca": "cbcc",
    "obs": "UGC bastidores da live (R - UGC bastidores da live), ramo beleza, loja fictícia Rubi Make. Versão limpa (sem 'Comente LIVE'): o robô cola a cartela. UGC às terças; sábado fica com o rodízio e as séries."
+  },
+  {
+   "id": "ugc-bastidores-perfumaria",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "beleza",
+   "titulo": "Foto não tem cheiro. Na live, o cliente pergunta e compra na hora.",
+   "video": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/ugc-bastidores-perfumaria.mp4",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-perfumaria.jpg",
+   "legenda": "Foto não tem cheiro. Na live, o cliente pergunta e compra na hora.\n\nPor trás de uma live numa perfumaria: o vendedor descreve as notas e mostra o frasco de perto, o cliente pergunta no chat e o pedido chega pago na Central de Pedidos.\n\nNo Moviki, a sua loja abre a live pelo celular e uma resposta no chat atende todo mundo que está assistindo. O cliente escolhe a fragrância, compra ali mesmo e o Pix cai direto na sua conta.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão. Conheça pelo link da bio.",
+   "tipo_pauta": "conversao",
+   "canais": ["instagram", "facebook"],
+   "vende_live": true,
+   "dias": ["2026-10-27"],
+   "a_partir_de": "2026-10-27",
+   "valido_ate": "2027-01-25",
+   "reconferir_em": null,
+   "repetir_apos_dias": 45,
+   "marca": "db34",
+   "obs": "UGC bastidores da live (R - UGC bastidores da live), ramo beleza, loja fictícia Âmbar e Flor Perfumaria. Versão limpa (sem 'Comente LIVE'): o robô cola a cartela. UGC às terças; sábado fica com o rodízio e as séries."
+  },
+  {
+   "id": "ugc-bastidores-presentes",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "casa",
+   "titulo": "Do escritório, ela comprou o presente sem abrir nenhum site.",
+   "video": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/ugc-bastidores-presentes.mp4",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-presentes.jpg",
+   "legenda": "Do escritório, ela comprou o presente sem abrir nenhum site.\n\nPor trás de uma live numa loja de presentes: a loja mostra cada detalhe da cesta de perto, a cliente pergunta no chat e o pedido chega pago na Central de Pedidos, pronto para embalar.\n\nNo Moviki, a sua loja abre a live pelo celular e uma resposta no chat atende todo mundo que está assistindo. A cliente escolhe o presente, compra ali mesmo e o Pix cai direto na sua conta.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão. Conheça pelo link da bio.",
+   "tipo_pauta": "conversao",
+   "canais": ["instagram", "facebook"],
+   "vende_live": true,
+   "dias": ["2026-11-03"],
+   "a_partir_de": "2026-11-03",
+   "valido_ate": "2027-02-01",
+   "reconferir_em": null,
+   "repetir_apos_dias": 45,
+   "marca": "ef59",
+   "obs": "UGC bastidores da live (R - UGC bastidores da live), ramo casa, loja fictícia Laço Bonito Presentes. Versão limpa (sem 'Comente LIVE'): o robô cola a cartela. UGC às terças; sábado fica com o rodízio e as séries."
   }
  ]
 }

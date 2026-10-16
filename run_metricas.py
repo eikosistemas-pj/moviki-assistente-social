@@ -231,13 +231,29 @@ def montar(hist, agora, get_ig=None, get_fb=None, catalogo=None, contas=None, pu
                                     "texto": f"{dia.strftime('%d/%m')}: {f} saiu {x} de {e}."})
 
     # --------------------------------------------------------- plano B / freio
+    # 15/10/2026 (marca 2026-10-15-republicar): falha que o Instagram ja
+    # superou (houve post no Instagram DEPOIS dela) desce de "grave" para
+    # "atencao" e diz quando voltou. Vermelho fica so para o que ainda esta
+    # quebrado — antes a falha de 12/10 ficou 7 dias vermelha com o Instagram
+    # publicando normal. Mesma regra do freio: post no Instagram zera a conta.
     semana = agora - timedelta(days=DIAS_AGENDA)
+    ig_ok = sorted(datetime.fromisoformat(p["quando"]) for p in posts
+                   if p["rede"] == "instagram" and not p["planoB"])
     for p in posts:
-        if p["planoB"] and datetime.fromisoformat(p["quando"]) >= semana:
-            alertas.append({"nivel": "grave", "tipo": "plano_b",
-                            "texto": f"{datetime.fromisoformat(p['quando']).astimezone(FUSO).strftime('%d/%m %H:%M')}: "
-                                     f"Instagram falhou no {p['formato']} — saiu só no Facebook. "
-                                     f"{(p.get('erroInstagram') or '')[:120]}"})
+        q = datetime.fromisoformat(p["quando"])
+        if not (p["planoB"] and q >= semana):
+            continue
+        texto = (f"{q.astimezone(FUSO).strftime('%d/%m %H:%M')}: "
+                 f"Instagram falhou no {p['formato']} — saiu só no Facebook. "
+                 f"{(p.get('erroInstagram') or '')[:120]}").rstrip()
+        voltou = next((t for t in ig_ok if t > q), None)
+        if voltou:
+            ponto = "" if texto.endswith((".", "!", "?")) else "."
+            alertas.append({"nivel": "atencao", "tipo": "plano_b",
+                            "texto": f"{texto}{ponto} O Instagram voltou a publicar em "
+                                     f"{voltou.astimezone(FUSO).strftime('%d/%m %H:%M')}."})
+        else:
+            alertas.append({"nivel": "grave", "tipo": "plano_b", "texto": texto})
     fr = freio.ler()
     fim = freio.ativo(agora)
     if fim:

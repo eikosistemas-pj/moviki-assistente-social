@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-16T18:22:21+00:00",
+  "formato": "feed",
+  "descricao": "Venda joias ao vivo no Moviki",
+  "media_id": "17983400810901536",
+  "origem": "casa",
+  "peca": "feed-joias-venda-ao-vivo",
+  "rede": "instagram",
+  "ramo": "joalheria",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261016-182206.jpg",
+  "fb": "1312620718595159_122121896103430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-16T16:49:48+00:00",
   "formato": "story",
   "descricao": "Seus sapatos esportivos ao vivo",

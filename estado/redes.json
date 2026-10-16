@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-16T00:58:20+00:00",
+ "gerado": "2026-10-16T05:46:46+00:00",
  "versao": "2026-10-15-republicar",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1953,
-   "posts": 35,
+   "seguidores": 1955,
+   "posts": 36,
    "cota_usada": 5,
    "cota_total": 100
   },
@@ -37,22 +37,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-08",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-10-09",
    "hoje": false,
@@ -151,7 +135,7 @@
   },
   {
    "dia": "2026-10-15",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 1,
     "feito": 1
@@ -159,6 +143,22 @@
    "story": {
     "esperado": 2,
     "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-10-16",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 0
    },
    "reel": {
     "esperado": 0,
@@ -175,7 +175,7 @@
      "comentarios": 0
     },
     "feed": {
-     "posts": 5,
+     "posts": 4,
      "curtidas": 5,
      "comentarios": 0
     },
@@ -187,12 +187,12 @@
    },
    "fb": {
     "story": {
-     "posts": 15,
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 6,
+     "posts": 5,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -212,7 +212,7 @@
     },
     "feed": {
      "posts": 13,
-     "curtidas": 11,
+     "curtidas": 12,
      "comentarios": 0
     },
     "reel": {
@@ -287,7 +287,7 @@
    "ig": {
     "id": "18176777092442801",
     "link": "https://www.instagram.com/p/DeiKpmuGMIP/",
-    "curtidas": 0,
+    "curtidas": 1,
     "comentarios": 0
    },
    "fb": {
@@ -1859,28 +1859,34 @@
    "ig": 1953,
    "ig_posts": 35,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-16",
+   "ig": 1955,
+   "ig_posts": 36,
+   "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1953,
-  "ganho_7d": 20,
-  "desde_7d": "2026-10-08",
-  "ganho_30d": -344,
+  "atual": 1955,
+  "ganho_7d": 19,
+  "desde_7d": "2026-10-09",
+  "ganho_30d": -342,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3047,
-    "dias": 13,
-    "por_dia": 234.4
+    "falta": 3045,
+    "dias": 12,
+    "por_dia": 253.8
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8047,
-    "dias": 73,
-    "por_dia": 110.2
+    "falta": 8045,
+    "dias": 72,
+    "por_dia": 111.7
    }
   ]
  },
@@ -1919,21 +1925,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-15",
-    "hoje": true,
-    "id": "video-comercio-naturais",
-    "titulo": "Produtos naturais: venda ao vivo pelo celular",
-    "ramo": "naturais",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-naturais.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-naturais.webp",
-    "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nChegou novidade no granel, e ninguém do bairro fica sabendo. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu empório direto do celular. Pesa na hora, mostra o chá e a castanha de perto, responde no chat quanto a cliente quer levar e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
-    "hashtags": "#moviki #produtosnaturais #vidasaudavel #lojadenaturais #comerciolocal",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-15-video-comercio-naturais.mp4"
-   },
-   {
     "dia": "2026-10-16",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-perfumaria",
     "titulo": "Perfumaria: venda ao vivo pelo celular",
     "ramo": "beleza",
@@ -2008,6 +2001,19 @@
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nMeio da semana, corredor do shopping vazio e o enxoval parado na arara. Enquanto isso, quem está montando o enxoval está no sofá de casa, pesquisando pelo celular.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o body de pertinho, responde \"tem RN?\" e \"é 100% algodão?\" no chat e lança a oferta. E quem quer sentir o tecido antes toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojista #varejo #liveshop #vendasonline",
     "hashtags": "#moviki #lojista #varejo #liveshop #vendasonline",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-21-video-shopping-bebe.mp4"
+   },
+   {
+    "dia": "2026-10-22",
+    "hoje": false,
+    "id": "ugc-bastidores-maquiagem",
+    "titulo": "Maquiagem: os bastidores de uma live na loja",
+    "ramo": "beleza",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fugc-bastidores-maquiagem.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/ugc-bastidores-maquiagem.webp",
+    "duracao": 38.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nA cliente sumiu do direct. Na live, ela compra na hora.\n\nAssim é o bastidor: a lojista mostra a cor real do batom, uma resposta no chat atende todo mundo que está assistindo e o pedido chega pago na Central de Pedidos, enquanto a equipe já embala.\n\nCom o Moviki, você abre a live da sua loja direto do celular e a cliente vê o tom de verdade, não a cor da foto. Ela escolhe, compra ali mesmo e paga sem sair da transmissão.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
+    "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-22-ugc-bastidores-maquiagem.mp4"
    }
   ]
  },

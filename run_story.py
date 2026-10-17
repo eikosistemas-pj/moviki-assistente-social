@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Publica UM story (22/09/2026).
+Publica UM story (22/09/2026; grade de video e trilha em 17/10/2026).
 
-Fontes: stories do Material de apoio do parceiro (arte 9:16, sem legenda) e,
-quando a fonte estiver ligada, stories de criadores autorizados e aprovados.
-A escolha e a mistura moram em src/pecas.py.
+Alterna VIDEO (corte de 9-20 s do Material de apoio ou do acervo, com trilha)
+e ARTE (arte 9:16 animada com zoom e trilha). Chamada "Responda LIVE"
+embutida um story sim, outro nao. Tudo em src/story.py.
 
 Sem peca publicavel = termina sem publicar, com aviso. Nunca quebra o
 workflow por falta de conteudo.
@@ -17,18 +17,14 @@ Uso:
 """
 import sys
 
-from src import config, pecas
+from src import config, story
 
 
 def main():
     print(f"moviki-assistente-social {config.VERSAO}")
     forcado = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
     origem = {"material": "casa", "criador": "criador"}.get(forcado)
-    peca = pecas.escolher_peca("story", origem)
-    if not peca:
-        print("nenhum story publicavel hoje -> nada a publicar.")
-        return
-    pecas.publicar(peca)
+    story.rodar(origem)
 
 
 if __name__ == "__main__":

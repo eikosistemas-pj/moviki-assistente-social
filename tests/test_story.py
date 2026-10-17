@@ -163,3 +163,23 @@ def test_arte_parada_nao_solta_mais_cartela_separada(monkeypatch):
     import inspect
     from src import pecas
     assert "_story_cartela(ig)" not in inspect.getsource(pecas.publicar).split("def _reel_instagram")[0]
+
+
+# ------------------------------------------------------------------ reel diario
+def test_reel_cada_dia_um_ramo_diferente():
+    from src import pecas
+    lista = [{"id": "a", "categoria": "moda"}, {"id": "b", "categoria": "beleza"},
+             {"id": "c", "categoria": "casa"}, {"id": "d", "categoria": "moda"}]
+    hist = [{"formato": "reel", "ramo": "moda"}, {"formato": "reel", "ramo": "beleza"},
+            {"formato": "story", "ramo": "casa"}]
+    assert [p["id"] for p in pecas.ramo_da_vez(lista, "reel", hist)] == ["c"]      # casa nunca saiu em reel
+    hist = [{"formato": "reel", "ramo": "casa"}, {"formato": "reel", "ramo": "moda"},
+            {"formato": "reel", "ramo": "beleza"}]
+    assert [p["id"] for p in pecas.ramo_da_vez(lista, "reel", hist)] == ["b"]      # beleza e o mais antigo
+    assert pecas.ramo_da_vez(lista[:1], "reel", hist) == lista[:1]
+
+
+def test_reel_sai_todo_dia():
+    from pathlib import Path
+    yml = (Path(__file__).resolve().parent.parent / ".github/workflows/reel.yml").read_text(encoding="utf-8")
+    assert "'37 22 * * *'" in yml

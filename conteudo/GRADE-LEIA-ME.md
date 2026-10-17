@@ -24,7 +24,7 @@ O vídeo **não entra no git** (mesma regra do `reels.md`): vai como anexo da re
 | `legenda` | legenda do Instagram, na voz da marca, fechando com "link da bio". O Facebook recebe a mesma trocando por moviki.com.br |
 | `canais` | `instagram`, `facebook` |
 | `vende_live` | `true` se o vídeo vende a live: só sai com o secret `LIVE_NA_PAGINA` = 1 |
-| `dias` | datas marcadas (AAAA-MM-DD). **Só em dia que tem reel:** terça e sábado (quinta a partir de 15/10, quando o calendário mudar) |
+| `dias` | datas marcadas (AAAA-MM-DD). Desde 17/10/2026 sai **1 reel por dia** (~19h37): qualquer data serve. Fora do dia marcado, o rodízio escolhe cada dia um ramo diferente |
 | `a_partir_de` / `valido_ate` | janela em que o vídeo pode sair. **Todo vídeo tem prazo** |
 | `reconferir_em` | para vídeo com dado que muda (preço, regra de outra plataforma): nessa data ele para de sair até alguém reconferir |
 | `repetir_apos_dias` | intervalo mínimo entre duas saídas (padrão 45) |

@@ -19,9 +19,13 @@ O QUE FAZ
     instrumental, sem direito autoral de terceiro). Video que ja tem fundo
     musical mantem o proprio som; video so com voz ganha a trilha baixinha
     por baixo, abaixando sozinha quando a voz fala (ducking).
-  - CHAMADA embutida: quando a vez pede, os 3 s finais sao a cartela
-    "Responda LIVE" (com variacao de titulo), na mesma trilha. Substitui o
-    segundo story estatico que saia depois de toda arte.
+  - CHAMADA (17/10/2026, ajuste do Paulo): nada de tela cheia no fim. Uma
+    faixa discreta "Responda LIVE" aparece por cima do proprio video, logo
+    acima da caixa "Enviar mensagem" do story, nos ultimos ~4 s. Responder
+    o story com LIVE cai no direct e dispara o Funil LIVE do ManyChat
+    (gatilho "resposta de story": live, link, quero).
+  - VOLUME (17/10/2026): trilha sempre de FUNDO — baixa, sem agudo
+    estridente; video que ja tem trilha propria nao recebe a nossa.
 
 NUNCA QUEBRA
   Qualquer falha levanta excecao para quem chamou (src/story.py), que cai no
@@ -42,13 +46,13 @@ CORTE_MIN = 9.0
 CORTE_ALVO = 15.0
 CORTE_MAX = 20.0
 VIDEO_MIN = 8.0          # video mais curto que isso nao vira story
-ARTE_SEG = 7.0           # arte animada
-CTA_SEG = 3.2            # cartela no fim
-XF = 0.35                # transicao entre o trecho e a cartela
+ARTE_SEG = 8.0           # arte animada
+CTA_ULTIMOS = 4.0        # a faixa da chamada aparece nos ultimos N s
 TAXA = 8000              # analise de audio (mono 8 kHz basta para achar pausa)
 FUNDO_DB = -50.0         # piso acima disso = o video ja tem fundo musical
-VOL_TRILHA_SOB_VOZ = 0.22
-VOL_TRILHA_SOZINHA = 0.75
+VOL_TRILHA_SOB_VOZ = 0.09   # ~ -21 dB sob a voz, e ainda abaixa quando ela fala
+VOL_TRILHA_SOZINHA = 0.45   # arte animada, so trilha: ~ -26 LUFS, fundo
+SUAVIZAR = "highpass=f=70,lowpass=f=6500"   # tira o chiado/agudo que "grita"
 
 TITULOS_CTA = (
     "Quer ver a live da sua loja funcionando?",
@@ -182,10 +186,50 @@ def analisar(caminho, exe=None):
 
 
 # ------------------------------------------------------------------ cartela
-def imagem_cta(semente):
-    """Cartela 'Responda LIVE' com o titulo variando pela semente."""
-    titulo = TITULOS_CTA[sum(map(ord, str(semente))) % len(TITULOS_CTA)]
-    return cartela.imagem("story", semente=f"cta-{semente}", titulo=titulo)
+def imagem_cta(semente=None):
+    """Faixa transparente 1080x1920 com a chamada, logo acima da caixa
+    'Enviar mensagem' do story (que ocupa os ~160 px de baixo)."""
+    from PIL import Image, ImageDraw
+    titulo = TITULOS_CTA[sum(map(ord, str(semente or ""))) % len(TITULOS_CTA)]
+    img = Image.new("RGBA", arte.STORY, (0, 0, 0, 0))
+    l, a = img.size
+    # degrade escuro so na faixa, para ler sobre qualquer video
+    topo, base = int(a * 0.70), int(a * 0.905)
+    grad = Image.new("RGBA", (l, base - topo))
+    gd = ImageDraw.Draw(grad)
+    for y in range(base - topo):
+        alfa = int(225 * min(1.0, y / ((base - topo) * 0.40)))
+        gd.line([(0, y), (l, y)], fill=(0, 6, 28, alfa))
+    img.alpha_composite(grad, (0, topo))
+    d = ImageDraw.Draw(img)
+    f_tit = arte._fonte(config.FONTE_FORTE, 40)
+    y = int(a * 0.745)
+    for linha in arte._quebrar(d, titulo, f_tit, l - 160)[:2]:
+        arte._centro(d, y, linha, f_tit, arte.BRANCO, l)
+        y += f_tit.size + 10
+    # pilula RESPONDA [LIVE]
+    y += 16
+    f_r = arte._fonte(config.FONTE_FORTE, 40)
+    f_live = arte._fonte(config.FONTE_TITULO, 74)
+    w_r = arte._largura(d, "RESPONDA", f_r)
+    w_l = arte._largura(d, "LIVE", f_live)
+    larg = w_r + 28 + w_l + 64
+    x0 = (l - larg) // 2
+    alt = f_live.size + 30
+    d.rounded_rectangle((x0, y, x0 + larg, y + alt), radius=alt // 2, fill=(255, 255, 255, 240))
+    bb = d.textbbox((0, 0), "RESPONDA", font=f_r)
+    d.text((x0 + 32, y + alt // 2 - (bb[1] + bb[3]) // 2), "RESPONDA", font=f_r, fill=arte.TINTA)
+    xl = x0 + 32 + w_r + 18
+    d.rounded_rectangle((xl - 10, y + 8, xl + w_l + 12, y + alt - 8), radius=(alt - 16) // 2, fill=arte.VERDE)
+    bb = d.textbbox((0, 0), "LIVE", font=f_live)
+    d.text((xl + 1, y + alt // 2 - (bb[1] + bb[3]) // 2), "LIVE", font=f_live, fill=arte.TINTA)
+    y += alt + 14
+    f_sub = arte._fonte(config.FONTE_FORTE, 30)
+    arte._centro(d, y, "e receba no direct uma live de exemplo do seu ramo", f_sub, (240, 246, 255), l)
+    # seta para a caixa de resposta
+    cx, ty = l // 2, y + f_sub.size + 18
+    d.polygon([(cx - 22, ty), (cx + 22, ty), (cx, ty + 22)], fill=(255, 255, 255, 230))
+    return img
 
 
 # ------------------------------------------------------------------ ffmpeg
@@ -218,8 +262,8 @@ def montar(saida, video=None, ini=0.0, fim=None, imagem=None, trilha=None, cta=N
     """Monta o story em 1080x1920/30 fps, H.264 + AAC.
 
     video+ini/fim -> corte do video;  imagem -> arte animada (ARTE_SEG).
-    cta = caminho da cartela (None = sem chamada).  trilha = mp3 (None = sem).
-    fundo = o video ja tem trilha propria (a nossa so entra na cartela).
+    cta = PNG transparente da faixa (None = sem chamada).  trilha = mp3.
+    fundo = o video ja tem trilha propria (a nossa nao entra).
     """
     exe = exe or cartela._ffmpeg()
     if not exe:
@@ -227,7 +271,7 @@ def montar(saida, video=None, ini=0.0, fim=None, imagem=None, trilha=None, cta=N
     if video is None and imagem is None:
         raise ValueError("video ou imagem")
     seg = ARTE_SEG if video is None else round(float(fim) - float(ini), 2)
-    total = round(seg + (CTA_SEG - XF if cta else 0.0), 2)
+    total = seg
     if total > config.STORY_DURACAO_MAX:
         raise RuntimeError("story longo demais")
 
@@ -239,13 +283,15 @@ def montar(saida, video=None, ini=0.0, fim=None, imagem=None, trilha=None, cta=N
         entradas += ["-loop", "1", "-t", f"{seg:.2f}", "-i", str(imagem)]
         f.append(f"[0:v]{_zoom(seg)},trim=duration={seg},setpts=PTS-STARTPTS[vbase]")
     n = 1
+    fade_fim = f"fade=t=out:st={max(seg - 0.25, 0):.2f}:d=0.25"
     if cta:
-        entradas += ["-loop", "1", "-t", f"{CTA_SEG:.2f}", "-i", str(cta)]
-        f.append(f"[{n}:v]{_zoom(CTA_SEG, 1.0, 1.04)},trim=duration={CTA_SEG}[vcta]")
-        f.append(f"[vbase][vcta]xfade=transition=fade:duration={XF}:offset={seg - XF:.2f}[v]")
+        ini_cta = round(max(seg - CTA_ULTIMOS, seg * 0.45), 2)
+        entradas += ["-loop", "1", "-t", f"{seg:.2f}", "-i", str(cta)]
+        f.append(f"[{n}:v]format=rgba,fps=30,fade=t=in:st={ini_cta}:d=0.45:alpha=1[ov]")
+        f.append(f"[vbase][ov]overlay=0:0:shortest=1,format=yuv420p,{fade_fim}[v]")
         n += 1
     else:
-        f.append(f"[vbase]fade=t=out:st={max(seg - 0.25, 0):.2f}:d=0.25[v]")
+        f.append(f"[vbase]{fade_fim}[v]")
 
     # ---- audio
     voz = None
@@ -255,26 +301,19 @@ def montar(saida, video=None, ini=0.0, fim=None, imagem=None, trilha=None, cta=N
                  f"apad=whole_dur={total}[voz]")
         voz = "[voz]"
     mus = None
-    if trilha:
+    if trilha and not (voz and fundo):
         entradas += ["-stream_loop", "-1", "-i", str(trilha)]
         base = (f"[{n}:a]aformat=sample_rates=44100:channel_layouts=stereo,"
-                f"atrim=duration={total},asetpts=PTS-STARTPTS")
-        if voz and fundo:
-            # o video ja tem trilha: a nossa entra so na cartela
-            if cta:
-                ini_c = seg - XF
-                f.append(f"{base},volume='if(lt(t,{ini_c:.2f}),0,{VOL_TRILHA_SOZINHA})':eval=frame,"
-                         f"afade=t=out:st={total - 0.6:.2f}:d=0.6[mus]")
-                mus = "[mus]"
-        elif voz:
+                f"atrim=duration={total},asetpts=PTS-STARTPTS,{SUAVIZAR}")
+        if voz:
             f.append(f"{base},volume={VOL_TRILHA_SOB_VOZ},afade=t=in:d=0.6,"
-                     f"afade=t=out:st={total - 0.8:.2f}:d=0.8[musb]")
+                     f"afade=t=out:st={max(total - 0.8, 0):.2f}:d=0.8[musb]")
             f.append("[voz]asplit=2[vozm][vozsc]")
-            f.append("[musb][vozsc]sidechaincompress=threshold=0.04:ratio=6:attack=15:release=350[mus]")
+            f.append("[musb][vozsc]sidechaincompress=threshold=0.03:ratio=8:attack=15:release=400[mus]")
             voz, mus = "[vozm]", "[mus]"
         else:
-            f.append(f"{base},volume={VOL_TRILHA_SOZINHA},afade=t=in:d=0.4,"
-                     f"afade=t=out:st={total - 0.8:.2f}:d=0.8[mus]")
+            f.append(f"{base},volume={VOL_TRILHA_SOZINHA},afade=t=in:d=0.8,"
+                     f"afade=t=out:st={max(total - 1.0, 0):.2f}:d=1.0[mus]")
             mus = "[mus]"
     if voz and mus:
         f.append(f"{voz}{mus}amix=inputs=2:duration=first:normalize=0,atrim=duration={total}[a]")
@@ -298,4 +337,6 @@ def nome_seguro(txt):
 
 
 def salvar_cta(semente, pasta):
-    return arte.salvar(imagem_cta(semente), str(Path(pasta) / "cta.png"))
+    caminho = str(Path(pasta) / "cta.png")
+    imagem_cta(semente).save(caminho, "PNG")
+    return caminho

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Grade de stories com video e trilha (17/10/2026)."""
+import os
 import subprocess
 import tempfile
 from datetime import datetime, timedelta, timezone
@@ -63,13 +64,12 @@ def test_alterna_video_e_arte():
     assert story.proximo_tipo([_h(tipo=None)]) == "video"
 
 
-def test_chamada_um_sim_outro_nao(monkeypatch):
+def test_chamada_so_no_video(monkeypatch):
     monkeypatch.setattr(config, "CARTELA_STORY", True)
-    assert story.precisa_cta([])
-    assert not story.precisa_cta([_h(cta=True)])
-    assert story.precisa_cta([_h(cta=False)])
+    assert story.precisa_cta("video")
+    assert not story.precisa_cta("arte")
     monkeypatch.setattr(config, "CARTELA_STORY", False)
-    assert not story.precisa_cta([])
+    assert not story.precisa_cta("video")
 
 
 def test_nao_repete_ramo_quando_ha_outro():
@@ -120,8 +120,29 @@ def test_corte_de_video(tmp_path, com_audio, fundo, cta):
     s = sv.montar(str(tmp_path / "s.mp4"), video=v, ini=1.0, fim=5.0, trilha=sv.trilhas()[0],
                   cta=c, fundo=fundo, audio=com_audio)
     dur, audio = cartela._sondar(cartela._ffmpeg(), s)
-    esperado = 4.0 + (sv.CTA_SEG - sv.XF if cta else 0)
+    esperado = 4.0
     assert audio and abs(dur - esperado) < 0.3
+
+
+@pytest.mark.skipif(not TEM_FFMPEG, reason="sem ffmpeg")
+def test_faixa_da_chamada_e_transparente_no_miolo():
+    img = sv.imagem_cta("x")
+    assert img.size == (1080, 1920) and img.mode == "RGBA"
+    assert img.getpixel((540, 600))[3] == 0          # o video aparece inteiro em cima
+    assert img.getpixel((540, 1700))[3] > 0          # faixa embaixo
+    assert all(img.getpixel((540, y))[3] == 0 for y in range(1780, 1920, 20))  # caixa de resposta livre
+
+
+def test_trilha_sempre_de_fundo():
+    assert sv.VOL_TRILHA_SOZINHA <= 0.5 and sv.VOL_TRILHA_SOB_VOZ <= 0.12
+
+
+@pytest.mark.skipif(not TEM_FFMPEG, reason="sem ffmpeg")
+def test_video_com_trilha_propria_nao_recebe_a_nossa(tmp_path):
+    v = _video(tmp_path, True)
+    a = sv.montar(str(tmp_path / "s1.mp4"), video=v, ini=0, fim=4, trilha=sv.trilhas()[0], fundo=True)
+    b = sv.montar(str(tmp_path / "s2.mp4"), video=v, ini=0, fim=4, trilha=None, fundo=True)
+    assert abs(os.path.getsize(a) - os.path.getsize(b)) < 2000
 
 
 @pytest.mark.skipif(not TEM_FFMPEG, reason="sem ffmpeg")

@@ -14,10 +14,13 @@ AGORA
               da grade (so os que ja estrearam como reel), cortado na pausa
               da fala; cada rodada usa o proximo corte do mesmo video.
       ARTE  = arte 9:16 do Material de apoio (ou de criador), animada com
-              zoom lento + trilha.
+              zoom lento + trilha baixa.
   - Nunca o mesmo ramo em seguida, quando houver alternativa.
-  - CHAMADA "Responda LIVE": embutida nos 3 s finais, um story sim, outro
-    nao (no Instagram). Acabou o story estatico separado.
+  - CHAMADA "Responda LIVE": faixa discreta por cima do proprio story, nos
+    ultimos ~4 s, logo acima da caixa "Enviar mensagem"; so nos stories de
+    VIDEO (a arte ja tem o proprio botao), entao sai um sim, outro nao (so no
+    Instagram). Responder LIVE cai no direct e dispara o Funil
+    LIVE do ManyChat (gatilho de resposta de story). Acabou a tela cheia.
   - Peca de CRIADOR: so volta depois de CRIADOR_QUARENTENA_DIAS.
   - Facebook recebe a mesma montagem SEM a chamada (o ManyChat so esta
     ligado no Instagram).
@@ -59,12 +62,10 @@ def proximo_tipo(hist=None):
     return "arte" if st[0].get("tipo") == "video" else "video"
 
 
-def precisa_cta(hist=None):
-    """Chamada um story sim, outro nao."""
-    if not config.CARTELA_STORY:
-        return False
-    st = _stories(hist)
-    return not (st and st[0].get("cta"))
+def precisa_cta(tipo):
+    """Chamada so no story de VIDEO (a faixa cobriria o rodape da arte, que
+    ja tem o proprio botao). Como video e arte alternam, sai um sim, outro nao."""
+    return bool(config.CARTELA_STORY) and tipo == "video"
 
 
 def ultimo_ramo(hist=None):
@@ -287,7 +288,7 @@ def publicar(peca, hist=None):
     from .social.facebook import Facebook, espelhar_formato
     from .social.instagram import Instagram
 
-    cta = precisa_cta(hist)
+    cta = precisa_cta(peca.get("tipo"))
     try:
         info = montar(peca, cta, hist)
     except Exception as e:  # noqa: BLE001

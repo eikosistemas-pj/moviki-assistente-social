@@ -179,7 +179,7 @@ def test_reel_cada_dia_um_ramo_diferente():
     assert pecas.ramo_da_vez(lista[:1], "reel", hist) == lista[:1]
 
 
-def test_reel_sai_todo_dia():
+def test_reel_sai_duas_vezes_por_dia():
     from pathlib import Path
     yml = (Path(__file__).resolve().parent.parent / ".github/workflows/reel.yml").read_text(encoding="utf-8")
-    assert "'37 22 * * *'" in yml
+    assert "'37 22 * * *'" in yml and "'23 16 * * *'" in yml

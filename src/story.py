@@ -328,7 +328,7 @@ def publicar(peca, hist=None):
         _final()
         return mid
     try:
-        mid = Instagram().story_video(_url_final(url_ig))
+        mid = Instagram(ia=peca.get("origem") != "criador").story_video(_url_final(url_ig))
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: Instagram falhou ({e}) -> publicando no Facebook.")
         mid = Facebook().story_video(_url_final(url_fb))

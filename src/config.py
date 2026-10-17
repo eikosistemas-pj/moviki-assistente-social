@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-17-reel-2x-dia"
+VERSAO = "2026-10-17-rotulo-ia"
 
 # Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
 # e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o
@@ -179,6 +179,8 @@ REEL_DURACAO_MAX = 90
 STORY_DURACAO_MAX = 60
 
 # ----------------------------------------------------------------- Meta
+# Rotulo "Informacoes de IA" no Instagram (17/10/2026). ROTULO_IA=0 desliga.
+ROTULO_IA = os.environ.get("ROTULO_IA", "").strip() != "0"
 IG_ACCOUNT_ID = os.environ.get("IG_ACCOUNT_ID", "")
 FACEBOOK_PAGE_ID = os.environ.get("FACEBOOK_PAGE_ID", "")
 PAGE_ACCESS_TOKEN = os.environ.get("PAGE_ACCESS_TOKEN", "")

@@ -97,6 +97,9 @@ def test_plano_b_publica_na_pagina_e_deixa_alarme(monkeypatch):
     import src.social.facebook as fb_mod
 
     class IgQuebrado:
+        def __init__(self, **kw):  # aceita ia= (rotulo de IA, 17/10/2026)
+            pass
+
         def story(self, url):
             raise RuntimeError("conta restrita")
 

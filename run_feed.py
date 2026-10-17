@@ -318,7 +318,10 @@ def main():
         _marcar(post, fb_id, "facebook", {"miniatura": url})
         return
 
-    ig = Instagram()
+    # Rotulo de IA: so peca da casa (arte feita com IA). Card da vitrine e
+    # peca de criador real ficam sem.
+    _p = post.get("_peca") or {}
+    ig = Instagram(ia=bool(_p) and _p.get("origem") != "criador")
     try:
         media_id = ig.foto(url, legenda, post["hashtags"],
                            colaboradores=pecas.colaboradores(post["_peca"]) if post.get("_peca") else None)

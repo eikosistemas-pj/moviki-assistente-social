@@ -127,6 +127,30 @@ def escolher(lista, recentes):
     return ordem[0]
 
 
+def ramo_da_vez(lista, formato, hist=None):
+    """Reel (17/10/2026): cada dia um ramo DIFERENTE, em sequencia. Fica so com
+    as pecas do ramo que esta ha mais tempo sem sair neste formato (ramo
+    nunca usado vem antes). Com um ramo so na lista, nao filtra."""
+    if not lista:
+        return lista
+    hist = estado.ler_lista("historico.json") if hist is None else hist
+    ordem = []
+    for h in hist:
+        if h.get("formato") == formato:
+            r = h.get("ramo") or "geral"
+            if r not in ordem:
+                ordem.append(r)
+    ramos = sorted({p.get("categoria") or "geral" for p in lista})
+    if len(ramos) < 2:
+        return lista
+
+    def idade(r):
+        return len(ordem) + 1 if r not in ordem else ordem.index(r)
+
+    alvo = max(ramos, key=idade)
+    return [p for p in lista if (p.get("categoria") or "geral") == alvo]
+
+
 def escolher_peca(formato, forcar_origem=None):
     # Grade (30/09/2026): o video marcado para hoje vence o sorteio e a fatia
     # dos criadores. Forcar "criador" no workflow pula a grade de proposito.
@@ -145,6 +169,8 @@ def escolher_peca(formato, forcar_origem=None):
     if not lista and not forcar_origem:
         origem = "casa" if origem == "criador" else "criador"
         lista = grupos.get(origem) or []
+    if formato == "reel":
+        lista = ramo_da_vez(lista, formato)
     peca = escolher(lista, estado.recentes(_estado(formato)))
     if peca:
         print(f"{formato}: peca {peca['id']} ({peca['origem']}, {peca.get('categoria')})")

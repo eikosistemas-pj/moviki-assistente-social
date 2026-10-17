@@ -1,14 +1,16 @@
 name: Reel
 
-# Reel e o formato de maior alcance organico. 1 por dia desde 17/10/2026,
-# cada dia um ramo diferente (antes: 2x por semana).
+# Reel e o formato de maior alcance organico. 2 por dia desde 17/10/2026,
+# cada um de um ramo diferente (antes: 2x por semana).
 # 22/09/2026: passou a publicar tambem na Pagina do Facebook (antes, com
 # SO_FACEBOOK ligado, saia sem publicar nada) e a puxar video do Material de
 # apoio e, quando ligada, de criadores autorizados e aprovados.
 on:
   schedule:
-    # 17/10/2026: 1 reel por DIA, cada dia um ramo diferente (src/pecas.py,
-    # ramo_da_vez). Horario de pico do Reels no Brasil, fora dos stories.
+    # 17/10/2026: 2 reels por DIA, cada um de um ramo diferente (src/pecas.py,
+    # ramo_da_vez). Picos do Reels no Brasil (almoco e noite), fora dos
+    # stories e do feed. Repetir video e aceito: nao pode ficar sem postar.
+    - cron: '23 16 * * *'   # ~13h23 BRT — todo dia
     - cron: '37 22 * * *'   # ~19h37 BRT — todo dia
   workflow_dispatch:
     inputs:

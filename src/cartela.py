@@ -67,7 +67,7 @@ DURACAO_MAX_COM_CARTELA = 180
 
 
 # ------------------------------------------------------------------ arte
-def imagem(modo="reel", semente=None):
+def imagem(modo="reel", semente=None, titulo=None):
     """Cartela 1080x1920 no padrao Moviki.
 
     modo 'reel'  -> "COMENTE LIVE" (o reel tem caixa de comentario).
@@ -83,7 +83,7 @@ def imagem(modo="reel", semente=None):
     margem = 96
     larg = l - margem * 2
 
-    titulo = "Quer ver a live da sua loja funcionando?"
+    titulo = titulo or "Quer ver a live da sua loja funcionando?"
     f_tit, linhas = arte._caber(d, titulo.upper(), config.FONTE_TITULO, larg, 128, 72, 4)
     y = int(a * 0.20)
     for i, linha in enumerate(linhas):
@@ -204,6 +204,9 @@ _RELEASES = {
     TAG_RELEASE: ("Cartelas temporarias (robo)",
                   "Reels com a cartela 'Comente LIVE', hospedados so ate o Instagram copiar. "
                   "O robo apaga cada arquivo depois de publicar."),
+    "stories": ("Stories montados (robo)",
+                "Stories em video (cortes do Material de apoio e artes animadas, com trilha), "
+                "hospedados so ate a Meta copiar. O robo apaga cada arquivo dois dias depois."),
     TAG_TIKTOK: ("Kit TikTok com cartela (robo)",
                  "Videos do Kit TikTok do dia com a cartela 'Mande LIVE no direct' no fim. "
                  "O Paulo baixa pelo painel do dono e posta pelo app. O robo apaga cada "

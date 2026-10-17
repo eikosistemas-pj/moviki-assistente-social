@@ -345,8 +345,9 @@ def publicar(peca, hashtags=""):
     # e o painel do dono mostra curtidas e comentarios das duas redes.
     fid = espelhar_formato(formato, midia, url, leg_fb)
     marcar(peca, mid, "instagram", dict(mini, fb=fid) if fid else mini)
-    if formato == "story":
-        _story_cartela(ig)
+    # 17/10/2026: acabou o story estatico "Responda LIVE" depois de toda arte
+    # (repetia 2x por dia). A chamada agora vai embutida no story montado,
+    # um sim e outro nao (src/story.py). _story_cartela fica so como reserva.
     return mid
 
 

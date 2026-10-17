@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-16T15:20:44+00:00",
- "versao": "2026-10-15-republicar",
+ "gerado": "2026-10-17T05:31:57+00:00",
+ "versao": "2026-10-17-reel-2x-dia",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1954,
-   "posts": 36,
-   "cota_usada": 5,
+   "seguidores": 1963,
+   "posts": 38,
+   "cota_usada": 6,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
+  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12",
-  "feed": null
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -37,22 +37,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-09",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 2
-   },
-   "reel": {
-    "esperado": 0,
-    "feito": 0
-   }
-  },
   {
    "dia": "2026-10-10",
    "hoje": false,
@@ -151,9 +135,25 @@
   },
   {
    "dia": "2026-10-16",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 2
+   },
+   "reel": {
+    "esperado": 0,
+    "feito": 0
+   }
+  },
+  {
+   "dia": "2026-10-17",
+   "hoje": true,
+   "feed": {
+    "esperado": 0,
     "feito": 0
    },
    "story": {
@@ -161,31 +161,36 @@
     "feito": 0
    },
    "reel": {
-    "esperado": 0,
-    "feito": 0
+    "esperado": 1,
+    "feito": 1
    }
   }
  ],
  "totais": {
   "7d": {
    "ig": {
+    "reel": {
+     "posts": 3,
+     "curtidas": 2,
+     "comentarios": 0
+    },
     "story": {
-     "posts": 8,
+     "posts": 10,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
      "posts": 4,
-     "curtidas": 5,
-     "comentarios": 0
-    },
-    "reel": {
-     "posts": 2,
-     "curtidas": 1,
+     "curtidas": 3,
      "comentarios": 0
     }
    },
    "fb": {
+    "reel": {
+     "posts": 3,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "story": {
      "posts": 14,
      "curtidas": 0,
@@ -195,45 +200,40 @@
      "posts": 5,
      "curtidas": 0,
      "comentarios": 0
-    },
-    "reel": {
-     "posts": 2,
-     "curtidas": 0,
-     "comentarios": 0
     }
    }
   },
   "30d": {
    "ig": {
+    "reel": {
+     "posts": 4,
+     "curtidas": 2,
+     "comentarios": 2
+    },
     "story": {
-     "posts": 8,
+     "posts": 10,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 13,
+     "posts": 14,
      "curtidas": 12,
      "comentarios": 0
-    },
-    "reel": {
-     "posts": 3,
-     "curtidas": 1,
-     "comentarios": 2
     }
    },
    "fb": {
+    "reel": {
+     "posts": 8,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "story": {
-     "posts": 46,
+     "posts": 48,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
      "posts": 22,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "reel": {
-     "posts": 7,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -249,6 +249,105 @@
  ],
  "posts": [
   {
+   "quando": "2026-10-17T03:01:37+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Produtos do sertão: venda ao vivo pelo celular",
+   "peca": "video-comercio-sertanejos",
+   "ramo": "alimentacao",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-sertanejos.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18057121715803305",
+    "link": "https://www.instagram.com/reel/DelGA1lkf6f/",
+    "curtidas": 1,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1425309138988304",
+    "link": "https://www.facebook.com/reel/1425309138988304/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-10-16T23:55:20+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Venda seu material escolar ao vivo",
+   "peca": "story-material-escolar",
+   "ramo": "papelaria",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-material-escolar.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18394181329201302",
+    "link": "https://www.instagram.com/stories/moviki.oficial/4009543919088234300",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1754214009145538"
+   }
+  },
+  {
+   "quando": "2026-10-16T18:22:21+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Venda joias ao vivo no Moviki",
+   "peca": "feed-joias-venda-ao-vivo",
+   "ramo": "joalheria",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261016-182206.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17983400810901536",
+    "link": "https://www.instagram.com/p/DekKo_zG0Iv/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122121896103430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122121896103430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-10-16T16:49:48+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Seus sapatos esportivos ao vivo",
+   "peca": "story-tenis-esportivos-ao-vivo",
+   "ramo": "moda",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-tenis-esportivos-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18074716832764938",
+    "link": "https://www.instagram.com/stories/moviki.oficial/4009329769779460778",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1646024793539592"
+   }
+  },
+  {
    "quando": "2026-10-15T23:50:59+00:00",
    "formato": "story",
    "origem": "criador",
@@ -262,10 +361,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18127033405878407",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4008816958484583728",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18127033405878407"
    },
    "fb": {
     "id": "1419355220318202"
@@ -312,10 +408,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18354407515221608",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4008615603028950116",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18354407515221608"
    },
    "fb": {
     "id": "1430232809250165"
@@ -1731,24 +1824,6 @@
     "comentarios": 0,
     "compartilhamentos": 0
    }
-  },
-  {
-   "quando": "2026-09-16T17:15:22+00:00",
-   "formato": "feed",
-   "origem": "vitrine",
-   "subtipo": "vitrine",
-   "titulo": "Fábio Suplementos (Suplementos / Nutricao Esportiva)",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-vitrine-20260916-171517.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1312620718595159_122115940119430818",
-    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
-   }
   }
  ],
  "seguidores_hist": [
@@ -1865,34 +1940,40 @@
    "ig": 1954,
    "ig_posts": 36,
    "fb": 2
+  },
+  {
+   "dia": "2026-10-17",
+   "ig": 1963,
+   "ig_posts": 38,
+   "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1954,
-  "ganho_7d": 18,
-  "desde_7d": "2026-10-09",
-  "ganho_30d": -343,
+  "atual": 1963,
+  "ganho_7d": 15,
+  "desde_7d": "2026-10-10",
+  "ganho_30d": -334,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3046,
-    "dias": 12,
-    "por_dia": 253.8
+    "falta": 3037,
+    "dias": 11,
+    "por_dia": 276.1
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8046,
-    "dias": 72,
-    "por_dia": 111.8
+    "falta": 8037,
+    "dias": 71,
+    "por_dia": 113.2
    }
   ]
  },
  "triagem": {
   "ligada": true,
-  "liberadas": 138,
+  "liberadas": 139,
   "barradas": 5,
   "pendentes": 0,
   "lista_barradas": [
@@ -1917,29 +1998,16 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 2,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {
-  "videos_disponiveis": 31,
+  "videos_disponiveis": 32,
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-10-16",
-    "hoje": true,
-    "id": "video-comercio-perfumaria",
-    "titulo": "Perfumaria: venda ao vivo pelo celular",
-    "ramo": "beleza",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-perfumaria.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-perfumaria.webp",
-    "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nPerfume não tem cheiro na foto, e a cliente passa reto. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua perfumaria direto do celular. Descreve as notas de cada fragrância, mostra o frasco de perto, monta o kit presente com a cliente no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
-    "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-16-video-comercio-perfumaria.mp4"
-   },
-   {
     "dia": "2026-10-17",
-    "hoje": false,
+    "hoje": true,
     "id": "video-comercio-utilidades",
     "titulo": "Utilidades e cozinha: venda ao vivo pelo celular",
     "ramo": "casa",
@@ -2014,12 +2082,25 @@
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nA cliente sumiu do direct. Na live, ela compra na hora.\n\nAssim é o bastidor: a lojista mostra a cor real do batom, uma resposta no chat atende todo mundo que está assistindo e o pedido chega pago na Central de Pedidos, enquanto a equipe já embala.\n\nCom o Moviki, você abre a live da sua loja direto do celular e a cliente vê o tom de verdade, não a cor da foto. Ela escolhe, compra ali mesmo e paga sem sair da transmissão.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
     "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-22-ugc-bastidores-maquiagem.mp4"
+   },
+   {
+    "dia": "2026-10-23",
+    "hoje": false,
+    "id": "ugc-bastidores-moda-praia",
+    "titulo": "Moda praia: os bastidores de uma live na loja",
+    "ramo": "moda",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fugc-bastidores-moda-praia.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/ugc-bastidores-moda-praia.webp",
+    "duracao": 40.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nEla desistiu no checkout. Na live, ela vê o biquíni de perto e compra na hora.\n\nAssim é o bastidor: a lojista mostra o biquíni de perto, uma resposta no chat sobre o tamanho atende todo mundo que está assistindo e o pedido chega pago na Central de Pedidos, enquanto a equipe já separa a sacola.\n\nCom o Moviki, você abre a live da sua loja direto do celular e a cliente vê o caimento de verdade, não só a foto. Ela escolhe, compra ali mesmo e paga sem sair da transmissão.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
+    "hashtags": "#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-23-ugc-bastidores-moda-praia.mp4"
    }
   ]
  },
  "grade": {
-  "versao": "2026-10-16-ugc",
-  "acervo": 7,
+  "versao": "2026-10-16-ugc-mp",
+  "acervo": 8,
   "no_ar": 3,
   "com_erro": 0,
   "proximos": [

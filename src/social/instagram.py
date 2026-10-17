@@ -38,7 +38,12 @@ class Instagram:
     plataforma = "instagram"
 
     def __init__(self, account_id=None, token=None, post_fn=None,
-                 get_fn=None, sleep_fn=time.sleep):
+                 get_fn=None, sleep_fn=time.sleep, ia=False):
+        # 17/10/2026: rotulo "Informacoes de IA" da Meta (parametro
+        # is_ai_generated, changelog de 22/06/2026, todas as versoes). Liga em
+        # todo conteudo da casa feito com IA (pessoas e cenas realistas);
+        # nunca em peca de criador real. Desliga geral com ROTULO_IA=0.
+        self.ia = bool(ia) and config.ROTULO_IA
         self.account_id = account_id or config.IG_ACCOUNT_ID
         self.token = token or config.PAGE_ACCESS_TOKEN
         self._post_fn = post_fn
@@ -48,6 +53,19 @@ class Instagram:
 
     # ------------------------------------------------------------- baixo nivel
     def _post(self, caminho, params):
+        rotular = (self.ia and str(caminho).endswith("/media")
+                   and any(k in params for k in ("image_url", "video_url", "media_type")))
+        if rotular:
+            params = dict(params, is_ai_generated="true")
+        r = self._post_cru(caminho, params)
+        if rotular and isinstance(r, dict) and "is_ai_generated" in str(r.get("error") or ""):
+            # A Meta recusou o rotulo: o post nao pode cair por causa dele.
+            print("aviso: a Meta recusou o rotulo de IA -> publicando sem ele")
+            params = {k: v for k, v in params.items() if k != "is_ai_generated"}
+            r = self._post_cru(caminho, params)
+        return r
+
+    def _post_cru(self, caminho, params):
         if self._post_fn is not None:
             return self._post_fn(caminho, params)
         params = dict(params, access_token=self.token)

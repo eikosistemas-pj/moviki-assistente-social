@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-17T18:00:17+00:00",
+  "formato": "story",
+  "descricao": "Sua loja de naturais ao vivo no mapa",
+  "media_id": "17891482911455621",
+  "origem": "casa",
+  "peca": "story-naturais-granola",
+  "rede": "instagram",
+  "ramo": "naturais",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-naturais-granola.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "bossa-moderna",
+  "fb": "1135443905628553"
+ },
+ {
   "quando": "2026-10-17T14:30:03+00:00",
   "formato": "story",
   "descricao": "Moda praia: os bastidores de uma live na loja",

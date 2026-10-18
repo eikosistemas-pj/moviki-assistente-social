@@ -81,8 +81,29 @@ def candidatas(formato):
             cria = criadores.pecas(criadores.carregar(), formato)
         except Exception as e:  # noqa: BLE001
             print(f"AVISO: pecas de criadores indisponiveis ({e}) -> so material")
+    casa = [p for p in casa if not ja_saiu_uma_vez(formato, p["id"])]
     print(f"{formato}: {len(casa)} pecas da casa | {len(cria)} de criadores")
     return {"casa": casa, "criador": cria}
+
+
+# ------------------------------------------------------------------ so uma vez
+UMA_VEZ = "pecas_uma_vez.json"
+
+
+def so_uma_vez(formato, pid):
+    return pid in config.MATERIAL_SO_UMA_VEZ.get(formato, set())
+
+
+def ja_saiu_uma_vez(formato, pid, hist=None, gravadas=None):
+    """Peca marcada SO UMA VEZ neste formato e que ja foi publicada (18/10/2026).
+    Confere o registro proprio e, por garantia, o historico."""
+    if not so_uma_vez(formato, pid):
+        return False
+    gravadas = estado.ler_lista(UMA_VEZ) if gravadas is None else gravadas
+    if f"{formato}:{pid}" in gravadas:
+        return True
+    hist = estado.ler_lista("historico.json") if hist is None else hist
+    return any(h.get("formato") == formato and h.get("peca") == pid for h in hist)
 
 
 def _ultimas_origens(formato, n=4):
@@ -179,6 +200,11 @@ def escolher_peca(formato, forcar_origem=None):
 
 def marcar(peca, media_id, rede, extra=None):
     estado.marcar_usado(_estado(peca["formato"]), peca["id"], janela=JANELA)
+    if so_uma_vez(peca["formato"], peca["id"]):
+        chave = f"{peca['formato']}:{peca['id']}"
+        gravadas = estado.ler_lista(UMA_VEZ)
+        if chave not in gravadas:
+            estado.gravar_lista(UMA_VEZ, [chave] + gravadas)
     dados = {"origem": "criador" if peca["origem"] == "criador" else "casa",
              "peca": peca["id"], "rede": rede}
     if peca.get("criador"):

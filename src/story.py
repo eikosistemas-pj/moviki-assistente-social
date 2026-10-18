@@ -130,9 +130,37 @@ def _filtrar_criadores(grupos, hist=None):
     return grupos
 
 
+def _ultima_vez(pid, hist=None):
+    for h in _stories(hist):
+        if h.get("peca") == pid:
+            try:
+                return datetime.fromisoformat(h["quando"])
+            except (KeyError, ValueError, TypeError):
+                return None
+    return None
+
+
+def fixa_da_vez(lista, hist=None, agora=None):
+    """Arte FIXA do story (config.STORY_FIXAS, 18/10/2026) que ja passou do
+    intervalo desde a ultima vez. Inedita conta como vencida. Com mais de uma,
+    vai a que esta ha mais tempo sem sair."""
+    vencidas = [p for p in lista
+                if p.get("id") in config.STORY_FIXAS
+                and not _publicada_ha(p["id"], config.STORY_FIXAS[p["id"]], hist, agora)]
+    if not vencidas:
+        return None
+    antiga = datetime.min.replace(tzinfo=timezone.utc)
+    return min(vencidas, key=lambda p: _ultima_vez(p["id"], hist) or antiga)
+
+
 def escolher_arte(forcar_origem=None, hist=None):
     grupos = _filtrar_criadores(pecas.candidatas("story"), hist)
     origem = forcar_origem or pecas.escolher_origem("story", grupos)
+    if forcar_origem != "criador":
+        fixa = fixa_da_vez(grupos.get("casa") or [], hist)
+        if fixa:
+            print(f"story: arte fixa {fixa['id']} (a cada {config.STORY_FIXAS[fixa['id']]} dias)")
+            return fixa
     lista = grupos.get(origem) or []
     if not lista and not forcar_origem:
         origem = "casa" if origem == "criador" else "criador"

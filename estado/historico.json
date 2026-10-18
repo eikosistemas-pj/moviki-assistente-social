@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-18T18:14:29+00:00",
+  "formato": "story",
+  "descricao": "Maquiagem: os bastidores de uma live na loja",
+  "media_id": "17941737750371112",
+  "origem": "casa",
+  "peca": "video:ugc-bastidores-maquiagem",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "miniatura": "https://app.moviki.com.br/material/capas/ugc-bastidores-maquiagem.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-19.8",
+  "fb": "1938097924220944"
+ },
+ {
   "quando": "2026-10-18T14:50:28+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

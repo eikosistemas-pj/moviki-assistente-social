@@ -339,7 +339,11 @@ def publicar(peca, hist=None):
     nome = story_video.nome_seguro(peca["id"])
     url_fb = hospedar(info["fb"], f"story-{carimbo}-{nome}-fb.mp4")
     url_ig = url_fb if info["ig"] == info["fb"] else hospedar(info["ig"], f"story-{carimbo}-{nome}.mp4")
-    mini = {"miniatura": peca.get("capa") or (peca["url"] if info["tipo"] == "arte" else "")}
+    # Capa .webp (padrao das capas do material desde 26/09) nao serve de capa do
+    # Instagram, mas serve de miniatura no painel: sem ela o story de video
+    # aparecia "Sem miniatura".
+    mini = {"miniatura": peca.get("capa") or peca.get("capa_triagem")
+            or (peca["url"] if info["tipo"] == "arte" else "")}
     no_ig = freio.no_instagram("story")
 
     def _final():

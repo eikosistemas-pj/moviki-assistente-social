@@ -144,6 +144,13 @@ def _mini_publicado(idx, formato, quando):
     return melhor[1] if melhor else ""
 
 
+def _id_catalogo(peca):
+    """Story de video grava a peca como "video:<id do material>"; o catalogo
+    conhece so o <id>. Sem tirar o prefixo, o story ficava sem miniatura."""
+    peca = str(peca or "")
+    return peca[len("video:"):] if peca.startswith("video:") else peca
+
+
 # ---------------------------------------------------------------- agenda
 def esperado(formato, dia):
     """Posts que o calendario manda sair nesse dia (data de Brasilia)."""
@@ -177,7 +184,7 @@ def montar(hist, agora, get_ig=None, get_fb=None, catalogo=None, contas=None, pu
             continue
         formato = linha.get("formato", "feed")
         rede = linha.get("rede", "facebook")
-        cat = catalogo.get(linha.get("peca") or "", {})
+        cat = catalogo.get(_id_catalogo(linha.get("peca")), {})
         p = {
             "quando": linha["quando"],
             "formato": formato,

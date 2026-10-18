@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-18T05:47:18+00:00",
- "versao": "2026-10-17-reel-2x-dia",
+ "gerado": "2026-10-18T14:30:12+00:00",
+ "versao": "2026-10-18-miniatura-story",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1969,
+   "seguidores": 1965,
    "posts": 40,
-   "cota_usada": 7,
+   "cota_usada": 6,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
+  "feed": null,
   "story": "2026-10-12",
-  "reel": "2026-10-05",
-  "feed": null
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -256,7 +256,7 @@
    "titulo": "Presentes: os bastidores de uma live na loja",
    "peca": "video:ugc-bastidores-presentes",
    "ramo": "casa",
-   "miniatura": "",
+   "miniatura": "https://app.moviki.com.br/material/capas/ugc-bastidores-presentes.webp",
    "rede": "instagram",
    "planoB": false,
    "erroInstagram": null,
@@ -328,7 +328,7 @@
    "titulo": "Perfumaria: os bastidores de uma live na loja",
    "peca": "video:ugc-bastidores-perfumaria",
    "ramo": "beleza",
-   "miniatura": "",
+   "miniatura": "https://app.moviki.com.br/material/capas/ugc-bastidores-perfumaria.webp",
    "rede": "instagram",
    "planoB": false,
    "erroInstagram": null,
@@ -400,16 +400,13 @@
    "titulo": "Moda praia: os bastidores de uma live na loja",
    "peca": "video:ugc-bastidores-moda-praia",
    "ramo": "moda",
-   "miniatura": "",
+   "miniatura": "https://app.moviki.com.br/material/capas/ugc-bastidores-moda-praia.webp",
    "rede": "instagram",
    "planoB": false,
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18116622154816421",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4009983941028711923",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18116622154816421"
    },
    "fb": {
     "id": "2102031387089584"
@@ -2089,31 +2086,31 @@
   },
   {
    "dia": "2026-10-18",
-   "ig": 1969,
+   "ig": 1965,
    "ig_posts": 40,
    "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1969,
-  "ganho_7d": 22,
+  "atual": 1965,
+  "ganho_7d": 18,
   "desde_7d": "2026-10-11",
-  "ganho_30d": -328,
+  "ganho_30d": -332,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3031,
+    "falta": 3035,
     "dias": 10,
-    "por_dia": 303.1
+    "por_dia": 303.5
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8031,
+    "falta": 8035,
     "dias": 70,
-    "por_dia": 114.7
+    "por_dia": 114.8
    }
   ]
  },
@@ -2144,7 +2141,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 2,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {

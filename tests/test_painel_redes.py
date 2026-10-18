@@ -242,3 +242,21 @@ def test_conta_com_erro_nao_apaga_a_serie():
     s1 = run_metricas.serie_seguidores([], {"instagram": {"seguidores": 2297}}, a)
     s2 = run_metricas.serie_seguidores(s1, {"instagram": {"erro": "token"}}, a + timedelta(days=1))
     assert s2 == s1
+
+
+def test_story_de_video_acha_a_capa_no_catalogo():
+    """18/10: story de video grava peca "video:<id>" e o painel mostrava
+    "Sem miniatura" porque o catalogo so conhece o <id>."""
+    agora = datetime(2026, 10, 18, 11, 0, tzinfo=timezone.utc)
+    hist = [{"quando": "2026-10-18T04:26:40+00:00", "formato": "story",
+             "peca": "video:ugc-bastidores-presentes", "rede": "instagram",
+             "miniatura": "", "descricao": "Presentes"}]
+    cat = {"ugc-bastidores-presentes": {"mini": "https://app.moviki.com.br/material/capas/x.webp"}}
+    r = run_metricas.montar(hist, agora, None, None, cat)
+    assert r["posts"][0]["miniatura"].endswith("/capas/x.webp")
+
+
+def test_id_catalogo_so_tira_o_prefixo_de_video():
+    assert run_metricas._id_catalogo("video:abc") == "abc"
+    assert run_metricas._id_catalogo("story-abc") == "story-abc"
+    assert run_metricas._id_catalogo(None) == ""

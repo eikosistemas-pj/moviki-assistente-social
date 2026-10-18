@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-17-reel-2x-dia"
+VERSAO = "2026-10-18-checklist-balcao"
 
 # Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
 # e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o
@@ -145,6 +145,20 @@ MATERIAL_EXCLUIR_FIXO = {
 }
 MATERIAL_EXCLUIR = MATERIAL_EXCLUIR_FIXO | {
     x.strip() for x in os.environ.get("MATERIAL_EXCLUIR", "").split(",") if x.strip()
+}
+
+# Pecas do Material de apoio com regra propria na pagina oficial (18/10/2026,
+# pedido do Paulo para o checklist do balcao de live).
+#   SO UMA VEZ: depois de publicada naquele formato, nunca mais volta.
+#     Fica gravado em estado/pecas_uma_vez.json (o historico guarda so as
+#     ultimas 2000 publicacoes e um dia a peca voltaria).
+#   FIXA NO STORY: a arte volta ao story sempre que passam N dias da ultima
+#     vez, na frente do rodizio normal. Inedita, sai na proxima vaga de arte.
+MATERIAL_SO_UMA_VEZ = {
+    "feed": {"balcao-de-live-checklist"},
+}
+STORY_FIXAS = {
+    "balcao-de-live-checklist-story": 3,
 }
 
 # ----------------------------------------------------------------- criadores

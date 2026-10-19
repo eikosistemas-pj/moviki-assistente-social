@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-19T21:51:51+00:00",
+  "formato": "story",
+  "descricao": "Cama, mesa e banho: venda ao vivo pelo celular",
+  "media_id": "17949923130340785",
+  "origem": "casa",
+  "peca": "video:video-comercio-cama-mesa-banho",
+  "rede": "instagram",
+  "ramo": "casa",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-cama-mesa-banho.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-15.9",
+  "fb": "1654208426345055"
+ },
+ {
   "quando": "2026-10-19T21:14:24+00:00",
   "formato": "reel",
   "descricao": "Loja de brinquedos: venda ao vivo pelo celular",

@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-19T18:59:26+00:00",
+  "formato": "feed",
+  "descricao": "Checklist do balcão de live",
+  "media_id": "18019032212953491",
+  "origem": "casa",
+  "peca": "balcao-de-live-checklist",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261019-185904.jpg",
+  "fb": "1312620718595159_122122328031430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-19T17:49:18+00:00",
   "formato": "story",
   "descricao": "Uma live do começo ao fim, com telas reais",

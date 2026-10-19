@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-19T20:43:57+00:00",
+  "formato": "story",
+  "descricao": "Venda seus produtos de moto ao vivo",
+  "media_id": "18145788073630925",
+  "origem": "casa",
+  "peca": "story-moto-produtos",
+  "rede": "instagram",
+  "ramo": "automotivo",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-moto-produtos.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "1704664467740133"
+ },
+ {
   "quando": "2026-10-19T18:59:26+00:00",
   "formato": "feed",
   "descricao": "Checklist do balcão de live",

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-19T06:04:38+00:00",
+ "gerado": "2026-10-19T17:25:51+00:00",
  "versao": "2026-10-18-miniatura-story",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1968,
+   "seguidores": 1969,
    "posts": 42,
-   "cota_usada": 7,
+   "cota_usada": 6,
    "cota_total": 100
   },
   "facebook": {
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "feed": null,
-  "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -383,10 +383,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17941737750371112",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4010821703835761967",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17941737750371112"
    },
    "fb": {
     "id": "1938097924220944"
@@ -406,10 +403,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17932306857416355",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4010719044026063295",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17932306857416355"
    },
    "fb": {
     "id": "4529996857256907"
@@ -2226,29 +2220,29 @@
   },
   {
    "dia": "2026-10-19",
-   "ig": 1968,
+   "ig": 1969,
    "ig_posts": 42,
    "fb": 2
   }
  ],
  "seguidores": {
-  "atual": 1968,
-  "ganho_7d": 23,
+  "atual": 1969,
+  "ganho_7d": 24,
   "desde_7d": "2026-10-12",
-  "ganho_30d": -329,
+  "ganho_30d": -328,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3032,
+    "falta": 3031,
     "dias": 9,
-    "por_dia": 336.9
+    "por_dia": 336.8
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8032,
+    "falta": 8031,
     "dias": 69,
     "por_dia": 116.4
    }

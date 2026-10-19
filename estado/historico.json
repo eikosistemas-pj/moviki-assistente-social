@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-19T17:49:18+00:00",
+  "formato": "story",
+  "descricao": "Uma live do começo ao fim, com telas reais",
+  "media_id": "17951681646050067",
+  "origem": "casa",
+  "peca": "video:video-live-demonstracao",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-live-demonstracao.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "pop-brasil",
+  "corte": "0.0-11.9",
+  "fb": "1417086793329054"
+ },
+ {
   "quando": "2026-10-19T04:35:22+00:00",
   "formato": "story",
   "descricao": "Mostre seu estoque em tempo real",

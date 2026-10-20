@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-20T04:49:49+00:00",
+  "formato": "story",
+  "descricao": "Perfumaria: venda ao vivo pelo celular",
+  "media_id": "17888879187477990",
+  "origem": "casa",
+  "peca": "video:video-comercio-perfumaria",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-perfumaria.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "funk-pop-leve",
+  "corte": "0.0-15.6",
+  "fb": "1108581768694815"
+ },
+ {
   "quando": "2026-10-20T01:15:08+00:00",
   "formato": "reel",
   "descricao": "Produtos naturais: venda ao vivo pelo celular",

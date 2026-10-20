@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-20T05:56:54+00:00",
+ "gerado": "2026-10-20T15:37:35+00:00",
  "versao": "2026-10-18-miniatura-story",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1971,
+   "seguidores": 1966,
    "posts": 45,
    "cota_usada": 8,
    "cota_total": 100
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "feed": null,
-  "story": "2026-10-12",
-  "reel": "2026-10-05"
+  "reel": "2026-10-05",
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -2405,29 +2405,29 @@
   },
   {
    "dia": "2026-10-20",
-   "ig": 1971,
+   "ig": 1966,
    "ig_posts": 45,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1971,
-  "ganho_7d": 26,
+  "atual": 1966,
+  "ganho_7d": 21,
   "desde_7d": "2026-10-13",
-  "ganho_30d": -326,
+  "ganho_30d": -331,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3029,
+    "falta": 3034,
     "dias": 8,
-    "por_dia": 378.6
+    "por_dia": 379.2
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8029,
+    "falta": 8034,
     "dias": 68,
     "por_dia": 118.1
    }
@@ -2460,7 +2460,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 2,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {

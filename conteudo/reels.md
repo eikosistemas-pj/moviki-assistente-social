@@ -32,20 +32,4 @@ publicar e avisa no log — não quebra.
 
 ---
 
-## endereco-que-muda-reel
-tipo: educativo
-url: https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/reels/endereco-que-muda.mp4
-titulo: Ontem ele tava naquela esquina. E hoje?
-angulo: Mostre a dor de quem trabalha em carrinho: o cliente de ontem não sabe onde você está hoje. Primeira linha precisa segurar quem está rolando o feed. Feche mandando pro link da bio.
-
-## quem-procura-reel
-tipo: educativo
-url: https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/reels/quem-procura.mp4
-titulo: Bateu vontade. Só falta saber se ele tá na praça hoje.
-angulo: Vire o post pro lado de QUEM PROCURA, não do lojista. A pessoa quer achar o pastel, o açaí, o barbeiro móvel. Mostre que dá pra ver quem está aberto perto de você. Feche mandando pro link da bio.
-
-## abrir-o-dia-reel
-tipo: bastidor
-url: https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/reels/abrir-o-dia.mp4
-titulo: Todo dia ele abre. Todo dia num lugar diferente.
-angulo: Post de posicionamento e respeito. Trabalhar na rua não é menos negócio, é só um negócio que anda. Sem pieguice, sem vitimização, sem número inventado.
+(Os 3 reels de 2026-09 "endereco-que-muda", "quem-procura" e "abrir-o-dia" sairam em 20/10/2026: falavam so de mapa, posicionamento aposentado. Os videos continuam na release `reels`.)

@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-20T23:55:11+00:00",
+  "formato": "story",
+  "descricao": "Calçados: venda ao vivo pelo celular",
+  "media_id": "18448857109125438",
+  "origem": "casa",
+  "peca": "video:video-comercio-calcados",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-calcados.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-15.9",
+  "fb": "1750628532675899"
+ },
+ {
   "quando": "2026-10-20T20:57:11+00:00",
   "formato": "story",
   "descricao": "Suplementos vendendo ao vivo",

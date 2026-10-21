@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-21T17:47:40+00:00",
+  "formato": "feed",
+  "descricao": "Sua joalheria ao vivo no Moviki",
+  "media_id": "18126009262823462",
+  "origem": "casa",
+  "peca": "feed-joalheria-ao-vivo",
+  "rede": "instagram",
+  "ramo": "joalheria",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261021-174725.jpg",
+  "fb": "1312620718595159_122122599921430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-21T16:16:18+00:00",
   "formato": "story",
   "descricao": "Autopeças: venda ao vivo pelo celular",

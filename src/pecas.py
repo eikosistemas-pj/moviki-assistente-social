@@ -375,7 +375,7 @@ def publicar(peca, hashtags=""):
         return mid
 
     try:
-        ig = Instagram()
+        ig = Instagram(ia=peca.get("origem") != "criador")
         if formato == "reel":
             mid = _reel_instagram(ig, peca, url, leg_ig, hashtags)
         else:

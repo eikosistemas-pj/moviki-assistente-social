@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-21T19:30:20+00:00",
+  "formato": "story",
+  "descricao": "Checklist do balcão de live",
+  "media_id": "18153032404539801",
+  "origem": "casa",
+  "peca": "balcao-de-live-checklist-story",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/stories/balcao-de-live-checklist-story.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "lofi-house",
+  "fb": "1835838777862574"
+ },
+ {
   "quando": "2026-10-21T17:47:40+00:00",
   "formato": "feed",
   "descricao": "Sua joalheria ao vivo no Moviki",

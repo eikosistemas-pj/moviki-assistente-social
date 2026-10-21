@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-21T20:58:00+00:00",
+  "formato": "story",
+  "descricao": "Brechó: venda ao vivo pelo celular",
+  "media_id": "17880797019549295",
+  "origem": "casa",
+  "peca": "video:video-comercio-brecho",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-brecho.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "pop-brasil",
+  "corte": "0.0-15.5",
+  "fb": "1623085152589339"
+ },
+ {
   "quando": "2026-10-21T20:20:16+00:00",
   "formato": "reel",
   "descricao": "Presentes: os bastidores de uma live na loja",

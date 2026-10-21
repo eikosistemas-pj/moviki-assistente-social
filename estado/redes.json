@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-21T05:57:42+00:00",
+ "gerado": "2026-10-21T15:55:17+00:00",
  "versao": "2026-10-20-rotulo-ia",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
    "seguidores": 1975,
    "posts": 48,
-   "cota_usada": 8,
+   "cota_usada": 7,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
+  "reel": "2026-10-05",
   "feed": null,
-  "reel": "2026-10-05"
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -427,10 +427,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18115431254105610",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4012199852515159431",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18115431254105610"
    },
    "fb": {
     "id": "2347915519290090"

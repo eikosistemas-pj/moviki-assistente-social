@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-21T16:16:18+00:00",
+  "formato": "story",
+  "descricao": "Autopeças: venda ao vivo pelo celular",
+  "media_id": "18133997308712081",
+  "origem": "casa",
+  "peca": "video:video-comercio-autopecas",
+  "rede": "instagram",
+  "ramo": "automotivo",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-autopecas.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "funk-pop-leve",
+  "corte": "0.0-13.8",
+  "fb": "1134943046010421"
+ },
+ {
   "quando": "2026-10-21T04:43:54+00:00",
   "formato": "story",
   "descricao": "Suplementos ao vivo na academia",

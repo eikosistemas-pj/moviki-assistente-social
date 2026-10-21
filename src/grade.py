@@ -10,7 +10,9 @@ POR QUE EXISTE
 
 ONDE MORA
   conteudo/grade.json  -> a grade (editada por quem produz o video)
-  video                -> asset da release `acervo` deste repo (fora do git)
+  video                -> asset da release `acervo` deste repo (fora do git) OU,
+                          desde 21/10/2026, o Firebase Storage do Moviki, pasta
+                          material/ (leitura publica; o Paulo sobe tudo num lugar so)
   capa                 -> conteudo/acervo-capas/<id>.jpg (raw do GitHub:
                           a Meta aceita e o painel do dono mostra)
 
@@ -39,7 +41,8 @@ PREFIXO = "grade:"
 FORMATOS = ("reel",)                       # por enquanto so video 9:16 no reel
 CANAIS = ("instagram", "facebook")         # onde o robo publica
 REPETIR_PADRAO = 45                        # dias entre duas saidas do mesmo video
-URL_VIDEO = re.compile(r"^https://github\.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/[a-z0-9-]+\.mp4$")
+URL_VIDEO = re.compile(r"^(https://github\.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/[a-z0-9-]+\.mp4"
+                       r"|https://firebasestorage\.googleapis\.com/v0/b/moviki-app\.firebasestorage\.app/o/material%2F[a-z0-9-]+\.mp4\?alt=media)$")
 URL_CAPA = re.compile(r"^https://raw\.githubusercontent\.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/[a-z0-9-]+\.jpg$")
 ID_OK = re.compile(r"^[a-z0-9][a-z0-9-]{2,79}$")
 
@@ -67,7 +70,7 @@ def validar(item):
     if item.get("formato") not in FORMATOS:
         erros.append(f"formato {item.get('formato')!r} fora de {FORMATOS}")
     if not URL_VIDEO.match(str(item.get("video") or "")):
-        erros.append("video fora da release acervo")
+        erros.append("video fora do acervo (release acervo ou Firebase material/)")
     if item.get("capa") and not URL_CAPA.match(str(item["capa"])):
         erros.append("capa fora de conteudo/acervo-capas")
     if not str(item.get("titulo") or "").strip():
@@ -127,7 +130,7 @@ def ultima_saida(pid, hist=None):
 
 
 def no_ar(url):
-    """O arquivo existe na release? (a Meta baixa daqui; 404 derrubaria o post
+    """O arquivo existe no acervo (release ou Firebase)? (a Meta baixa daqui; 404 derrubaria o post
     no Instagram E no Facebook). Falha de rede = trata como fora."""
     try:
         r = net.get(url, stream=True, timeout=30, allow_redirects=True)
@@ -185,7 +188,7 @@ def agendada_hoje(formato, hoje=None, dados=None, hist=None, conferir=no_ar):
         if ultima_saida(PREFIXO + it["id"], hist) == hoje:
             continue
         if conferir and not conferir(it["video"]):
-            print(f"grade: {it['id']} agendado para hoje mas o video NAO esta na release acervo -> sorteio normal")
+            print(f"grade: {it['id']} agendado para hoje mas o video NAO esta no acervo -> sorteio normal")
             continue
         return peca(it)
     return None
@@ -254,9 +257,9 @@ def relatorio(hoje, dados=None, hist=None, dia_de=None, dias=14, conferir=no_ar)
                              "motivo": ("sem " + it["formato"] + " nesse dia") if sem_slot else
                                        ("live fora da página" if bloq else ("" if s == "ok" else s))})
             if not sem_slot and s == "ok" and not bloq and conferir and not conferir(it["video"]):
-                proximos[-1].update(sai=False, motivo="vídeo não está na release acervo")
+                proximos[-1].update(sai=False, motivo="vídeo não está no acervo")
                 alertas.append({"nivel": "grave", "tipo": "grade",
-                                "texto": f"Grade: {it['titulo']} está marcado para {dia.strftime('%d/%m')}, mas o vídeo não está na release acervo do GitHub. Suba o arquivo {it['id']}.mp4."})
+                                "texto": f"Grade: {it['titulo']} está marcado para {dia.strftime('%d/%m')}, mas o vídeo não está no acervo. Suba o arquivo {it['id']}.mp4 no Firebase (Storage, pasta material) ou na release acervo do GitHub, conforme o endereço da grade."})
             if sem_slot:
                 alertas.append({"nivel": "grave", "tipo": "grade",
                                 "texto": f"Grade: {it['titulo']} está marcado para {dia.strftime('%d/%m')}, dia sem {it['formato']} no calendário. Não vai sair."})

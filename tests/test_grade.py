@@ -40,6 +40,18 @@ def test_video_fora_da_release_acervo_barra():
     assert any("release acervo" in x for x in e)
 
 
+def test_video_no_firebase_material_vale():
+    fb = "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-teste.mp4?alt=media"
+    assert grade.validar(item(video=fb)) == []
+
+
+def test_video_no_firebase_fora_de_material_barra():
+    for url in ("https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/criadores%2Fx.mp4?alt=media",
+                "https://firebasestorage.googleapis.com/v0/b/outro-app.firebasestorage.app/o/material%2Fx.mp4?alt=media",
+                "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fx.mp4?alt=media&token=abc"):
+        assert grade.validar(item(video=url)) != [], url
+
+
 def test_sem_valido_ate_barra():
     e = grade.validar(item(valido_ate=None))
     assert any("valido_ate" in x for x in e)

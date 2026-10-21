@@ -7,11 +7,11 @@ A grade diz **qual vídeo sai em qual dia**. Sem ela, o reel sai por sorteio ent
 | O quê | Onde |
 |---|---|
 | A grade | `conteudo/grade.json` (este repositório) |
-| O vídeo (já com a proteção anticópia) | release **`acervo`** deste repositório, anexo `<id>.mp4` |
+| O vídeo (já com a proteção anticópia) | **Firebase Storage do Moviki, pasta `material/`** (desde 21/10/2026, preferido: um lugar só para grade, anúncio e Material de apoio) ou release **`acervo`** deste repositório, anexo `<id>.mp4` |
 | A capa (JPG 1080x1920) | `conteudo/acervo-capas/<id>.jpg` |
 | Cópia limpa (sem proteção) | Google Drive — nunca no GitHub |
 
-O vídeo **não entra no git** (mesma regra do `reels.md`): vai como anexo da release, que tem endereço público permanente.
+O vídeo **não entra no git** (mesma regra do `reels.md`). Endereço no Firebase: `https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F<id>.mp4?alt=media` (a pasta `material/` tem leitura pública). Nunca trocar o conteúdo mantendo o nome: versão nova ganha nome novo.
 
 ## Campos de cada vídeo
 

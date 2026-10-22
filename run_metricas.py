@@ -23,7 +23,7 @@ Nunca publica nada e nunca quebra: metrica que falha vira "—" no painel.
 import json
 import re
 from collections import Counter
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from src import config, estado, freio, grade, material, tiktok, triagem
 from src import util_net as net
@@ -152,6 +152,9 @@ def _id_catalogo(peca):
 
 
 # ---------------------------------------------------------------- agenda
+REEL_DIARIO_DESDE = date(2026, 10, 17)
+
+
 def esperado(formato, dia):
     """Posts que o calendario manda sair nesse dia (data de Brasilia)."""
     wd = dia.weekday()  # 0 = segunda
@@ -160,6 +163,11 @@ def esperado(formato, dia):
     if formato == "story":
         return 2
     if formato == "reel":
+        # 22/10/2026: reel.yml roda 2x por dia, todo dia, desde 17/10/2026.
+        # Antes daquele dia valia "ter e sab". Sem esta troca o painel dava dia
+        # sem reel como esperado 0 e o teste da grade recusava video agendado.
+        if dia >= REEL_DIARIO_DESDE:
+            return 2
         return 1 if wd in (1, 5) else 0
     return 0
 

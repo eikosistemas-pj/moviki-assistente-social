@@ -14,7 +14,10 @@ import requests
 # Erro de rede do requests traz a URL inteira — com access_token=... junto.
 # Tudo que vira mensagem de erro passa por aqui antes.
 # 03/10/2026: chave da Anthropic (sk-ant-...) tambem e mascarada.
-_SEGREDOS = re.compile(r"(access_token=|input_token=|client_secret=)[^&\s'\"]+|((?:Bearer|OAuth)\s+)[A-Za-z0-9._\-|]+|(sk-ant-)[A-Za-z0-9_\-]+", re.I)
+# 22/10/2026: credenciais do Google/YouTube (refresh_token=, token de acesso
+# ya29., refresh 1//) tambem.
+_SEGREDOS = re.compile(r"(access_token=|input_token=|client_secret=|refresh_token=)[^&\s'\"]+"
+                       r"|((?:Bearer|OAuth)\s+)[A-Za-z0-9._\-|]+|(sk-ant-|ya29\.|1//)[A-Za-z0-9_\-.]+", re.I)
 
 
 def sem_segredo(texto):

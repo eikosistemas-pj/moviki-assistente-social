@@ -886,5 +886,35 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-10-20T05:57:15+00:00"
+ },
+ "video-live-black-friday": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-live-black-friday.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-22T01:02:00+00:00"
+ },
+ "ugc-bastidores-bf-perfumaria": {
+  "imagem": "https://app.moviki.com.br/material/capas/ugc-bastidores-bf-perfumaria.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-22T01:02:01+00:00"
+ },
+ "ugc-bastidores-bf-bijuteria": {
+  "imagem": "https://app.moviki.com.br/material/capas/ugc-bastidores-bf-bijuteria.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-22T01:02:02+00:00"
+ },
+ "ugc-bastidores-bf-boutique": {
+  "imagem": "https://app.moviki.com.br/material/capas/ugc-bastidores-bf-boutique.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-22T01:02:03+00:00"
+ },
+ "ugc-bastidores-bf-brecho": {
+  "imagem": "https://app.moviki.com.br/material/capas/ugc-bastidores-bf-brecho.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-22T01:02:04+00:00"
  }
 }

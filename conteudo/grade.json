@@ -1,5 +1,5 @@
 {
- "versao": "2026-10-21-artes-black-friday",
+ "versao": "2026-10-22-gancho-trend-boutique",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -461,6 +461,26 @@
    "repetir_apos_dias": 20,
    "marca": "47f7",
    "obs": "Kit Black Friday ao vivo (preto e dourado, motion + trilha, 9 s), 21/10/2026. Mesmo arquivo do botao Material Black Friday."
+  },
+  {
+   "id": "ugc-bastidores-bf-boutique-c",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "moda",
+   "titulo": "Loja vazia... e ela falando com quem? Ela estava ao vivo, vendendo.",
+   "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fugc-bastidores-bf-boutique-c.mp4?alt=media",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-bf-boutique-c.jpg",
+   "legenda": "Loja vazia... e ela falando com quem?\n\nEla estava ao vivo. Na live, a peça aparece de perto, a cliente pergunta o tamanho no chat e compra num toque, sem carrinho e sem checkout.\n\nLoja vazia não é caixa vazio. Monte a sua Black Friday ao vivo.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão. Conheça pelo link da bio.",
+   "tipo_pauta": "conversao",
+   "canais": ["instagram", "facebook"],
+   "vende_live": true,
+   "dias": ["2026-10-22"],
+   "a_partir_de": "2026-10-22",
+   "valido_ate": "2026-11-30",
+   "reconferir_em": null,
+   "repetir_apos_dias": 45,
+   "marca": "18fd",
+   "obs": "Gancho de trend (curiosidade + revelação + volta do gancho), 22/10/2026: cenas novas na porta da loja vazia + corpo do UGC bf-boutique (Ateliê Canela). Versão limpa (sem 'Comente LIVE'): o robô cola a cartela. Sai só até o fim de novembro."
   }
  ]
 }

@@ -48,7 +48,7 @@ TITULO_MAX = 100
 DESCRICAO_MAX = 5000
 VIDEO_MAX_BYTES = 256 * 1024 * 1024
 CAPA_MAX_BYTES = 2 * 1024 * 1024
-CATEGORIA_YT = "22"                      # Pessoas e blogs (a mesma dos envios a mao)
+CATEGORIA_YT = "27"                      # Educacao (padrao de envio do canal, 22/10/2026)
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 API = "https://www.googleapis.com/youtube/v3"

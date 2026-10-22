@@ -1,16 +1,16 @@
 {
- "gerado": "2026-10-22T06:03:01+00:00",
+ "gerado": "2026-10-22T15:51:28+00:00",
  "versao": "2026-10-21-grade-firebase",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1983,
+   "seguidores": 1981,
    "posts": 51,
    "cota_usada": 8,
    "cota_total": 100
   },
   "facebook": {
-   "nome": "Moviki.app",
+   "nome": "Moviki Live Shop",
    "curtidas_pagina": 3,
    "seguidores": 3
   }
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -240,7 +240,13 @@
    }
   }
  },
- "alertas": [],
+ "alertas": [
+  {
+   "nivel": "grave",
+   "tipo": "grade",
+   "texto": "Grade: Loja vazia... e ela falando com quem? Ela estava ao vivo, vendendo. está marcado para 22/10, dia sem reel no calendário. Não vai sair."
+  }
+ ],
  "posts": [
   {
    "quando": "2026-10-22T04:38:22+00:00",
@@ -427,10 +433,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18133997308712081",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4012936337048476806",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18133997308712081"
    },
    "fb": {
     "id": "1134943046010421"
@@ -2754,29 +2757,29 @@
   },
   {
    "dia": "2026-10-22",
-   "ig": 1983,
+   "ig": 1981,
    "ig_posts": 51,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1983,
-  "ganho_7d": 30,
+  "atual": 1981,
+  "ganho_7d": 28,
   "desde_7d": "2026-10-15",
-  "ganho_30d": -314,
+  "ganho_30d": -316,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3017,
+    "falta": 3019,
     "dias": 6,
-    "por_dia": 502.8
+    "por_dia": 503.2
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8017,
+    "falta": 8019,
     "dias": 66,
     "por_dia": 121.5
    }
@@ -2910,11 +2913,22 @@
   ]
  },
  "grade": {
-  "versao": "2026-10-21-black-friday",
-  "acervo": 13,
-  "no_ar": 4,
+  "versao": "2026-10-22-gancho-trend-boutique",
+  "acervo": 24,
+  "no_ar": 15,
   "com_erro": 0,
   "proximos": [
+   {
+    "dia": "2026-10-22",
+    "hoje": true,
+    "id": "ugc-bastidores-bf-boutique-c",
+    "titulo": "Loja vazia... e ela falando com quem? Ela estava ao vivo, vendendo.",
+    "formato": "reel",
+    "pilar": "ramo",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-bf-boutique-c.jpg",
+    "sai": false,
+    "motivo": "sem reel nesse dia"
+   },
    {
     "dia": "2026-10-24",
     "hoje": false,
@@ -2923,6 +2937,17 @@
     "formato": "reel",
     "pilar": "serie-live",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
+    "dia": "2026-10-24",
+    "hoje": false,
+    "id": "bf-ao-vivo",
+    "titulo": "Black Friday ao vivo: sua loja na live.",
+    "formato": "reel",
+    "pilar": "serie-live",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/bf-ao-vivo.jpg",
     "sai": true,
     "motivo": ""
    },
@@ -2938,6 +2963,28 @@
     "motivo": ""
    },
    {
+    "dia": "2026-10-27",
+    "hoje": false,
+    "id": "bf-sem-checkout",
+    "titulo": "Black Friday ao vivo: sem carrinho, sem checkout.",
+    "formato": "reel",
+    "pilar": "serie-live",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/bf-sem-checkout.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
+    "dia": "2026-10-31",
+    "hoje": false,
+    "id": "bf-pix",
+    "titulo": "Black Friday ao vivo: Pix dentro da live.",
+    "formato": "reel",
+    "pilar": "serie-live",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/bf-pix.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
     "dia": "2026-11-03",
     "hoje": false,
     "id": "ugc-bastidores-presentes",
@@ -2945,6 +2992,17 @@
     "formato": "reel",
     "pilar": "ramo",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-presentes.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
+    "dia": "2026-11-03",
+    "hoje": false,
+    "id": "bf-comece-hoje",
+    "titulo": "Black Friday ao vivo: comece hoje.",
+    "formato": "reel",
+    "pilar": "serie-live",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/bf-comece-hoje.jpg",
     "sai": true,
     "motivo": ""
    }

@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-22T00:01:09+00:00",
+  "formato": "story",
+  "descricao": "Mostre o produto e receba o pedido",
+  "media_id": "18101801606638370",
+  "origem": "casa",
+  "peca": "story-suplementos-avental",
+  "rede": "instagram",
+  "ramo": "naturais",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-suplementos-avental.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "1096194470058813"
+ },
+ {
   "quando": "2026-10-21T20:58:00+00:00",
   "formato": "story",
   "descricao": "Brechó: venda ao vivo pelo celular",

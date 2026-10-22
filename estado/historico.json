@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-10-22T20:15:51+00:00",
+  "formato": "reel",
+  "descricao": "Loja vazia... e ela falando com quem? Ela estava ao vivo, vendendo.",
+  "media_id": "18642289021040766",
+  "origem": "casa",
+  "peca": "grade:ugc-bastidores-bf-boutique-c",
+  "rede": "instagram",
+  "ramo": "moda",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-bf-boutique-c.jpg",
+  "fb": "1441811451497465"
+ },
+ {
   "quando": "2026-10-22T19:24:49+00:00",
   "formato": "story",
   "descricao": "Black Friday ao vivo: perfumaria (bastidores)",

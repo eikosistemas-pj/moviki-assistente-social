@@ -1,0 +1,123 @@
+{
+ "versao": "2026-10-22-youtube",
+ "leia": "Fila do robo de Shorts do canal Moviki Live Shop (run_youtube.py). 'fila' sai primeiro, na ordem escrita, com titulo/descricao/comentario feitos a mao para busca de 'live shop'. Esgotada a fila, o robo pega sozinho os videos 9:16 do Material de apoio e da grade que ainda nao estao no canal. 'pular' = nunca sobe (motivo ao lado). 'playlists' = id da playlist do canal por tipo. O comentario NAO e postado pelo robo (a API nao fixa comentario): fica no estado para a passada semanal.",
+ "playlists": {
+  "ramo": "PLVHJo8Gl87CY",
+  "bastidores": "PLEh_6L-dW1lA",
+  "como_vender": "PLCJc5gL33i04"
+ },
+ "pular": {
+  "ugc-bastidores-bf-boutique": "mesma cena da versao -c, ja no canal",
+  "ugc-bastidores-bf-perfumaria": "mesma cena da versao -c, ja no canal",
+  "ugc-bastidores-bf-bijuteria": "mesma cena da versao -c, ja no canal",
+  "ugc-bastidores-bf-brecho": "mesma cena da versao -c, ja no canal",
+  "video-live-parceiro": "fala com parceiro, nao com lojista"
+ },
+ "fila": [
+  {
+   "id": "video-live-black-friday",
+   "playlist": "como_vender",
+   "titulo": "Black Friday ao vivo: a cliente vê, pergunta e paga sem sair da tela | Live shop | Moviki",
+   "descricao": "No caminho de sempre, a cliente clica no anúncio, cai na loja inteira, procura o produto, vai pro carrinho e para no cadastro.\n\nNa live shop é uma tela só: o produto fixado com o preço, a dúvida respondida no chat e a compra num toque. O pedido pago chega na Central de Pedidos.\n\nMonte a sua Black Friday ao vivo, direto do celular.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nO que é live shop: https://www.moviki.com.br/live-shop\nComo fazer a primeira live de vendas: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "Como montar a sua Black Friday ao vivo, passo a passo: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-sem-checkout",
+   "playlist": "como_vender",
+   "titulo": "Black Friday sem carrinho e sem checkout: venda na live shop | Moviki",
+   "descricao": "A cliente clica no anúncio, cai numa loja inteira, procura o produto, vai para o carrinho... e desiste no cadastro.\n\nNa live shop é diferente: ela vê o produto, toca em Comprar e paga ali mesmo, sem sair da transmissão. Menos passos entre a vontade e a compra.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nVender online sem loja virtual: https://www.moviki.com.br/guia/vender-online-sem-loja-virtual\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "Como vender online sem montar loja virtual: https://www.moviki.com.br/guia/vender-online-sem-loja-virtual\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-pix",
+   "playlist": "como_vender",
+   "titulo": "Pix dentro da live: a venda da Black Friday que não se perde | Live shop | Moviki",
+   "descricao": "Tem venda que se perde no \"te passo o Pix depois\".\n\nNa live shop do Moviki, a cliente paga sem sair da transmissão, e o dinheiro cai direto na conta da loja. O pedido chega pago na Central de Pedidos.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nComo receber Pix na live: https://www.moviki.com.br/guia/receber-pix-na-live\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #blackfriday #pix #vendaaovivo #moviki",
+   "comentario": "Como receber Pix durante a live, passo a passo: https://www.moviki.com.br/guia/receber-pix-na-live\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-ao-vivo",
+   "playlist": "como_vender",
+   "titulo": "Black Friday ao vivo: a sua loja na live, pelo celular | Live shop | Moviki",
+   "descricao": "Na Black Friday, a cliente está com o celular na mão procurando oferta. A pergunta é se ela vai encontrar a sua loja.\n\nCom o Moviki, você abre a live da loja pelo celular e mostra o produto de perto. A cliente pergunta no chat, vê a resposta na hora e decide ali mesmo.\n\nCompra dentro da live com Pix no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nIdeias de live para a sua loja: https://www.moviki.com.br/guia/ideias-de-live-de-vendas\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "Ideias de live de vendas para a Black Friday: https://www.moviki.com.br/guia/ideias-de-live-de-vendas\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-uma-resposta",
+   "playlist": "como_vender",
+   "titulo": "Uma resposta na live vale para todas as clientes | Live shop na Black Friday | Moviki",
+   "descricao": "Na Black Friday, todo mundo pergunta a mesma coisa: tem no meu tamanho? Qual a cor? Fixa bem?\n\nNa live shop, você responde uma vez no chat e a resposta vale para todas as clientes que estão assistindo. Menos mensagem repetida no direct, mais tempo para vender.\n\nCena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nRoteiro de live de vendas: https://www.moviki.com.br/guia/roteiro-de-live\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "Roteiro pronto para a sua live de vendas: https://www.moviki.com.br/guia/roteiro-de-live\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-oferta-relampago",
+   "playlist": "como_vender",
+   "titulo": "Oferta relâmpago na live: a Black Friday que acontece na hora | Live shop | Moviki",
+   "descricao": "Oferta de Black Friday que fica o dia inteiro no ar perde a graça.\n\nNa live shop, você solta uma oferta relâmpago com contagem na tela: preço especial por poucos minutos, na frente de quem está assistindo. Quem está na live decide na hora.\n\nOferta relâmpago com contagem no plano Enterprise. Teste grátis de 30 dias, sem cartão.\n\nIdeias de live de vendas: https://www.moviki.com.br/guia/ideias-de-live-de-vendas\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #blackfriday #ofertarelampago #vendaaovivo #moviki",
+   "comentario": "Mais ideias para a live da Black Friday: https://www.moviki.com.br/guia/ideias-de-live-de-vendas\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-do-celular",
+   "playlist": "como_vender",
+   "titulo": "Live de vendas do celular, sem estúdio e sem seguidores | Black Friday | Moviki",
+   "descricao": "Você não precisa de estúdio, de aplicativo nem de milhares de seguidores para fazer live.\n\nCom o Moviki, a live sai do próprio celular, e você chama quem já é cliente da loja: WhatsApp, status, Instagram. Na Black Friday, comece por quem já te conhece.\n\nCena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nEquipamento para live de vendas: https://www.moviki.com.br/guia/equipamento-para-live\nLive de vendas sem seguidores: https://www.moviki.com.br/guia/live-sem-seguidores\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "O que você precisa (e o que não precisa) para fazer live de vendas: https://www.moviki.com.br/guia/equipamento-para-live\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-pedido-pago",
+   "playlist": "como_vender",
+   "titulo": "Pedido da live pago e organizado, sem caderninho | Live shop na Black Friday | Moviki",
+   "descricao": "Live boa é aquela em que nenhum pedido se perde no caderninho.\n\nNo Moviki, cada venda da live chega na Central de Pedidos com nome, produto e pagamento. Você separa, embala e entrega sem confusão, mesmo no dia mais corrido do ano.\n\nCena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nComo fazer live de vendas: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "Passo a passo da primeira live de vendas: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-ensaio",
+   "playlist": "como_vender",
+   "titulo": "Primeira live de vendas? Faça um ensaio antes da Black Friday | Live shop | Moviki",
+   "descricao": "Primeira live dá frio na barriga. Por isso, no Moviki, você pode fazer um ensaio antes: a live funciona de verdade, mas ninguém vê.\n\nTeste a luz, o lugar dos produtos e o que vai falar. Assim você chega pronto em 27/11.\n\nCena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nRoteiro de live de vendas: https://www.moviki.com.br/guia/roteiro-de-live\nMelhor horário para live: https://www.moviki.com.br/guia/melhor-horario-para-live\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "Roteiro para a sua primeira live de vendas: https://www.moviki.com.br/guia/roteiro-de-live\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-presente",
+   "playlist": "como_vender",
+   "titulo": "Presente se escolhe de perto: venda ao vivo na Black Friday | Live shop | Moviki",
+   "descricao": "Quem compra presente quer ter certeza: a cor, o tamanho, o acabamento.\n\nNa live shop, a cliente vê o produto de perto, tira a dúvida no chat e garante o presente sem sair da tela. Na Black Friday, isso faz diferença.\n\nTeste grátis de 30 dias, sem cartão.\n\nLive shop para loja de presentes: https://www.moviki.com.br/live-shop/presentes\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #blackfriday #presentes #vendaaovivo #moviki",
+   "comentario": "Tudo sobre live shop para loja de presentes: https://www.moviki.com.br/live-shop/presentes\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "bf-comece-hoje",
+   "playlist": "como_vender",
+   "titulo": "Black Friday é 27/11: comece hoje a live da sua loja | Live shop | Moviki",
+   "descricao": "A Black Friday é em 27/11, e a loja que chega pronta sai na frente.\n\nComece hoje com o Moviki: monte a live da sua loja, faça um ensaio e convide suas clientes. Dá tempo de testar com calma antes do dia.\n\nTeste grátis de 30 dias, sem cartão.\n\nComo divulgar a sua live: https://www.moviki.com.br/guia/como-divulgar-live\nComo fazer live de vendas: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\n\n#liveshop #blackfriday #vendaaovivo #moviki",
+   "comentario": "Como divulgar a live para as suas clientes: https://www.moviki.com.br/guia/como-divulgar-live\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "video-live-sem-seguidores",
+   "playlist": "como_vender",
+   "titulo": "Live de vendas sem seguidores: abra a live da sua loja pelo celular | Moviki",
+   "descricao": "Tem plataforma que pede mil seguidores pra liberar a live. A loja que está começando fica de fora.\n\nNo Moviki, a sua loja abre a live pelo celular com zero seguidor e sem aplicativo. Você chama os seus clientes pelo WhatsApp, pelo Status e pelo Instagram, e a tela é só da sua loja. O Pix cai direto na sua conta e o Moviki não cobra comissão sobre a venda.\n\nLive nos planos Premium e Enterprise. Teste grátis de 30 dias, sem cartão.\n\nLive de vendas sem seguidores: https://www.moviki.com.br/guia/live-sem-seguidores\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #vendaaovivo #moviki",
+   "comentario": "Como fazer live de vendas começando do zero: https://www.moviki.com.br/guia/live-sem-seguidores\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "video-live-sem-comissao",
+   "playlist": "como_vender",
+   "titulo": "Venda ao vivo sem comissão sobre a venda | Live shop com mensalidade fixa | Moviki",
+   "descricao": "Em muito marketplace, cada venda paga comissão e ainda uma taxa por item.\n\nNo Moviki, o Pix da venda cai direto na sua chave e a gente não cobra comissão sobre a venda. Você paga uma mensalidade fixa, e a live vem no plano Premium, pros clientes que você já tem.\n\nTeste grátis de 30 dias, sem cartão.\n\nTaxas de live shop, comparadas: https://www.moviki.com.br/guia/taxas-live-shop\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #vendaaovivo #moviki",
+   "comentario": "Quanto custa vender em live shop, taxa por taxa: https://www.moviki.com.br/guia/taxas-live-shop\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "video-live-oferta-relampago",
+   "playlist": "como_vender",
+   "titulo": "Oferta relâmpago na live sem vender o que você não tem | Live shop | Moviki",
+   "descricao": "Oferta relâmpago na live, com a quantidade certa na tela.\n\nNo Moviki, quem gera o Pix da oferta segura a peça por alguns minutos. Sem peça livre, o próximo cliente não recebe o código. Não pagou no prazo, a peça volta sozinha para a oferta. O Pix confirmado entra em vendidos.\n\nOferta relâmpago no plano Enterprise. Teste grátis de 30 dias, sem cartão.\n\nIdeias de live de vendas: https://www.moviki.com.br/guia/ideias-de-live-de-vendas\nO que é live shop: https://www.moviki.com.br/live-shop\n\n#liveshop #ofertarelampago #vendaaovivo #moviki",
+   "comentario": "Mais ideias de oferta para a sua live: https://www.moviki.com.br/guia/ideias-de-live-de-vendas\nTeste grátis de 30 dias, sem cartão."
+  },
+  {
+   "id": "ugc-bastidores-moda",
+   "playlist": "bastidores",
+   "titulo": "Bastidores de uma live shop numa loja de moda | Venda ao vivo pelo celular | Moviki",
+   "descricao": "Por trás de uma live dentro da loja: o celular no tripé, a cliente perguntando no chat e o pedido chegando pago do outro lado.\n\nNo Moviki, a sua loja abre a live pelo celular, mostra a peça e responde na hora.\n\nPix dentro da live no plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.\n\nLive shop para loja de moda: https://www.moviki.com.br/live-shop/moda\nComo fazer a primeira live de vendas: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\n\n#liveshop #moda #vendaaovivo #moviki",
+   "comentario": "Tudo sobre live shop para loja de moda: https://www.moviki.com.br/live-shop/moda\nTeste grátis de 30 dias, sem cartão."
+  }
+ ]
+}

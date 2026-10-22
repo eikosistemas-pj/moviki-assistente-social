@@ -220,3 +220,10 @@ Este repo **não escreve** em nenhuma coleção do Firestore. Só lê `negocios`
 
 - **Peça com texto de parceiro nunca vai à página oficial.** Três travas: campo `so_parceiro: true` no catálogo do Material de apoio, a lista `MATERIAL_EXCLUIR`, e a triagem por imagem (`src/triagem.py`) — a IA lê o texto impresso na arte (ou na capa do vídeo) uma vez e guarda o veredito em `estado/triagem_material.json`. Peça ainda não olhada fica de fora. Sem `ANTHROPIC_API_KEY` a triagem desliga e o painel avisa.
 - **Kit TikTok do dia:** o `metricas.yml` escolhe um vídeo 9:16 do material por dia (agenda de 7 dias em `estado/tiktok.json`) com legenda da marca e 5 hashtags. O painel do dono mostra o kit com Baixar vídeo e Copiar legenda. A postagem é manual pelo app do TikTok — a API pública exige auditoria que não aprova ferramenta de conta própria.
+
+## YouTube Shorts (22/10/2026)
+
+- `youtube.yml` sobe **1 Short por dia útil** (segunda a sexta, ~11h40) no canal Moviki Live Shop, com título, descrição, capa e playlist. A fila feita à mão mora em `conteudo/youtube.json`; esgotada, o robô pega sozinho os vídeos 9:16 do Material de apoio e da grade que ainda não estão no canal. `estado/youtube.json` guarda cada envio (inclusive os que subiram à mão) e nada sobe duas vezes.
+- Mesmas travas da página oficial: `compliance.garantir()` em título, descrição e comentário; triagem, `MATERIAL_EXCLUIR` e `LIVE_NA_PAGINA`; nunca vídeo vencido ou que vence em menos de 7 dias.
+- **Sobe PRIVADO** até a auditoria da API do YouTube (projeto não auditado só envia privado). A publicação e o comentário fixado são feitos na passada semanal. Aprovada a auditoria, o secret `YT_VISIBILIDADE` = `public` faz o robô publicar sozinho. O comentário fixado continua manual: a API não fixa comentário.
+- Secrets: `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` (e, depois da auditoria, `YT_VISIBILIDADE`). Sem eles o robô avisa e sai sem erro.

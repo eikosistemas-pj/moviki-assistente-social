@@ -1,0 +1,52 @@
+name: YouTube Shorts
+
+# 22/10/2026: 1 Short por dia util no canal Moviki Live Shop (5 por semana,
+# dentro dos 3 a 5 aprovados pelo Paulo). Fila em conteudo/youtube.json.
+# Ate a auditoria da API do YouTube, o video sobe PRIVADO e e publicado na
+# passada semanal. Depois dela: secret YT_VISIBILIDADE = public.
+# Repositorio publico: nao gasta a cota de minutos do Actions.
+on:
+  schedule:
+    - cron: '41 14 * * 1-5'   # ~11h41 BRT, segunda a sexta
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'mostra a fila e NAO sobe'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: moviki-assistente-social-estado
+  cancel-in-progress: false
+
+jobs:
+  enviar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Subir Short
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_VISIBILIDADE: ${{ secrets.YT_VISIBILIDADE }}
+          # Mesmas travas da pagina oficial: triagem por imagem, exclusoes e live.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MATERIAL_EXCLUIR: ${{ secrets.MATERIAL_EXCLUIR }}
+          LIVE_NA_PAGINA: ${{ secrets.LIVE_NA_PAGINA }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python run_youtube.py
+
+      - name: Salvar estado
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          python salvar_estado.py "estado: youtube"

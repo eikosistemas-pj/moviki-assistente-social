@@ -12,3 +12,7 @@ Nao editar a mao a menos que queira forcar uma repeticao.
 - `recentes_trilhas_story.json` — rodízio das trilhas.
 - No `historico.json`, cada story ganha `tipo` (video|arte), `cta`
   (chamada embutida), `trilha` e `corte`.
+
+## YouTube (22/10/2026)
+
+- `youtube.json` — cada vídeo já no canal Moviki Live Shop, por id da peça: id do YouTube, visibilidade, título, comentário a fixar e playlist. `manual: true` = subiu à mão antes do robô. Apagar uma linha faz o robô subir aquele vídeo de novo.

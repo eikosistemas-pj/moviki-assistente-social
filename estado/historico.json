@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-22T04:38:22+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: a compra numa tela só",
+  "media_id": "18152247217552389",
+  "origem": "casa",
+  "peca": "video:video-live-black-friday",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-live-black-friday.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-18.4",
+  "fb": "3303648799819342"
+ },
+ {
   "quando": "2026-10-22T01:03:50+00:00",
   "formato": "reel",
   "descricao": "Black Friday ao vivo: bijuteria (bastidores)",

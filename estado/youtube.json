@@ -245,6 +245,18 @@
    "yt": "YswPUBxUrI0",
    "visibilidade": "public",
    "manual": true
+  },
+  "video-live-black-friday": {
+   "yt": "uzJs1DM5ako",
+   "quando": "2026-10-22T20:53:18+00:00",
+   "visibilidade": "private",
+   "titulo": "Black Friday ao vivo: a cliente vê, pergunta e paga sem sair da tela | Live shop | Moviki",
+   "comentario": "Como montar a sua Black Friday ao vivo, passo a passo: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\nTeste grátis de 30 dias, sem cartão.",
+   "playlist": "PLCJc5gL33i04",
+   "origem": "grade",
+   "capa": true,
+   "na_playlist": true,
+   "robo": "2026-10-22-youtube"
   }
  }
 }

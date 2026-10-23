@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-23T00:05:02+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: sua loja na live",
+  "media_id": "18091583066690157",
+  "origem": "casa",
+  "peca": "video:bf-ao-vivo",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/bf-ao-vivo.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "pop-brasil",
+  "corte": "0.0-9.0",
+  "fb": "1642193967600693"
+ },
+ {
   "quando": "2026-10-22T20:52:57+00:00",
   "formato": "story",
   "descricao": "Suplementos na feira, ao vivo no mapa",

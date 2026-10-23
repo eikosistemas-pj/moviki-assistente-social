@@ -916,5 +916,53 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-10-22T01:02:04+00:00"
+ },
+ "bf-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:03:56+00:00"
+ },
+ "bf-sem-checkout": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-sem-checkout.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:03:57+00:00"
+ },
+ "bf-uma-resposta": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-uma-resposta.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:03:58+00:00"
+ },
+ "bf-do-celular": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-do-celular.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:03:59+00:00"
+ },
+ "bf-pix": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-pix.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:03:59+00:00"
+ },
+ "bf-oferta-relampago": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-oferta-relampago.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:04:00+00:00"
+ },
+ "bf-pedido-pago": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-pedido-pago.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:04:01+00:00"
+ },
+ "bf-ensaio": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-ensaio.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T00:04:02+00:00"
  }
 }

@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-23T19:30:31+00:00",
+  "formato": "story",
+  "descricao": "Seu suco ao vivo no mapa",
+  "media_id": "17913392835543825",
+  "origem": "casa",
+  "peca": "story-suco-ao-vivo",
+  "rede": "instagram",
+  "ramo": "alimentacao",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-suco-ao-vivo.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "bossa-moderna",
+  "fb": "3013167019043101"
+ },
+ {
   "quando": "2026-10-23T18:53:46+00:00",
   "formato": "feed",
   "descricao": "Black Friday ao vivo: sem carrinho, sem checkout",

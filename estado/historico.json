@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-23T16:02:50+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: sem carrinho, sem checkout",
+  "media_id": "18108736241353793",
+  "origem": "casa",
+  "peca": "video:bf-sem-checkout",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/bf-sem-checkout.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-9.0",
+  "fb": "2077096522934232"
+ },
+ {
   "quando": "2026-10-23T04:48:56+00:00",
   "formato": "story",
   "descricao": "Venha para o Moviki e venda ao vivo em sua própria live!!!",

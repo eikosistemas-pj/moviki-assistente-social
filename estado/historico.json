@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-23T18:53:46+00:00",
+  "formato": "feed",
+  "descricao": "Black Friday ao vivo: sem carrinho, sem checkout",
+  "media_id": "18013639082988470",
+  "origem": "casa",
+  "peca": "bf-sem-checkout-feed",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261023-185329.jpg",
+  "fb": "1312620718595159_122122878657430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-23T16:02:50+00:00",
   "formato": "story",
   "descricao": "Black Friday ao vivo: sem carrinho, sem checkout",

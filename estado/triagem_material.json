@@ -1012,5 +1012,29 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-10-23T00:58:55+00:00"
+ },
+ "bf-presente": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-presente.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T05:58:50+00:00"
+ },
+ "bf-comece-hoje": {
+  "imagem": "https://app.moviki.com.br/material/capas/bf-comece-hoje.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T05:58:51+00:00"
+ },
+ "bf-presente-feed": {
+  "imagem": "https://app.moviki.com.br/material/feed/bf-presente-feed.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T05:58:52+00:00"
+ },
+ "bf-comece-hoje-feed": {
+  "imagem": "https://app.moviki.com.br/material/feed/bf-comece-hoje-feed.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-23T05:58:53+00:00"
  }
 }

@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-23T05:58:34+00:00",
+ "gerado": "2026-10-23T15:42:44+00:00",
  "versao": "2026-10-21-grade-firebase",
  "contas": {
   "instagram": {
    "usuario": "moviki.oficial",
-   "seguidores": 1986,
+   "seguidores": 1982,
    "posts": 54,
    "cota_usada": 8,
    "cota_total": 100
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "feed": null,
-  "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -427,10 +427,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18133147699701817",
-    "link": "https://www.instagram.com/stories/moviki.oficial/4013654856019837059",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18133147699701817"
    },
    "fb": {
     "id": "1090106220531731"
@@ -2860,31 +2857,31 @@
   },
   {
    "dia": "2026-10-23",
-   "ig": 1986,
+   "ig": 1982,
    "ig_posts": 54,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1986,
-  "ganho_7d": 32,
+  "atual": 1982,
+  "ganho_7d": 28,
   "desde_7d": "2026-10-16",
-  "ganho_30d": -311,
+  "ganho_30d": -315,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3014,
+    "falta": 3018,
     "dias": 5,
-    "por_dia": 602.8
+    "por_dia": 603.6
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8014,
+    "falta": 8018,
     "dias": 65,
-    "por_dia": 123.3
+    "por_dia": 123.4
    }
   ]
  },
@@ -2915,7 +2912,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 4,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {
@@ -2931,8 +2928,8 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fugc-bastidores-moda-praia.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/ugc-bastidores-moda-praia.webp",
     "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nEla desistiu no checkout. Na live, ela vê o biquíni de perto e compra na hora.\n\nAssim é o bastidor: a lojista mostra o biquíni de perto, uma resposta no chat sobre o tamanho atende todo mundo que está assistindo e o pedido chega pago na Central de Pedidos, enquanto a equipe já separa a sacola.\n\nCom o Moviki, você abre a live da sua loja direto do celular e a cliente vê o caimento de verdade, não só a foto. Ela escolhe, compra ali mesmo e paga sem sair da transmissão.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
-    "hashtags": "#moviki #lojaderoupa #modafeminina #lojista #vendasonline",
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nEla desistiu no checkout. Na live, ela vê o biquíni de perto e compra na hora.\n\nAssim é o bastidor: a lojista mostra o biquíni de perto, uma resposta no chat sobre o tamanho atende todo mundo que está assistindo e o pedido chega pago na Central de Pedidos, enquanto a equipe já separa a sacola.\n\nCom o Moviki, você abre a live da sua loja direto do celular e a cliente vê o caimento de verdade, não só a foto. Ela escolhe, compra ali mesmo e paga sem sair da transmissão.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #halloween #lojaderoupa #modafeminina #lojista",
+    "hashtags": "#moviki #halloween #lojaderoupa #modafeminina #lojista",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-23-ugc-bastidores-moda-praia.mp4"
    },
    {
@@ -2944,8 +2941,8 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fugc-bastidores-perfumaria.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/ugc-bastidores-perfumaria.webp",
     "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nFoto não tem cheiro. Na live, o cliente pergunta e compra na hora.\n\nAssim é o bastidor: o vendedor descreve as notas e mostra o frasco de perto, uma resposta no chat atende todo mundo que está assistindo e o pedido chega pago na Central de Pedidos, já na fila do balcão.\n\nCom o Moviki, você abre a live da sua loja direto do celular e o cliente tira a dúvida sobre a fragrância na hora. Ele escolhe, compra ali mesmo e paga sem sair da transmissão.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #salaodebeleza #esteticista #manicure #empreendedora",
-    "hashtags": "#moviki #salaodebeleza #esteticista #manicure #empreendedora",
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nFoto não tem cheiro. Na live, o cliente pergunta e compra na hora.\n\nAssim é o bastidor: o vendedor descreve as notas e mostra o frasco de perto, uma resposta no chat atende todo mundo que está assistindo e o pedido chega pago na Central de Pedidos, já na fila do balcão.\n\nCom o Moviki, você abre a live da sua loja direto do celular e o cliente tira a dúvida sobre a fragrância na hora. Ele escolhe, compra ali mesmo e paga sem sair da transmissão.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #halloween #salaodebeleza #esteticista #manicure",
+    "hashtags": "#moviki #halloween #salaodebeleza #esteticista #manicure",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-24-ugc-bastidores-perfumaria.mp4"
    },
    {
@@ -2970,8 +2967,8 @@
     "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-shopping-esportes.mp4?alt=media",
     "capa": "https://app.moviki.com.br/material/capas/video-shopping-esportes.webp",
     "duracao": 38.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nMeio da semana, corredor vazio, tênis parado na vitrine. Enquanto isso, o seu cliente está no celular procurando o próximo par.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tênis de perto, tira dúvida de numeração no chat e lança a oferta. E quem quer experimentar antes toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #lojista #varejo #liveshop #vendasonline",
-    "hashtags": "#moviki #lojista #varejo #liveshop #vendasonline",
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nMeio da semana, corredor vazio, tênis parado na vitrine. Enquanto isso, o seu cliente está no celular procurando o próximo par.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tênis de perto, tira dúvida de numeração no chat e lança a oferta. E quem quer experimentar antes toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #halloween #lojista #varejo #liveshop",
+    "hashtags": "#moviki #halloween #lojista #varejo #liveshop",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-10-26-video-shopping-esportes.mp4"
    },
    {

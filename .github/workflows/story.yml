@@ -1,18 +1,19 @@
 name: Story
 
-# Story (22/09/2026; grade nova em 17/10/2026). 5 por dia, alternando CORTE DE
-# VIDEO do Material de apoio e ARTE ANIMADA, os dois com trilha. A chamada
-# "Responda LIVE" vai embutida no fim, um story sim, outro nao (src/story.py).
+# Story (22/09/2026; grade nova em 17/10/2026; ajuste de 23/10/2026).
+# 4 por dia (era 5): corte de VIDEO e ARTE animada alternando, mais 1
+# PERGUNTA DO DIA (resposta numa palavra no direct). No maximo 1 story por
+# tema sazonal (Black Friday...) por dia. Nada antes das 7h BRT: o Actions
+# atrasa a rodada da noite em ate 4 h e ela caia de madrugada (src/story.py).
 #
 # MINUTOS DO ACTIONS: este repositorio e PUBLICO, e repositorio publico nao
 # gasta a cota mensal de minutos do plano gratuito. Cada rodada dura ~2 min.
 on:
   schedule:
-    - cron: '47 11 * * *'   # ~8h47 BRT
-    - cron: '29 15 * * *'   # ~12h29 BRT (fora do feed de sexta)
-    - cron: '41 17 * * *'   # ~14h41 BRT
-    - cron: '07 21 * * *'   # ~18h07 BRT
-    - cron: '13 0 * * *'    # ~21h13 BRT
+    - cron: '17 11 * * *'   # ~8h17 BRT
+    - cron: '43 14 * * *'   # ~11h43 BRT
+    - cron: '22 19 * * *'   # ~16h22 BRT
+    - cron: '38 22 * * *'   # ~19h38 BRT
   workflow_dispatch:
     inputs:
       origem:

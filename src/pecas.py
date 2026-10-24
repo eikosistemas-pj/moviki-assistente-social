@@ -190,6 +190,13 @@ def escolher_peca(formato, forcar_origem=None):
     if not lista and not forcar_origem:
         origem = "casa" if origem == "criador" else "criador"
         lista = grupos.get(origem) or []
+    # 23/10/2026: tema sazonal (Black Friday...) no maximo 1 por formato e 2
+    # no perfil por dia, nunca em seguida; e peca com estreia marcada na grade
+    # nao sai antes pelo sorteio (src/tema.py).
+    from . import tema
+    if formato == "reel":
+        lista = tema.sem_estreia(lista)
+    lista = tema.filtrar(lista, formato)
     if formato == "reel":
         lista = ramo_da_vez(lista, formato)
     peca = escolher(lista, estado.recentes(_estado(formato)))

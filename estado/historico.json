@@ -1,5 +1,22 @@
 [
  {
+  "quando": "2026-10-24T14:12:29+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: do seu celular",
+  "media_id": "18638359834004020",
+  "origem": "casa",
+  "peca": "video:bf-do-celular",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/bf-do-celular.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "pop-brasil",
+  "tema": "black-friday",
+  "corte": "0.0-9.0",
+  "fb": "2315083085893609"
+ },
+ {
   "quando": "2026-10-24T01:04:31+00:00",
   "formato": "reel",
   "descricao": "Confeitaria: venda ao vivo pelo celular",

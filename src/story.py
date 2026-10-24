@@ -27,12 +27,23 @@ AGORA
   - Videos montados sobem como asset temporario do Release `stories` e sao
     apagados dois dias depois (video nao entra no repositorio).
 
+AJUSTE DE 23/10/2026 (stories com 0-3 visualizacoes, BF 3x no mesmo dia)
+  - 4 rodadas por dia (era 5) e nenhum story na madrugada (antes das 7h BRT,
+    o atraso do Actions jogava a rodada das 21h para 1h-2h da manha).
+  - PERGUNTA DO DIA (src/story_pergunta.py): 1 por dia, a partir do 2o story
+    do dia (ou depois das 17h). Resposta numa palavra = conversa no direct,
+    que e o que puxa a conta para a frente da barra de stories.
+  - TEMA (Black Friday, Natal...) e ESTREIA da grade: travas em src/tema.py,
+    as mesmas do feed e do reel.
+
 NUNCA QUEBRA
   Montagem falhou -> publica a peca original (arte parada), como antes.
+  Trava de tema esvaziou a lista -> volta para a lista sem a trava.
 """
 from datetime import datetime, timedelta, timezone
 
-from . import cartela, config, estado, grade, material, pecas, story_video, triagem
+from . import cartela, config, estado, grade, material, pecas, story_pergunta, story_video, triagem
+from . import tema as tema_mod
 from . import util_net as net
 
 TAG = "stories"
@@ -47,6 +58,9 @@ EST_VIDEO = "pecas_storyvideo"
 EST_TRILHA = "trilhas_story"
 EST_CORTES = "story_cortes.json"
 
+HORA_PRIMEIRO_STORY = 7      # BRT: antes disso, rodada atrasada nao publica
+HORA_PERGUNTA = 17           # BRT: depois disso a pergunta pode ser o 2o story
+
 
 # ------------------------------------------------------------------ historico
 def _stories(hist=None):
@@ -55,8 +69,9 @@ def _stories(hist=None):
 
 
 def proximo_tipo(hist=None):
-    """'video' ou 'arte', alternando com o ultimo story publicado."""
-    st = _stories(hist)
+    """'video' ou 'arte', alternando com o ultimo story publicado (a pergunta
+    do dia nao entra na alternancia)."""
+    st = [h for h in _stories(hist) if h.get("tipo") != "pergunta"]
     if not st:
         return "video"
     return "arte" if st[0].get("tipo") == "video" else "video"
@@ -69,8 +84,27 @@ def precisa_cta(tipo):
 
 
 def ultimo_ramo(hist=None):
-    st = _stories(hist)
+    st = [h for h in _stories(hist) if h.get("tipo") != "pergunta"]
     return st[0].get("ramo") if st else None
+
+
+# ------------------------------------------------------------------ dia
+def stories_de_hoje(hist=None, hoje=None):
+    return [h for h in _stories(hist) if tema_mod.dia_br(h) == (hoje or config.hoje_br())]
+
+
+def precisa_pergunta(hist=None, hoje=None, hora=None):
+    """1 pergunta por dia: a partir do 2o story do dia, ou do 1o depois das 17h."""
+    hoje_st = stories_de_hoje(hist, hoje)
+    if any(h.get("tipo") == "pergunta" for h in hoje_st):
+        return False
+    hora = datetime.now(config.FUSO_BR).hour if hora is None else hora
+    return len(hoje_st) >= 2 or (len(hoje_st) >= 1 and hora >= HORA_PERGUNTA)
+
+
+def madrugada(hora=None):
+    hora = datetime.now(config.FUSO_BR).hour if hora is None else hora
+    return hora < HORA_PRIMEIRO_STORY
 
 
 def _publicada_ha(pid, dias, hist=None, agora=None):
@@ -97,8 +131,11 @@ def videos_da_casa():
     """Videos verticais que podem virar story: Material de apoio + acervo da
     grade que ja estreou como reel (nunca estragar a estreia)."""
     saida = []
+    estreias = tema_mod.estreias()
     try:
         for p in triagem.filtrar(material.pecas(material.carregar_catalogo(), "reel")):
+            if p["id"] in estreias:
+                continue
             if (p.get("duracao") or 0) < story_video.VIDEO_MIN:
                 continue
             if p.get("w") and p.get("h") and p["h"] < p["w"]:
@@ -165,12 +202,12 @@ def escolher_arte(forcar_origem=None, hist=None):
     if not lista and not forcar_origem:
         origem = "casa" if origem == "criador" else "criador"
         lista = grupos.get(origem) or []
-    lista = sem_repetir_ramo(lista, ultimo_ramo(hist))
+    lista = tema_mod.filtrar(sem_repetir_ramo(lista, ultimo_ramo(hist)), "story", hist)
     return pecas.escolher(lista, estado.recentes(pecas._estado("story")))
 
 
 def escolher_video(hist=None):
-    lista = sem_repetir_ramo(videos_da_casa(), ultimo_ramo(hist))
+    lista = tema_mod.filtrar(sem_repetir_ramo(videos_da_casa(), ultimo_ramo(hist)), "story", hist)
     print(f"story video: {len(lista)} videos candidatos")
     return pecas.escolher(lista, estado.recentes(EST_VIDEO))
 
@@ -274,6 +311,11 @@ def montar(peca, cta, hist=None):
         ini, fim = an["cortes"][i]
         info.update(tipo="video", corte=f"{ini:.1f}-{fim:.1f}", corte_i=i, cortes=len(an["cortes"]))
         base = dict(video=fonte, ini=ini, fim=fim, trilha=trilha, fundo=an["fundo"], audio=an["audio"], exe=exe)
+    elif peca.get("tipo") == "pergunta":
+        caminho = story_pergunta.salvar(peca, str(pasta / "pergunta.jpg"),
+                                        semente=config.hoje_br().toordinal())
+        info.update(tipo="pergunta")
+        base = dict(imagem=caminho, trilha=trilha, exe=exe)
     else:
         img = pecas._baixar_imagem(peca["url"])
         if peca.get("credito"):
@@ -300,6 +342,10 @@ def escolher(forcar_origem=None, hist=None):
             print(f"AVISO: grade indisponivel ({e})")
         if ag:
             return dict(ag, tipo="video" if ag.get("midia") == "video" else "arte")
+        if precisa_pergunta(hist):
+            p = story_pergunta.da_vez()
+            print(f"story: pergunta do dia {p['pid']}")
+            return p
     tipo = "arte" if forcar_origem == "criador" else proximo_tipo(hist)
     if tipo == "video":
         p = escolher_video(hist)
@@ -323,11 +369,13 @@ def publicar(peca, hist=None):
         print(f"story: montagem falhou ({net.sem_segredo(e)}) -> peca original")
         info = None
     if info is None:
-        if peca.get("tipo") == "video":
+        if peca.get("tipo") in ("video", "pergunta"):
             raise MontagemFalhou(peca["id"])
         return pecas.publicar(dict(peca, formato="story"))
 
     extra = {"tipo": info["tipo"], "cta": cta, "trilha": info["trilha"]}
+    if tema_mod.tema(peca):
+        extra["tema"] = tema_mod.tema(peca)
     if info.get("corte"):
         extra["corte"] = info["corte"]
     if config.DRY_RUN:
@@ -353,6 +401,8 @@ def publicar(peca, hist=None):
             estado.marcar_usado(EST_TRILHA, info["trilha"], janela=20)
         if info["tipo"] == "video":
             estado.marcar_usado(EST_VIDEO, peca["id"], janela=pecas.JANELA)
+        if info["tipo"] == "pergunta":
+            story_pergunta.marcar(peca["pid"])
 
     if not no_ig:
         mid = Facebook().story_video(_url_final(url_fb))
@@ -360,7 +410,9 @@ def publicar(peca, hist=None):
         _final()
         return mid
     try:
-        mid = Instagram(ia=peca.get("origem") != "criador").story_video(_url_final(url_ig))
+        # Pergunta do dia e arte desenhada pelo robo (sem imagem de IA): sem rotulo.
+        mid = Instagram(ia=peca.get("origem") != "criador"
+                        and peca.get("tipo") != "pergunta").story_video(_url_final(url_ig))
     except Exception as e:  # noqa: BLE001
         print(f"AVISO: Instagram falhou ({e}) -> publicando no Facebook.")
         mid = Facebook().story_video(_url_final(url_fb))
@@ -379,6 +431,9 @@ def publicar(peca, hist=None):
 
 
 def rodar(forcar_origem=None):
+    if not forcar_origem and madrugada():
+        print(f"story: madrugada (antes das {HORA_PRIMEIRO_STORY}h BRT) -> rodada atrasada, nada a publicar.")
+        return None
     hist = estado.ler_lista("historico.json")
     peca = escolher(forcar_origem, hist)
     if not peca:

@@ -1,5 +1,5 @@
 {
- "versao": "2026-10-22-gancho-trend-lote2",
+ "versao": "2026-10-23-sem-reprise-bf",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -274,13 +274,13 @@
    "tipo_pauta": "conversao",
    "canais": ["instagram", "facebook"],
    "vende_live": true,
-   "dias": ["2026-10-24"],
+   "dias": [],
    "a_partir_de": "2026-10-22",
    "valido_ate": "2026-11-30",
    "reconferir_em": null,
    "repetir_apos_dias": 20,
    "marca": "f9d2",
-   "obs": "Kit Black Friday ao vivo (preto e dourado, motion + trilha, 9 s), 21/10/2026. Mesmo arquivo do botao Material Black Friday."
+   "obs": "23/10/2026: estreia de 24/10 tirada (saiu pelo sorteio em 22/10, antes da trava de estreia). Kit Black Friday ao vivo (preto e dourado, motion + trilha, 9 s), 21/10/2026. Mesmo arquivo do botao Material Black Friday."
   },
   {
    "id": "bf-sem-checkout",

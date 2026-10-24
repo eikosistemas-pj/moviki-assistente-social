@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-24T18:12:14+00:00",
+  "formato": "story",
+  "descricao": "Mostre o produto ao vivo e receba o pedido",
+  "media_id": "18117938495291637",
+  "origem": "casa",
+  "peca": "story-eletronicos-por-live-2",
+  "rede": "instagram",
+  "ramo": "eletronicos",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-eletronicos-por-live-2.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "1670744591177482"
+ },
+ {
   "quando": "2026-10-24T14:12:29+00:00",
   "formato": "story",
   "descricao": "Black Friday ao vivo: do seu celular",

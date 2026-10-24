@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-10-24T19:01:56+00:00",
+  "formato": "reel",
+  "descricao": "Oferta relâmpago sem vender o que você não tem",
+  "media_id": "18131941510761563",
+  "origem": "casa",
+  "peca": "grade:video-live-oferta-relampago",
+  "rede": "instagram",
+  "ramo": "geral",
+  "grade": true,
+  "pilar": "serie-live",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
+  "fb": "2547873932376879"
+ },
+ {
   "quando": "2026-10-24T18:12:14+00:00",
   "formato": "story",
   "descricao": "Mostre o produto ao vivo e receba o pedido",

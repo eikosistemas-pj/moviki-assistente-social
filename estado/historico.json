@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-25T01:38:50+00:00",
+  "formato": "story",
+  "descricao": "Produtos naturais: venda ao vivo pelo celular",
+  "media_id": "17918308989465115",
+  "origem": "casa",
+  "peca": "video:video-comercio-naturais",
+  "rede": "instagram",
+  "ramo": "naturais",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-naturais.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "bossa-moderna",
+  "corte": "0.0-15.2",
+  "fb": "28875175052143852"
+ },
+ {
   "quando": "2026-10-25T00:43:15+00:00",
   "formato": "reel",
   "descricao": "Autopeças: venda ao vivo pelo celular",

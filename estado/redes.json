@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-25T05:59:15+00:00",
+ "gerado": "2026-10-25T14:55:55+00:00",
  "versao": "2026-10-23-story-pergunta",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1979,
+   "seguidores": 1975,
    "posts": 59,
    "cota_usada": 6,
    "cota_total": 100
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -206,7 +206,7 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 48,
+     "posts": 49,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -223,7 +223,7 @@
    },
    "fb": {
     "story": {
-     "posts": 81,
+     "posts": 82,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-25T14:43:05+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Checklist do balcão de live",
+   "peca": "balcao-de-live-checklist-story",
+   "ramo": "geral",
+   "miniatura": "https://app.moviki.com.br/material/stories/balcao-de-live-checklist-story.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17940572526389457",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4015788696779289219",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1686396866336701"
+   }
+  },
   {
    "quando": "2026-10-25T01:38:50+00:00",
    "formato": "story",
@@ -377,10 +400,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18638359834004020",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4015048534687589795",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18638359834004020"
    },
    "fb": {
     "id": "2315083085893609"
@@ -3048,37 +3068,37 @@
   },
   {
    "dia": "2026-10-25",
-   "ig": 1979,
+   "ig": 1975,
    "ig_posts": 59,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1979,
-  "ganho_7d": 14,
+  "atual": 1975,
+  "ganho_7d": 10,
   "desde_7d": "2026-10-18",
-  "ganho_30d": -318,
+  "ganho_30d": -322,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3021,
+    "falta": 3025,
     "dias": 3,
-    "por_dia": 1007.0
+    "por_dia": 1008.3
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8021,
+    "falta": 8025,
     "dias": 63,
-    "por_dia": 127.3
+    "por_dia": 127.4
    }
   ]
  },
  "triagem": {
   "ligada": true,
-  "liberadas": 156,
+  "liberadas": 158,
   "barradas": 5,
   "pendentes": 0,
   "lista_barradas": [
@@ -3103,7 +3123,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 0,
+  "olhadas_agora": 1,
   "falhas_agora": 0
  },
  "tiktok": {

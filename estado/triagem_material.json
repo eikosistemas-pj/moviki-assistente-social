@@ -1042,5 +1042,11 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-10-25T14:41:53+00:00"
+ },
+ "calculadora-taxas-feed": {
+  "imagem": "https://app.moviki.com.br/material/feed/calculadora-taxas-feed.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-10-25T14:56:10+00:00"
  }
 }

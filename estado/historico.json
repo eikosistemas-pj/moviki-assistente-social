@@ -1,5 +1,22 @@
 [
  {
+  "quando": "2026-10-25T18:33:12+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: oferta relâmpago",
+  "media_id": "18121795009971115",
+  "origem": "casa",
+  "peca": "video:bf-oferta-relampago",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/bf-oferta-relampago.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "lofi-house",
+  "tema": "black-friday",
+  "corte": "0.0-9.0",
+  "fb": "1138479905354644"
+ },
+ {
   "quando": "2026-10-25T14:43:05+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

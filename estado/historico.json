@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-26T20:37:24+00:00",
+  "formato": "story",
+  "descricao": "Vender pelo WhatsApp ou ao vivo?",
+  "media_id": "18120538127325147",
+  "origem": "casa",
+  "peca": "pergunta:whats-ou-live",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "bossa-moderna",
+  "fb": "1123154633449281"
+ },
+ {
   "quando": "2026-10-26T19:01:23+00:00",
   "formato": "feed",
   "descricao": "Quanto a plataforma tira de cada venda sua?",

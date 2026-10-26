@@ -1,5 +1,22 @@
 [
  {
+  "quando": "2026-10-26T17:07:40+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: pedido pago e organizado",
+  "media_id": "18124959238904615",
+  "origem": "casa",
+  "peca": "video:bf-pedido-pago",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/bf-pedido-pago.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "tema": "black-friday",
+  "corte": "0.0-9.0",
+  "fb": "1801157461033090"
+ },
+ {
   "quando": "2026-10-26T01:42:48+00:00",
   "formato": "story",
   "descricao": "Quanto a plataforma tira de cada venda sua? (story)",

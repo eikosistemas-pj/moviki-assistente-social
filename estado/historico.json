@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-26T01:42:48+00:00",
+  "formato": "story",
+  "descricao": "Quanto a plataforma tira de cada venda sua? (story)",
+  "media_id": "18133193275668644",
+  "origem": "casa",
+  "peca": "story-calculadora-taxas",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-calculadora-taxas.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "934143319575399"
+ },
+ {
   "quando": "2026-10-26T00:43:44+00:00",
   "formato": "reel",
   "descricao": "Eletroportáteis: venda ao vivo pelo celular",

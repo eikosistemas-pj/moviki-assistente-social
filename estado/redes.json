@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-27T06:12:15+00:00",
+ "gerado": "2026-10-27T16:26:54+00:00",
  "versao": "2026-10-23-story-pergunta",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1986,
+   "seguidores": 1987,
    "posts": 64,
-   "cota_usada": 7,
+   "cota_usada": 8,
    "cota_total": 100
   },
   "facebook": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -206,7 +206,7 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 56,
+     "posts": 57,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -223,7 +223,7 @@
    },
    "fb": {
     "story": {
-     "posts": 85,
+     "posts": 86,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-27T16:10:16+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Moda masculina ao vivo, pelo celular",
+   "peca": "story-moda-masculina-camisa",
+   "ramo": "moda",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-moda-masculina-camisa.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18102136916561654",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4017282162134362841",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1128479699709802"
+   }
+  },
   {
    "quando": "2026-10-27T02:27:40+00:00",
    "formato": "story",
@@ -404,10 +427,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18124959238904615",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4016586289562027115",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18124959238904615"
    },
    "fb": {
     "id": "1801157461033090"
@@ -3247,29 +3267,29 @@
   },
   {
    "dia": "2026-10-27",
-   "ig": 1986,
+   "ig": 1987,
    "ig_posts": 64,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1986,
-  "ganho_7d": 20,
+  "atual": 1987,
+  "ganho_7d": 21,
   "desde_7d": "2026-10-20",
-  "ganho_30d": -311,
+  "ganho_30d": -310,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3014,
+    "falta": 3013,
     "dias": 1,
-    "por_dia": 3014.0
+    "por_dia": 3013.0
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8014,
+    "falta": 8013,
     "dias": 61,
     "por_dia": 131.4
    }

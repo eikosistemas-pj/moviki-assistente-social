@@ -153,22 +153,28 @@ class Instagram:
         return pub["id"]
 
     @staticmethod
-    def com_chamada(texto):
+    def com_chamada(texto, chamada=None):
         """Poe a chamada "Comente LIVE" na primeira linha (08/10/2026). A
         primeira linha e o que aparece antes do "mais" no feed e por cima do
-        reel. Nao repete se a legenda ja pede o comentario."""
-        chamada = config.CHAMADA_COMENTE
-        if not chamada or re.search(r"\bcomente\s+live\b", texto or "", flags=re.I):
+        reel. Nao repete se a legenda ja pede o comentario.
+        28/10/2026: `chamada` da peca (grade) troca a padrao; "" = sem chamada."""
+        if chamada is None:
+            chamada = config.CHAMADA_COMENTE
+            if re.search(r"\bcomente\s+live\b", texto or "", flags=re.I):
+                return texto
+        elif config.CHAMADA_COMENTE == "":
+            chamada = ""   # CHAMADA_COMENTE=0 desliga toda chamada, a da peca tambem
+        if not chamada or chamada.strip()[:40].lower() in (texto or "").lower():
             return texto
         return f"{chamada}\n\n{texto}" if texto else chamada
 
     @staticmethod
-    def legenda_final(legenda, hashtags=""):
+    def legenda_final(legenda, hashtags="", chamada=None):
         """Legenda + hashtags no fim, respeitando os limites do Instagram:
         no maximo 5 hashtags no total (contando as que ja estiverem no texto)
         e 2.200 caracteres."""
         texto = (legenda or "").strip()
-        texto = Instagram.com_chamada(texto)
+        texto = Instagram.com_chamada(texto, chamada)
         ja = re.findall(r"#\w+", texto)
         vaga = max(0, config.HASHTAGS_MAX - len(ja))
         novas = [t for t in (hashtags or "").split() if t.startswith("#") and t not in ja][:vaga]
@@ -230,9 +236,9 @@ class Instagram:
             {"image_url": image_url, "caption": self.legenda_final(legenda, hashtags)},
             "container foto", colaboradores, 10, 4)
 
-    def reel(self, video_url, legenda, hashtags="", capa_url=None, colaboradores=None):
+    def reel(self, video_url, legenda, hashtags="", capa_url=None, colaboradores=None, chamada=None):
         params = {"media_type": "REELS", "video_url": video_url,
-                  "caption": self.legenda_final(legenda, hashtags)}
+                  "caption": self.legenda_final(legenda, hashtags, chamada)}
         if capa_url:
             params["cover_url"] = capa_url
         return self._criar_e_publicar(params, "container reel", colaboradores, 30, 8)

@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-28T20:21:46+00:00",
+  "formato": "story",
+  "descricao": "Qual dia da semana a sua loja vende mais?",
+  "media_id": "18108998462255912",
+  "origem": "casa",
+  "peca": "pergunta:dia-forte",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "lofi-house",
+  "fb": "2476955262795323"
+ },
+ {
   "quando": "2026-10-28T18:38:29+00:00",
   "formato": "feed",
   "descricao": "Sua ótica ao vivo no Moviki",

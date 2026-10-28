@@ -1,0 +1,72 @@
+1
+00:00:05,171 --> 00:00:07,682
+Em Financeiro, abra Cartão de crédito.
+
+2
+00:00:07,722 --> 00:00:11,844
+Aqui o seu cliente passa a poder pagar no cartão, além do Pix.
+
+3
+00:00:13,071 --> 00:00:15,934
+O Pix continua do jeito que você escolheu.
+
+4
+00:00:15,974 --> 00:00:18,700
+O cartão é só uma forma a mais de pagar.
+
+5
+00:00:19,938 --> 00:00:24,119
+Para receber no cartão, conecte uma conta no seu nome.
+
+6
+00:00:24,159 --> 00:00:30,373
+O mais fácil é o Mercado Pago: toque em Conectar, entre na sua conta e autorize.
+
+7
+00:00:31,604 --> 00:00:36,658
+Com a conta conectada, marque Aceitar cartão de crédito na minha vitrine e na live.
+
+8
+00:00:37,904 --> 00:00:42,124
+Escolha em até quantas vezes o cliente pode parcelar.
+
+9
+00:00:42,164 --> 00:00:46,224
+Cada parcela tem um valor mínimo, e o painel avisa.
+
+10
+00:00:47,471 --> 00:00:48,547
+Toque em Salvar.
+
+11
+00:00:48,587 --> 00:00:52,943
+A partir daí, o cartão aparece para o cliente na hora de pagar.
+
+12
+00:00:54,171 --> 00:00:58,441
+Na sua página, o cliente monta o pedido e toca em Fazer pedido.
+
+13
+00:00:59,738 --> 00:01:03,694
+Na hora de pagar, ele escolhe Cartão de crédito e em quantas vezes.
+
+14
+00:01:04,938 --> 00:01:07,995
+Depois, ele digita os dados numa página segura.
+
+15
+00:01:08,035 --> 00:01:10,697
+O número do cartão não passa pelo Moviki.
+
+16
+00:01:11,938 --> 00:01:18,167
+Com o cartão aprovado, o pedido chega pago na sua Central de Pedidos, com a etiqueta do cartão.
+
+17
+00:01:19,404 --> 00:01:24,124
+O dinheiro cai na sua conta, já com a taxa do cartão descontada.
+
+18
+00:01:24,164 --> 00:01:26,652
+O Moviki não cobra nada por venda.
+

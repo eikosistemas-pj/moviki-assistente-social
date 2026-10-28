@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-28-faro-verao"  # antes: 2026-10-28-chamada-faro (grade aceita o video de venda dos Guias FARO)
+VERSAO = "2026-10-28-instagram"  # @ do Instagram e cartela do TikTok: movikiliveshop; antes: 2026-10-28-tiktok-movikiliveshop; 2026-10-28-faro-verao
 
 # Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
 # e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o
@@ -62,7 +62,7 @@ LOGO_PATH = ASSETS_DIR / "logo.png"
 MARCA = "Moviki"
 SITE = "https://moviki.com.br"
 APP = "https://app.moviki.com.br"
-INSTAGRAM = "@moviki.oficial"
+INSTAGRAM = "@movikiliveshop"   # 24/10/2026: era @moviki.oficial (TikTok tambem virou movikiliveshop em 28/10; Facebook segue moviki.oficial)
 COR_PRIMARIA = "#00f2fe"   # mesma cor padrao gravada em negocios.cor
 COR_FUNDO = "#0b1220"
 COR_TEXTO = "#ffffff"

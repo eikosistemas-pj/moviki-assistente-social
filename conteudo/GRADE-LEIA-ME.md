@@ -7,7 +7,7 @@ A grade diz **qual vídeo sai em qual dia**. Sem ela, o reel sai por sorteio ent
 | O quê | Onde |
 |---|---|
 | A grade | `conteudo/grade.json` (este repositório) |
-| O vídeo (já com a proteção anticópia) | **Firebase Storage do Moviki, pasta `material/`** (desde 21/10/2026, preferido: um lugar só para grade, anúncio e Material de apoio) ou release **`acervo`** deste repositório, anexo `<id>.mp4` |
+| O vídeo (já com a proteção anticópia) | **Firebase Storage do Moviki, pasta `material/`** (desde 21/10/2026, preferido: um lugar só para grade, anúncio e Material de apoio) ou release **`acervo`** deste repositório, anexo `<id>.mp4`. **Guias FARO** (28/10/2026): o vídeo de venda pode morar na página de venda do próprio guia, `https://app.moviki.com.br/faro/<guia>/<arquivo>.mp4` (nunca a pasta paga `faro/c/`) |
 | A capa (JPG 1080x1920) | `conteudo/acervo-capas/<id>.jpg` |
 | Cópia limpa (sem proteção) | Google Drive — nunca no GitHub |
 
@@ -30,7 +30,7 @@ O vídeo **não entra no git** (mesma regra do `reels.md`). Endereço no Firebas
 | `repetir_apos_dias` | intervalo mínimo entre duas saídas (padrão 45) |
 | `so_agendado` | `true` = sai só nos dias marcados, nunca no sorteio |
 | `marca` | código da proteção anticópia (registro do Project) |
-| `chamada` | (opcional, 28/10/2026) primeira linha própria da legenda no Instagram, no lugar do "Comente LIVE". Usado pelos **Guias FARO**: "Comente GUIA…". Texto vazio = sem chamada. Só funciona se a palavra existir no ManyChat |
+| `chamada` | (opcional, 28/10/2026) primeira linha própria da legenda no Instagram, no lugar do "Comente LIVE". Usado pelos **Guias FARO** com a palavra do próprio guia ("Comente VERÃO…"; GUIA mostra a lista de todos). Texto vazio = sem chamada. Só funciona se a palavra existir no ManyChat |
 | `cartela` | (opcional) `false` = o reel sai **sem** a cartela falada "Comenta LIVE" no fim. Obrigatório com `chamada` que não fala LIVE (a trava recusa a combinação errada) |
 
 ## Travas (falha fechada)

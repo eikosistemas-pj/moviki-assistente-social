@@ -98,6 +98,16 @@ def validar(item):
             erros.append("sem valido_ate (todo video tem prazo de revisao)")
     except ValueError:
         pass
+    # 28/10/2026 (Guias FARO): chamada propria do video ("Comente GUIA ...")
+    # no lugar do "Comente LIVE", e cartela LIVE desligada por video.
+    if "chamada" in item:
+        ch = item.get("chamada")
+        if not isinstance(ch, str) or len(ch) > 160:
+            erros.append("chamada deve ser texto de ate 160 letras (vazio = sem chamada)")
+        elif ch and re.search(r"\blive\b", ch, flags=re.I) is None and not item.get("cartela") is False:
+            erros.append("chamada propria sem LIVE pede cartela: false (a cartela fala 'Comenta LIVE')")
+    if "cartela" in item and not isinstance(item.get("cartela"), bool):
+        erros.append("cartela deve ser true ou false")
     return erros
 
 
@@ -161,6 +171,8 @@ def peca(item):
         "categoria": item.get("ramo") or "geral", "pilar": item.get("pilar") or "",
         "legenda_ig": ig, "legenda_fb": fb, "criador": None,
         "agendado": list(item.get("dias") or []),
+        "chamada": item["chamada"] if isinstance(item.get("chamada"), str) else None,
+        "cartela": item.get("cartela") is not False,
     }
 
 

@@ -30,6 +30,8 @@ O vídeo **não entra no git** (mesma regra do `reels.md`). Endereço no Firebas
 | `repetir_apos_dias` | intervalo mínimo entre duas saídas (padrão 45) |
 | `so_agendado` | `true` = sai só nos dias marcados, nunca no sorteio |
 | `marca` | código da proteção anticópia (registro do Project) |
+| `chamada` | (opcional, 28/10/2026) primeira linha própria da legenda no Instagram, no lugar do "Comente LIVE". Usado pelos **Guias FARO**: "Comente GUIA…". Texto vazio = sem chamada. Só funciona se a palavra existir no ManyChat |
+| `cartela` | (opcional) `false` = o reel sai **sem** a cartela falada "Comenta LIVE" no fim. Obrigatório com `chamada` que não fala LIVE (a trava recusa a combinação errada) |
 
 ## Travas (falha fechada)
 

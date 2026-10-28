@@ -358,7 +358,7 @@ def publicar(peca, hashtags=""):
     if config.DRY_RUN:
         if formato == "reel" and no_ig:
             from . import cartela
-            local, _ = cartela.reel_com_cartela(url)   # ensaio: monta e nao sobe
+            local, _ = cartela.reel_com_cartela(url) if peca.get("cartela", True) else (None, None)   # ensaio: monta e nao sobe
             print(f"DRY_RUN: reel com cartela em {local}" if local else "DRY_RUN: sem cartela")
         print("DRY_RUN ligado -> nada foi publicado.")
         return None
@@ -415,11 +415,12 @@ def _reel_instagram(ig, peca, url, leg_ig, hashtags):
     """Reel no Instagram com a cartela "Comente LIVE" no fim (src/cartela.py).
     Cartela falhou em qualquer ponto -> o reel original, como antes."""
     from . import cartela
-    url_c, asset = cartela.reel_com_cartela(url)
+    ch = peca.get("chamada")   # 28/10/2026: chamada propria (Guias FARO); None = padrao
+    url_c, asset = cartela.reel_com_cartela(url) if peca.get("cartela", True) else (None, None)
     if url_c:
         try:
             mid = ig.reel(url_c, leg_ig, hashtags, capa_url=peca.get("capa"),
-                          colaboradores=colaboradores(peca))
+                          colaboradores=colaboradores(peca), chamada=ch)
             print("cartela: reel publicado com a cartela 'Comente LIVE'")
             return mid
         except Exception as e:  # noqa: BLE001
@@ -427,7 +428,7 @@ def _reel_instagram(ig, peca, url, leg_ig, hashtags):
         finally:
             cartela.apagar(asset)
     return ig.reel(url, leg_ig, hashtags, capa_url=peca.get("capa"),
-                   colaboradores=colaboradores(peca))
+                   colaboradores=colaboradores(peca), chamada=ch)
 
 
 def _story_cartela(ig):

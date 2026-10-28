@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-10-28T01:48:10+00:00",
+  "formato": "reel",
+  "descricao": "Black Friday ao vivo: sem carrinho, sem checkout.",
+  "media_id": "18207885961373164",
+  "origem": "casa",
+  "peca": "grade:bf-sem-checkout",
+  "rede": "instagram",
+  "ramo": "geral",
+  "grade": true,
+  "pilar": "serie-live",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/bf-sem-checkout.jpg",
+  "fb": "1642447793956679"
+ },
+ {
   "quando": "2026-10-28T00:40:52+00:00",
   "formato": "feed",
   "descricao": "Black Friday ao vivo: uma resposta para todas",

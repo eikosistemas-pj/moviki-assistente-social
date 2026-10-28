@@ -1,5 +1,22 @@
 [
  {
+  "quando": "2026-10-28T00:06:13+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: ensaie antes",
+  "media_id": "17882089290547343",
+  "origem": "casa",
+  "peca": "video:bf-ensaio",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/bf-ensaio.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "tema": "black-friday",
+  "corte": "0.0-9.0",
+  "fb": "2038722823354085"
+ },
+ {
   "quando": "2026-10-27T20:55:46+00:00",
   "formato": "reel",
   "descricao": "Foto não tem cheiro. Na live, o cliente pergunta e compra na hora.",

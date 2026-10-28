@@ -52,6 +52,15 @@ def test_video_no_firebase_fora_de_material_barra():
         assert grade.validar(item(video=url)) != [], url
 
 
+def test_video_de_venda_do_guia_faro_vale_e_pasta_paga_barra():
+    ok = "https://app.moviki.com.br/faro/verao-na-praia/reel-comente-verao.mp4"
+    assert grade.validar(item(video=ok)) == []
+    for url in ("https://app.moviki.com.br/faro/c/08d5f23d143801d628c449f35a1c556a/boas-vindas.mp4",
+                "https://app.moviki.com.br/index.mp4",
+                "https://app.moviki.com.br/faro/verao-na-praia/x.mp4?t=1"):
+        assert grade.validar(item(video=url)) != [], url
+
+
 def test_sem_valido_ate_barra():
     e = grade.validar(item(valido_ate=None))
     assert any("valido_ate" in x for x in e)

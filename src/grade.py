@@ -13,6 +13,9 @@ ONDE MORA
   video                -> asset da release `acervo` deste repo (fora do git) OU,
                           desde 21/10/2026, o Firebase Storage do Moviki, pasta
                           material/ (leitura publica; o Paulo sobe tudo num lugar so)
+                          OU, desde 28/10/2026, so para os Guias FARO, a pagina de
+                          venda do guia em app.moviki.com.br/faro/<guia>/ (nunca a
+                          pasta paga faro/c/)
   capa                 -> conteudo/acervo-capas/<id>.jpg (raw do GitHub:
                           a Meta aceita e o painel do dono mostra)
 
@@ -42,7 +45,11 @@ FORMATOS = ("reel",)                       # por enquanto so video 9:16 no reel
 CANAIS = ("instagram", "facebook")         # onde o robo publica
 REPETIR_PADRAO = 45                        # dias entre duas saidas do mesmo video
 URL_VIDEO = re.compile(r"^(https://github\.com/eikosistemas-pj/moviki-assistente-social/releases/download/acervo/[a-z0-9-]+\.mp4"
-                       r"|https://firebasestorage\.googleapis\.com/v0/b/moviki-app\.firebasestorage\.app/o/material%2F[a-z0-9-]+\.mp4\?alt=media)$")
+                       r"|https://firebasestorage\.googleapis\.com/v0/b/moviki-app\.firebasestorage\.app/o/material%2F[a-z0-9-]+\.mp4\?alt=media"
+                       # 28/10/2026: video de venda dos Guias FARO, publico na pagina de venda do
+                       # proprio guia (app.moviki.com.br/faro/<guia>/). Uma pasta so: o conteudo
+                       # pago (faro/c/<hash>/) nunca casa com este padrao.
+                       r"|https://app\.moviki\.com\.br/faro/[a-z0-9-]+/[a-z0-9-]+\.mp4)$")
 URL_CAPA = re.compile(r"^https://raw\.githubusercontent\.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/[a-z0-9-]+\.jpg$")
 ID_OK = re.compile(r"^[a-z0-9][a-z0-9-]{2,79}$")
 

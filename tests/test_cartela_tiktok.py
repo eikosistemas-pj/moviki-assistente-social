@@ -15,7 +15,7 @@ def test_imagem_e_voz_do_tiktok():
 
 def test_textos_do_tiktok_passam_na_trava():
     for t in (config.CHAMADA_TIKTOK,
-              "Mande LIVE no direct do @moviki.oficial e eu te mando o link de uma live de exemplo."):
+              "Mande LIVE no direct do @movikiliveshop e eu te mando o link de uma live de exemplo."):
         assert t and compliance.violacoes(t) == []
 
 

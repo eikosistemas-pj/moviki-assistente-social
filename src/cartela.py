@@ -112,7 +112,7 @@ def imagem(modo="reel", semente=None, titulo=None):
         y += f_dir.size + 34
 
     if modo == "tiktok":
-        sub = "Mande LIVE no direct do @moviki.oficial e eu te mando o link de uma live de exemplo."
+        sub = "Mande LIVE no direct do @movikiliveshop e eu te mando o link de uma live de exemplo."
         larg_sub = larg - 120     # o TikTok tambem tem coluna de botoes na direita
     elif modo == "reel":
         sub = "Escreva LIVE nos comentários e eu te mando no direct o link de uma live de exemplo do seu ramo."

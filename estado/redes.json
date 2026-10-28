@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-28T06:48:50+00:00",
+ "gerado": "2026-10-28T17:07:57+00:00",
  "versao": "2026-10-23-story-pergunta",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1987,
+   "seguidores": 1989,
    "posts": 67,
    "cota_usada": 7,
    "cota_total": 100
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
+  "reel": "2026-10-05",
   "feed": null,
-  "reel": "2026-10-05"
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -176,7 +176,7 @@
     },
     "reel": {
      "posts": 14,
-     "curtidas": 121,
+     "curtidas": 108,
      "comentarios": 0
     },
     "feed": {
@@ -206,24 +206,24 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 60,
+     "posts": 61,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
      "posts": 26,
-     "curtidas": 125,
+     "curtidas": 112,
      "comentarios": 3
     },
     "feed": {
-     "posts": 21,
-     "curtidas": 14,
+     "posts": 20,
+     "curtidas": 13,
      "comentarios": 0
     }
    },
    "fb": {
     "story": {
-     "posts": 87,
+     "posts": 88,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-28T16:57:36+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Black Friday ao vivo: presente se escolhe de perto",
+   "peca": "video:bf-presente",
+   "ramo": "geral",
+   "miniatura": "https://app.moviki.com.br/material/capas/bf-presente.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18109815977245177",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4018030720936230686",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "4051007748541125"
+   }
+  },
   {
    "quando": "2026-10-28T02:40:49+00:00",
    "formato": "story",
@@ -404,10 +427,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18102136916561654",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4017282162134362841",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18102136916561654"
    },
    "fb": {
     "id": "1128479699709802"
@@ -449,7 +469,7 @@
    "ig": {
     "id": "18126487036911500",
     "link": "https://www.instagram.com/reel/De-srOQigK3/",
-    "curtidas": 36,
+    "curtidas": 31,
     "comentarios": 0
    },
    "fb": {
@@ -495,7 +515,7 @@
    "ig": {
     "id": "17940806226369092",
     "link": "https://www.instagram.com/reel/De-NI_NE0AV/",
-    "curtidas": 38,
+    "curtidas": 36,
     "comentarios": 0
    },
    "fb": {
@@ -654,7 +674,7 @@
    "ig": {
     "id": "18035960891849039",
     "link": "https://www.instagram.com/reel/De7bH4GAoil/",
-    "curtidas": 46,
+    "curtidas": 40,
     "comentarios": 0
    },
    "fb": {
@@ -3173,26 +3193,6 @@
    "fb": {
     "id": "1252553337031938"
    }
-  },
-  {
-   "quando": "2026-09-28T16:47:10+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "peca",
-   "titulo": "Atenda ao vivo com o Moviki",
-   "peca": "feed-farmacia-atenda-ao-vivo",
-   "ramo": "farmacia",
-   "miniatura": "https://app.moviki.com.br/material/feed/feed-farmacia-atenda-ao-vivo.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18116816707860359",
-    "link": "https://www.instagram.com/p/Dd1pcUNl0pR/",
-    "curtidas": 1,
-    "comentarios": 0
-   }
   }
  ],
  "seguidores_hist": [
@@ -3378,31 +3378,31 @@
   },
   {
    "dia": "2026-10-28",
-   "ig": 1987,
+   "ig": 1989,
    "ig_posts": 67,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1987,
-  "ganho_7d": 12,
+  "atual": 1989,
+  "ganho_7d": 14,
   "desde_7d": "2026-10-21",
-  "ganho_30d": -310,
+  "ganho_30d": -308,
   "desde_30d": "2026-09-28",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3013,
+    "falta": 3011,
     "dias": 0,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8013,
+    "falta": 8011,
     "dias": 60,
-    "por_dia": 133.6
+    "por_dia": 133.5
    }
   ]
  },

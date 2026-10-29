@@ -1,5 +1,5 @@
 {
- "versao": "2026-10-28-faro-verao",
+ "versao": "2026-10-29-faro-natal",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -603,6 +603,28 @@
    "repetir_apos_dias": 10,
    "marca": "",
    "obs": "Guia FARO Verão (28/10/2026). Só Instagram: a palavra VERÃO dispara a automação 'Guia FARO VERAO' do ManyChat, que não está no Facebook. A cartela falada 'Comenta VERÃO' já vem colada no vídeo; cartela LIVE desligada. Reconferir em 31/12: preço e o que o guia traz."
+  },
+  {
+   "id": "faro-natal-comente",
+   "formato": "reel",
+   "pilar": "faro",
+   "ramo": "confeitaria",
+   "titulo": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
+   "video": "https://app.moviki.com.br/faro/natal-por-encomenda/reel-comente-natal.mp4",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
+   "legenda": "Vai vender doce, panetone ou prato da ceia por encomenda neste Natal? 🎄\n\nO Guia FARO mostra a ordem certa: o cardápio que dá para fazer em lote, a lei e o rótulo, o preço com o seu tempo na conta, quantas encomendas você aguenta, o sinal no Pix e a entrega sem correria.\n\nLeitura no celular, PDF, audiobook e checklist. Você tem 7 dias para desistir se não servir.",
+   "chamada": "💬 Comente NATAL que eu te mando no direct o link do Guia FARO.",
+   "cartela": false,
+   "tipo_pauta": "conversao",
+   "canais": ["instagram"],
+   "vende_live": false,
+   "dias": ["2026-11-01", "2026-11-08", "2026-11-15", "2026-11-22"],
+   "a_partir_de": "2026-10-30",
+   "valido_ate": "2026-12-15",
+   "reconferir_em": "2026-12-10",
+   "repetir_apos_dias": 7,
+   "marca": "",
+   "obs": "Guia FARO Natal (29/10/2026). Só Instagram: a palavra NATAL dispara a automação 'Guia FARO NATAL' do ManyChat (com a lista 'não contém' para Feliz Natal), que não está no Facebook. Cartela 'Comente NATAL' (sem voz) colada no fim do vídeo; cartela LIVE desligada. Para de sair em 15/12, fim da venda do guia."
   }
  ]
 }

@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-29T06:58:23+00:00",
+ "gerado": "2026-10-29T17:23:30+00:00",
  "versao": "2026-10-28-instagram",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1996,
+   "seguidores": 1997,
    "posts": 70,
    "cota_usada": 7,
    "cota_total": 100
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
+  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12",
-  "feed": null
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -176,7 +176,7 @@
     },
     "reel": {
      "posts": 14,
-     "curtidas": 94,
+     "curtidas": 92,
      "comentarios": 0
     },
     "feed": {
@@ -206,13 +206,13 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 64,
+     "posts": 65,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
      "posts": 28,
-     "curtidas": 98,
+     "curtidas": 96,
      "comentarios": 3
     },
     "feed": {
@@ -223,7 +223,7 @@
    },
    "fb": {
     "story": {
-     "posts": 89,
+     "posts": 90,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-29T17:13:30+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "geral",
+   "miniatura": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/criadores%2FzEi14ouOAFUSeWb0dgeYEB7trCc2%2F1790130022508-67rt01.png?alt=media&token=05c3a960-112f-4b61-9796-cc757def2957",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18415885186094651",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4018763482144712090",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1123951293728011"
+   }
+  },
   {
    "quando": "2026-10-29T02:58:19+00:00",
    "formato": "story",
@@ -404,10 +427,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18109815977245177",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4018030720936230686",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18109815977245177"
    },
    "fb": {
     "id": "4051007748541125"
@@ -608,7 +628,7 @@
    "ig": {
     "id": "18126487036911500",
     "link": "https://www.instagram.com/reel/De-srOQigK3/",
-    "curtidas": 30,
+    "curtidas": 29,
     "comentarios": 0
    },
    "fb": {
@@ -813,7 +833,7 @@
    "ig": {
     "id": "18035960891849039",
     "link": "https://www.instagram.com/reel/De7bH4GAoil/",
-    "curtidas": 33,
+    "curtidas": 32,
     "comentarios": 0
    },
    "fb": {
@@ -3462,31 +3482,31 @@
   },
   {
    "dia": "2026-10-29",
-   "ig": 1996,
+   "ig": 1997,
    "ig_posts": 70,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1996,
-  "ganho_7d": 15,
+  "atual": 1997,
+  "ganho_7d": 16,
   "desde_7d": "2026-10-22",
-  "ganho_30d": -300,
+  "ganho_30d": -299,
   "desde_30d": "2026-09-29",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3004,
+    "falta": 3003,
     "dias": -1,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8004,
+    "falta": 8003,
     "dias": 59,
-    "por_dia": 135.7
+    "por_dia": 135.6
    }
   ]
  },

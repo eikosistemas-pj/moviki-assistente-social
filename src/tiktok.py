@@ -113,6 +113,42 @@ def kit(videos, hoje, agenda):
     return saida
 
 
+def legenda_grade(item, dia):
+    """Legenda do TikTok para video da grade (Guias FARO): a chamada do direct
+    com a palavra do proprio guia abre a legenda (o 'Mande LIVE' nao entra)."""
+    palavra = item["tiktok"]["palavra"]
+    chamada = f"\U0001f4e9 Mande {palavra} no direct que eu te mando o link do Guia FARO."
+    base = str(item.get("legenda") or "").strip()
+    reserva = f"{str(item.get('titulo') or 'Guia FARO').strip().rstrip('.')}."
+    texto = compliance.garantir(f"{chamada}\n\n{base}", f"{chamada}\n\n{reserva}")
+    tags = conteudo.hashtags("conversao", item.get("ramo"), dia)
+    return f"{texto}\n\n{tags}".strip(), tags
+
+
+def com_grade(dias, hoje, itens_do_dia=None):
+    """Troca o video do Material de apoio pelo da grade nos dias em que um Guia
+    FARO tem versao TikTok marcada. Esse video ja traz o proprio fim
+    ('Mande <PALAVRA> no direct'), entao nao ganha a cartela 'Mande LIVE'."""
+    from . import grade
+    itens_do_dia = itens_do_dia or grade.tiktok_do_dia
+    por_dia = {d["dia"]: d for d in dias}
+    for n in range(DIAS):
+        dia = hoje + timedelta(days=n)
+        achados = itens_do_dia(dia)
+        if not achados:
+            continue
+        it = achados[0]
+        texto, tags = legenda_grade(it, dia)
+        por_dia[dia.isoformat()] = {
+            "dia": dia.isoformat(), "hoje": n == 0, "id": "grade:" + it["id"],
+            "titulo": it.get("titulo", ""), "ramo": it.get("ramo", ""),
+            "video": it["tiktok"]["video"], "capa": it.get("capa") or "",
+            "duracao": None, "legenda": texto, "hashtags": tags,
+            "sem_cartela": True, "palavra": it["tiktok"]["palavra"],
+        }
+    return [por_dia[k] for k in sorted(por_dia)]
+
+
 def atualizar(videos, hoje):
     """Le a agenda salva, completa os 7 dias, grava e devolve o bloco do relatorio."""
     salvo = estado.ler_lista(ARQUIVO)
@@ -120,6 +156,10 @@ def atualizar(videos, hoje):
     agenda = planejar(videos, hoje, salvo.get("agenda"))
     estado.gravar_lista(ARQUIVO, {"agenda": agenda})
     dias = kit(videos, hoje, agenda)
+    try:
+        dias = com_grade(dias, hoje)
+    except Exception as e:  # noqa: BLE001
+        print(f"kit tiktok: grade fora ({str(e)[:120]}) -> so o Material de apoio.")
     try:
         from . import cartela
         dias = cartela.kit_tiktok(dias, hoje.isoformat())

@@ -366,6 +366,8 @@ def kit_tiktok(dias, hoje_iso, novos=None):
         return dias
     querer = set()
     for d in sorted(dias, key=lambda x: (not x.get("hoje"), x.get("dia", ""))):
+        if d.get("sem_cartela"):      # 29/10/2026: video da grade (Guia FARO) ja tem o proprio fim
+            continue
         nome = nome_tiktok(d["dia"], d["id"])
         querer.add(nome)
         a = existentes.get(nome)

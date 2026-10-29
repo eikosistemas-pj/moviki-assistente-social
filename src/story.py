@@ -149,6 +149,11 @@ def videos_da_casa():
         for it in itens:
             if it.get("formato") != "reel" or not it.get("video"):
                 continue
+            # 29/10/2026: reel com palavra propria (Guias FARO: "Comente NATAL") nao vira
+            # corte de story: o story ganha "Responda LIVE" (outro funil) e o quadro
+            # "COMENTE" do video nao funciona em story (story nao tem comentario).
+            if it.get("cartela") is False:
+                continue
             if grade.situacao(it, hoje) != "ok" or grade.vende_live_bloqueado(it):
                 continue
             if not grade.ultima_saida(grade.PREFIXO + it["id"]):

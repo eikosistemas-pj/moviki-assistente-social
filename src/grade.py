@@ -115,7 +115,39 @@ def validar(item):
             erros.append("chamada propria sem LIVE pede cartela: false (a cartela fala 'Comenta LIVE')")
     if "cartela" in item and not isinstance(item.get("cartela"), bool):
         erros.append("cartela deve ser true ou false")
+    # 29/10/2026 (Guias FARO): versao para o Kit TikTok do dia. O TikTok nao tem
+    # gatilho de comentario no Brasil: o video pede "Mande <PALAVRA> no direct".
+    if "tiktok" in item:
+        tt = item.get("tiktok")
+        if not isinstance(tt, dict):
+            erros.append("tiktok deve ser {video, palavra, dias}")
+        else:
+            if not URL_VIDEO.match(str(tt.get("video") or "")):
+                erros.append("tiktok.video fora do acervo")
+            if not re.match(r"^[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{3,12}$", str(tt.get("palavra") or "")):
+                erros.append("tiktok.palavra deve ser uma palavra em maiusculas")
+            if not tt.get("dias"):
+                erros.append("tiktok.dias vazio")
+            for d in tt.get("dias") or []:
+                try:
+                    _data(d)
+                except ValueError:
+                    erros.append(f"tiktok.dia {d!r} mal escrito")
     return erros
+
+
+def tiktok_do_dia(dia, dados=None):
+    """Itens da grade com versao TikTok marcada para `dia` (date). So item valido e no prazo."""
+    itens, _ = validos(dados)
+    saida = []
+    for it in itens:
+        tt = it.get("tiktok")
+        if not tt or dia.isoformat() not in (tt.get("dias") or []):
+            continue
+        if situacao(it, dia) != "ok":
+            continue
+        saida.append(it)
+    return saida
 
 
 def situacao(item, hoje):

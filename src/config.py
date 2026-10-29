@@ -18,7 +18,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-28-instagram"  # @ do Instagram e cartela do TikTok: movikiliveshop; antes: 2026-10-28-tiktok-movikiliveshop; 2026-10-28-faro-verao
+VERSAO = "2026-10-29-faro-tiktok"  # Kit TikTok com os Guias FARO; antes: 2026-10-28-instagram; @ do Instagram e cartela do TikTok: movikiliveshop; antes: 2026-10-28-tiktok-movikiliveshop; 2026-10-28-faro-verao
 
 # Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
 # e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o

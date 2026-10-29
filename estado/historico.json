@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-10-29T02:58:19+00:00",
+  "formato": "story",
+  "descricao": "Bijuteria: venda ao vivo pelo celular",
+  "media_id": "18121150513956256",
+  "origem": "casa",
+  "peca": "video:video-comercio-bijuteria",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-bijuteria.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "tech-energia",
+  "corte": "0.0-15.8",
+  "fb": "2112798402661886"
+ },
+ {
   "quando": "2026-10-29T02:03:24+00:00",
   "formato": "reel",
   "descricao": "Loja de brinquedos: venda ao vivo pelo celular",

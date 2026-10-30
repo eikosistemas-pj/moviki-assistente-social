@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-30T19:50:35+00:00",
+  "formato": "feed",
+  "descricao": "Sua ótica ao vivo, com pedido organizado",
+  "media_id": "18107303105262157",
+  "origem": "casa",
+  "peca": "feed-otica-no-moviki",
+  "rede": "instagram",
+  "ramo": "otica",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261030-195011.jpg",
+  "fb": "1312620718595159_122123845695430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-30T16:53:03+00:00",
   "formato": "story",
   "descricao": "Acessórios de celular: venda ao vivo pelo celular",

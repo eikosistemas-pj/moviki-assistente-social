@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-30T07:01:26+00:00",
+ "gerado": "2026-10-30T16:59:21+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1996,
    "posts": 73,
-   "cota_usada": 7,
+   "cota_usada": 8,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
+  "feed": null,
   "story": "2026-10-12",
-  "feed": null
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -176,12 +176,12 @@
     },
     "reel": {
      "posts": 14,
-     "curtidas": 87,
+     "curtidas": 83,
      "comentarios": 0
     },
     "feed": {
      "posts": 5,
-     "curtidas": 1,
+     "curtidas": 2,
      "comentarios": 0
     }
    },
@@ -206,24 +206,24 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 68,
+     "posts": 69,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
      "posts": 30,
-     "curtidas": 92,
+     "curtidas": 88,
      "comentarios": 3
     },
     "feed": {
      "posts": 20,
-     "curtidas": 10,
+     "curtidas": 11,
      "comentarios": 0
     }
    },
    "fb": {
     "story": {
-     "posts": 91,
+     "posts": 92,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-30T16:53:03+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Acessórios de celular: venda ao vivo pelo celular",
+   "peca": "video:video-comercio-acessorios-celular",
+   "ramo": "eletronicos",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-acessorios-celular.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18119593493044121",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4019478034378180130",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2540818593082731"
+   }
+  },
   {
    "quando": "2026-10-30T02:57:03+00:00",
    "formato": "story",
@@ -307,7 +330,7 @@
    "ig": {
     "id": "18122978846292642",
     "link": "https://www.instagram.com/p/DfGYd8yDHwb/",
-    "curtidas": 0,
+    "curtidas": 1,
     "comentarios": 0
    },
    "fb": {
@@ -404,10 +427,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18415885186094651",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4018763482144712090",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18415885186094651"
    },
    "fb": {
     "id": "1123951293728011"
@@ -767,7 +787,7 @@
    "ig": {
     "id": "18126487036911500",
     "link": "https://www.instagram.com/reel/De-srOQigK3/",
-    "curtidas": 27,
+    "curtidas": 26,
     "comentarios": 0
    },
    "fb": {
@@ -813,7 +833,7 @@
    "ig": {
     "id": "17940806226369092",
     "link": "https://www.instagram.com/reel/De-NI_NE0AV/",
-    "curtidas": 28,
+    "curtidas": 27,
     "comentarios": 0
    },
    "fb": {
@@ -972,7 +992,7 @@
    "ig": {
     "id": "18035960891849039",
     "link": "https://www.instagram.com/reel/De7bH4GAoil/",
-    "curtidas": 31,
+    "curtidas": 29,
     "comentarios": 0
    },
    "fb": {

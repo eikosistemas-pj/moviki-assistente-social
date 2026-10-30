@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-10-30T01:17:22+00:00",
+  "formato": "feed",
+  "descricao": "Black Friday ao vivo: do seu celular",
+  "media_id": "18122978846292642",
+  "origem": "casa",
+  "peca": "bf-do-celular-feed",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261030-011707.jpg",
+  "fb": "1312620718595159_122123740935430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-10-30T00:16:43+00:00",
   "formato": "story",
   "descricao": "Black Friday ao vivo: bijuteria (bastidores)",

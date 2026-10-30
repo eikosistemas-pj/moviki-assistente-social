@@ -317,6 +317,18 @@
    "capa": true,
    "na_playlist": true,
    "robo": "2026-10-22-youtube"
+  },
+  "bf-do-celular": {
+   "yt": "4_8heVSEhdw",
+   "quando": "2026-10-30T19:41:31+00:00",
+   "visibilidade": "private",
+   "titulo": "Live de vendas do celular, sem estúdio e sem seguidores | Black Friday | Moviki",
+   "comentario": "O que você precisa (e o que não precisa) para fazer live de vendas: https://www.moviki.com.br/guia/equipamento-para-live\nTeste grátis de 30 dias, sem cartão.",
+   "playlist": "PLCJc5gL33i04",
+   "origem": "grade",
+   "capa": true,
+   "na_playlist": true,
+   "robo": "2026-10-22-youtube"
   }
  }
 }

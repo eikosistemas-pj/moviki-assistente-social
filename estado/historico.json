@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-10-30T20:02:25+00:00",
+  "formato": "story",
+  "descricao": "O que o cliente mais pergunta?",
+  "media_id": "18417107452085266",
+  "origem": "casa",
+  "peca": "pergunta:pergunta-repetida",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "1810118316683914"
+ },
+ {
   "quando": "2026-10-30T19:50:35+00:00",
   "formato": "feed",
   "descricao": "Sua ótica ao vivo, com pedido organizado",

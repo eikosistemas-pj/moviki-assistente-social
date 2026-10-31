@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-10-31T20:07:06+00:00",
+  "formato": "reel",
+  "descricao": "Black Friday ao vivo: Pix dentro da live.",
+  "media_id": "17975538003171976",
+  "origem": "casa",
+  "peca": "grade:bf-pix",
+  "rede": "instagram",
+  "ramo": "geral",
+  "grade": true,
+  "pilar": "serie-live",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/bf-pix.jpg",
+  "fb": "2151990412375952"
+ },
+ {
   "quando": "2026-10-31T19:18:46+00:00",
   "formato": "story",
   "descricao": "Black Friday ao vivo: brechó (bastidores)",

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-31T06:55:54+00:00",
+ "gerado": "2026-10-31T16:01:42+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1996,
    "posts": 76,
-   "cota_usada": 7,
+   "cota_usada": 8,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
+  "story": "2026-10-12",
   "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -176,7 +176,7 @@
     },
     "reel": {
      "posts": 14,
-     "curtidas": 82,
+     "curtidas": 81,
      "comentarios": 2
     },
     "feed": {
@@ -206,13 +206,13 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 72,
+     "posts": 73,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
      "posts": 32,
-     "curtidas": 87,
+     "curtidas": 86,
      "comentarios": 5
     },
     "feed": {
@@ -223,7 +223,7 @@
    },
    "fb": {
     "story": {
-     "posts": 93,
+     "posts": 94,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-10-31T15:54:00+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Sua pizzaria vende ao vivo no mapa",
+   "peca": "story-pizzaria-ao-vivo",
+   "ramo": "alimentacao",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-pizzaria-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18090017465689339",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4020173114352169011",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2203459510203907"
+   }
+  },
   {
    "quando": "2026-10-31T02:45:37+00:00",
    "formato": "story",
@@ -404,10 +427,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18119593493044121",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4019478034378180130",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18119593493044121"
    },
    "fb": {
     "id": "2540818593082731"
@@ -926,7 +946,7 @@
    "ig": {
     "id": "18126487036911500",
     "link": "https://www.instagram.com/reel/De-srOQigK3/",
-    "curtidas": 24,
+    "curtidas": 23,
     "comentarios": 0
    },
    "fb": {

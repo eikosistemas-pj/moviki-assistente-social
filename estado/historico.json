@@ -1,5 +1,22 @@
 [
  {
+  "quando": "2026-10-31T02:45:37+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: boutique (bastidores)",
+  "media_id": "18135880330663480",
+  "origem": "casa",
+  "peca": "video:ugc-bastidores-bf-boutique",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://app.moviki.com.br/material/capas/ugc-bastidores-bf-boutique.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "bossa-moderna",
+  "tema": "black-friday",
+  "corte": "0.0-10.2",
+  "fb": "2543155046095714"
+ },
+ {
   "quando": "2026-10-31T01:54:56+00:00",
   "formato": "reel",
   "descricao": "Black Friday ao vivo: bijuteria (bastidores)",

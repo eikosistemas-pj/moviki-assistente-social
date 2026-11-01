@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-01T19:48:46+00:00",
+  "formato": "story",
+  "descricao": "Seu pet shop vende ao vivo no mapa",
+  "media_id": "18341325190279335",
+  "origem": "casa",
+  "peca": "story-petshop-ao-vivo",
+  "rede": "instagram",
+  "ramo": "pet",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-petshop-ao-vivo.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "bossa-moderna",
+  "fb": "1096853009728652"
+ },
+ {
   "quando": "2026-11-01T16:58:45+00:00",
   "formato": "story",
   "descricao": "Black Friday ao vivo: Pix dentro da live",

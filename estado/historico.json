@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-01T20:46:49+00:00",
+  "formato": "reel",
+  "descricao": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
+  "media_id": "18127658756488335",
+  "origem": "casa",
+  "peca": "grade:faro-natal-comente",
+  "rede": "instagram",
+  "ramo": "confeitaria",
+  "grade": true,
+  "pilar": "faro",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
+  "fb": "1478204547519035"
+ },
+ {
   "quando": "2026-11-01T19:48:46+00:00",
   "formato": "story",
   "descricao": "Seu pet shop vende ao vivo no mapa",

@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-01T02:37:27+00:00",
+  "formato": "story",
+  "descricao": "Checklist do balcão de live",
+  "media_id": "18023928281927162",
+  "origem": "casa",
+  "peca": "balcao-de-live-checklist-story",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/stories/balcao-de-live-checklist-story.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "1907465643967284"
+ },
+ {
   "quando": "2026-11-01T01:31:32+00:00",
   "formato": "reel",
   "descricao": "Açaí e lanchonete: venda ao vivo pelo celular",

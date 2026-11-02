@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-02T02:52:55+00:00",
+  "formato": "story",
+  "descricao": "Loja de brinquedos: venda ao vivo pelo celular",
+  "media_id": "18113959990894048",
+  "origem": "casa",
+  "peca": "video:video-comercio-brinquedos",
+  "rede": "instagram",
+  "ramo": "infantil",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-brinquedos.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "lofi-house",
+  "corte": "0.0-14.2",
+  "fb": "1658206275704424"
+ },
+ {
   "quando": "2026-11-02T01:49:42+00:00",
   "formato": "reel",
   "descricao": "Autopeças: venda ao vivo pelo celular",

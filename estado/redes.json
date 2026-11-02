@@ -1,11 +1,11 @@
 {
- "gerado": "2026-11-01T17:05:17+00:00",
+ "gerado": "2026-11-02T07:36:38+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1999,
-   "posts": 78,
+   "seguidores": 1927,
+   "posts": 80,
    "cota_usada": 6,
    "cota_total": 100
   },
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "reel": "2026-10-05",
-  "feed": null,
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -37,22 +37,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-10-25",
-   "hoje": false,
-   "feed": {
-    "esperado": 0,
-    "feito": 0
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 4
-   },
-   "reel": {
-    "esperado": 2,
-    "feito": 2
-   }
-  },
   {
    "dia": "2026-10-26",
    "hoje": false,
@@ -151,14 +135,30 @@
   },
   {
    "dia": "2026-11-01",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 0,
     "feito": 0
    },
    "story": {
     "esperado": 2,
-    "feito": 1
+    "feito": 4
+   },
+   "reel": {
+    "esperado": 2,
+    "feito": 2
+   }
+  },
+  {
+   "dia": "2026-11-02",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
+    "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 0
    },
    "reel": {
     "esperado": 2,
@@ -176,7 +176,7 @@
     },
     "reel": {
      "posts": 14,
-     "curtidas": 77,
+     "curtidas": 49,
      "comentarios": 2
     },
     "feed": {
@@ -206,34 +206,34 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 77,
+     "posts": 80,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
-     "posts": 34,
-     "curtidas": 82,
+     "posts": 36,
+     "curtidas": 77,
      "comentarios": 5
     },
     "feed": {
-     "posts": 19,
+     "posts": 18,
      "curtidas": 11,
      "comentarios": 0
     }
    },
    "fb": {
     "story": {
-     "posts": 96,
+     "posts": 97,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
-     "posts": 35,
+     "posts": 37,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 20,
+     "posts": 19,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -242,6 +242,127 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-02T02:52:55+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Loja de brinquedos: venda ao vivo pelo celular",
+   "peca": "video:video-comercio-brinquedos",
+   "ramo": "infantil",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-brinquedos.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18113959990894048",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4021229449488097812",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1658206275704424"
+   }
+  },
+  {
+   "quando": "2026-11-02T01:49:42+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Autopeças: venda ao vivo pelo celular",
+   "peca": "video-comercio-autopecas",
+   "ramo": "automotivo",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-autopecas.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18109626878218776",
+    "link": "https://www.instagram.com/reel/DfOKe7LjZ2v/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "973984315404241",
+    "link": "https://www.facebook.com/reel/973984315404241/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-11-01T23:53:43+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Você tem tripé para o celular?",
+   "peca": "pergunta:tripe",
+   "ramo": "geral",
+   "miniatura": "",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18352364248280979",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4021139263764340283",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1140200635175545"
+   }
+  },
+  {
+   "quando": "2026-11-01T20:46:49+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
+   "peca": "grade:faro-natal-comente",
+   "ramo": "confeitaria",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18127658756488335",
+    "link": "https://www.instagram.com/reel/DfNnxcfE_Ga/",
+    "curtidas": 1,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1478204547519035",
+    "link": "https://www.facebook.com/reel/1478204547519035/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-11-01T19:48:46+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Seu pet shop vende ao vivo no mapa",
+   "peca": "story-petshop-ao-vivo",
+   "ramo": "pet",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-petshop-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18341325190279335",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4021015997800412402",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1096853009728652"
+   }
+  },
   {
    "quando": "2026-11-01T16:58:45+00:00",
    "formato": "story",
@@ -279,10 +400,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18023928281927162",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4020496950481736071",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18023928281927162"
    },
    "fb": {
     "id": "1907465643967284"
@@ -328,10 +446,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18117714749011176",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4020409937171796640",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18117714749011176"
    },
    "fb": {
     "id": "2343469116408942"
@@ -377,10 +492,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18110357678617775",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4020276047152514573",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18110357678617775"
    },
    "fb": {
     "id": "1108712148414772"
@@ -1078,7 +1190,7 @@
    "ig": {
     "id": "18126487036911500",
     "link": "https://www.instagram.com/reel/De-srOQigK3/",
-    "curtidas": 22,
+    "curtidas": 21,
     "comentarios": 0
    },
    "fb": {
@@ -1124,7 +1236,7 @@
    "ig": {
     "id": "17940806226369092",
     "link": "https://www.instagram.com/reel/De-NI_NE0AV/",
-    "curtidas": 24,
+    "curtidas": 23,
     "comentarios": 0
    },
    "fb": {
@@ -1283,7 +1395,7 @@
    "ig": {
     "id": "18035960891849039",
     "link": "https://www.instagram.com/reel/De7bH4GAoil/",
-    "curtidas": 27,
+    "curtidas": 23,
     "comentarios": 0
    },
    "fb": {
@@ -3487,62 +3599,6 @@
    "fb": {
     "id": "2072784373415969"
    }
-  },
-  {
-   "quando": "2026-10-03T00:45:23+00:00",
-   "formato": "story",
-   "origem": "criador",
-   "subtipo": null,
-   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
-   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
-   "ramo": "geral",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261003-004516.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "979574804393201"
-   }
-  },
-  {
-   "quando": "2026-10-02T19:33:30+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "institucional",
-   "titulo": "indique-conhece",
-   "peca": null,
-   "ramo": "",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-institucional-20261002-193312.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18096351458392292",
-    "erro": "Unsupported get request. Object with ID '18096351458392292' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Ple"
-   },
-   "fb": {
-    "id": "1312620718595159_122119219659430818",
-    "erro": "(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'p"
-   }
-  },
-  {
-   "quando": "2026-10-02T18:00:58+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Sua loja de cosméticos ao vivo no Moviki",
-   "peca": "story-loja-cosmeticos-ao-vivo",
-   "ramo": "beleza",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-loja-cosmeticos-ao-vivo.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1403685325301754"
-   }
   }
  ],
  "seguidores_hist": [
@@ -3755,28 +3811,34 @@
    "ig": 1999,
    "ig_posts": 78,
    "fb": 3
+  },
+  {
+   "dia": "2026-11-02",
+   "ig": 1927,
+   "ig_posts": 80,
+   "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1999,
-  "ganho_7d": 24,
-  "desde_7d": "2026-10-25",
-  "ganho_30d": -186,
-  "desde_30d": "2026-10-02",
+  "atual": 1927,
+  "ganho_7d": -54,
+  "desde_7d": "2026-10-26",
+  "ganho_30d": -256,
+  "desde_30d": "2026-10-03",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3001,
-    "dias": -4,
+    "falta": 3073,
+    "dias": -5,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8001,
-    "dias": 56,
-    "por_dia": 142.9
+    "falta": 8073,
+    "dias": 55,
+    "por_dia": 146.8
    }
   ]
  },
@@ -3815,21 +3877,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-11-01",
-    "hoje": true,
-    "id": "bf-ensaio",
-    "titulo": "Black Friday ao vivo: ensaie antes",
-    "ramo": "geral",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fbf-ensaio.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/bf-ensaio.webp",
-    "duracao": 9.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nPrimeira live dá frio na barriga. Por isso, no Moviki, você pode fazer um ensaio antes: a live funciona de verdade, mas ninguém vê.\n\nTeste a luz, o lugar dos produtos e o que vai falar. Assim você chega pronto em 27/11.\n\n30 dias grátis, com a live liberada. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #esquentablackfriday #pequenonegocio #empreendedor #comerciolocal",
-    "hashtags": "#moviki #esquentablackfriday #pequenonegocio #empreendedor #comerciolocal",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-01-bf-ensaio.mp4"
-   },
-   {
     "dia": "2026-11-02",
-    "hoje": false,
+    "hoje": true,
     "id": "grade:faro-natal-comente",
     "titulo": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
     "ramo": "confeitaria",
@@ -3905,6 +3954,19 @@
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nNa Black Friday, todo mundo pergunta a mesma coisa: tem no meu tamanho? Qual a cor? Fixa bem?\n\nNa live do Moviki, você responde uma vez no chat e a resposta vale para todas as clientes que estão assistindo. Menos mensagem repetida no direct, mais tempo para vender.\n\n30 dias grátis, com a live liberada. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #esquentablackfriday #pequenonegocio #empreendedor #comerciolocal",
     "hashtags": "#moviki #esquentablackfriday #pequenonegocio #empreendedor #comerciolocal",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-07-bf-uma-resposta.mp4"
+   },
+   {
+    "dia": "2026-11-08",
+    "hoje": false,
+    "id": "ugc-bastidores-bf-boutique",
+    "titulo": "Black Friday ao vivo: boutique (bastidores)",
+    "ramo": "moda",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fugc-bastidores-bf-boutique.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/ugc-bastidores-bf-boutique.webp",
+    "duracao": 36.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nEla clicou no anúncio de Black Friday e desistiu no checkout. Na live, ela compra num toque.\n\nPor trás de uma live numa boutique: a lojista mostra o tricô de perto, responde o tamanho no chat e a equipe acompanha cada pedido pago.\n\nNo Moviki, a cliente vê a peça, pergunta e compra sem procurar no meio da loja inteira.\n\nPagamento com Pix dentro da transmissão: recurso do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #esquentablackfriday #lojaderoupa #modafeminina #lojista",
+    "hashtags": "#moviki #esquentablackfriday #lojaderoupa #modafeminina #lojista",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-08-ugc-bastidores-bf-boutique.mp4"
    }
   ]
  },
@@ -3914,17 +3976,6 @@
   "no_ar": 28,
   "com_erro": 0,
   "proximos": [
-   {
-    "dia": "2026-11-01",
-    "hoje": true,
-    "id": "faro-natal-comente",
-    "titulo": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
-    "formato": "reel",
-    "pilar": "faro",
-    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
-    "sai": true,
-    "motivo": ""
-   },
    {
     "dia": "2026-11-03",
     "hoje": false,
@@ -4010,6 +4061,17 @@
     "formato": "reel",
     "pilar": "ramo",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-bf-boutique.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
+    "dia": "2026-11-15",
+    "hoje": false,
+    "id": "faro-natal-comente",
+    "titulo": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
+    "formato": "reel",
+    "pilar": "faro",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
     "sai": true,
     "motivo": ""
    }

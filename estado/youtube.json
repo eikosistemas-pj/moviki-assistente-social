@@ -329,6 +329,18 @@
    "capa": true,
    "na_playlist": true,
    "robo": "2026-10-22-youtube"
+  },
+  "bf-pedido-pago": {
+   "yt": "drw_mCr5I2c",
+   "quando": "2026-11-02T22:53:28+00:00",
+   "visibilidade": "private",
+   "titulo": "Pedido da live pago e organizado, sem caderninho | Live shop na Black Friday | Moviki",
+   "comentario": "Passo a passo da primeira live de vendas: https://www.moviki.com.br/guia/como-fazer-live-de-vendas\nTeste grátis de 30 dias, sem cartão.",
+   "playlist": "PLCJc5gL33i04",
+   "origem": "grade",
+   "capa": true,
+   "na_playlist": true,
+   "robo": "2026-10-22-youtube"
   }
  }
 }

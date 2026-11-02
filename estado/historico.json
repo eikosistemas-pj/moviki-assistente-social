@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-02T21:59:44+00:00",
+  "formato": "feed",
+  "descricao": "Black Friday ao vivo: Pix dentro da live",
+  "media_id": "18092642999215855",
+  "origem": "casa",
+  "peca": "bf-pix-feed",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261102-215926.jpg",
+  "fb": "1312620718595159_122124246375430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-02T20:37:50+00:00",
   "formato": "story",
   "descricao": "Hamburgueria: o lanche saindo da chapa, ao vivo",

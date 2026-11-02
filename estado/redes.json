@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-02T07:36:38+00:00",
+ "gerado": "2026-11-02T20:43:11+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1927,
+   "seguidores": 1929,
    "posts": 80,
-   "cota_usada": 6,
+   "cota_usada": 5,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "reel": "2026-10-05",
   "story": "2026-10-12",
-  "feed": null
+  "feed": null,
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -170,7 +170,7 @@
   "7d": {
    "ig": {
     "story": {
-     "posts": 28,
+     "posts": 27,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -180,14 +180,14 @@
      "comentarios": 2
     },
     "feed": {
-     "posts": 5,
+     "posts": 4,
      "curtidas": 3,
      "comentarios": 0
     }
    },
    "fb": {
     "story": {
-     "posts": 28,
+     "posts": 27,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -197,7 +197,7 @@
      "comentarios": 0
     },
     "feed": {
-     "posts": 5,
+     "posts": 4,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -206,13 +206,13 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 80,
+     "posts": 81,
      "curtidas": 0,
      "comentarios": 0
     },
     "reel": {
      "posts": 36,
-     "curtidas": 77,
+     "curtidas": 76,
      "comentarios": 5
     },
     "feed": {
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-02T20:37:50+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Hamburgueria: o lanche saindo da chapa, ao vivo",
+   "peca": "story-hamburgueria-ao-vivo",
+   "ramo": "alimentacao",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-hamburgueria-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18117328811024234",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4021765499255971212",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2208771913011588"
+   }
+  },
   {
    "quando": "2026-11-02T02:52:55+00:00",
    "formato": "story",
@@ -354,10 +377,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18341325190279335",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4021015997800412402",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18341325190279335"
    },
    "fb": {
     "id": "1096853009728652"
@@ -377,10 +397,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18095339777272001",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4020930373349663327",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18095339777272001"
    },
    "fb": {
     "id": "1157033663672263"
@@ -1395,7 +1412,7 @@
    "ig": {
     "id": "18035960891849039",
     "link": "https://www.instagram.com/reel/De7bH4GAoil/",
-    "curtidas": 23,
+    "curtidas": 22,
     "comentarios": 0
    },
    "fb": {
@@ -3582,23 +3599,6 @@
     "curtidas": 0,
     "comentarios": 0
    }
-  },
-  {
-   "quando": "2026-10-03T16:36:41+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Cosméticos ao vivo no Moviki",
-   "peca": "story-cosmeticos-ao-vivo",
-   "ramo": "beleza",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-cosmeticos-ao-vivo.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "2072784373415969"
-   }
   }
  ],
  "seguidores_hist": [
@@ -3814,31 +3814,31 @@
   },
   {
    "dia": "2026-11-02",
-   "ig": 1927,
+   "ig": 1929,
    "ig_posts": 80,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1927,
-  "ganho_7d": -54,
+  "atual": 1929,
+  "ganho_7d": -52,
   "desde_7d": "2026-10-26",
-  "ganho_30d": -256,
+  "ganho_30d": -254,
   "desde_30d": "2026-10-03",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3073,
+    "falta": 3071,
     "dias": -5,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8073,
+    "falta": 8071,
     "dias": 55,
-    "por_dia": 146.8
+    "por_dia": 146.7
    }
   ]
  },

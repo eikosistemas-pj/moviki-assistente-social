@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-03T02:40:53+00:00",
+  "formato": "story",
+  "descricao": "Boutique de bairro: venda ao vivo pelo celular",
+  "media_id": "18107452928257371",
+  "origem": "casa",
+  "peca": "video:video-comercio-boutique",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-boutique.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-10.7",
+  "fb": "29396050169988954"
+ },
+ {
   "quando": "2026-11-02T23:47:59+00:00",
   "formato": "reel",
   "descricao": "Games e informática: venda ao vivo pelo celular",

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-03T07:50:14+00:00",
+ "gerado": "2026-11-03T18:22:29+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1936,
+   "seguidores": 1938,
    "posts": 83,
-   "cota_usada": 6,
+   "cota_usada": 7,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,15 +169,15 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 5,
-     "comentarios": 2
-    },
     "story": {
      "posts": 27,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 14,
+     "curtidas": 5,
+     "comentarios": 2
     },
     "feed": {
      "posts": 5,
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 27,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 27,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 84,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 38,
      "curtidas": 76,
      "comentarios": 5
-    },
-    "story": {
-     "posts": 83,
-     "curtidas": 0,
-     "comentarios": 0
     },
     "feed": {
      "posts": 19,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 38,
+    "story": {
+     "posts": 98,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 98,
+    "reel": {
+     "posts": 38,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -248,6 +248,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-03T18:06:03+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Seu hambúrguer no mapa e em vídeo",
+   "peca": "story-hamburguer-no-mapa",
+   "ramo": "alimentacao",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-hamburguer-no-mapa.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18133525147759572",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4022413906668497899",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2027645094859264"
+   }
+  },
   {
    "quando": "2026-11-03T03:42:34+00:00",
    "formato": "reel",
@@ -3670,23 +3693,6 @@
    "fb": {
     "id": "1402350234864324"
    }
-  },
-  {
-   "quando": "2026-10-04T17:02:44+00:00",
-   "formato": "story",
-   "origem": "criador",
-   "subtipo": null,
-   "titulo": "Moviki é sensacional !!!!",
-   "peca": "c:mp7RoQriVJGxLl3HKpd6",
-   "ramo": "geral",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261004-170238.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1447993610520367"
-   }
   }
  ],
  "seguidores_hist": [
@@ -3908,29 +3914,29 @@
   },
   {
    "dia": "2026-11-03",
-   "ig": 1936,
+   "ig": 1938,
    "ig_posts": 83,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1936,
-  "ganho_7d": -51,
+  "atual": 1938,
+  "ganho_7d": -49,
   "desde_7d": "2026-10-27",
-  "ganho_30d": -244,
+  "ganho_30d": -242,
   "desde_30d": "2026-10-04",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3064,
+    "falta": 3062,
     "dias": -6,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8064,
+    "falta": 8062,
     "dias": 54,
     "por_dia": 149.3
    }

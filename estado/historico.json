@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-03T21:55:21+00:00",
+  "formato": "reel",
+  "descricao": "Black Friday ao vivo: comece hoje.",
+  "media_id": "18346124230287142",
+  "origem": "casa",
+  "peca": "grade:bf-comece-hoje",
+  "rede": "instagram",
+  "ramo": "geral",
+  "grade": true,
+  "pilar": "serie-live",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/bf-comece-hoje.jpg",
+  "fb": "1479706557387157"
+ },
+ {
   "quando": "2026-11-03T20:59:54+00:00",
   "formato": "story",
   "descricao": "O seu cliente já desistiu no carrinho?",

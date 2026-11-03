@@ -341,6 +341,18 @@
    "capa": true,
    "na_playlist": true,
    "robo": "2026-10-22-youtube"
+  },
+  "bf-ensaio": {
+   "yt": "V_YjAO8s0G4",
+   "quando": "2026-11-03T20:37:24+00:00",
+   "visibilidade": "private",
+   "titulo": "Primeira live de vendas? Faça um ensaio antes da Black Friday | Live shop | Moviki",
+   "comentario": "Roteiro para a sua primeira live de vendas: https://www.moviki.com.br/guia/roteiro-de-live\nTeste grátis de 30 dias, sem cartão.",
+   "playlist": "PLCJc5gL33i04",
+   "origem": "grade",
+   "capa": true,
+   "na_playlist": true,
+   "robo": "2026-10-22-youtube"
   }
  }
 }

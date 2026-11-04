@@ -59,9 +59,14 @@ def test_biblioteca_de_trilhas_no_repositorio():
 # ------------------------------------------------------------------ grade
 def test_alterna_video_e_arte():
     assert story.proximo_tipo([]) == "video"
+    # 1o story do dia (o ultimo foi ontem) e sempre video
+    assert story.proximo_tipo([_h(tipo="video", dias=1)]) == "video"
+    # depois de um video hoje, a arte pode entrar uma vez
     assert story.proximo_tipo([_h(tipo="video")]) == "arte"
     assert story.proximo_tipo([_h(tipo="arte")]) == "video"
     assert story.proximo_tipo([_h(tipo=None)]) == "video"
+    # ja teve arte hoje: so video, mesmo depois de um video
+    assert story.proximo_tipo([_h(tipo="video"), _h(tipo="arte")]) == "video"
 
 
 def test_chamada_so_no_video(monkeypatch):

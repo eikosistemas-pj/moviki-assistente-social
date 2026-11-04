@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-04T20:08:32+00:00",
+  "formato": "feed",
+  "descricao": "Black Friday ao vivo: oferta relâmpago",
+  "media_id": "18118433896998974",
+  "origem": "casa",
+  "peca": "bf-oferta-relampago-feed",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261104-200818.jpg",
+  "fb": "1312620718595159_122124502983430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-04T18:20:27+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

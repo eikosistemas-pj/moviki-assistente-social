@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-04T00:53:12+00:00",
+  "formato": "story",
+  "descricao": "Cosméticos: venda ao vivo pelo celular",
+  "media_id": "18108067697637963",
+  "origem": "casa",
+  "peca": "video:video-comercio-cosmeticos",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-cosmeticos.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "lofi-house",
+  "corte": "0.0-9.1",
+  "fb": "1800982211052885"
+ },
+ {
   "quando": "2026-11-03T21:55:21+00:00",
   "formato": "reel",
   "descricao": "Black Friday ao vivo: comece hoje.",

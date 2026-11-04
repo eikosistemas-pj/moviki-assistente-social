@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-04T01:37:24+00:00",
+  "formato": "feed",
+  "descricao": "Venda óculos ao vivo no Moviki",
+  "media_id": "17942397006390240",
+  "origem": "casa",
+  "peca": "feed-oculos-venda-ao-vivo",
+  "rede": "instagram",
+  "ramo": "otica",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261104-013711.jpg",
+  "fb": "1312620718595159_122124387015430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-04T00:53:12+00:00",
   "formato": "story",
   "descricao": "Cosméticos: venda ao vivo pelo celular",

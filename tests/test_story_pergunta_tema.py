@@ -99,7 +99,16 @@ def test_pergunta_sai_do_segundo_story_do_dia(monkeypatch):
 
 def test_pergunta_nao_entra_na_alternancia_video_arte():
     hist = [_h(peca="pergunta:ramo", tipo="pergunta"), _h(peca="video:x", tipo="video", horas=1)]
-    assert story.proximo_tipo(hist) == "arte"
+    assert story.proximo_tipo(hist, HOJE) == "arte"
+
+
+def test_arte_no_maximo_uma_vez_por_dia():
+    # 03/11/2026: video por padrao; arte so 1x no dia e nunca no 1o story
+    assert story.proximo_tipo([_h(peca="video:a", tipo="video")], HOJE) == "arte"
+    ja = [_h(peca="video:b", tipo="video"), _h(peca="story-x", tipo="arte", horas=2), _h(peca="video:a", tipo="video", horas=4)]
+    assert story.proximo_tipo(ja, HOJE) == "video"
+    ontem = [_h(peca="video:a", tipo="video", horas=30)]
+    assert story.proximo_tipo(ontem, HOJE) == "video"
 
 
 def test_madrugada_nao_publica():

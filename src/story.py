@@ -68,18 +68,26 @@ def _stories(hist=None):
     return [h for h in hist if h.get("formato") == "story"]
 
 
-def proximo_tipo(hist=None):
-    """'video' ou 'arte', alternando com o ultimo story publicado (a pergunta
-    do dia nao entra na alternancia)."""
+ARTE_POR_DIA = 1             # 03/11/2026: arte parada no maximo 1x por dia
+
+
+def proximo_tipo(hist=None, hoje=None):
+    """'video' ou 'arte'. Desde 03/11/2026 (pedido do Paulo: grade dinamica, sem
+    "imagem estatica" repetida) o story e VIDEO por padrao; a arte animada entra
+    no maximo ARTE_POR_DIA vez por dia, nunca duas seguidas e nunca no 1o story
+    do dia. A pergunta do dia nao conta."""
     st = [h for h in _stories(hist) if h.get("tipo") != "pergunta"]
-    if not st:
+    if not st or st[0].get("tipo") != "video":
         return "video"
-    return "arte" if st[0].get("tipo") == "video" else "video"
+    hoje_st = [h for h in stories_de_hoje(hist, hoje) if h.get("tipo") != "pergunta"]
+    if not hoje_st or sum(1 for h in hoje_st if h.get("tipo") == "arte") >= ARTE_POR_DIA:
+        return "video"
+    return "arte"
 
 
 def precisa_cta(tipo):
     """Chamada so no story de VIDEO (a faixa cobriria o rodape da arte, que
-    ja tem o proprio botao). Como video e arte alternam, sai um sim, outro nao."""
+    ja tem o proprio botao)."""
     return bool(config.CARTELA_STORY) and tipo == "video"
 
 

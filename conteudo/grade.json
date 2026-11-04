@@ -1,5 +1,5 @@
 {
- "versao": "2026-10-29-faro-natal",
+ "versao": "2026-11-03-desejo-moda",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -627,6 +627,48 @@
    "repetir_apos_dias": 7,
    "marca": "",
    "obs": "Guia FARO Natal (29/10/2026). Só Instagram: a palavra NATAL dispara a automação 'Guia FARO NATAL' do ManyChat (com a lista 'não contém' para Feliz Natal), que não está no Facebook. Cartela 'Comente NATAL' (sem voz) colada no fim do vídeo; cartela LIVE desligada. Para de sair em 15/12, fim da venda do guia."
+  },
+  {
+   "id": "desejo-moda-comente",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "moda",
+   "titulo": "Essa é a loja que a cliente não consegue fechar.",
+   "tipo_pauta": "conversao",
+   "vende_live": true,
+   "a_partir_de": "2026-11-04",
+   "valido_ate": "2027-02-28",
+   "reconferir_em": null,
+   "repetir_apos_dias": 21,
+   "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fdesejo-moda-comente.mp4?alt=media",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/desejo-moda-comente.jpg",
+   "legenda": "Essa é a loja que a cliente não consegue fechar. 🛍️\n\nVídeo na capa, catálogo com foto e tamanho, sacola que mostra quanto falta pra entrega grátis, Pix ou reserva para provar na loja, avaliações e o aviso da próxima live. Tudo num link só.\n\nA sua loja pode ficar assim. Venda pela página e live nos planos Premium e Enterprise; Pix dentro da live no Enterprise. Loja fictícia, criada para mostrar o Moviki. Teste grátis de 30 dias, sem cartão.",
+   "chamada": "💬 Comente LOJA que eu te mando no direct a loja completa, pronta para vender.",
+   "cartela": false,
+   "canais": ["instagram"],
+   "dias": ["2026-11-05", "2026-11-12", "2026-11-19"],
+   "marca": "1461",
+   "obs": "Formato DESEJO (03/11/2026): loja de amostra completa (Atelier Vinha) no celular, gancho dos produtos saindo da tela, tela real da live, cartão final \"Comente LOJA\" com a voz da Malu. Só Instagram: a palavra LOJA dispara a automação \"Funil LOJA - Desejo (comentario Instagram)\" do ManyChat. Cartela LIVE desligada. Loja fictícia (selo \"Loja de exemplo\" no vídeo)."
+  },
+  {
+   "id": "desejo-moda",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "moda",
+   "titulo": "Essa é a loja que a cliente não consegue fechar.",
+   "tipo_pauta": "conversao",
+   "vende_live": true,
+   "a_partir_de": "2026-11-04",
+   "valido_ate": "2027-02-28",
+   "reconferir_em": null,
+   "repetir_apos_dias": 21,
+   "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fdesejo-moda.mp4?alt=media",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/desejo-moda.jpg",
+   "legenda": "Essa é a loja que a cliente não consegue fechar. 🛍️\n\nVídeo na capa, catálogo com foto e tamanho, sacola que mostra quanto falta pra entrega grátis, Pix ou reserva para provar na loja, avaliações e o aviso da próxima live. Tudo num link só.\n\nA sua loja pode ficar assim. Venda pela página e live nos planos Premium e Enterprise; Pix dentro da live no Enterprise. Loja fictícia, criada para mostrar o Moviki. Teste grátis de 30 dias, sem cartão. Conheça pelo link da bio.",
+   "canais": ["facebook"],
+   "dias": ["2026-11-09"],
+   "marca": "e366",
+   "obs": "Formato DESEJO (03/11/2026), versão limpa (termina em \"A sua loja pode ficar assim\"): Facebook e cortes de story (com \"Responda LIVE\"). No Instagram sai a versão -comente."
   }
  ]
 }

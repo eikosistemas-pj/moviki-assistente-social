@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-04T07:27:16+00:00",
+ "gerado": "2026-11-04T18:34:46+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "feed": null,
+  "story": "2026-10-12",
   "reel": "2026-10-05"
  },
  "so_facebook": false,
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,6 +169,11 @@
  "totais": {
   "7d": {
    "ig": {
+    "story": {
+     "posts": 26,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 14,
      "curtidas": 5,
@@ -178,14 +183,14 @@
      "posts": 5,
      "curtidas": 3,
      "comentarios": 0
-    },
+    }
+   },
+   "fb": {
     "story": {
      "posts": 26,
      "curtidas": 0,
      "comentarios": 0
-    }
-   },
-   "fb": {
+    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -195,33 +200,33 @@
      "posts": 5,
      "curtidas": 0,
      "comentarios": 0
-    },
-    "story": {
-     "posts": 26,
-     "curtidas": 0,
-     "comentarios": 0
     }
    }
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 87,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 40,
-     "curtidas": 76,
+     "curtidas": 75,
      "comentarios": 5
     },
     "feed": {
      "posts": 20,
      "curtidas": 11,
      "comentarios": 0
-    },
-    "story": {
-     "posts": 86,
-     "curtidas": 0,
-     "comentarios": 0
     }
    },
    "fb": {
+    "story": {
+     "posts": 100,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 40,
      "curtidas": 0,
@@ -229,11 +234,6 @@
     },
     "feed": {
      "posts": 21,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 99,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -248,6 +248,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-04T18:20:27+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Checklist do balcão de live",
+   "peca": "balcao-de-live-checklist-story",
+   "ramo": "geral",
+   "miniatura": "https://app.moviki.com.br/material/stories/balcao-de-live-checklist-story.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18132908249506299",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4023145925232678301",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2669246233519051"
+   }
+  },
   {
    "quando": "2026-11-04T02:42:42+00:00",
    "formato": "reel",
@@ -387,10 +410,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18133525147759572",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4022413906668497899",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18133525147759572"
    },
    "fb": {
     "id": "2027645094859264"
@@ -1471,7 +1491,7 @@
    "ig": {
     "id": "18126487036911500",
     "link": "https://www.instagram.com/reel/De-srOQigK3/",
-    "curtidas": 21,
+    "curtidas": 20,
     "comentarios": 0
    },
    "fb": {

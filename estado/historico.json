@@ -1,5 +1,22 @@
 [
  {
+  "quando": "2026-11-05T01:06:39+00:00",
+  "formato": "story",
+  "descricao": "Black Friday ao vivo: comece hoje",
+  "media_id": "18065410811627084",
+  "origem": "casa",
+  "peca": "video:bf-comece-hoje",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://app.moviki.com.br/material/capas/bf-comece-hoje.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "tema": "black-friday",
+  "corte": "0.0-9.0",
+  "fb": "1893480822016077"
+ },
+ {
   "quando": "2026-11-04T21:58:54+00:00",
   "formato": "reel",
   "descricao": "Maquiagem: os bastidores de uma live na loja",

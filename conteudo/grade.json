@@ -1,5 +1,5 @@
 {
- "versao": "2026-10-29-faro-natal",
+ "versao": "2026-11-05-bolsas-comente",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -627,6 +627,28 @@
    "repetir_apos_dias": 7,
    "marca": "",
    "obs": "Guia FARO Natal (29/10/2026). Só Instagram: a palavra NATAL dispara a automação 'Guia FARO NATAL' do ManyChat (com a lista 'não contém' para Feliz Natal), que não está no Facebook. Cartela 'Comente NATAL' (sem voz) colada no fim do vídeo; cartela LIVE desligada. Para de sair em 15/12, fim da venda do guia."
+  },
+  {
+   "id": "reel-bolsas-ao-vivo-comente",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "bolsas",
+   "titulo": "Bolsa na foto não mostra o que cabe dentro. Na live, mostra.",
+   "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Freel-bolsas-ao-vivo-comente.mp4?alt=media",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-bolsas-ao-vivo-comente.jpg",
+   "legenda": "Bolsa na foto não mostra o que cabe dentro. 👜\n\nNa live, a loja abre a bolsa na frente da cliente: mostra o couro de perto, o zíper e os bolsos, e responde no chat se cabe o notebook e se tem em preto. Sem precisar de seguidores: a cliente entra pelo link, sem baixar nada.\n\nPix e oferta relâmpago dentro da live são do plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.",
+   "chamada": "💬 Comente BOLSA que eu te mando no direct a live de uma loja de bolsas funcionando.",
+   "cartela": false,
+   "tipo_pauta": "conversao",
+   "canais": ["instagram"],
+   "vende_live": true,
+   "dias": ["2026-11-09", "2026-11-16", "2026-11-23"],
+   "a_partir_de": "2026-11-06",
+   "valido_ate": "2027-01-31",
+   "reconferir_em": "2027-01-15",
+   "repetir_apos_dias": 7,
+   "marca": "eff8",
+   "obs": "Ramo bolsas (05/11/2026). Mesmo vídeo do direct (live-bolsas, Jacarandá Bolsas, loja de exemplo) com o fim trocado (sem 'toca em Começar agora grátis') e a cartela falada 'Comenta BOLSA' colada. Só Instagram: a palavra BOLSA dispara 'Comente BOLSA' do ManyChat, que não está no Facebook. Cartela LIVE desligada. Vídeo no Firebase Storage material/ (subido pelo Paulo)."
   }
  ]
 }

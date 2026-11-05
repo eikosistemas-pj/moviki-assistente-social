@@ -1,5 +1,5 @@
 {
- "versao": "2026-11-05-bolsas-comente",
+ "versao": "2026-11-05-moveis-comente",
  "leia": "Grade de vídeos do robô. Como mexer: conteudo/GRADE-LEIA-ME.md. Vídeo na release 'acervo'; capa em conteudo/acervo-capas/.",
  "itens": [
   {
@@ -649,6 +649,28 @@
    "repetir_apos_dias": 7,
    "marca": "eff8",
    "obs": "Ramo bolsas (05/11/2026). Mesmo vídeo do direct (live-bolsas, Jacarandá Bolsas, loja de exemplo) com o fim trocado (sem 'toca em Começar agora grátis') e a cartela falada 'Comenta BOLSA' colada. Só Instagram: a palavra BOLSA dispara 'Comente BOLSA' do ManyChat, que não está no Facebook. Cartela LIVE desligada. Vídeo no Firebase Storage material/ (subido pelo Paulo)."
+  },
+  {
+   "id": "reel-moveis-ao-vivo-comente",
+   "formato": "reel",
+   "pilar": "ramo",
+   "ramo": "moveis",
+   "titulo": "Foto não mostra se o sofá cabe na sala. Na live, mostra.",
+   "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Freel-moveis-ao-vivo-comente.mp4?alt=media",
+   "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-moveis-ao-vivo-comente.jpg",
+   "legenda": "Foto não mostra se o sofá cabe na sala. 🛋️\n\nNa live, a loja mede o sofá com a trena na frente da câmera, passa a mão no tecido, abre a gaveta do aparador e responde no chat se cabe numa sala de 3 metros e se tem em cinza. A entrega é pela tabela de bairros da loja, com taxa por bairro, e dá para reservar e pagar na loja. Móvel é compra grande: a cliente paga no Pix ou no cartão em até 12x. Sem precisar de seguidores: a cliente entra pelo link, sem baixar nada.\n\nPix, cartão e oferta relâmpago dentro da live são do plano Enterprise. Cena ilustrativa, loja fictícia. Teste grátis de 30 dias, sem cartão.",
+   "chamada": "💬 Comente MÓVEIS que eu te mando no direct a live de uma loja de móveis funcionando.",
+   "cartela": false,
+   "tipo_pauta": "conversao",
+   "canais": ["instagram"],
+   "vende_live": true,
+   "dias": ["2026-11-11", "2026-11-18", "2026-11-25"],
+   "a_partir_de": "2026-11-07",
+   "valido_ate": "2027-01-31",
+   "reconferir_em": "2027-01-15",
+   "repetir_apos_dias": 7,
+   "marca": "f9a7",
+   "obs": "Ramo móveis (05/11/2026). Mesmo vídeo do direct (live-moveis, Casa Tarumã Móveis, loja de exemplo) com o fim trocado (sem 'toca em Começar agora grátis') e a cartela falada 'Comenta MÓVEIS' colada. Só Instagram: a palavra MÓVEIS dispara 'Comente MÓVEIS' do ManyChat, que não está no Facebook. Cartela LIVE desligada. Vídeo no Firebase Storage material/ (subido pelo Paulo)."
   }
  ]
 }

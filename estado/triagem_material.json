@@ -1060,5 +1060,23 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-10-30T02:55:21+00:00"
+ },
+ "video-bolsas-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-bolsas-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-05T07:52:22+00:00"
+ },
+ "story-bolsas-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/stories/story-bolsas-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-05T07:52:22+00:00"
+ },
+ "feed-bolsas-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-bolsas-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-05T07:52:23+00:00"
  }
 }

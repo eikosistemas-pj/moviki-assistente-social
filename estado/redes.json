@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-05T07:51:54+00:00",
+ "gerado": "2026-11-05T18:40:22+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1949,
+   "seguidores": 1933,
    "posts": 89,
    "cota_usada": 6,
    "cota_total": 100
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
   "story": "2026-10-12",
+  "feed": null,
   "reel": "2026-10-05"
  },
  "so_facebook": false,
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,15 +169,15 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 4,
-     "comentarios": 3
-    },
     "story": {
      "posts": 25,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 14,
+     "curtidas": 4,
+     "comentarios": 2
     },
     "feed": {
      "posts": 5,
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 25,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 25,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 90,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 42,
      "curtidas": 75,
-     "comentarios": 7
-    },
-    "story": {
-     "posts": 89,
-     "curtidas": 0,
-     "comentarios": 0
+     "comentarios": 5
     },
     "feed": {
      "posts": 20,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 42,
+    "story": {
+     "posts": 101,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 101,
+    "reel": {
+     "posts": 42,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-05T18:20:24+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "geral",
+   "miniatura": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/criadores%2FzEi14ouOAFUSeWb0dgeYEB7trCc2%2F1790130022508-67rt01.png?alt=media&token=05c3a960-112f-4b61-9796-cc757def2957",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18138334345679373",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4023870597942496807",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "3387002958164078"
+   }
+  },
   {
    "quando": "2026-11-05T02:56:12+00:00",
    "formato": "reel",
@@ -381,10 +404,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18132908249506299",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4023145925232678301",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18132908249506299"
    },
    "fb": {
     "id": "2669246233519051"
@@ -407,7 +427,7 @@
     "id": "18078860438444398",
     "link": "https://www.instagram.com/reel/DfTaJUKgebj/",
     "curtidas": 0,
-    "comentarios": 1
+    "comentarios": 0
    },
    "fb": {
     "id": "1454665433518094",
@@ -1896,7 +1916,7 @@
     "id": "18140779204725229",
     "link": "https://www.instagram.com/reel/De5cgpBF1ey/",
     "curtidas": 0,
-    "comentarios": 1
+    "comentarios": 0
    },
    "fb": {
     "id": "1810158586797252",
@@ -3866,23 +3886,6 @@
     "curtidas": 0,
     "comentarios": 0
    }
-  },
-  {
-   "quando": "2026-10-06T18:34:59+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Sua loja de utilidades ao vivo no Moviki",
-   "peca": "story-loja-utilidades-cama-ao-vivo",
-   "ramo": "casa",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-loja-utilidades-cama-ao-vivo.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "904496102597335"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4116,31 +4119,31 @@
   },
   {
    "dia": "2026-11-05",
-   "ig": 1949,
+   "ig": 1933,
    "ig_posts": 89,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1949,
-  "ganho_7d": -48,
+  "atual": 1933,
+  "ganho_7d": -64,
   "desde_7d": "2026-10-29",
-  "ganho_30d": 16,
+  "ganho_30d": 0,
   "desde_30d": "2026-10-06",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3051,
+    "falta": 3067,
     "dias": -8,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8051,
+    "falta": 8067,
     "dias": 52,
-    "por_dia": 154.8
+    "por_dia": 155.1
    }
   ]
  },
@@ -4171,7 +4174,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 3,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {

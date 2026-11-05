@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-05T21:35:40+00:00",
+  "formato": "story",
+  "descricao": "Para mostrar produto: foto ou vídeo ao vivo?",
+  "media_id": "18114801197622680",
+  "origem": "casa",
+  "peca": "pergunta:foto-ou-video",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "funk-pop-leve",
+  "fb": "1646275603569330"
+ },
+ {
   "quando": "2026-11-05T18:20:24+00:00",
   "formato": "story",
   "descricao": "Moviki é sensacional !!!!",

@@ -1084,5 +1084,11 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-11-06T01:06:53+00:00"
+ },
+ "feed-moveis-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/feed/feed-moveis-ao-vivo.jpg",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T01:39:27+00:00"
  }
 }

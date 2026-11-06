@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-06T01:39:49+00:00",
+  "formato": "feed",
+  "descricao": "Venda armações ao vivo",
+  "media_id": "18131981479864485",
+  "origem": "casa",
+  "peca": "feed-armacoes-ao-vivo",
+  "rede": "instagram",
+  "ramo": "otica",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261106-013930.jpg",
+  "fb": "1312620718595159_122124692721430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-06T01:07:50+00:00",
   "formato": "story",
   "descricao": "Bolsas: a loja ao vivo, do começo ao pedido",

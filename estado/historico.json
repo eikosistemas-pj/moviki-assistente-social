@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-06T21:36:33+00:00",
+  "formato": "reel",
+  "descricao": "Vai vender na praia neste verão? O Guia FARO mostra o caminho.",
+  "media_id": "18111636796919755",
+  "origem": "casa",
+  "peca": "grade:faro-verao-comente",
+  "rede": "instagram",
+  "ramo": "praia",
+  "grade": true,
+  "pilar": "faro",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-verao-comente.jpg",
+  "fb": "28958795827118382"
+ },
+ {
   "quando": "2026-11-06T20:58:34+00:00",
   "formato": "story",
   "descricao": "O seu cliente prefere pagar como?",

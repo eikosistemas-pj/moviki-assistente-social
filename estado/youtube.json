@@ -377,6 +377,18 @@
    "capa": true,
    "na_playlist": true,
    "robo": "2026-10-22-youtube"
+  },
+  "video-live-sem-seguidores": {
+   "yt": "FDIs-1yRd30",
+   "quando": "2026-11-06T20:34:01+00:00",
+   "visibilidade": "private",
+   "titulo": "Live de vendas sem seguidores: abra a live da sua loja pelo celular | Moviki",
+   "comentario": "Como fazer live de vendas começando do zero: https://www.moviki.com.br/guia/live-sem-seguidores\nTeste grátis de 30 dias, sem cartão.",
+   "playlist": "PLCJc5gL33i04",
+   "origem": "grade",
+   "capa": true,
+   "na_playlist": true,
+   "robo": "2026-10-22-youtube"
   }
  }
 }

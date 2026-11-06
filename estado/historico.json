@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-06T20:58:34+00:00",
+  "formato": "story",
+  "descricao": "O seu cliente prefere pagar como?",
+  "media_id": "17902316088387090",
+  "origem": "casa",
+  "peca": "pergunta:pix",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "1484779517050349"
+ },
+ {
   "quando": "2026-11-06T20:45:04+00:00",
   "formato": "feed",
   "descricao": "Black Friday ao vivo: pedido pago e organizado",

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-06T07:53:02+00:00",
+ "gerado": "2026-11-06T17:54:09+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1935,
+   "seguidores": 1906,
    "posts": 92,
-   "cota_usada": 6,
+   "cota_usada": 7,
    "cota_total": 100
   },
   "facebook": {
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "feed": null,
-  "story": "2026-10-12",
-  "reel": "2026-10-05"
+  "reel": "2026-10-05",
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,6 +169,11 @@
  "totais": {
   "7d": {
    "ig": {
+    "story": {
+     "posts": 24,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 14,
      "curtidas": 3,
@@ -178,14 +183,14 @@
      "posts": 5,
      "curtidas": 1,
      "comentarios": 0
-    },
+    }
+   },
+   "fb": {
     "story": {
      "posts": 24,
      "curtidas": 0,
      "comentarios": 0
-    }
-   },
-   "fb": {
+    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -195,33 +200,33 @@
      "posts": 5,
      "curtidas": 0,
      "comentarios": 0
-    },
-    "story": {
-     "posts": 24,
-     "curtidas": 0,
-     "comentarios": 0
     }
    }
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 93,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 43,
-     "curtidas": 75,
+     "curtidas": 74,
      "comentarios": 3
     },
     "feed": {
      "posts": 20,
      "curtidas": 11,
      "comentarios": 0
-    },
-    "story": {
-     "posts": 92,
-     "curtidas": 0,
-     "comentarios": 0
     }
    },
    "fb": {
+    "story": {
+     "posts": 103,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 43,
      "curtidas": 0,
@@ -231,17 +236,35 @@
      "posts": 21,
      "curtidas": 0,
      "comentarios": 0
-    },
-    "story": {
-     "posts": 102,
-     "curtidas": 0,
-     "comentarios": 0
     }
    }
   }
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-06T17:47:31+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Móveis: meça o sofá ao vivo",
+   "peca": "story-moveis-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-moveis-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18141375358624757",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4024578827539246128",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1859822555037497"
+   }
+  },
   {
    "quando": "2026-11-06T02:59:47+00:00",
    "formato": "reel",
@@ -381,10 +404,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18138334345679373",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4023870597942496807",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18138334345679373"
    },
    "fb": {
     "id": "3387002958164078"
@@ -1789,7 +1809,7 @@
    "ig": {
     "id": "17940806226369092",
     "link": "https://www.instagram.com/reel/De-NI_NE0AV/",
-    "curtidas": 23,
+    "curtidas": 22,
     "comentarios": 0
    },
    "fb": {
@@ -4176,31 +4196,31 @@
   },
   {
    "dia": "2026-11-06",
-   "ig": 1935,
+   "ig": 1906,
    "ig_posts": 92,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1935,
-  "ganho_7d": -61,
+  "atual": 1906,
+  "ganho_7d": -90,
   "desde_7d": "2026-10-30",
-  "ganho_30d": -1,
+  "ganho_30d": -30,
   "desde_30d": "2026-10-07",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3065,
+    "falta": 3094,
     "dias": -9,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8065,
+    "falta": 8094,
     "dias": 51,
-    "por_dia": 158.1
+    "por_dia": 158.7
    }
   ]
  },
@@ -4231,7 +4251,7 @@
     "trecho": "Rafael Mendes Fotografia"
    }
   ],
-  "olhadas_agora": 1,
+  "olhadas_agora": 0,
   "falhas_agora": 0
  },
  "tiktok": {

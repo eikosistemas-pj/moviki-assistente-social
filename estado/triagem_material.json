@@ -1090,5 +1090,47 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-11-06T01:39:27+00:00"
+ },
+ "video-moda-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-moda-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T02:57:27+00:00"
+ },
+ "video-semijoias-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-semijoias-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T02:57:28+00:00"
+ },
+ "video-calcados-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-calcados-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T02:57:28+00:00"
+ },
+ "video-cosmeticos-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-cosmeticos-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T02:57:29+00:00"
+ },
+ "video-pet-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-pet-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T02:57:30+00:00"
+ },
+ "video-acai-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-acai-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T02:57:30+00:00"
+ },
+ "video-confeitaria-ao-vivo": {
+  "imagem": "https://app.moviki.com.br/material/capas/reel-confeitaria-ao-vivo.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-06T02:57:31+00:00"
  }
 }

@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-07T00:25:15+00:00",
+  "formato": "story",
+  "descricao": "Açaí e lanchonete: venda ao vivo pelo celular",
+  "media_id": "18086388725686272",
+  "origem": "casa",
+  "peca": "video:video-comercio-acai",
+  "rede": "instagram",
+  "ramo": "alimentacao",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-acai.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-16.1",
+  "fb": "1906653980496906"
+ },
+ {
   "quando": "2026-11-06T21:36:33+00:00",
   "formato": "reel",
   "descricao": "Vai vender na praia neste verão? O Guia FARO mostra o caminho.",

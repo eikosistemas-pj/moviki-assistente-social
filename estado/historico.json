@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-07T20:18:15+00:00",
+  "formato": "reel",
+  "descricao": "Black Friday ao vivo: a cliente vê, pergunta e paga sem sair da tela.",
+  "media_id": "18250465099309269",
+  "origem": "casa",
+  "peca": "grade:video-live-black-friday",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "grade": true,
+  "pilar": "serie-live",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-black-friday.jpg",
+  "fb": "1007591828292369"
+ },
+ {
   "quando": "2026-11-07T19:31:38+00:00",
   "formato": "story",
   "descricao": "Móveis: a loja ao vivo, do começo ao pedido",

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-07T07:01:48+00:00",
+ "gerado": "2026-11-07T16:48:25+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1907,
    "posts": 95,
-   "cota_usada": 6,
+   "cota_usada": 7,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "reel": "2026-10-05",
-  "feed": null
+  "feed": null,
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,14 +169,14 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 2,
-     "comentarios": 0
-    },
     "story": {
      "posts": 23,
      "curtidas": 0,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 14,
+     "curtidas": 2,
      "comentarios": 0
     },
     "feed": {
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 23,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 23,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 96,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 45,
      "curtidas": 73,
      "comentarios": 3
-    },
-    "story": {
-     "posts": 95,
-     "curtidas": 0,
-     "comentarios": 0
     },
     "feed": {
      "posts": 21,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 45,
+    "story": {
+     "posts": 104,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 103,
+    "reel": {
+     "posts": 45,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-07T16:40:54+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "geral",
+   "miniatura": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/criadores%2FzEi14ouOAFUSeWb0dgeYEB7trCc2%2F1790128595348-qyk4tl.png?alt=media&token=1b135ef3-9d76-45ba-870f-f4c71f94a8d7",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17927255133204566",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4025270014001129685",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1163140836287624"
+   }
+  },
   {
    "quando": "2026-11-07T02:31:36+00:00",
    "formato": "reel",
@@ -381,10 +404,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18141375358624757",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4024578827539246128",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18141375358624757"
    },
    "fb": {
     "id": "1859822555037497"

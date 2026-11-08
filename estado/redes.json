@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-08T07:13:06+00:00",
+ "gerado": "2026-11-08T16:59:50+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1907,
+   "seguidores": 1905,
    "posts": 97,
    "cota_usada": 6,
    "cota_total": 100
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
+  "feed": null,
   "reel": "2026-10-05",
-  "story": "2026-10-12",
-  "feed": null
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -206,7 +206,7 @@
   "30d": {
    "ig": {
     "story": {
-     "posts": 99,
+     "posts": 100,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -223,7 +223,7 @@
    },
    "fb": {
     "story": {
-     "posts": 105,
+     "posts": 106,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-08T16:54:11+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Farmácia: venda ao vivo no bairro",
+   "peca": "video:video-comercio-farmacia",
+   "ramo": "farmacia",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-farmacia.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18119818409100933",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4026001577399420633",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1426855132844924"
+   }
+  },
   {
    "quando": "2026-11-08T02:47:44+00:00",
    "formato": "story",
@@ -377,10 +400,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17927255133204566",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4025270014001129685",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17927255133204566"
    },
    "fb": {
     "id": "1163140836287624"
@@ -4367,29 +4387,29 @@
   },
   {
    "dia": "2026-11-08",
-   "ig": 1907,
+   "ig": 1905,
    "ig_posts": 97,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1907,
-  "ganho_7d": -92,
+  "atual": 1905,
+  "ganho_7d": -94,
   "desde_7d": "2026-11-01",
-  "ganho_30d": -29,
+  "ganho_30d": -31,
   "desde_30d": "2026-10-09",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3093,
+    "falta": 3095,
     "dias": -11,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8093,
+    "falta": 8095,
     "dias": 49,
     "por_dia": 165.2
    }

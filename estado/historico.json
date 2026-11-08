@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-08T00:02:26+00:00",
+  "formato": "story",
+  "descricao": "Você toca a loja sozinha ou com equipe?",
+  "media_id": "17966764515236860",
+  "origem": "casa",
+  "peca": "pergunta:sozinha",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "lofi-house",
+  "fb": "1040660795713075"
+ },
+ {
   "quando": "2026-11-07T20:18:15+00:00",
   "formato": "reel",
   "descricao": "Black Friday ao vivo: a cliente vê, pergunta e paga sem sair da tela.",

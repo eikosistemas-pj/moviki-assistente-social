@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-08T16:54:11+00:00",
+  "formato": "story",
+  "descricao": "Farmácia: venda ao vivo no bairro",
+  "media_id": "18119818409100933",
+  "origem": "casa",
+  "peca": "video:video-comercio-farmacia",
+  "rede": "instagram",
+  "ramo": "farmacia",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-farmacia.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "tech-energia",
+  "corte": "0.0-14.7",
+  "fb": "1426855132844924"
+ },
+ {
   "quando": "2026-11-08T02:47:44+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

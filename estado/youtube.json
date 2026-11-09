@@ -389,6 +389,18 @@
    "capa": true,
    "na_playlist": true,
    "robo": "2026-10-22-youtube"
+  },
+  "video-live-sem-comissao": {
+   "yt": "Sp0rlB-Y80Q",
+   "quando": "2026-11-09T23:33:58+00:00",
+   "visibilidade": "private",
+   "titulo": "Venda ao vivo sem comissão sobre a venda | Live shop com mensalidade fixa | Moviki",
+   "comentario": "Quanto custa vender em live shop, taxa por taxa: https://www.moviki.com.br/guia/taxas-live-shop\nTeste grátis de 30 dias, sem cartão.",
+   "playlist": "PLCJc5gL33i04",
+   "origem": "grade",
+   "capa": true,
+   "na_playlist": true,
+   "robo": "2026-10-22-youtube"
   }
  }
 }

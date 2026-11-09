@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-09T07:52:50+00:00",
+ "gerado": "2026-11-09T21:24:04+00:00",
  "versao": "2026-10-29-faro-tiktok",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1905,
    "posts": 99,
-   "cota_usada": 5,
+   "cota_usada": 3,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
+  "reel": "2026-10-05",
   "story": "2026-10-12",
-  "reel": "2026-10-05"
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,13 +169,13 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 22,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 22,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 49,
-     "curtidas": 73,
-     "comentarios": 3
-    },
     "story": {
-     "posts": 102,
+     "posts": 103,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 49,
+     "curtidas": 72,
+     "comentarios": 3
     },
     "feed": {
      "posts": 19,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 49,
+    "story": {
+     "posts": 106,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 106,
+    "reel": {
+     "posts": 49,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-09T21:15:01+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Eletroportáteis: venda ao vivo pelo celular",
+   "peca": "video:video-comercio-eletroportateis",
+   "ramo": "eletronicos",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-eletroportateis.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18121193180280617",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4026857605720882407",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1813171486573957"
+   }
+  },
   {
    "quando": "2026-11-09T02:06:07+00:00",
    "formato": "reel",
@@ -331,10 +354,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18132932384495750",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4026089437137586825",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18132932384495750"
    },
    "fb": {
     "id": "3359192050931965"
@@ -354,10 +374,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18119818409100933",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4026001577399420633",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18119818409100933"
    },
    "fb": {
     "id": "1426855132844924"
@@ -2126,7 +2143,7 @@
    "ig": {
     "id": "18126487036911500",
     "link": "https://www.instagram.com/reel/De-srOQigK3/",
-    "curtidas": 20,
+    "curtidas": 19,
     "comentarios": 0
    },
    "fb": {
@@ -4146,23 +4163,6 @@
     "link": "https://www.facebook.com/reel/1131554919806920/",
     "curtidas": 0,
     "comentarios": 0
-   }
-  },
-  {
-   "quando": "2026-10-10T17:26:38+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Sua vitrine agora é ao vivo",
-   "peca": "story-otica-vitrine-ao-vivo",
-   "ramo": "otica",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-otica-vitrine-ao-vivo.jpg",
-   "rede": "facebook",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "fb": {
-    "id": "1096195546609320"
    }
   }
  ],

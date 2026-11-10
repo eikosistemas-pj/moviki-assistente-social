@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-10T18:23:47+00:00",
+  "formato": "story",
+  "descricao": "Moda fitness: venda ao vivo pelo celular",
+  "media_id": "18131858089906380",
+  "origem": "casa",
+  "peca": "video:video-comercio-moda-fitness",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-moda-fitness.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "tech-energia",
+  "corte": "0.0-15.5",
+  "fb": "3419636031570668"
+ },
+ {
   "quando": "2026-11-10T04:22:23+00:00",
   "formato": "reel",
   "descricao": "Ela desistiu no checkout. Na live, ela vê o biquíni de perto e compra na hora.",

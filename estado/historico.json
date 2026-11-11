@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-11T22:54:23+00:00",
+  "formato": "reel",
+  "descricao": "Foto não mostra se o sofá cabe na sala. Na live, mostra.",
+  "media_id": "18350489371264106",
+  "origem": "casa",
+  "peca": "grade:reel-moveis-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "moveis",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-moveis-ao-vivo-comente.jpg",
+  "fb": "1635324641463112"
+ },
+ {
   "quando": "2026-11-11T22:00:42+00:00",
   "formato": "story",
   "descricao": "Vender pelo WhatsApp ou ao vivo?",

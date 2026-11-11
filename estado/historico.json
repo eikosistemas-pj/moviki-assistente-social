@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-11T01:24:46+00:00",
+  "formato": "feed",
+  "descricao": "Black Friday ao vivo: ensaie antes",
+  "media_id": "17896220583682826",
+  "origem": "casa",
+  "peca": "bf-ensaio-feed",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261111-012432.jpg",
+  "fb": "1312620718595159_122125436553430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-11T00:55:42+00:00",
   "formato": "story",
   "descricao": "Sua papelaria ao vivo, do balcão",

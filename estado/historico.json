@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-11T00:55:42+00:00",
+  "formato": "story",
+  "descricao": "Sua papelaria ao vivo, do balcão",
+  "media_id": "18212477890369045",
+  "origem": "casa",
+  "peca": "story-material-escolar-2",
+  "rede": "instagram",
+  "ramo": "papelaria",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-material-escolar-2.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "bossa-moderna",
+  "fb": "2334397430737607"
+ },
+ {
   "quando": "2026-11-10T21:54:48+00:00",
   "formato": "reel",
   "descricao": "Tênis na foto não mostra a sola. Na live, mostra.",

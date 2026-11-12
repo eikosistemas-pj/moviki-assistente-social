@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-12T18:45:33+00:00",
+  "formato": "story",
+  "descricao": "Games e informática: venda ao vivo pelo celular",
+  "media_id": "18497936347109163",
+  "origem": "casa",
+  "peca": "video:video-comercio-games",
+  "rede": "instagram",
+  "ramo": "eletronicos",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-games.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "tech-energia",
+  "corte": "0.0-15.7",
+  "fb": "2384589742284562"
+ },
+ {
   "quando": "2026-11-12T03:28:30+00:00",
   "formato": "reel",
   "descricao": "Cosmético na foto não tira dúvida. Na live, tira.",

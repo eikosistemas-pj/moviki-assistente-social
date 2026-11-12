@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-12T03:28:30+00:00",
+  "formato": "reel",
+  "descricao": "Cosmético na foto não tira dúvida. Na live, tira.",
+  "media_id": "18451854532192612",
+  "origem": "casa",
+  "peca": "grade:reel-cosmeticos-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "cosmeticos",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-cosmeticos-ao-vivo-comente.jpg",
+  "fb": "4643793549196606"
+ },
+ {
   "quando": "2026-11-12T02:05:03+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

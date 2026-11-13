@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-13T07:50:18+00:00",
+ "gerado": "2026-11-13T18:28:48+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1905,
+   "seguidores": 1906,
    "posts": 111,
-   "cota_usada": 6,
+   "cota_usada": 7,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
+  "reel": "2026-10-05",
   "story": "2026-10-12",
-  "reel": "2026-10-05"
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,6 +169,11 @@
  "totais": {
   "7d": {
    "ig": {
+    "story": {
+     "posts": 22,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -176,16 +181,16 @@
     },
     "feed": {
      "posts": 5,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "fb": {
+    "story": {
+     "posts": 22,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -193,11 +198,6 @@
     },
     "feed": {
      "posts": 5,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -205,35 +205,35 @@
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 110,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 55,
      "curtidas": 70,
      "comentarios": 3
     },
     "feed": {
-     "posts": 22,
-     "curtidas": 8,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 110,
-     "curtidas": 0,
+     "posts": 21,
+     "curtidas": 6,
      "comentarios": 0
     }
    },
    "fb": {
+    "story": {
+     "posts": 110,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 55,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 22,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 110,
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -248,6 +248,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-13T18:07:57+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Moda praia: venda ao vivo pelo celular",
+   "peca": "video:video-comercio-moda-praia",
+   "ramo": "moda",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-moda-praia.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17914217289592673",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4029662576837971835",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1175419584856686"
+   }
+  },
   {
    "quando": "2026-11-13T03:00:26+00:00",
    "formato": "reel",
@@ -387,10 +410,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18497936347109163",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4028956612600423602",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18497936347109163"
    },
    "fb": {
     "id": "2384589742284562"
@@ -4431,53 +4451,6 @@
    "fb": {
     "id": "2008668953130080"
    }
-  },
-  {
-   "quando": "2026-10-14T17:44:05+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "peca",
-   "titulo": "Sua loja de cosméticos ao vivo no Moviki",
-   "peca": "feed-loja-cosmeticos-ao-vivo",
-   "ramo": "beleza",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261014-174340.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17907786765333164",
-    "link": "https://www.instagram.com/p/Dee8qHUmFcN/",
-    "curtidas": 2,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "1312620718595159_122121586329430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122121586329430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
-  },
-  {
-   "quando": "2026-10-14T17:23:42+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Venda seu artesanato ao vivo",
-   "peca": "story-artesanato-venda-ao-vivo",
-   "ramo": "artesanato",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-artesanato-venda-ao-vivo.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17918776182451494"
-   },
-   "fb": {
-    "id": "1579450490049448"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4759,29 +4732,29 @@
   },
   {
    "dia": "2026-11-13",
-   "ig": 1905,
+   "ig": 1906,
    "ig_posts": 111,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1905,
-  "ganho_7d": -1,
+  "atual": 1906,
+  "ganho_7d": 0,
   "desde_7d": "2026-11-06",
-  "ganho_30d": -39,
+  "ganho_30d": -38,
   "desde_30d": "2026-10-14",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3095,
+    "falta": 3094,
     "dias": -16,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8095,
+    "falta": 8094,
     "dias": 44,
     "por_dia": 184.0
    }

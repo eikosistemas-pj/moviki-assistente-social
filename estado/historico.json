@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-13T21:29:07+00:00",
+  "formato": "story",
+  "descricao": "Qual dia da semana a sua loja vende mais?",
+  "media_id": "18128627869807637",
+  "origem": "casa",
+  "peca": "pergunta:dia-forte",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "lofi-house",
+  "fb": "4745378845749396"
+ },
+ {
   "quando": "2026-11-13T21:01:59+00:00",
   "formato": "feed",
   "descricao": "Mostre seu artesanato ao vivo",

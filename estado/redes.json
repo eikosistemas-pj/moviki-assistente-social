@@ -1,11 +1,11 @@
 {
- "gerado": "2026-11-12T18:49:50+00:00",
- "versao": "2026-10-29-faro-tiktok",
+ "gerado": "2026-11-13T07:50:18+00:00",
+ "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1905,
-   "posts": 108,
+   "posts": 111,
    "cota_usada": 6,
    "cota_total": 100
   },
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "feed": null,
-  "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -37,22 +37,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-11-05",
-   "hoje": false,
-   "feed": {
-    "esperado": 1,
-    "feito": 1
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 3
-   },
-   "reel": {
-    "esperado": 2,
-    "feito": 2
-   }
-  },
   {
    "dia": "2026-11-06",
    "hoje": false,
@@ -151,6 +135,22 @@
   },
   {
    "dia": "2026-11-12",
+   "hoje": false,
+   "feed": {
+    "esperado": 1,
+    "feito": 1
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 3
+   },
+   "reel": {
+    "esperado": 2,
+    "feito": 2
+   }
+  },
+  {
+   "dia": "2026-11-13",
    "hoje": true,
    "feed": {
     "esperado": 1,
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 1
+    "feito": 0
    },
    "reel": {
     "esperado": 2,
@@ -169,11 +169,6 @@
  "totais": {
   "7d": {
    "ig": {
-    "story": {
-     "posts": 22,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -181,16 +176,16 @@
     },
     "feed": {
      "posts": 5,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "story": {
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     }
    },
    "fb": {
-    "story": {
-     "posts": 22,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -198,6 +193,11 @@
     },
     "feed": {
      "posts": 5,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "story": {
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -205,35 +205,35 @@
   },
   "30d": {
    "ig": {
-    "story": {
-     "posts": 110,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "reel": {
-     "posts": 54,
-     "curtidas": 72,
+     "posts": 55,
+     "curtidas": 70,
      "comentarios": 3
     },
     "feed": {
      "posts": 22,
      "curtidas": 8,
      "comentarios": 0
-    }
-   },
-   "fb": {
+    },
     "story": {
      "posts": 110,
      "curtidas": 0,
      "comentarios": 0
-    },
+    }
+   },
+   "fb": {
     "reel": {
-     "posts": 54,
+     "posts": 55,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
      "posts": 22,
+     "curtidas": 0,
+     "comentarios": 0
+    },
+    "story": {
+     "posts": 110,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -248,6 +248,131 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-13T03:00:26+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Semijoia na foto não brilha. Na live, brilha.",
+   "peca": "video-semijoias-ao-vivo",
+   "ramo": "joalheria",
+   "miniatura": "https://app.moviki.com.br/material/capas/reel-semijoias-ao-vivo.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18089835461309851",
+    "link": "https://www.instagram.com/reel/DfqnS1SgHpb/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "3595393270635448",
+    "link": "https://www.facebook.com/reel/3595393270635448/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-11-13T02:03:29+00:00",
+   "formato": "feed",
+   "origem": "casa",
+   "subtipo": "peca",
+   "titulo": "Black Friday ao vivo: presente se escolhe de perto",
+   "peca": "bf-presente-feed",
+   "ramo": "geral",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261113-020316.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17957551212298337",
+    "link": "https://www.instagram.com/p/Dfqg4LZlznf/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1312620718595159_122125728711430818",
+    "link": "https://www.facebook.com/122118442485430818/posts/122125728711430818",
+    "curtidas": 0,
+    "comentarios": 0,
+    "compartilhamentos": 0
+   }
+  },
+  {
+   "quando": "2026-11-13T01:31:58+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Moviki é sensacional !!!!",
+   "peca": "c:mp7RoQriVJGxLl3HKpd6",
+   "ramo": "geral",
+   "miniatura": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/criadores%2FzEi14ouOAFUSeWb0dgeYEB7trCc2%2F1790130022508-67rt01.png?alt=media&token=05c3a960-112f-4b61-9796-cc757def2957",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18066250064632783",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4029161210993510637",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1128437646602417"
+   }
+  },
+  {
+   "quando": "2026-11-12T22:22:47+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Loja de shopping: artigos para pet — venda ao vivo",
+   "peca": "video-shopping-pet",
+   "ramo": "shopping",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-shopping-pet.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17977640019174662",
+    "link": "https://www.instagram.com/reel/DfqHhDVDb4i/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2313670139455854",
+    "link": "https://www.facebook.com/reel/2313670139455854/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-11-12T21:55:41+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "O que mais trava a venda pelo celular?",
+   "peca": "pergunta:o-que-trava",
+   "ramo": "geral",
+   "miniatura": "",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17891966211624311",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4029052381017757507",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "4420556174859699"
+   }
+  },
   {
    "quando": "2026-11-12T18:45:33+00:00",
    "formato": "story",
@@ -311,10 +436,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18004426484801971",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4028453169025665330",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18004426484801971"
    },
    "fb": {
     "id": "950436404609317"
@@ -360,10 +482,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17979637949930605",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4028330179483695501",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17979637949930605"
    },
    "fb": {
     "id": "1445322314470594"
@@ -2774,7 +2893,7 @@
    "ig": {
     "id": "18035960891849039",
     "link": "https://www.instagram.com/reel/De7bH4GAoil/",
-    "curtidas": 21,
+    "curtidas": 20,
     "comentarios": 0
    },
    "fb": {
@@ -4359,99 +4478,6 @@
    "fb": {
     "id": "1579450490049448"
    }
-  },
-  {
-   "quando": "2026-10-14T00:46:54+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Brinquedos ao vivo no mapa",
-   "peca": "story-brinquedos-no-mapa",
-   "ramo": "infantil",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-brinquedos-no-mapa.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18077670935420763"
-   },
-   "fb": {
-    "id": "1795177928171458"
-   }
-  },
-  {
-   "quando": "2026-10-14T00:35:14+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "peca",
-   "titulo": "Cama, mesa e banho ao vivo no Moviki",
-   "peca": "feed-cama-mesa-banho-ao-vivo",
-   "ramo": "casa",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261014-003447.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18113375990016836",
-    "link": "https://www.instagram.com/p/DedG57SlEG8/",
-    "curtidas": 0,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "1312620718595159_122121489705430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122121489705430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
-  },
-  {
-   "quando": "2026-10-13T23:56:03+00:00",
-   "formato": "reel",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Já imaginou fazer uma live direto da sua loja?",
-   "peca": "grade:ugc-bastidores-moda",
-   "ramo": "moda",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-moda.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17922529683222034",
-    "link": "https://www.instagram.com/reel/DedCYg8j3RW/",
-    "curtidas": 1,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "2646959505776157",
-    "link": "https://www.facebook.com/reel/2646959505776157/",
-    "curtidas": 0,
-    "comentarios": 0
-   }
-  },
-  {
-   "quando": "2026-10-13T19:21:08+00:00",
-   "formato": "story",
-   "origem": "criador",
-   "subtipo": null,
-   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
-   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
-   "ramo": "geral",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/story-criador-20261013-192046.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17881876347627290"
-   },
-   "fb": {
-    "id": "1511340474219941"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4730,28 +4756,34 @@
    "ig": 1905,
    "ig_posts": 108,
    "fb": 3
+  },
+  {
+   "dia": "2026-11-13",
+   "ig": 1905,
+   "ig_posts": 111,
+   "fb": 3
   }
  ],
  "seguidores": {
   "atual": 1905,
-  "ganho_7d": -28,
-  "desde_7d": "2026-11-05",
-  "ganho_30d": -40,
-  "desde_30d": "2026-10-13",
+  "ganho_7d": -1,
+  "desde_7d": "2026-11-06",
+  "ganho_30d": -39,
+  "desde_30d": "2026-10-14",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 3095,
-    "dias": -15,
+    "dias": -16,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 8095,
-    "dias": 45,
-    "por_dia": 179.9
+    "dias": 44,
+    "por_dia": 184.0
    }
   ]
  },
@@ -4790,21 +4822,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-11-12",
-    "hoje": true,
-    "id": "video-acai-ao-vivo",
-    "titulo": "Açaí na foto não mostra o creme. Na live, dá água na boca.",
-    "ramo": "alimentacao",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Freel-acai-ao-vivo.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/reel-acai-ao-vivo.webp",
-    "duracao": 84.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nAçaí na foto não mostra o creme. Na live, dá água na boca.\n\nCom o Moviki, uma loja de açaí entra ao vivo pelo próprio celular, sem precisar de seguidores: a cliente entra pelo link, sem baixar nada, e a loja mostra o copo montado na frente do cliente e responde no chat se dá para trocar o morango e se entrega no bairro. Compra com um toque, e do lado da loja o pedido chega na tela. E fora da live, a página da loja com catálogo, sacola, entrega ou reserva, e o mapa em tempo real.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise. Cena ilustrativa, loja de exemplo.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #esquentablackfriday #delivery #lanchonete #restaurante",
-    "hashtags": "#moviki #esquentablackfriday #delivery #lanchonete #restaurante",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-12-video-acai-ao-vivo.mp4"
-   },
-   {
     "dia": "2026-11-13",
-    "hoje": false,
+    "hoje": true,
     "id": "grade:faro-verao-comente",
     "titulo": "Vai vender na praia neste verão? O Guia FARO mostra o caminho.",
     "ramo": "praia",
@@ -4881,6 +4900,19 @@
     "hashtags": "#moviki #blackfriday #pequenonegocio #empreendedor #comerciolocal",
     "sem_cartela": true,
     "palavra": "NATAL"
+   },
+   {
+    "dia": "2026-11-19",
+    "hoje": false,
+    "id": "video-pet-ao-vivo",
+    "titulo": "Na foto, ninguém sabe se o peitoral serve. Na live, a loja mostra.",
+    "ramo": "pet",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Freel-pet-ao-vivo.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/reel-pet-ao-vivo.webp",
+    "duracao": 84.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nNa foto, ninguém sabe se o peitoral serve. Na live, a loja mostra.\n\nCom o Moviki, um pet shop entra ao vivo pelo próprio celular, sem precisar de seguidores: a cliente entra pelo link, sem baixar nada, e a loja mostra o peitoral de perto, a costura e o tamanho, e responde no chat se serve no cachorro da cliente. Compra com um toque, e do lado da loja o pedido chega na tela. E fora da live, a página da loja com catálogo, sacola, entrega ou reserva, e o mapa em tempo real.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise. Cena ilustrativa, loja de exemplo.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #blackfriday #petshop #banhoetosa #pet",
+    "hashtags": "#moviki #blackfriday #petshop #banhoetosa #pet",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-19-video-pet-ao-vivo.mp4"
    }
   ]
  },
@@ -4891,19 +4923,8 @@
   "com_erro": 0,
   "proximos": [
    {
-    "dia": "2026-11-12",
-    "hoje": true,
-    "id": "reel-cosmeticos-ao-vivo-comente",
-    "titulo": "Cosmético na foto não tira dúvida. Na live, tira.",
-    "formato": "reel",
-    "pilar": "ramo",
-    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-cosmeticos-ao-vivo-comente.jpg",
-    "sai": true,
-    "motivo": ""
-   },
-   {
     "dia": "2026-11-13",
-    "hoje": false,
+    "hoje": true,
     "id": "reel-pet-ao-vivo-comente",
     "titulo": "Na foto, ninguém sabe se o peitoral serve. Na live, a loja mostra.",
     "formato": "reel",
@@ -5151,6 +5172,17 @@
     "formato": "reel",
     "pilar": "ramo",
     "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-confeitaria-ao-vivo-comente.jpg",
+    "sai": true,
+    "motivo": ""
+   },
+   {
+    "dia": "2026-11-26",
+    "hoje": false,
+    "id": "reel-cosmeticos-ao-vivo-comente",
+    "titulo": "Cosmético na foto não tira dúvida. Na live, tira.",
+    "formato": "reel",
+    "pilar": "ramo",
+    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-cosmeticos-ao-vivo-comente.jpg",
     "sai": true,
     "motivo": ""
    }

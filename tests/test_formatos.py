@@ -44,7 +44,7 @@ def test_reel_no_facebook_inicia_manda_url_e_publica():
     assert _fb(g).reel("https://x/v.mp4", "legenda") == "v1"
     assert [c[1].get("upload_phase") for c in g.chamadas] == ["start", "finish"]
     assert g.chamadas[1][1]["video_state"] == "PUBLISHED"
-    assert g.chamadas[1][1]["description"] == "legenda"
+    assert g.chamadas[1][1]["description"] == Facebook.com_chamada("legenda")
     destino, cab = g.uploads[0]
     assert cab["file_url"] == "https://x/v.mp4" and cab["Authorization"] == "OAuth tp"
 

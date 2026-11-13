@@ -18,13 +18,13 @@ RAIZ = Path(__file__).resolve().parent.parent
 
 # Marca de versao do robo. Sai na primeira linha do log de cada execucao do
 # feed: e assim que se confere, no Actions, qual versao rodou de verdade.
-VERSAO = "2026-10-29-faro-tiktok"  # Kit TikTok com os Guias FARO; antes: 2026-10-28-instagram; @ do Instagram e cartela do TikTok: movikiliveshop; antes: 2026-10-28-tiktok-movikiliveshop; 2026-10-28-faro-verao
+VERSAO = "2026-11-12-chamada-facebook"  # Legenda do Facebook fecha com o link do Messenger (funil LIVE); antes: 2026-10-29-faro-tiktok (Kit TikTok com os Guias FARO); 2026-10-28-instagram; @ do Instagram e cartela do TikTok: movikiliveshop; antes: 2026-10-28-tiktok-movikiliveshop; 2026-10-28-faro-verao
 
 # Chamada "Comente LIVE" (08/10/2026). Primeira linha de TODA legenda de feed
 # e reel no Instagram: quem comenta LIVE recebe no direct, pelo ManyChat, o
-# link da live de exemplo do ramo dele e o cadastro. So no Instagram (o
-# Facebook nao esta ligado ao ManyChat). Desliga com a variavel
-# CHAMADA_COMENTE=0. A peca do material de apoio NAO muda: o parceiro posta a
+# link da live de exemplo do ramo dele e o cadastro. So no Instagram: no
+# Facebook a chamada e outra (CHAMADA_FACEBOOK, logo abaixo). Desliga com a
+# variavel CHAMADA_COMENTE=0. A peca do material de apoio NAO muda: o parceiro posta a
 # mesma peca no perfil dele, onde comentar LIVE nao dispara nada.
 _chamada = os.environ.get("CHAMADA_COMENTE", "").strip()
 CHAMADA_COMENTE = "" if _chamada == "0" else (
@@ -37,6 +37,17 @@ CHAMADA_COMENTE = "" if _chamada == "0" else (
 # padrao aqui).
 CARTELA_REEL = os.environ.get("CARTELA_REEL", "").strip() != "0"
 CARTELA_STORY = os.environ.get("CARTELA_STORY", "").strip() != "0"
+
+# Chamada do Facebook (12/11/2026). Ultima linha de TODA legenda de feed e
+# reel na Pagina: um link do Messenger que abre o Funil LIVE do ManyChat
+# (gatilho de link de referencia ref=live). Nao e "Comente LIVE" de proposito:
+# o Facebook rebaixa post que pede comentario com palavra certa (isca de
+# engajamento), e o link abre a conversa inteira em vez de uma unica mensagem
+# privada. Antes disso a legenda do Facebook saia sem chamada nenhuma.
+# Desliga com a variavel CHAMADA_FACEBOOK=0.
+_chamada_fb = os.environ.get("CHAMADA_FACEBOOK", "").strip()
+CHAMADA_FACEBOOK = "" if _chamada_fb == "0" else (
+    _chamada_fb or "\U0001f4ac Quer ver uma live de exemplo do seu ramo? Chama a gente no Messenger: https://m.me/moviki.oficial?ref=live")
 
 # Kit TikTok (09/10/2026). O TikTok nao libera gatilho de comentario no
 # ManyChat no Brasil: so o direct dispara o funil. A legenda do kit abre com

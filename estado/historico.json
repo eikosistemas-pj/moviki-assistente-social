@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-13T18:07:57+00:00",
+  "formato": "story",
+  "descricao": "Moda praia: venda ao vivo pelo celular",
+  "media_id": "17914217289592673",
+  "origem": "casa",
+  "peca": "video:video-comercio-moda-praia",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-moda-praia.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "funk-pop-leve",
+  "corte": "0.0-15.9",
+  "fb": "1175419584856686"
+ },
+ {
   "quando": "2026-11-13T03:00:26+00:00",
   "formato": "reel",
   "descricao": "Semijoia na foto não brilha. Na live, brilha.",

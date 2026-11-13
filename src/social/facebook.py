@@ -25,6 +25,11 @@ Como o usuario do sistema `moviki-social` tem acesso total a Pagina, o token
 devolvido NAO expira. Por isso o robo faz essa troca sozinho, uma vez por
 execucao, e o secret continua sendo o token do usuario do sistema — nada
 muda do lado de quem configura.
+
+CHAMADA DO MESSENGER (12/11/2026): toda legenda de foto e de reel fecha com o
+link do Messenger que abre o Funil LIVE (config.CHAMADA_FACEBOOK). Entra aqui,
+no ponto unico de publicacao, para valer no espelho, no plano B e no modo
+SO_FACEBOOK. Story nao tem legenda.
 """
 import os
 import time
@@ -117,10 +122,22 @@ class Facebook:
         if not (isinstance(r, dict) and r.get("success")):
             raise RuntimeError(f"facebook upload de video: {r}")
 
+    # ------------------------------------------------------------ chamada
+    @staticmethod
+    def com_chamada(texto):
+        """Fecha a legenda com a chamada do Messenger (12/11/2026), ver
+        config.CHAMADA_FACEBOOK. Vai no FIM: a primeira linha continua sendo o
+        gancho do post. Nao repete se a legenda ja traz um link do Messenger."""
+        texto = (texto or "").strip()
+        chamada = config.CHAMADA_FACEBOOK
+        if not chamada or "m.me/" in texto.lower():
+            return texto
+        return f"{texto}\n\n{chamada}" if texto else chamada
+
     # -------------------------------------------------------------- acoes
     def foto(self, image_url, legenda):
         r = self._ok(self._post(f"{self._pagina()}/photos",
-                                {"url": image_url, "caption": legenda}), "foto")
+                                {"url": image_url, "caption": self.com_chamada(legenda)}), "foto")
         return r.get("post_id") or r.get("id")
 
     def reel(self, video_url, descricao):
@@ -136,7 +153,7 @@ class Facebook:
         self._enviar_video(video_id, video_url, ini.get("upload_url"))
         fim = self._ok(self._post(f"{pag}/video_reels", {
             "upload_phase": "finish", "video_id": video_id,
-            "video_state": "PUBLISHED", "description": descricao,
+            "video_state": "PUBLISHED", "description": self.com_chamada(descricao),
         }), "reel finish")
         if not fim.get("success"):
             raise RuntimeError(f"facebook reel finish: {fim}")

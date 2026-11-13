@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-13T21:01:59+00:00",
+  "formato": "feed",
+  "descricao": "Mostre seu artesanato ao vivo",
+  "media_id": "18350271676254780",
+  "origem": "casa",
+  "peca": "feed-artesanato-mostre-ao-vivo",
+  "rede": "instagram",
+  "ramo": "artesanato",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261113-210145.jpg",
+  "fb": "1312620718595159_122125830273430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-13T18:07:57+00:00",
   "formato": "story",
   "descricao": "Moda praia: venda ao vivo pelo celular",

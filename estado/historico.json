@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-14T16:51:57+00:00",
+  "formato": "story",
+  "descricao": "Loja de shopping: suplementos — venda ao vivo",
+  "media_id": "17875653747639743",
+  "origem": "casa",
+  "peca": "video:video-shopping-suplementos",
+  "rede": "instagram",
+  "ramo": "shopping",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-shopping-suplementos.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "tech-energia",
+  "corte": "0.0-12.9",
+  "fb": "3208719552651554"
+ },
+ {
   "quando": "2026-11-14T02:46:55+00:00",
   "formato": "reel",
   "descricao": "Açaí na foto não mostra o creme. Na live, dá água na boca.",

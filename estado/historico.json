@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-14T20:52:57+00:00",
+  "formato": "reel",
+  "descricao": "Ela clicou no anúncio de Black Friday e desistiu no checkout. Na live, ela compra num toque.",
+  "media_id": "17928321213201053",
+  "origem": "casa",
+  "peca": "grade:ugc-bastidores-bf-boutique",
+  "rede": "instagram",
+  "ramo": "moda",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-bf-boutique.jpg",
+  "fb": "1622584349351433"
+ },
+ {
   "quando": "2026-11-14T20:04:31+00:00",
   "formato": "story",
   "descricao": "Live curta ou live longa?",

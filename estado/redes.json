@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-15T07:47:10+00:00",
+ "gerado": "2026-11-15T17:39:42+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1906,
+   "seguidores": 1907,
    "posts": 116,
    "cota_usada": 5,
    "cota_total": 100
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,13 +169,13 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 21,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 21,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 59,
-     "curtidas": 70,
-     "comentarios": 3
-    },
     "story": {
      "posts": 112,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 59,
+     "curtidas": 70,
+     "comentarios": 3
     },
     "feed": {
      "posts": 21,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 59,
+    "story": {
+     "posts": 112,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 112,
+    "reel": {
+     "posts": 59,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-15T17:27:39+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Roupa no cabide não mostra o caimento. Na live, mostra.",
+   "peca": "video:video-moda-ao-vivo",
+   "ramo": "moda",
+   "miniatura": "https://app.moviki.com.br/material/capas/reel-moda-ao-vivo.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18502430611097487",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4031091817735014185",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1136512989272495"
+   }
+  },
   {
    "quando": "2026-11-15T02:18:13+00:00",
    "formato": "reel",
@@ -354,10 +377,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17875653747639743",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4030349126840159508",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17875653747639743"
    },
    "fb": {
     "id": "3208719552651554"
@@ -4569,26 +4589,6 @@
     "comentarios": 0,
     "compartilhamentos": 0
    }
-  },
-  {
-   "quando": "2026-10-16T16:49:48+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Seus sapatos esportivos ao vivo",
-   "peca": "story-tenis-esportivos-ao-vivo",
-   "ramo": "moda",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-tenis-esportivos-ao-vivo.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18074716832764938"
-   },
-   "fb": {
-    "id": "1646024793539592"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4882,29 +4882,29 @@
   },
   {
    "dia": "2026-11-15",
-   "ig": 1906,
+   "ig": 1907,
    "ig_posts": 116,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1906,
-  "ganho_7d": 1,
+  "atual": 1907,
+  "ganho_7d": 2,
   "desde_7d": "2026-11-08",
-  "ganho_30d": -48,
+  "ganho_30d": -47,
   "desde_30d": "2026-10-16",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3094,
+    "falta": 3093,
     "dias": -18,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8094,
+    "falta": 8093,
     "dias": 42,
     "por_dia": 192.7
    }

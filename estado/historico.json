@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-15T02:18:13+00:00",
+  "formato": "reel",
+  "descricao": "Roupa no cabide não mostra o caimento. Na live, mostra.",
+  "media_id": "18003213714046613",
+  "origem": "casa",
+  "peca": "grade:reel-moda-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "moda",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-moda-ao-vivo-comente.jpg",
+  "fb": "1144521178446254"
+ },
+ {
   "quando": "2026-11-15T00:16:18+00:00",
   "formato": "story",
   "descricao": "Venha para o Moviki e venda ao vivo em sua própria live!!!",

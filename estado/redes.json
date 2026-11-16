@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-16T07:53:47+00:00",
+ "gerado": "2026-11-16T20:56:18+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1906,
    "posts": 118,
-   "cota_usada": 5,
+   "cota_usada": 4,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "reel": "2026-10-05",
-  "feed": null
+  "feed": null,
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,13 +169,13 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 21,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 22,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 21,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 60,
-     "curtidas": 69,
-     "comentarios": 3
-    },
     "story": {
-     "posts": 113,
+     "posts": 111,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 59,
+     "curtidas": 69,
+     "comentarios": 3
     },
     "feed": {
      "posts": 20,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 60,
+    "story": {
+     "posts": 111,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 113,
+    "reel": {
+     "posts": 59,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -242,6 +242,29 @@
  },
  "alertas": [],
  "posts": [
+  {
+   "quando": "2026-11-16T20:46:32+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Loja de shopping: artigos para bebê — venda ao vivo",
+   "peca": "video:video-shopping-bebe",
+   "ramo": "shopping",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-shopping-bebe.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17930288262244622",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4031916648872201264",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1863489228163603"
+   }
+  },
   {
    "quando": "2026-11-16T02:26:04+00:00",
    "formato": "reel",
@@ -331,10 +354,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17916780957472016",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4031182806868134971",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17916780957472016"
    },
    "fb": {
     "id": "1139395685730486"
@@ -354,10 +374,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18502430611097487",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4031091817735014185",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18502430611097487"
    },
    "fb": {
     "id": "1136512989272495"
@@ -4521,92 +4538,6 @@
    },
    "fb": {
     "id": "28669159869419176"
-   }
-  },
-  {
-   "quando": "2026-10-17T19:51:05+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Perfumaria: os bastidores de uma live na loja",
-   "peca": "video:ugc-bastidores-perfumaria",
-   "ramo": "beleza",
-   "miniatura": "https://app.moviki.com.br/material/capas/ugc-bastidores-perfumaria.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18181124314438380"
-   },
-   "fb": {
-    "id": "1129005080049358"
-   }
-  },
-  {
-   "quando": "2026-10-17T18:38:39+00:00",
-   "formato": "reel",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Autopeças: venda ao vivo pelo celular",
-   "peca": "video-comercio-autopecas",
-   "ramo": "automotivo",
-   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-autopecas.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17992514889109987",
-    "link": "https://www.instagram.com/reel/DemxNiqj12N/",
-    "curtidas": 0,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "2006102453718653",
-    "link": "https://www.facebook.com/reel/2006102453718653/",
-    "curtidas": 0,
-    "comentarios": 0
-   }
-  },
-  {
-   "quando": "2026-10-17T18:00:17+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Sua loja de naturais ao vivo no mapa",
-   "peca": "story-naturais-granola",
-   "ramo": "naturais",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-naturais-granola.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17891482911455621"
-   },
-   "fb": {
-    "id": "1135443905628553"
-   }
-  },
-  {
-   "quando": "2026-10-17T14:30:03+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Moda praia: os bastidores de uma live na loja",
-   "peca": "video:ugc-bastidores-moda-praia",
-   "ramo": "moda",
-   "miniatura": "https://app.moviki.com.br/material/capas/ugc-bastidores-moda-praia.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18116622154816421"
-   },
-   "fb": {
-    "id": "2102031387089584"
    }
   }
  ],

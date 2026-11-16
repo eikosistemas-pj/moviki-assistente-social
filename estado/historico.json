@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-16T20:46:32+00:00",
+  "formato": "story",
+  "descricao": "Loja de shopping: artigos para bebê — venda ao vivo",
+  "media_id": "17930288262244622",
+  "origem": "casa",
+  "peca": "video:video-shopping-bebe",
+  "rede": "instagram",
+  "ramo": "shopping",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-shopping-bebe.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "tech-energia",
+  "corte": "0.0-14.8",
+  "fb": "1863489228163603"
+ },
+ {
   "quando": "2026-11-16T02:26:04+00:00",
   "formato": "reel",
   "descricao": "Semijoia na foto não brilha. Na live, brilha.",

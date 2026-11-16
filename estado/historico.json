@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-16T02:26:04+00:00",
+  "formato": "reel",
+  "descricao": "Semijoia na foto não brilha. Na live, brilha.",
+  "media_id": "18100851743433871",
+  "origem": "casa",
+  "peca": "grade:reel-semijoias-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "semijoias",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-semijoias-ao-vivo-comente.jpg",
+  "fb": "2410545233020843"
+ },
+ {
   "quando": "2026-11-16T00:22:09+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

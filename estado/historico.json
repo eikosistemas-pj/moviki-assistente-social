@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-17T00:18:43+00:00",
+  "formato": "reel",
+  "descricao": "Bolsa na foto não mostra o que cabe dentro. Na live, mostra.",
+  "media_id": "17919335370531429",
+  "origem": "casa",
+  "peca": "grade:reel-bolsas-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "bolsas",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-bolsas-ao-vivo-comente.jpg",
+  "fb": "2234868007111562"
+ },
+ {
   "quando": "2026-11-16T23:52:27+00:00",
   "formato": "story",
   "descricao": "Se pudesse mostrar só 1 produto ao vivo hoje, qual seria?",

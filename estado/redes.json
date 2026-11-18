@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-18T08:28:16+00:00",
+ "gerado": "2026-11-18T19:21:58+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1906,
+   "seguidores": 1905,
    "posts": 124,
-   "cota_usada": 6,
+   "cota_usada": 7,
    "cota_total": 100
   },
   "facebook": {
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "story": "2026-10-12",
-  "reel": "2026-10-05",
-  "feed": null
+  "feed": null,
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,6 +169,11 @@
  "totais": {
   "7d": {
    "ig": {
+    "story": {
+     "posts": 20,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -178,14 +183,14 @@
      "posts": 5,
      "curtidas": 2,
      "comentarios": 0
-    },
+    }
+   },
+   "fb": {
     "story": {
      "posts": 20,
      "curtidas": 0,
      "comentarios": 0
-    }
-   },
-   "fb": {
+    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -195,45 +200,40 @@
      "posts": 5,
      "curtidas": 0,
      "comentarios": 0
-    },
-    "story": {
-     "posts": 20,
-     "curtidas": 0,
-     "comentarios": 0
     }
    }
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 108,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 60,
      "curtidas": 66,
      "comentarios": 3
     },
     "feed": {
-     "posts": 22,
+     "posts": 21,
      "curtidas": 7,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 108,
-     "curtidas": 0,
      "comentarios": 0
     }
    },
    "fb": {
+    "story": {
+     "posts": 108,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 60,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 22,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 108,
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -253,6 +253,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-18T19:11:01+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Mostre sua farmácia ao vivo",
+   "peca": "story-farmacia-mostre-ao-vivo",
+   "ramo": "farmacia",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-farmacia-mostre-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18189644068419666",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4033318227186861024",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2593641787774498"
+   }
+  },
   {
    "quando": "2026-11-18T04:00:49+00:00",
    "formato": "reel",
@@ -392,10 +415,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17920617648530898",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4032602479401252840",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17920617648530898"
    },
    "fb": {
     "id": "1696231918773485"
@@ -4526,53 +4546,6 @@
    "fb": {
     "id": "1704664467740133"
    }
-  },
-  {
-   "quando": "2026-10-19T18:59:26+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "peca",
-   "titulo": "Checklist do balcão de live",
-   "peca": "balcao-de-live-checklist",
-   "ramo": "geral",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261019-185904.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18019032212953491",
-    "link": "https://www.instagram.com/p/Der9QZ8HaO0/",
-    "curtidas": 0,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "1312620718595159_122122328031430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122122328031430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
-  },
-  {
-   "quando": "2026-10-19T17:49:18+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Uma live do começo ao fim, com telas reais",
-   "peca": "video:video-live-demonstracao",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/capas/video-live-demonstracao.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17951681646050067"
-   },
-   "fb": {
-    "id": "1417086793329054"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4884,31 +4857,31 @@
   },
   {
    "dia": "2026-11-18",
-   "ig": 1906,
+   "ig": 1905,
    "ig_posts": 124,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1906,
-  "ganho_7d": 1,
+  "atual": 1905,
+  "ganho_7d": 0,
   "desde_7d": "2026-11-11",
-  "ganho_30d": -63,
+  "ganho_30d": -64,
   "desde_30d": "2026-10-19",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3094,
+    "falta": 3095,
     "dias": -21,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8094,
+    "falta": 8095,
     "dias": 39,
-    "por_dia": 207.5
+    "por_dia": 207.6
    }
   ]
  },

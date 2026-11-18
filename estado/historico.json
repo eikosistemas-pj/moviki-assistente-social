@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-18T22:39:38+00:00",
+  "formato": "story",
+  "descricao": "Em que cidade fica a sua loja?",
+  "media_id": "18120218213008120",
+  "origem": "casa",
+  "peca": "pergunta:cidade",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "29854691614114221"
+ },
+ {
   "quando": "2026-11-18T20:59:50+00:00",
   "formato": "feed",
   "descricao": "Loja de tênis ao vivo com o Moviki",

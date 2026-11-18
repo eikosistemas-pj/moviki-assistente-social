@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-18T03:07:24+00:00",
+  "formato": "feed",
+  "descricao": "Venda seu artesanato ao vivo",
+  "media_id": "18104741315113034",
+  "origem": "casa",
+  "peca": "feed-artesanato-venda-ao-vivo",
+  "rede": "instagram",
+  "ramo": "artesanato",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261118-030705.jpg",
+  "fb": "1312620718595159_122126533731430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-18T02:36:33+00:00",
   "formato": "story",
   "descricao": "Semijoia na foto não brilha. Na live, brilha.",

@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-18T19:11:01+00:00",
+  "formato": "story",
+  "descricao": "Mostre sua farmácia ao vivo",
+  "media_id": "18189644068419666",
+  "origem": "casa",
+  "peca": "story-farmacia-mostre-ao-vivo",
+  "rede": "instagram",
+  "ramo": "farmacia",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-farmacia-mostre-ao-vivo.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "pop-brasil",
+  "fb": "2593641787774498"
+ },
+ {
   "quando": "2026-11-18T04:00:49+00:00",
   "formato": "reel",
   "descricao": "Foto não mostra se o sofá cabe na sala. Na live, mostra.",

@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-19T08:41:07+00:00",
+ "gerado": "2026-11-19T19:27:21+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1905,
+   "seguidores": 1904,
    "posts": 127,
    "cota_usada": 6,
    "cota_total": 100
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "feed": null,
-  "reel": "2026-10-05",
-  "story": "2026-10-12"
+  "story": "2026-10-12",
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,13 +169,13 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 20,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 20,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 60,
-     "curtidas": 66,
-     "comentarios": 2
-    },
     "story": {
      "posts": 106,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 60,
+     "curtidas": 66,
+     "comentarios": 2
     },
     "feed": {
      "posts": 22,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 60,
+    "story": {
+     "posts": 106,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 106,
+    "reel": {
+     "posts": 60,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -248,6 +248,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-19T19:14:01+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Checklist do balcão de live",
+   "peca": "balcao-de-live-checklist-story",
+   "ramo": "geral",
+   "miniatura": "https://app.moviki.com.br/material/stories/balcao-de-live-checklist-story.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17916269799474127",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4034044481771002424",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "3079565972442299"
+   }
+  },
   {
    "quando": "2026-11-19T03:50:47+00:00",
    "formato": "reel",
@@ -387,10 +410,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18189644068419666",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4033318227186861024",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18189644068419666"
    },
    "fb": {
     "id": "2593641787774498"
@@ -4508,26 +4528,6 @@
    "fb": {
     "id": "4170853816541101"
    }
-  },
-  {
-   "quando": "2026-10-20T15:52:36+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Seu cliente parou de vir? Ele está no celular",
-   "peca": "story-universal-cliente-no-celular",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-universal-cliente-no-celular.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18115431254105610"
-   },
-   "fb": {
-    "id": "2347915519290090"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4845,31 +4845,31 @@
   },
   {
    "dia": "2026-11-19",
-   "ig": 1905,
+   "ig": 1904,
    "ig_posts": 127,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1905,
-  "ganho_7d": 0,
+  "atual": 1904,
+  "ganho_7d": -1,
   "desde_7d": "2026-11-12",
-  "ganho_30d": -61,
+  "ganho_30d": -62,
   "desde_30d": "2026-10-20",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3095,
+    "falta": 3096,
     "dias": -22,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8095,
+    "falta": 8096,
     "dias": 38,
-    "por_dia": 213.0
+    "por_dia": 213.1
    }
   ]
  },

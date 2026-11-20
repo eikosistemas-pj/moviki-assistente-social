@@ -1,4 +1,5 @@
 [
+ "horario",
  "carrinho",
  "cidade",
  "tripe",
@@ -12,6 +13,5 @@
  "ramo",
  "timidez",
  "sozinha",
- "pix",
- "foto-ou-video"
+ "pix"
 ]

@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-20T02:31:19+00:00",
+  "formato": "feed",
+  "descricao": "Móveis: o sofá com a medida na tela, ao vivo",
+  "media_id": "18116394800121577",
+  "origem": "casa",
+  "peca": "feed-moveis-ao-vivo",
+  "rede": "instagram",
+  "ramo": "casa",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261120-023103.jpg",
+  "fb": "1312620718595159_122126824509430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-20T01:55:45+00:00",
   "formato": "story",
   "descricao": "Tênis na foto não mostra a sola. Na live, mostra.",

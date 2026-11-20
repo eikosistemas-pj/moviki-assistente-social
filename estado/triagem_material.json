@@ -1138,5 +1138,65 @@
   "parceiro": false,
   "trecho": "",
   "em": "2026-11-06T07:53:53+00:00"
+ },
+ "video-comercio-semijoias": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-semijoias.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:09+00:00"
+ },
+ "video-comercio-chocolateria": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-chocolateria.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:10+00:00"
+ },
+ "video-comercio-floricultura": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-floricultura.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:11+00:00"
+ },
+ "video-comercio-presentes": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-presentes.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:11+00:00"
+ },
+ "video-comercio-moda-infantil": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-moda-infantil.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:12+00:00"
+ },
+ "video-comercio-festa": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-festa.webp",
+  "parceiro": true,
+  "trecho": "Venda pelo celular",
+  "em": "2026-11-20T08:27:13+00:00"
+ },
+ "video-comercio-otica": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-otica.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:15+00:00"
+ },
+ "video-comercio-emporio": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-emporio.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:15+00:00"
+ },
+ "video-comercio-padaria": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-padaria.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:17+00:00"
+ },
+ "video-comercio-lingerie": {
+  "imagem": "https://app.moviki.com.br/material/capas/video-comercio-lingerie.webp",
+  "parceiro": false,
+  "trecho": "",
+  "em": "2026-11-20T08:27:17+00:00"
  }
 }

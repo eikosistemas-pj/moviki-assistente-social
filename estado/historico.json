@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-21T01:44:58+00:00",
+  "formato": "story",
+  "descricao": "Semijoias: venda ao vivo pelo celular",
+  "media_id": "18112761830272041",
+  "origem": "casa",
+  "peca": "video:video-comercio-semijoias",
+  "rede": "instagram",
+  "ramo": "joalheria",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-semijoias.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "acustico-feliz",
+  "corte": "0.0-13.6",
+  "fb": "1113581274989139"
+ },
+ {
   "quando": "2026-11-20T22:43:49+00:00",
   "formato": "reel",
   "descricao": "Ótica: venda ao vivo pelo celular",

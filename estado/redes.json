@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-21T08:13:45+00:00",
+ "gerado": "2026-11-21T17:56:14+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1904,
    "posts": 133,
-   "cota_usada": 6,
+   "cota_usada": 7,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
+  "reel": "2026-10-05",
   "feed": null,
-  "reel": "2026-10-05"
+  "story": "2026-10-12"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,14 +169,14 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "story": {
      "posts": 20,
      "curtidas": 0,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 14,
+     "curtidas": 1,
      "comentarios": 0
     },
     "feed": {
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 20,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 60,
-     "curtidas": 65,
-     "comentarios": 2
-    },
     "story": {
      "posts": 102,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 60,
+     "curtidas": 66,
+     "comentarios": 2
     },
     "feed": {
      "posts": 22,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 60,
+    "story": {
+     "posts": 102,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 102,
+    "reel": {
+     "posts": 60,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -249,6 +249,29 @@
  ],
  "posts": [
   {
+   "quando": "2026-11-21T17:51:07+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Utilidades para o lar ao vivo no Moviki",
+   "peca": "story-utilidades-lar-ao-vivo",
+   "ramo": "casa",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-utilidades-lar-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18110270357459062",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4035452314127226425",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1684006779925409"
+   }
+  },
+  {
    "quando": "2026-11-21T03:35:16+00:00",
    "formato": "reel",
    "origem": "casa",
@@ -264,7 +287,7 @@
    "ig": {
     "id": "18095601455680371",
     "link": "https://www.instagram.com/reel/Df_RpPYkqbn/",
-    "curtidas": 0,
+    "curtidas": 1,
     "comentarios": 0
    },
    "fb": {
@@ -387,10 +410,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17882431152632674",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4034758890808815094",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17882431152632674"
    },
    "fb": {
     "id": "992591836746975"
@@ -4427,26 +4447,6 @@
    },
    "fb": {
     "id": "1793037675308110"
-   }
-  },
-  {
-   "quando": "2026-10-22T16:03:55+00:00",
-   "formato": "story",
-   "origem": "criador",
-   "subtipo": null,
-   "titulo": "Moviki é sensacional !!!!",
-   "peca": "c:mp7RoQriVJGxLl3HKpd6",
-   "ramo": "geral",
-   "miniatura": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/criadores%2FzEi14ouOAFUSeWb0dgeYEB7trCc2%2F1790130022508-67rt01.png?alt=media&token=05c3a960-112f-4b61-9796-cc757def2957",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18133147699701817"
-   },
-   "fb": {
-    "id": "1090106220531731"
    }
   }
  ],

@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-21T21:01:09+00:00",
+  "formato": "story",
+  "descricao": "Para mostrar produto: foto ou vídeo ao vivo?",
+  "media_id": "18115562717600849",
+  "origem": "casa",
+  "peca": "pergunta:foto-ou-video",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "funk-pop-leve",
+  "fb": "2738674346562676"
+ },
+ {
   "quando": "2026-11-21T17:51:07+00:00",
   "formato": "story",
   "descricao": "Utilidades para o lar ao vivo no Moviki",

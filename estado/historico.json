@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-22T21:59:23+00:00",
+  "formato": "reel",
+  "descricao": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
+  "media_id": "18123001918943024",
+  "origem": "casa",
+  "peca": "grade:faro-natal-comente",
+  "rede": "instagram",
+  "ramo": "confeitaria",
+  "grade": true,
+  "pilar": "faro",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
+  "fb": "1161899686397214"
+ },
+ {
   "quando": "2026-11-22T21:09:12+00:00",
   "formato": "story",
   "descricao": "O seu cliente prefere pagar como?",

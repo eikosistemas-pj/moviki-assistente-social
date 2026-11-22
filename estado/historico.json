@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-22T00:45:37+00:00",
+  "formato": "story",
+  "descricao": "Chocolateria: venda ao vivo pelo celular",
+  "media_id": "17982172547925170",
+  "origem": "casa",
+  "peca": "video:video-comercio-chocolateria",
+  "rede": "instagram",
+  "ramo": "alimentacao",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-chocolateria.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "lofi-house",
+  "corte": "0.0-17.2",
+  "fb": "1140890845463581"
+ },
+ {
   "quando": "2026-11-21T21:46:03+00:00",
   "formato": "reel",
   "descricao": "Roupa no cabide não mostra o caimento. Na live, mostra.",

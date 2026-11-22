@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-22T07:57:00+00:00",
+ "gerado": "2026-11-22T18:26:07+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
@@ -22,8 +22,8 @@
  },
  "rampa": {
   "story": "2026-10-12",
-  "reel": "2026-10-05",
-  "feed": null
+  "feed": null,
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,14 +169,14 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 1,
-     "comentarios": 0
-    },
     "story": {
      "posts": 20,
      "curtidas": 0,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 14,
+     "curtidas": 1,
      "comentarios": 0
     },
     "feed": {
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 20,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 60,
-     "curtidas": 65,
-     "comentarios": 2
-    },
     "story": {
      "posts": 100,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 60,
+     "curtidas": 65,
+     "comentarios": 2
     },
     "feed": {
      "posts": 21,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 60,
+    "story": {
+     "posts": 100,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 100,
+    "reel": {
+     "posts": 60,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -248,6 +248,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-22T18:06:39+00:00",
+   "formato": "story",
+   "origem": "criador",
+   "subtipo": null,
+   "titulo": "Venha para o Moviki e venda ao vivo em sua própria live!!!",
+   "peca": "c:JemLv0hH5lk0KtYwP6Fi",
+   "ramo": "geral",
+   "miniatura": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/criadores%2FzEi14ouOAFUSeWb0dgeYEB7trCc2%2F1790128595348-qyk4tl.png?alt=media&token=1b135ef3-9d76-45ba-870f-f4c71f94a8d7",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17869047525679700",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4036184848474091172",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2327018144531713"
+   }
+  },
   {
    "quando": "2026-11-22T02:47:26+00:00",
    "formato": "reel",
@@ -360,10 +383,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18110270357459062",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4035452314127226425",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18110270357459062"
    },
    "fb": {
     "id": "1684006779925409"
@@ -4360,26 +4380,6 @@
     "curtidas": 0,
     "comentarios": 0,
     "compartilhamentos": 0
-   }
-  },
-  {
-   "quando": "2026-10-23T16:02:50+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Black Friday ao vivo: sem carrinho, sem checkout",
-   "peca": "video:bf-sem-checkout",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/capas/bf-sem-checkout.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18108736241353793"
-   },
-   "fb": {
-    "id": "2077096522934232"
    }
   }
  ],

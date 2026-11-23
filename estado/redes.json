@@ -1,11 +1,11 @@
 {
- "gerado": "2026-11-22T18:26:07+00:00",
+ "gerado": "2026-11-23T08:56:19+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
    "seguidores": 1904,
-   "posts": 135,
+   "posts": 137,
    "cota_usada": 5,
    "cota_total": 100
   },
@@ -21,8 +21,8 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "story": "2026-10-12",
   "feed": null,
+  "story": "2026-10-12",
   "reel": "2026-10-05"
  },
  "so_facebook": false,
@@ -37,22 +37,6 @@
   "ultimo_acionamento": null
  },
  "agenda": [
-  {
-   "dia": "2026-11-15",
-   "hoje": false,
-   "feed": {
-    "esperado": 0,
-    "feito": 0
-   },
-   "story": {
-    "esperado": 2,
-    "feito": 3
-   },
-   "reel": {
-    "esperado": 2,
-    "feito": 2
-   }
-  },
   {
    "dia": "2026-11-16",
    "hoje": false,
@@ -151,32 +135,48 @@
   },
   {
    "dia": "2026-11-22",
-   "hoje": true,
+   "hoje": false,
    "feed": {
     "esperado": 0,
     "feito": 0
    },
    "story": {
     "esperado": 2,
-    "feito": 1
+    "feito": 3
    },
    "reel": {
     "esperado": 2,
+    "feito": 1
+   }
+  },
+  {
+   "dia": "2026-11-23",
+   "hoje": true,
+   "feed": {
+    "esperado": 1,
     "feito": 0
+   },
+   "story": {
+    "esperado": 2,
+    "feito": 0
+   },
+   "reel": {
+    "esperado": 2,
+    "feito": 1
    }
   }
  ],
  "totais": {
   "7d": {
    "ig": {
-    "story": {
-     "posts": 20,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "reel": {
      "posts": 14,
      "curtidas": 1,
+     "comentarios": 0
+    },
+    "story": {
+     "posts": 20,
+     "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "story": {
-     "posts": 20,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,35 +205,35 @@
   },
   "30d": {
    "ig": {
-    "story": {
-     "posts": 100,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "reel": {
      "posts": 60,
      "curtidas": 65,
      "comentarios": 2
     },
+    "story": {
+     "posts": 99,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "feed": {
-     "posts": 21,
+     "posts": 20,
      "curtidas": 6,
      "comentarios": 0
     }
    },
    "fb": {
-    "story": {
-     "posts": 100,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "reel": {
      "posts": 60,
      "curtidas": 0,
      "comentarios": 0
     },
+    "story": {
+     "posts": 99,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "feed": {
-     "posts": 21,
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -243,11 +243,204 @@
  "alertas": [
   {
    "nivel": "atencao",
+   "tipo": "faltou_post",
+   "texto": "22/11: reel saiu 1 de 2."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Ela clicou no anúncio de Black Friday e desistiu no checkout. Na live, ela compra num toque. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Foto não tem cheiro. Na live da Black Friday, a cliente pergunta e compra. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Na Black Friday, todas perguntam a mesma coisa. Na live, uma resposta atende todas. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Na Black Friday, peça única não espera “te passo o Pix depois”. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
    "tipo": "grade",
    "texto": "Grade: Black Friday ao vivo: a cliente vê, pergunta e paga sem sair da tela. sai de circulação em 27/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: sua loja na live. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: sem carrinho, sem checkout. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: uma resposta para todas. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: do seu celular. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: Pix dentro da live. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: oferta relâmpago. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: pedido pago e organizado. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: ensaie antes. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: presente se escolhe de perto. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Black Friday ao vivo: comece hoje. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Loja vazia... e ela falando com quem? Ela estava ao vivo, vendendo. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Ela tá borrifando perfume... no celular? Ela estava ao vivo, vendendo. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Por que ela tá colando o brinco na câmera? Ela estava ao vivo. sai de circulação em 30/11. Renove ou deixe vencer."
+  },
+  {
+   "nivel": "atencao",
+   "tipo": "grade",
+   "texto": "Grade: Só existe uma... e ela mostrando pra quem? Pra quem estava na live. sai de circulação em 30/11. Renove ou deixe vencer."
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-23T03:06:57+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Bolsa na foto não mostra o que cabe dentro. Na live, mostra.",
+   "peca": "grade:reel-bolsas-ao-vivo-comente",
+   "ramo": "bolsas",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-bolsas-ao-vivo-comente.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17910809760669421",
+    "link": "https://www.instagram.com/reel/DgEX7irFZMX/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2041860693178956",
+    "link": "https://www.facebook.com/reel/2041860693178956/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-11-23T01:09:33+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Floricultura: venda ao vivo pelo celular",
+   "peca": "video:video-comercio-floricultura",
+   "ramo": "casa",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-floricultura.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17915898795472997",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4036397726387750690",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2056793938365154"
+   }
+  },
+  {
+   "quando": "2026-11-22T21:59:23+00:00",
+   "formato": "reel",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
+   "peca": "grade:faro-natal-comente",
+   "ramo": "confeitaria",
+   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18123001918943024",
+    "link": "https://www.instagram.com/reel/DgD0zJfjDf9/",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "1161899686397214",
+    "link": "https://www.facebook.com/reel/1161899686397214/",
+    "curtidas": 0,
+    "comentarios": 0
+   }
+  },
+  {
+   "quando": "2026-11-22T21:09:12+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "O seu cliente prefere pagar como?",
+   "peca": "pergunta:pix",
+   "ramo": "geral",
+   "miniatura": "",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18000157206019491",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4036276758247951708",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2694595904355729"
+   }
+  },
   {
    "quando": "2026-11-22T18:06:39+00:00",
    "formato": "story",
@@ -311,10 +504,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17982172547925170",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4035660938296290926",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17982172547925170"
    },
    "fb": {
     "id": "1140890845463581"
@@ -360,10 +550,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18115562717600849",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4035547998456697424",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18115562717600849"
    },
    "fb": {
     "id": "2738674346562676"
@@ -4244,143 +4431,6 @@
    "fb": {
     "id": "2315083085893609"
    }
-  },
-  {
-   "quando": "2026-10-24T01:04:31+00:00",
-   "formato": "reel",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Confeitaria: venda ao vivo pelo celular",
-   "peca": "video-comercio-confeitaria",
-   "ramo": "alimentacao",
-   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-confeitaria.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17998299177042072",
-    "link": "https://www.instagram.com/reel/De26JsVArui/",
-    "curtidas": 0,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "1148090744823003",
-    "link": "https://www.facebook.com/reel/1148090744823003/",
-    "curtidas": 0,
-    "comentarios": 0
-   }
-  },
-  {
-   "quando": "2026-10-23T23:51:52+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Eletrônicos e acessórios vendendo por live",
-   "peca": "story-eletronicos-por-live",
-   "ramo": "eletronicos",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-eletronicos-por-live.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18070767935759630"
-   },
-   "fb": {
-    "id": "1586672649285039"
-   }
-  },
-  {
-   "quando": "2026-10-23T20:45:28+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Black Friday ao vivo: uma resposta para todas",
-   "peca": "video:bf-uma-resposta",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/capas/bf-uma-resposta.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18098598419413024"
-   },
-   "fb": {
-    "id": "1656537972729892"
-   }
-  },
-  {
-   "quando": "2026-10-23T20:10:07+00:00",
-   "formato": "reel",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Ela tá borrifando perfume... no celular? Ela estava ao vivo, vendendo.",
-   "peca": "grade:ugc-bastidores-bf-perfumaria-c",
-   "ramo": "beleza",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-bf-perfumaria-c.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18157696519517941",
-    "link": "https://www.instagram.com/reel/De2YazDE3VX/",
-    "curtidas": 0,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "2979094345763751",
-    "link": "https://www.facebook.com/reel/2979094345763751/",
-    "curtidas": 0,
-    "comentarios": 0
-   }
-  },
-  {
-   "quando": "2026-10-23T19:30:31+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Seu suco ao vivo no mapa",
-   "peca": "story-suco-ao-vivo",
-   "ramo": "alimentacao",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-suco-ao-vivo.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17913392835543825"
-   },
-   "fb": {
-    "id": "3013167019043101"
-   }
-  },
-  {
-   "quando": "2026-10-23T18:53:46+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "peca",
-   "titulo": "Black Friday ao vivo: sem carrinho, sem checkout",
-   "peca": "bf-sem-checkout-feed",
-   "ramo": "geral",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261023-185329.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18013639082988470",
-    "erro": "Unsupported get request. Object with ID '18013639082988470' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Ple"
-   },
-   "fb": {
-    "id": "1312620718595159_122122878657430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122122878657430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
   }
  ],
  "seguidores_hist": [
@@ -4719,28 +4769,34 @@
    "ig": 1904,
    "ig_posts": 135,
    "fb": 3
+  },
+  {
+   "dia": "2026-11-23",
+   "ig": 1904,
+   "ig_posts": 137,
+   "fb": 3
   }
  ],
  "seguidores": {
   "atual": 1904,
-  "ganho_7d": -3,
-  "desde_7d": "2026-11-15",
-  "ganho_30d": -78,
-  "desde_30d": "2026-10-23",
+  "ganho_7d": -2,
+  "desde_7d": "2026-11-16",
+  "ganho_30d": -80,
+  "desde_30d": "2026-10-24",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
     "falta": 3096,
-    "dias": -25,
+    "dias": -26,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
     "falta": 8096,
-    "dias": 35,
-    "por_dia": 231.3
+    "dias": 34,
+    "por_dia": 238.1
    }
   ]
  },
@@ -4783,21 +4839,8 @@
   "live_na_pagina": true,
   "dias": [
    {
-    "dia": "2026-11-22",
-    "hoje": true,
-    "id": "video-comercio-acessorios-celular",
-    "titulo": "Acessórios de celular: venda ao vivo pelo celular",
-    "ramo": "eletronicos",
-    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2Fvideo-comercio-acessorios-celular.mp4?alt=media",
-    "capa": "https://app.moviki.com.br/material/capas/video-comercio-acessorios-celular.webp",
-    "duracao": 40.0,
-    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nO cliente vê a capinha no balcão e compra pela internet. E o cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra a capinha de pertinho, testa o fone ao vivo, responde \"tem pro meu modelo?\" no chat e lança a oferta. E quem prefere buscar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #blackfriday #assistenciatecnica #celular #acessorios",
-    "hashtags": "#moviki #blackfriday #assistenciatecnica #celular #acessorios",
-    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-22-video-comercio-acessorios-celular.mp4"
-   },
-   {
     "dia": "2026-11-23",
-    "hoje": false,
+    "hoje": true,
     "id": "video-shopping-pet",
     "titulo": "Loja de shopping: artigos para pet — venda ao vivo",
     "ramo": "shopping",
@@ -4873,6 +4916,19 @@
     "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nCesta de Natal montada, e a encomenda ainda chega por telefone. Enquanto isso, o seu cliente de sempre está em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live do seu empório direto do celular. Mostra o queijo cortado, monta a cesta ao vivo, combina a encomenda no chat e lança a oferta. E quem prefere ver de perto toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #blackfriday #delivery #lanchonete #restaurante",
     "hashtags": "#moviki #blackfriday #delivery #lanchonete #restaurante",
     "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-28-video-comercio-emporio.mp4"
+   },
+   {
+    "dia": "2026-11-29",
+    "hoje": false,
+    "id": "video-comercio-lingerie",
+    "titulo": "Moda íntima: venda ao vivo pelo celular",
+    "ramo": "moda",
+    "video": "https://firebasestorage.googleapis.com/v0/b/moviki-app.firebasestorage.app/o/material%2F66-video-comercio-lingerie-A.mp4?alt=media",
+    "capa": "https://app.moviki.com.br/material/capas/video-comercio-lingerie.webp",
+    "duracao": 40.0,
+    "legenda": "📩 Manda LIVE no direct que eu te mando o link de uma live de exemplo.\n\nPresente de Réveillon, e a peça parada no cabide. Enquanto isso, as suas clientes de sempre estão em casa, com o celular na mão.\n\nCom o Moviki, você abre uma live da sua loja direto do celular. Mostra o tecido de perto, o caimento no cabide, tira a dúvida do tamanho no chat e lança a oferta. E quem quer provar toca em \"Como chegar\" e vai direto até a sua loja.\n\nPagamento com Pix e oferta relâmpago com contagem dentro da transmissão: recursos do plano Enterprise.\n\n30 dias grátis. Sem cartão, sem fidelidade — você só continua se fizer sentido.\nComece pelo link da bio.\n\n#moviki #blackfriday #lojaderoupa #modafeminina #lojista",
+    "hashtags": "#moviki #blackfriday #lojaderoupa #modafeminina #lojista",
+    "video_cartela": "https://github.com/eikosistemas-pj/moviki-assistente-social/releases/download/tiktok-kit/tiktok-2026-11-29-video-comercio-lingerie.mp4"
    }
   ]
  },
@@ -4883,30 +4939,8 @@
   "com_erro": 0,
   "proximos": [
    {
-    "dia": "2026-11-22",
-    "hoje": true,
-    "id": "faro-natal-comente",
-    "titulo": "Vai vender por encomenda neste Natal? O Guia FARO mostra a ordem certa.",
-    "formato": "reel",
-    "pilar": "faro",
-    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/faro-natal-comente.jpg",
-    "sai": true,
-    "motivo": ""
-   },
-   {
-    "dia": "2026-11-22",
-    "hoje": true,
-    "id": "reel-semijoias-ao-vivo-comente",
-    "titulo": "Semijoia na foto não brilha. Na live, brilha.",
-    "formato": "reel",
-    "pilar": "ramo",
-    "capa": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-semijoias-ao-vivo-comente.jpg",
-    "sai": true,
-    "motivo": ""
-   },
-   {
     "dia": "2026-11-23",
-    "hoje": false,
+    "hoje": true,
     "id": "reel-bolsas-ao-vivo-comente",
     "titulo": "Bolsa na foto não mostra o que cabe dentro. Na live, mostra.",
     "formato": "reel",
@@ -4917,7 +4951,7 @@
    },
    {
     "dia": "2026-11-23",
-    "hoje": false,
+    "hoje": true,
     "id": "reel-acai-ao-vivo-comente",
     "titulo": "Açaí na foto não mostra o creme. Na live, dá água na boca.",
     "formato": "reel",
@@ -4995,9 +5029,99 @@
   ],
   "vencendo": [
    {
+    "id": "ugc-bastidores-bf-boutique",
+    "titulo": "Ela clicou no anúncio de Black Friday e desistiu no checkout. Na live, ela compra num toque.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "ugc-bastidores-bf-perfumaria",
+    "titulo": "Foto não tem cheiro. Na live da Black Friday, a cliente pergunta e compra.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "ugc-bastidores-bf-bijuteria",
+    "titulo": "Na Black Friday, todas perguntam a mesma coisa. Na live, uma resposta atende todas.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "ugc-bastidores-bf-brecho",
+    "titulo": "Na Black Friday, peça única não espera “te passo o Pix depois”.",
+    "ate": "2026-11-30"
+   },
+   {
     "id": "video-live-black-friday",
     "titulo": "Black Friday ao vivo: a cliente vê, pergunta e paga sem sair da tela.",
     "ate": "2026-11-27"
+   },
+   {
+    "id": "bf-ao-vivo",
+    "titulo": "Black Friday ao vivo: sua loja na live.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-sem-checkout",
+    "titulo": "Black Friday ao vivo: sem carrinho, sem checkout.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-uma-resposta",
+    "titulo": "Black Friday ao vivo: uma resposta para todas.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-do-celular",
+    "titulo": "Black Friday ao vivo: do seu celular.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-pix",
+    "titulo": "Black Friday ao vivo: Pix dentro da live.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-oferta-relampago",
+    "titulo": "Black Friday ao vivo: oferta relâmpago.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-pedido-pago",
+    "titulo": "Black Friday ao vivo: pedido pago e organizado.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-ensaio",
+    "titulo": "Black Friday ao vivo: ensaie antes.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-presente",
+    "titulo": "Black Friday ao vivo: presente se escolhe de perto.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "bf-comece-hoje",
+    "titulo": "Black Friday ao vivo: comece hoje.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "ugc-bastidores-bf-boutique-c",
+    "titulo": "Loja vazia... e ela falando com quem? Ela estava ao vivo, vendendo.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "ugc-bastidores-bf-perfumaria-c",
+    "titulo": "Ela tá borrifando perfume... no celular? Ela estava ao vivo, vendendo.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "ugc-bastidores-bf-bijuteria-c",
+    "titulo": "Por que ela tá colando o brinco na câmera? Ela estava ao vivo.",
+    "ate": "2026-11-30"
+   },
+   {
+    "id": "ugc-bastidores-bf-brecho-c",
+    "titulo": "Só existe uma... e ela mostrando pra quem? Pra quem estava na live.",
+    "ate": "2026-11-30"
    }
   ]
  }

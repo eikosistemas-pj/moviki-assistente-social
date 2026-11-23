@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-23T03:06:57+00:00",
+  "formato": "reel",
+  "descricao": "Bolsa na foto não mostra o que cabe dentro. Na live, mostra.",
+  "media_id": "17910809760669421",
+  "origem": "casa",
+  "peca": "grade:reel-bolsas-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "bolsas",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-bolsas-ao-vivo-comente.jpg",
+  "fb": "2041860693178956"
+ },
+ {
   "quando": "2026-11-23T01:09:33+00:00",
   "formato": "story",
   "descricao": "Floricultura: venda ao vivo pelo celular",

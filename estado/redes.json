@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-23T08:56:19+00:00",
+ "gerado": "2026-11-23T22:33:39+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1904,
+   "seguidores": 1905,
    "posts": 137,
-   "cota_usada": 5,
+   "cota_usada": 3,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
-  "feed": null,
   "story": "2026-10-12",
-  "reel": "2026-10-05"
+  "reel": "2026-10-05",
+  "feed": null
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,35 +169,35 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 1,
-     "comentarios": 0
-    },
     "story": {
      "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
+    "reel": {
+     "posts": 14,
+     "curtidas": 1,
+     "comentarios": 0
+    },
     "feed": {
-     "posts": 5,
+     "posts": 4,
      "curtidas": 1,
      "comentarios": 0
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 0,
-     "comentarios": 0
-    },
     "story": {
      "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
+    "reel": {
+     "posts": 14,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "feed": {
-     "posts": 5,
+     "posts": 4,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 60,
-     "curtidas": 65,
-     "comentarios": 2
-    },
     "story": {
-     "posts": 99,
+     "posts": 98,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 59,
+     "curtidas": 65,
+     "comentarios": 2
     },
     "feed": {
      "posts": 20,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 60,
+    "story": {
+     "posts": 98,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 99,
+    "reel": {
+     "posts": 59,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -344,6 +344,29 @@
  ],
  "posts": [
   {
+   "quando": "2026-11-23T22:21:41+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Checklist do balcão de live",
+   "peca": "balcao-de-live-checklist-story",
+   "ramo": "geral",
+   "miniatura": "https://app.moviki.com.br/material/stories/balcao-de-live-checklist-story.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18097606640690068",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4037037971885694238",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "40848034831446818"
+   }
+  },
+  {
    "quando": "2026-11-23T03:06:57+00:00",
    "formato": "reel",
    "origem": "casa",
@@ -432,10 +455,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "18000157206019491",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4036276758247951708",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "18000157206019491"
    },
    "fb": {
     "id": "2694595904355729"
@@ -455,10 +475,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17869047525679700",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4036184848474091172",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17869047525679700"
    },
    "fb": {
     "id": "2327018144531713"
@@ -4365,72 +4382,6 @@
    "fb": {
     "id": "2212251722671590"
    }
-  },
-  {
-   "quando": "2026-10-24T19:01:56+00:00",
-   "formato": "reel",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Oferta relâmpago sem vender o que você não tem",
-   "peca": "grade:video-live-oferta-relampago",
-   "ramo": "geral",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/video-live-oferta-relampago.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18131941510761563",
-    "link": "https://www.instagram.com/reel/De41bbjEXEW/",
-    "curtidas": 0,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "2547873932376879",
-    "link": "https://www.facebook.com/reel/2547873932376879/",
-    "curtidas": 0,
-    "comentarios": 0
-   }
-  },
-  {
-   "quando": "2026-10-24T18:12:14+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Mostre o produto ao vivo e receba o pedido",
-   "peca": "story-eletronicos-por-live-2",
-   "ramo": "eletronicos",
-   "miniatura": "https://app.moviki.com.br/material/stories/story-eletronicos-por-live-2.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18117938495291637"
-   },
-   "fb": {
-    "id": "1670744591177482"
-   }
-  },
-  {
-   "quando": "2026-10-24T14:12:29+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Black Friday ao vivo: do seu celular",
-   "peca": "video:bf-do-celular",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/capas/bf-do-celular.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18638359834004020"
-   },
-   "fb": {
-    "id": "2315083085893609"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4772,29 +4723,29 @@
   },
   {
    "dia": "2026-11-23",
-   "ig": 1904,
+   "ig": 1905,
    "ig_posts": 137,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1904,
-  "ganho_7d": -2,
+  "atual": 1905,
+  "ganho_7d": -1,
   "desde_7d": "2026-11-16",
-  "ganho_30d": -80,
+  "ganho_30d": -79,
   "desde_30d": "2026-10-24",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3096,
+    "falta": 3095,
     "dias": -26,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8096,
+    "falta": 8095,
     "dias": 34,
     "por_dia": 238.1
    }

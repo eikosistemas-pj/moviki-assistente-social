@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-24T02:59:31+00:00",
+  "formato": "reel",
+  "descricao": "Açaí na foto não mostra o creme. Na live, dá água na boca.",
+  "media_id": "18063528338798748",
+  "origem": "casa",
+  "peca": "grade:reel-acai-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "acai",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-acai-ao-vivo-comente.jpg",
+  "fb": "4796545120613355"
+ },
+ {
   "quando": "2026-11-24T02:20:01+00:00",
   "formato": "story",
   "descricao": "Você toca a loja sozinha ou com equipe?",

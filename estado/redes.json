@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-24T10:50:56+00:00",
+ "gerado": "2026-11-24T21:05:47+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1905,
+   "seguidores": 1909,
    "posts": 140,
-   "cota_usada": 5,
+   "cota_usada": 6,
    "cota_total": 100
   },
   "facebook": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,14 +169,14 @@
  "totais": {
   "7d": {
    "ig": {
-    "reel": {
-     "posts": 14,
-     "curtidas": 1,
-     "comentarios": 0
-    },
     "story": {
      "posts": 20,
      "curtidas": 0,
+     "comentarios": 0
+    },
+    "reel": {
+     "posts": 14,
+     "curtidas": 1,
      "comentarios": 0
     },
     "feed": {
@@ -186,13 +186,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 14,
+    "story": {
+     "posts": 20,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 20,
+    "reel": {
+     "posts": 14,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -205,15 +205,15 @@
   },
   "30d": {
    "ig": {
-    "reel": {
-     "posts": 60,
-     "curtidas": 65,
-     "comentarios": 2
-    },
     "story": {
-     "posts": 97,
+     "posts": 96,
      "curtidas": 0,
      "comentarios": 0
+    },
+    "reel": {
+     "posts": 59,
+     "curtidas": 46,
+     "comentarios": 2
     },
     "feed": {
      "posts": 21,
@@ -222,13 +222,13 @@
     }
    },
    "fb": {
-    "reel": {
-     "posts": 60,
+    "story": {
+     "posts": 96,
      "curtidas": 0,
      "comentarios": 0
     },
-    "story": {
-     "posts": 97,
+    "reel": {
+     "posts": 59,
      "curtidas": 0,
      "comentarios": 0
     },
@@ -343,6 +343,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-24T20:57:55+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Moda infantil: venda ao vivo pelo celular",
+   "peca": "video:video-comercio-moda-infantil",
+   "ramo": "infantil",
+   "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-moda-infantil.webp",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "17981793546137040",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4037720695584139830",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2236905153849287"
+   }
+  },
   {
    "quando": "2026-11-24T06:31:58+00:00",
    "formato": "reel",
@@ -4349,72 +4372,6 @@
    "fb": {
     "id": "1635917298196067"
    }
-  },
-  {
-   "quando": "2026-10-25T19:09:52+00:00",
-   "formato": "reel",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Por que ela tá colando o brinco na câmera? Ela estava ao vivo.",
-   "peca": "grade:ugc-bastidores-bf-bijuteria-c",
-   "ramo": "moda",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/ugc-bastidores-bf-bijuteria-c.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18035960891849039",
-    "link": "https://www.instagram.com/reel/De7bH4GAoil/",
-    "curtidas": 19,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "958468463569169",
-    "link": "https://www.facebook.com/reel/958468463569169/",
-    "curtidas": 0,
-    "comentarios": 0
-   }
-  },
-  {
-   "quando": "2026-10-25T18:33:12+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Black Friday ao vivo: oferta relâmpago",
-   "peca": "video:bf-oferta-relampago",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/capas/bf-oferta-relampago.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18121795009971115"
-   },
-   "fb": {
-    "id": "1138479905354644"
-   }
-  },
-  {
-   "quando": "2026-10-25T14:43:05+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Checklist do balcão de live",
-   "peca": "balcao-de-live-checklist-story",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/stories/balcao-de-live-checklist-story.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "17940572526389457"
-   },
-   "fb": {
-    "id": "1686396866336701"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4762,31 +4719,31 @@
   },
   {
    "dia": "2026-11-24",
-   "ig": 1905,
+   "ig": 1909,
    "ig_posts": 140,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1905,
-  "ganho_7d": -1,
+  "atual": 1909,
+  "ganho_7d": 3,
   "desde_7d": "2026-11-17",
-  "ganho_30d": -70,
+  "ganho_30d": -66,
   "desde_30d": "2026-10-25",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3095,
+    "falta": 3091,
     "dias": -27,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8095,
+    "falta": 8091,
     "dias": 33,
-    "por_dia": 245.3
+    "por_dia": 245.2
    }
   ]
  },

@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-24T20:57:55+00:00",
+  "formato": "story",
+  "descricao": "Moda infantil: venda ao vivo pelo celular",
+  "media_id": "17981793546137040",
+  "origem": "casa",
+  "peca": "video:video-comercio-moda-infantil",
+  "rede": "instagram",
+  "ramo": "infantil",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-moda-infantil.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "lofi-house",
+  "corte": "0.0-15.2",
+  "fb": "2236905153849287"
+ },
+ {
   "quando": "2026-11-24T06:31:58+00:00",
   "formato": "reel",
   "descricao": "Na Black Friday, peça única não espera “te passo o Pix depois”.",

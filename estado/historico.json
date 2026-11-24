@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-24T00:25:01+00:00",
+  "formato": "feed",
+  "descricao": "Educação move grandes histórias",
+  "media_id": "18120445874589059",
+  "origem": "casa",
+  "peca": "feed-material-escolar-2",
+  "rede": "instagram",
+  "ramo": "papelaria",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261124-002449.jpg",
+  "fb": "1312620718595159_122127406839430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-23T22:21:41+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-25T04:24:11+00:00",
+  "formato": "feed",
+  "descricao": "Bolsas: mostre o que cabe dentro, ao vivo",
+  "media_id": "18402142132200096",
+  "origem": "casa",
+  "peca": "feed-bolsas-ao-vivo",
+  "rede": "instagram",
+  "ramo": "moda",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261125-042355.jpg",
+  "fb": "1312620718595159_122127558909430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-25T00:59:38+00:00",
   "formato": "reel",
   "descricao": "Tênis na foto não mostra a sola. Na live, mostra.",

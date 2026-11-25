@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-25T00:59:38+00:00",
+  "formato": "reel",
+  "descricao": "Tênis na foto não mostra a sola. Na live, mostra.",
+  "media_id": "18111598739259813",
+  "origem": "casa",
+  "peca": "grade:reel-calcados-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "calcados",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-calcados-ao-vivo-comente.jpg",
+  "fb": "1372155751535245"
+ },
+ {
   "quando": "2026-11-25T00:02:25+00:00",
   "formato": "story",
   "descricao": "O que dá mais frio na barriga: aparecer na câmera ou falar ao vivo?",

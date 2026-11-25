@@ -1,5 +1,19 @@
 [
  {
+  "quando": "2026-11-25T05:04:29+00:00",
+  "formato": "reel",
+  "descricao": "Foto não mostra se o sofá cabe na sala. Na live, mostra.",
+  "media_id": "17937665436142462",
+  "origem": "casa",
+  "peca": "grade:reel-moveis-ao-vivo-comente",
+  "rede": "instagram",
+  "ramo": "moveis",
+  "grade": true,
+  "pilar": "ramo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/conteudo/acervo-capas/reel-moveis-ao-vivo-comente.jpg",
+  "fb": "1173930131765167"
+ },
+ {
   "quando": "2026-11-25T04:24:11+00:00",
   "formato": "feed",
   "descricao": "Bolsas: mostre o que cabe dentro, ao vivo",

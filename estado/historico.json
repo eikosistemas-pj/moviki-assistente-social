@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-25T20:20:48+00:00",
+  "formato": "story",
+  "descricao": "Perfumaria ao vivo no Moviki",
+  "media_id": "18292982581290020",
+  "origem": "casa",
+  "peca": "story-perfumaria-ao-vivo",
+  "rede": "instagram",
+  "ramo": "beleza",
+  "miniatura": "https://app.moviki.com.br/material/stories/story-perfumaria-ao-vivo.jpg",
+  "tipo": "arte",
+  "cta": false,
+  "trilha": "tech-energia",
+  "fb": "2383584069139720"
+ },
+ {
   "quando": "2026-11-25T05:04:29+00:00",
   "formato": "reel",
   "descricao": "Foto não mostra se o sofá cabe na sala. Na live, mostra.",

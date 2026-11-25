@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-25T22:07:45+00:00",
+  "formato": "feed",
+  "descricao": "Sua papelaria ao vivo no mapa",
+  "media_id": "18215421394368762",
+  "origem": "casa",
+  "peca": "feed-material-escolar",
+  "rede": "instagram",
+  "ramo": "papelaria",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261125-220727.jpg",
+  "fb": "1312620718595159_122127649749430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-25T20:20:48+00:00",
   "formato": "story",
   "descricao": "Perfumaria ao vivo no Moviki",

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-25T09:46:00+00:00",
+ "gerado": "2026-11-25T20:26:23+00:00",
  "versao": "2026-11-12-chamada-facebook",
  "contas": {
   "instagram": {
    "usuario": "movikiliveshop",
-   "seguidores": 1910,
+   "seguidores": 1911,
    "posts": 143,
-   "cota_usada": 5,
+   "cota_usada": 6,
    "cota_total": 100
   },
   "facebook": {
@@ -21,9 +21,9 @@
   "reel": "instagram+facebook"
  },
  "rampa": {
+  "feed": null,
   "story": "2026-10-12",
-  "reel": "2026-10-05",
-  "feed": null
+  "reel": "2026-10-05"
  },
  "so_facebook": false,
  "freio": {
@@ -158,7 +158,7 @@
    },
    "story": {
     "esperado": 2,
-    "feito": 0
+    "feito": 1
    },
    "reel": {
     "esperado": 2,
@@ -169,6 +169,11 @@
  "totais": {
   "7d": {
    "ig": {
+    "story": {
+     "posts": 19,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 14,
      "curtidas": 1,
@@ -177,15 +182,15 @@
     "feed": {
      "posts": 5,
      "curtidas": 1,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 19,
-     "curtidas": 0,
      "comentarios": 0
     }
    },
    "fb": {
+    "story": {
+     "posts": 19,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 14,
      "curtidas": 0,
@@ -193,11 +198,6 @@
     },
     "feed": {
      "posts": 5,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 19,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -205,35 +205,35 @@
   },
   "30d": {
    "ig": {
+    "story": {
+     "posts": 95,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 60,
      "curtidas": 44,
      "comentarios": 2
     },
     "feed": {
-     "posts": 22,
+     "posts": 21,
      "curtidas": 6,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 95,
-     "curtidas": 0,
      "comentarios": 0
     }
    },
    "fb": {
+    "story": {
+     "posts": 95,
+     "curtidas": 0,
+     "comentarios": 0
+    },
     "reel": {
      "posts": 60,
      "curtidas": 0,
      "comentarios": 0
     },
     "feed": {
-     "posts": 22,
-     "curtidas": 0,
-     "comentarios": 0
-    },
-    "story": {
-     "posts": 95,
+     "posts": 21,
      "curtidas": 0,
      "comentarios": 0
     }
@@ -343,6 +343,29 @@
   }
  ],
  "posts": [
+  {
+   "quando": "2026-11-25T20:20:48+00:00",
+   "formato": "story",
+   "origem": "casa",
+   "subtipo": null,
+   "titulo": "Perfumaria ao vivo no Moviki",
+   "peca": "story-perfumaria-ao-vivo",
+   "ramo": "beleza",
+   "miniatura": "https://app.moviki.com.br/material/stories/story-perfumaria-ao-vivo.jpg",
+   "rede": "instagram",
+   "planoB": false,
+   "erroInstagram": null,
+   "collab": null,
+   "ig": {
+    "id": "18292982581290020",
+    "link": "https://www.instagram.com/stories/movikiliveshop/4038426778937897796",
+    "curtidas": 0,
+    "comentarios": 0
+   },
+   "fb": {
+    "id": "2383584069139720"
+   }
+  },
   {
    "quando": "2026-11-25T05:04:29+00:00",
    "formato": "reel",
@@ -459,10 +482,7 @@
    "erroInstagram": null,
    "collab": null,
    "ig": {
-    "id": "17981793546137040",
-    "link": "https://www.instagram.com/stories/movikiliveshop/4037720695584139830",
-    "curtidas": 0,
-    "comentarios": 0
+    "id": "17981793546137040"
    },
    "fb": {
     "id": "2236905153849287"
@@ -4355,53 +4375,6 @@
    "fb": {
     "id": "1123154633449281"
    }
-  },
-  {
-   "quando": "2026-10-26T19:01:23+00:00",
-   "formato": "feed",
-   "origem": "casa",
-   "subtipo": "peca",
-   "titulo": "Quanto a plataforma tira de cada venda sua?",
-   "peca": "calculadora-taxas-feed",
-   "ramo": "geral",
-   "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261026-190108.jpg",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18112918013602806",
-    "link": "https://www.instagram.com/p/De9_DrBFzcB/",
-    "curtidas": 0,
-    "comentarios": 0
-   },
-   "fb": {
-    "id": "1312620718595159_122123296443430818",
-    "link": "https://www.facebook.com/122118442485430818/posts/122123296443430818",
-    "curtidas": 0,
-    "comentarios": 0,
-    "compartilhamentos": 0
-   }
-  },
-  {
-   "quando": "2026-10-26T17:07:40+00:00",
-   "formato": "story",
-   "origem": "casa",
-   "subtipo": null,
-   "titulo": "Black Friday ao vivo: pedido pago e organizado",
-   "peca": "video:bf-pedido-pago",
-   "ramo": "geral",
-   "miniatura": "https://app.moviki.com.br/material/capas/bf-pedido-pago.webp",
-   "rede": "instagram",
-   "planoB": false,
-   "erroInstagram": null,
-   "collab": null,
-   "ig": {
-    "id": "18124959238904615"
-   },
-   "fb": {
-    "id": "1801157461033090"
-   }
   }
  ],
  "seguidores_hist": [
@@ -4755,29 +4728,29 @@
   },
   {
    "dia": "2026-11-25",
-   "ig": 1910,
+   "ig": 1911,
    "ig_posts": 143,
    "fb": 3
   }
  ],
  "seguidores": {
-  "atual": 1910,
-  "ganho_7d": 5,
+  "atual": 1911,
+  "ganho_7d": 6,
   "desde_7d": "2026-11-18",
-  "ganho_30d": -71,
+  "ganho_30d": -70,
   "desde_30d": "2026-10-26",
   "metas": [
    {
     "alvo": 5000,
     "ate": "2026-10-28",
-    "falta": 3090,
+    "falta": 3089,
     "dias": -28,
     "por_dia": null
    },
    {
     "alvo": 10000,
     "ate": "2026-12-27",
-    "falta": 8090,
+    "falta": 8089,
     "dias": 32,
     "por_dia": 252.8
    }

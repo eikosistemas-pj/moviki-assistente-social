@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-25T23:44:25+00:00",
+  "formato": "story",
+  "descricao": "Qual é o ramo da sua loja?",
+  "media_id": "18350796514281597",
+  "origem": "casa",
+  "peca": "pergunta:ramo",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "acustico-feliz",
+  "fb": "2191248375094649"
+ },
+ {
   "quando": "2026-11-25T22:07:45+00:00",
   "formato": "feed",
   "descricao": "Sua papelaria ao vivo no mapa",

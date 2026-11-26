@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-26T19:53:15+00:00",
+  "formato": "story",
+  "descricao": "Loja de presentes: venda ao vivo pelo celular",
+  "media_id": "17916767118475837",
+  "origem": "casa",
+  "peca": "video:video-comercio-presentes",
+  "rede": "instagram",
+  "ramo": "casa",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-presentes.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "bossa-moderna",
+  "corte": "0.0-11.8",
+  "fb": "3192273470975592"
+ },
+ {
   "quando": "2026-11-26T04:29:18+00:00",
   "formato": "reel",
   "descricao": "Cosmético na foto não tira dúvida. Na live, tira.",

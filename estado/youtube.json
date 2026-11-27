@@ -557,6 +557,18 @@
    "capa": true,
    "na_playlist": true,
    "robo": "2026-10-22-youtube"
+  },
+  "video-acai-ao-vivo": {
+   "yt": "fL-smPFVL50",
+   "quando": "2026-11-27T22:55:42+00:00",
+   "visibilidade": "private",
+   "titulo": "Açaí na foto não mostra o creme. Na live, dá água na boca | Live shop | Moviki",
+   "comentario": "Tudo sobre live shop, com o passo a passo: https://www.moviki.com.br/live-shop\nTeste grátis de 30 dias, sem cartão.",
+   "playlist": "PLCJc5gL33i04",
+   "origem": "material",
+   "capa": false,
+   "na_playlist": true,
+   "robo": "2026-10-22-youtube"
   }
  }
 }

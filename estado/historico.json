@@ -1,5 +1,20 @@
 [
  {
+  "quando": "2026-11-27T23:32:22+00:00",
+  "formato": "story",
+  "descricao": "Vender pelo WhatsApp ou ao vivo?",
+  "media_id": "17966709969250957",
+  "origem": "casa",
+  "peca": "pergunta:whats-ou-live",
+  "rede": "instagram",
+  "ramo": "geral",
+  "miniatura": "",
+  "tipo": "pergunta",
+  "cta": false,
+  "trilha": "pop-brasil",
+  "fb": "2775138769600758"
+ },
+ {
   "quando": "2026-11-27T23:02:40+00:00",
   "formato": "feed",
   "descricao": "Sua loja de autopeças ao vivo no mapa",

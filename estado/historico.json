@@ -1,5 +1,18 @@
 [
  {
+  "quando": "2026-11-27T23:02:40+00:00",
+  "formato": "feed",
+  "descricao": "Sua loja de autopeças ao vivo no mapa",
+  "media_id": "17890215822652754",
+  "origem": "casa",
+  "peca": "feed-autopecas-ao-vivo",
+  "rede": "instagram",
+  "ramo": "automotivo",
+  "miniatura": "https://raw.githubusercontent.com/eikosistemas-pj/moviki-assistente-social/main/publicado/feed-peca-20261127-230218.jpg",
+  "fb": "1312620718595159_122127910203430818",
+  "subtipo": "peca"
+ },
+ {
   "quando": "2026-11-27T19:47:37+00:00",
   "formato": "story",
   "descricao": "Checklist do balcão de live",

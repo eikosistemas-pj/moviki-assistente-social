@@ -1,5 +1,21 @@
 [
  {
+  "quando": "2026-11-28T02:59:42+00:00",
+  "formato": "story",
+  "descricao": "Ótica: venda ao vivo pelo celular",
+  "media_id": "18122044303802441",
+  "origem": "casa",
+  "peca": "video:video-comercio-otica",
+  "rede": "instagram",
+  "ramo": "otica",
+  "miniatura": "https://app.moviki.com.br/material/capas/video-comercio-otica.webp",
+  "tipo": "video",
+  "cta": true,
+  "trilha": "tech-energia",
+  "corte": "0.0-16.1",
+  "fb": "1616486753124306"
+ },
+ {
   "quando": "2026-11-28T00:17:59+00:00",
   "formato": "reel",
   "descricao": "Black Friday ao vivo: sem carrinho, sem checkout",
